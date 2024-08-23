@@ -280,7 +280,7 @@
     "url": "git://github.com/darkskyapp/translations"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --reporter dot",
     "lint-fix": "eslint . --fix",
     "lint": "eslint"
   },
