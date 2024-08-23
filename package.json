@@ -280,14 +280,14 @@
     "url": "git://github.com/darkskyapp/translations"
   },
   "scripts": {
-    "test": "eslint . && mocha --reporter dot",
-    "test-fix": "eslint . --fix . && mocha --reporter dot",
-    "lint-fix": "eslint . --fix"
+    "test": "mocha",
+    "lint-fix": "eslint . --fix",
+    "lint": "eslint"
   },
   "devDependencies": {
-    "eslint": "9.6.0",
-    "eslint-plugin-n": "17.9.0",
-    "eslint-plugin-promise": "6.4.0",
-    "mocha": "10.6.0"
+    "eslint": "9.9.0",
+    "eslint-plugin-n": "17.10.2",
+    "eslint-plugin-promise": "7.1.0",
+    "mocha": "10.7.3"
   }
 }

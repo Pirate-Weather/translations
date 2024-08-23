@@ -1,4 +1,4 @@
-name: Lint
+name: Test
 
 permissions:
   contents: write
@@ -10,14 +10,10 @@ on:
   push:
 
 jobs:
-  eslint:
+  mocha:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
       - uses: actions/setup-node@1e60f620b9541d16bece96c5465dc8ee9832be0b # v4.0.3
       - run: npm install
-      - run: npm run lint-fix
-      - name: "Auto Commit"
-        uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
-        with:
-            commit_message: 'style fixes by eslint'
+      - run: npm test
