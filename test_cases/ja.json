@@ -82,6 +82,12 @@
 
   "霧":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "薄曇り":
+    ["title", "light-clouds"],
 
   "曇り":
     ["title", "medium-clouds"],

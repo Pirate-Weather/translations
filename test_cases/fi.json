@@ -82,6 +82,12 @@
 
   "Sumua":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Puolipilvistä":
+    ["title", "light-clouds"],
 
   "Enimmäkseen pilvistä":
     ["title", "medium-clouds"],

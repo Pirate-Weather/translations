@@ -82,6 +82,12 @@
 
   "Udu":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Vähene pilvisus":
+    ["title", "light-clouds"],
 
   "Mõõdukas pilvisus":
     ["title", "medium-clouds"],

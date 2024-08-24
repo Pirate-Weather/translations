@@ -91,6 +91,9 @@
 
   "Мъгла":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
 
   "Незначителна Облачност":
     ["title", "light-clouds"],

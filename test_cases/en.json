@@ -82,6 +82,12 @@
 
   "Foggy":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Partly Cloudy":
+    ["title", "light-clouds"],
 
   "Mostly Cloudy":
     ["title", "medium-clouds"],

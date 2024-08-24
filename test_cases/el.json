@@ -82,6 +82,12 @@
 
   "Ομίχλη":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Αραιή νέφωση":
+    ["title", "light-clouds"],
 
   "Μερική νέφωση":
     ["title", "medium-clouds"],

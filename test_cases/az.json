@@ -82,6 +82,12 @@
 
   "Dumanlı":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Qismən Buludlu":
+    ["title", "light-clouds"],
 
   "Əsasən Buludlu":
     ["title", "medium-clouds"],

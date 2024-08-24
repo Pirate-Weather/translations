@@ -82,6 +82,12 @@
 
   "धुके":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "अंशतः ढगाळ":
+    ["title", "light-clouds"],
 
   "मुख्यतः ढगाळ":
     ["title", "medium-clouds"],

@@ -82,6 +82,12 @@
 
   "Ennuvolat":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Parcialment Ennuvolat":
+    ["title", "light-clouds"],
 
   "Majoritariament Ennuvolat":
     ["title", "medium-clouds"],

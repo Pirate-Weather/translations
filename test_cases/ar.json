@@ -82,6 +82,12 @@
 
   "اجواء غائمة":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "غائم جزئياً":
+    ["title", "light-clouds"],
 
   "اجواء غائمة":
     ["title", "medium-clouds"],

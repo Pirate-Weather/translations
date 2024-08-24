@@ -82,6 +82,12 @@
 
   "மூடுபனி":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "லேசான மேகமூட்டம்":
+    ["title", "light-clouds"],
 
   "பெரும்பாலும் மேகமூட்டம்":
     ["title", "medium-clouds"],

@@ -82,6 +82,12 @@
 
   "ערפל":
   ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "עננות חלקית":
+    ["title", "light-clouds"],
 
   "מעונן חלקית":
   ["title", "medium-clouds"],

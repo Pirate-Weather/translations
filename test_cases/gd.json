@@ -82,6 +82,12 @@
 
   "Ceòthach":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Sgothan Aotruime":
+    ["title", "light-clouds"],
 
   "Sgothach":
     ["title", "medium-clouds"],

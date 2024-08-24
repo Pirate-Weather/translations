@@ -82,6 +82,12 @@
 
   "धुंधला":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "सामान्य बादल":
+    ["title", "light-clouds"],
 
   "बादलों से आच्छादित":
     ["title", "medium-clouds"],

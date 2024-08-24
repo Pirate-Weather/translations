@@ -82,6 +82,12 @@
 
   "Berkabut":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Sedikit Berawan":
+    ["title", "light-clouds"],
 
   "Berawan":
     ["title", "medium-clouds"],

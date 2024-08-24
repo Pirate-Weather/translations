@@ -82,6 +82,12 @@
 
   "ਧੁੰਧ":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "ਕੁਝ ਹੱਦ ਤਕ ਬੱਦਲ ਹੋਣਾ":
+    ["title", "light-clouds"],
 
   "ਜ੍ਯਾਦਾ ਬੱਦਲ ਹੋਣਾ":
     ["title", "medium-clouds"],

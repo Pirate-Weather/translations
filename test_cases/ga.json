@@ -82,6 +82,12 @@
 
   "Ceoch":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Scamaill Bhána":
+    ["title", "light-clouds"],
 
   "Scamaill Mheasartha":
     ["title", "medium-clouds"],

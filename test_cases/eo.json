@@ -82,6 +82,12 @@
 
   "Nebulo":
   ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Malmultaj Nuboj":
+    ["title", "light-clouds"],
 
   "Nuboj":
   ["title", "medium-clouds"],

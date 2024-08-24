@@ -82,6 +82,12 @@
 
   "Migla":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Daļēji mākoņains":
+    ["title", "light-clouds"],
 
   "Pārsvarā mākoņains":
     ["title", "medium-clouds"],

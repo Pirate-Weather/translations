@@ -82,6 +82,12 @@
 
   "Oggyfay":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Artlypay Oudyclay":
+    ["title", "light-clouds"],
 
   "Ostlymay Oudyclay":
     ["title", "medium-clouds"],

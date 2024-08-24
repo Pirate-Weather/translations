@@ -82,6 +82,12 @@
 
   "دھندلا":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "جزوی طور پر ابر آلود":
+    ["title", "light-clouds"],
 
   "زیادہ تر ابر آلود":
     ["title", "medium-clouds"],

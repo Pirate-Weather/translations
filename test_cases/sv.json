@@ -82,6 +82,12 @@
 
   "Dimma":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Lätt molnighet":
+    ["title", "light-clouds"],
 
   "Molnigt":
     ["title", "medium-clouds"],

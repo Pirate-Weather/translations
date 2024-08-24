@@ -82,6 +82,12 @@
 
   "Tåke":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Lettskyet":
+    ["title", "light-clouds"],
 
   "Skyet":
     ["title", "medium-clouds"],

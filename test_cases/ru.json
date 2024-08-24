@@ -91,6 +91,9 @@
 
   "Туман":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
 
   "Небольшая Облачность":
     ["title", "light-clouds"],

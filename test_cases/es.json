@@ -82,6 +82,12 @@
 
   "Niebla":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Parcialmente Nublado":
+    ["title", "light-clouds"],
 
   "Mayormente Nublado":
     ["title", "medium-clouds"],

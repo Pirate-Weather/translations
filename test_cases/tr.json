@@ -82,6 +82,12 @@
 
   "Sis":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Hafif bulutlanma":
+    ["title", "light-clouds"],
 
   "Bulutlanma":
     ["title", "medium-clouds"],
