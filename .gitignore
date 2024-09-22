@@ -3,6 +3,5 @@
 *.swp
 .DS_Store
 .idea/
-/package-lock.json
 build
 node_modules
