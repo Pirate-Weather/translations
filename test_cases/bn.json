@@ -82,6 +82,12 @@
 
   "কুয়াশাছন্ন":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "হাল্কা মেঘাছন্ন":
+    ["title", "light-clouds"],
 
   "প্রায় মেঘাছন্ন":
     ["title", "medium-clouds"],

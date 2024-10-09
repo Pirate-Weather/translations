@@ -82,6 +82,12 @@
 
   "ნისლი":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "ნაწილობრივ ღრუბლიანი":
+    ["title", "light-clouds"],
 
   "უმეტესად ღრუბლიანი":
     ["title", "medium-clouds"],

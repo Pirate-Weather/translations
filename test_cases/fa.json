@@ -82,6 +82,12 @@
 
   "مه":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "آسمان کمی ابری":
+    ["title", "light-clouds"],
 
   "آسمان کمی تا قسمتی ابری":
     ["title", "medium-clouds"],

@@ -82,6 +82,12 @@
 
   "Þoka":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Skýjað að hluta til":
+    ["title", "light-clouds"],
 
   "Skýjað":
     ["title", "medium-clouds"],

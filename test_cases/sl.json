@@ -82,6 +82,12 @@
 
   "Megleno":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Delno oblačno":
+    ["title", "light-clouds"],
 
   "Pretežno oblačno":
     ["title", "medium-clouds"],

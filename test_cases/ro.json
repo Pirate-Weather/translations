@@ -82,6 +82,12 @@
 
   "Ceață":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Parțial Noros":
+    ["title", "light-clouds"],
 
   "Predominant Noros":
     ["title", "medium-clouds"],

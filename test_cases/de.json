@@ -58,6 +58,12 @@
 
   "Nebel":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Leicht bewölkt":
+    ["title", "light-clouds"],
 
   "Überwiegend bewölkt":
     ["title", "medium-clouds"],

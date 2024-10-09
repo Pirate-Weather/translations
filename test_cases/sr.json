@@ -82,6 +82,12 @@
 
   "Maglovito":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Mestimično oblačno":
+    ["title", "light-clouds"],
 
   "Pretežno oblačno":
     ["title", "medium-clouds"],

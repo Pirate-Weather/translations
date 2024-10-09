@@ -82,6 +82,12 @@
 
   "മൂടല്‍മഞ്ഞ്(മൂടിക്കെട്ടിയ)":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "ഭാഗീകമായി മേഘാവൃതം":
+    ["title", "light-clouds"],
 
   "മിക്കപ്പോഴും മേഘാവൃതമായ":
     ["title", "medium-clouds"],

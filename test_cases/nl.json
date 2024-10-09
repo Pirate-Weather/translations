@@ -58,6 +58,12 @@
 
   "Mist":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Licht bewolkt":
+    ["title", "light-clouds"],
 
   "Overwegend bewolkt":
     ["title", "medium-clouds"],

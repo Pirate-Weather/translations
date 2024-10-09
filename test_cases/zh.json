@@ -82,6 +82,12 @@
 
   "有雾":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "局部多云":
+    ["title", "light-clouds"],
 
   "多云":
     ["title", "medium-clouds"],

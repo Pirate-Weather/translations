@@ -91,6 +91,9 @@
 
   "Nevoeiro":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
 
   "Ligeiramente Nublado":
     ["title", "light-clouds"],

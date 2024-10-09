@@ -82,6 +82,12 @@
 
   "Hmlisto":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Čiastočne zamračené":
+    ["title", "light-clouds"],
 
   "Prevažne zamračené":
     ["title", "medium-clouds"],

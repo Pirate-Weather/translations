@@ -82,6 +82,12 @@
 
   "안개":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "약간 흐림":
+    ["title", "light-clouds"],
 
   "흐림":
     ["title", "medium-clouds"],

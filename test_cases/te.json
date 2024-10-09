@@ -82,6 +82,12 @@
 
   "పొగమంచు":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "పాక్షికంగా మేఘావృతం":
+    ["title", "light-clouds"],
 
   "చాలావరకు మేఘావృతంగా":
     ["title", "medium-clouds"],

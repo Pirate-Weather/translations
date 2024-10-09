@@ -82,6 +82,12 @@
 
   "Abu-Abu Taka Rai":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Abu-Abu Uituan":
+    ["title", "light-clouds"],
 
   "Abu-Abu":
     ["title", "medium-clouds"],

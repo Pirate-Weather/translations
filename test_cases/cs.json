@@ -82,6 +82,12 @@
 
   "Mlhavo":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Částečně oblačno":
+    ["title", "light-clouds"],
 
   "Převážně oblačno":
     ["title", "medium-clouds"],

@@ -82,6 +82,12 @@
 
   "có sương mù":
     ["title", "fog"],
+  
+  "mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "ít mây":
+    ["title", "light-clouds"],
 
   "có mây":
     ["title", "medium-clouds"],

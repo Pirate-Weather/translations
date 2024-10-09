@@ -1,4 +1,4 @@
-"use strict";
+
 const assert = require("assert");
 const Translation = require("./lib/translation");
 const translations = require("./");
@@ -53,7 +53,7 @@ describe("translations", () => {
       // candy treat.
       assert.strictEqual(
         test.translate(["bar", 10, ["baz", 20, "foo"]]),
-        "meeple meeple bar"
+        "meeple meeple bar",
       );
     });
 
@@ -125,7 +125,7 @@ describe("translations", () => {
           it(
             "should translate " + JSON.stringify(source) +
               " to " + JSON.stringify(summary),
-            () => assert.strictEqual(translation.translate(source), summary)
+            () => assert.strictEqual(translation.translate(source), summary),
           );
         }
       });

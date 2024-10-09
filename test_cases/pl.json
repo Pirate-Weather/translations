@@ -82,6 +82,12 @@
 
   "Mgła":
     ["title", "fog"],
+  
+  "Mostly clear":
+    ["title", "very-light-clouds"],
+  
+  "Niewielkie zachmurzenie":
+    ["title", "light-clouds"],
 
   "Średnie zachmurzenie":
     ["title", "medium-clouds"],

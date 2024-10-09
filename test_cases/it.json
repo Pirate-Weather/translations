@@ -82,6 +82,12 @@
 
   "Nebbia":
     ["title", "fog"],
+  
+  "Mostly Clear":
+    ["title", "very-light-clouds"],
+  
+  "Poco Nuvoloso":
+    ["title", "light-clouds"],
 
   "Nubi Sparse":
     ["title", "medium-clouds"],
