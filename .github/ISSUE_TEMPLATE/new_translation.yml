@@ -1,0 +1,52 @@
+name: New Language
+description: Request a new language to be added to the API.
+labels: ["enhancement" , "Needs Review"]
+body:
+
+  - type: input
+    id: name-the-language
+    attributes:
+      label: Language Name
+    validations:
+      required: true
+
+  - type: textarea
+    id: more-info
+    attributes:
+      label: More information
+    validations:
+      required: true
+
+  - type: dropdown
+    id: submit-pr
+    attributes:
+      label: Are you willing to submit a pull request to add the language?
+      options: 
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+
+  - type: textarea
+    id: other-details
+    attributes:
+      label: Other details
+      placeholder: |
+        Additional details and attachments.
+
+  - type: checkboxes
+    id: acknowledgements
+    attributes:
+      label: Acknowlegdements
+      description: Before submitting an issue please read the steps below carefully.
+      options:
+        - label: I have searched this repository to see if the language has already been requested.
+          required: true
+        - label: I have filled in the template to the best of my ability.
+          required: true
+        - label: The requested language is not a regional variant of an existing language.
+          required: true
+        - label: I have checked the [API documentation](https://pirateweather.net/en/latest/API/#request-parameters) to see if the language is already added to the API.
+          required: true
+        - label: I have written an informative title.
+          required: true
