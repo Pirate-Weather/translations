@@ -5,6 +5,7 @@
 - [ ] New translation
 - [ ] Translation update
 - [ ] Code quality improvements to existing code or addition of tests
+- [ ] Documentation Updates
 
 ## Checklist
 
