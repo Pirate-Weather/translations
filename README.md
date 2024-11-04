@@ -348,12 +348,9 @@ in English, respectively.
 *   `"clear"`: Represents the lack of *any* significant weather occurring and cloud cover covering less than 11.5% of the sky.
 *   `"possible-thunderstorm"`: Represents a chance of thunderstorms occurring.
 *   `"thunderstorm"`: Represents thunderstorms occurring.
-*   `"light-wind"`: Represents light wind at a location. (3 or 4 on the
-    [Beaufort scale][9], but only when this is historically unusual.)
-*   `"medium-wind"`: Represents moderate wind at a location. (5, 6, or 7 on the
-    [Beaufort scale][9], but only when this is historically unusual.)
-*   `"heavy-wind"`: Represents strong wind at a location. (8+ on the
-    [Beaufort scale][9].)
+*   `"light-wind"`: Represents light wind at a location. (15 mph (~24.14 km/h) or greater)
+*   `"medium-wind"`: Represents moderate wind at a location. (~22.37 mph (36 km/h) or greater)
+*   `"heavy-wind"`: Represents strong wind at a location. (40 mph (~64.37 km/h) or greater)
 *   `"low-humidity"`: Represents when the air is unusually dry.
 *   `"high-humidity"`: Represents when the air is unusually humid.
 *   `"fog"`: Represents when there is less than approximately 0.62 miles (1 kilometers) of
@@ -365,6 +362,4 @@ in English, respectively.
 *   `"medium-clouds"`: Represents when clouds cover more than 62.5% (but not
     all) of the sky. (Usually called "mostly cloudy" in English.)
 *   `"heavy-clouds"`: Represents complete (or nearly-complete) cloud cover.
-    (Usually called "overcast" in English.)
-
-[9]: https://en.wikipedia.org/wiki/Beaufort_scale
+    (Usually called "cloudy" in English.)
