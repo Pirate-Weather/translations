@@ -362,4 +362,4 @@ in English, respectively.
 *   `"medium-clouds"`: Represents when clouds cover more than 62.5% (but not
     all) of the sky. (Usually called "mostly cloudy" in English.)
 *   `"heavy-clouds"`: Represents complete (or nearly-complete) cloud cover.
-    (Usually called "cloudy" in English.)
+    (Usually called "overcast" in English.)
