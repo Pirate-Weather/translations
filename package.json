@@ -285,8 +285,8 @@
     "lint": "eslint"
   },
   "devDependencies": {
-    "eslint": "9.14.0",
-    "eslint-plugin-n": "17.13.1",
+    "eslint": "9.15.0",
+    "eslint-plugin-n": "17.13.2",
     "eslint-plugin-promise": "7.1.0",
     "mocha": "10.8.2"
   }
