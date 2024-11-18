@@ -8,12 +8,6 @@
   "Light Precipitation":
     ["title", "very-light-precipitation"],
 
-  "Possible Light Precipitation":
-    ["title", "possible-light-precipitation"],
-
-  "Light Precipitation":
-    ["title", "light-precipitation"],
-
   "Precipitation":
     ["title", "medium-precipitation"],
 
@@ -43,12 +37,6 @@
 
   "Light Sleet":
     ["title", "very-light-sleet"],
-
-  "Possible Light Sleet":
-    ["title", "possible-light-sleet"],
-
-  "Light Sleet":
-    ["title", "light-sleet"],
 
   "Sleet":
     ["title", "medium-sleet"],
