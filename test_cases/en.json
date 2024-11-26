@@ -62,6 +62,63 @@
   "Heavy Snow":
     ["title", "heavy-snow"],
 
+  "Thunderstorms":
+    ["title", "thunderstorm"],
+
+  "Possible Precipitation":
+    ["title", "possible-medium-precipitation"],
+
+  "Possible Heavy Precipitation":
+    ["title", "possible-heavy-precipitation"],
+  
+  "Possible Rain":
+    ["title", "possible-medium-rain"],
+
+  "Possible Heavy Rain":
+    ["title", "possible-heavy-rain"],
+    
+  "Possible Sleet":
+    ["title", "possible-medium-sleet"],
+
+  "Possible Heavy Sleet":
+    ["title", "possible-heavy-sleet"],
+
+  "Possible Snow":
+    ["title", "possible-medium-snow"],
+
+  "Possible Heavy Snow":
+    ["title", "possible-heavy-snow"],
+        
+  "Possible Freezing Drizzle":
+    ["title", "possible-freezing-drizzle"],
+
+  "Freezing Drizzle":
+    ["title", "freezing-drizzle"],
+          
+  "Possible Light Freezing Rain":
+    ["title", "possible-light-freezing-rain"],
+
+  "Light Freezing Rain":
+    ["title", "light-freezing-rain"],
+
+  "Possible Freezing Rain":
+    ["title", "possible-freezing-rain"],
+
+  "Freezing Rain":
+    ["title", "freezing-rain"],
+          
+  "Possible Heavy Freezing Rain":
+    ["title", "possible-heavy-freezing-rain"],
+  
+  "Heavy Freezing Rain":
+    ["title", "heavy-freezing-rain"],
+
+  "Possible Hail":
+    ["title", "possible-hail"],
+  
+  "Hail":
+    ["title", "hail"],
+
   "Windy":
     ["title", "medium-wind"],
 
