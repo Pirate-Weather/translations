@@ -83,7 +83,7 @@
   "안개":
     ["title", "fog"],
   
-  "mostly clear":
+  "대체로 맑음":
     ["title", "very-light-clouds"],
   
   "약간 흐림":
