@@ -4,7 +4,7 @@ Pirate Weather API Translation Module
 Introduction
 ------------
 
-The [Pirate Weather API][1] has, since version 2.x, included a [module for
+The [Pirate Weather API][1] has, since version 2.5, included a [module for
 producing textual weather summaries][2] from its weather data.  These summaries
 have always been in English (since that's the only language we know) and have
 always been procedurally generated (since there are so many possible weather
