@@ -83,7 +83,7 @@
   "有霧":
     ["title", "fog"],
   
-  "mostly clear":
+  "基本晴朗":
     ["title", "very-light-clouds"],
   
   "局部多雲":
