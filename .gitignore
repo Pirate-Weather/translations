@@ -5,3 +5,5 @@
 .idea/
 build
 node_modules
+__pycache__
+.editorconfig

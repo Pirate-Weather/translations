@@ -1,170 +1,173 @@
-{
-  "Clar":
+# This would be one of your translations, as a Python dictionary
+cases = {
+    "Ciel Dégagé":
     ["title", "clear"],
 
-  "Possibles Pluges Lleugeres":
+  "Très Faibles Précipitations Possibles":
     ["title", "possible-very-light-precipitation"],
 
-  "Precipitacions Lleugeres":
+  "Très Faibles Précipitations":
     ["title", "very-light-precipitation"],
 
-  "Possibles Pluges Lleugeres":
+  "Faibles Précipitations Possibles":
     ["title", "possible-light-precipitation"],
 
-  "Precipitacions Lleugeres":
+  "Faibles Précipitations":
     ["title", "light-precipitation"],
 
-  "Precipitació":
+  "Précipitations":
     ["title", "medium-precipitation"],
 
-  "Fortes Precipitacions":
+  "Fortes Précipitations":
     ["title", "heavy-precipitation"],
 
-  "Possible Plugim":
+  "Bruine Possible":
     ["title", "possible-very-light-rain"],
 
-  "Plugim":
+  "Bruine":
     ["title", "very-light-rain"],
 
-  "Possible Plugim":
+  "Pluie Faible Possible":
     ["title", "possible-light-rain"],
 
-  "Pluja Lleugera":
+  "Pluie Faible":
     ["title", "light-rain"],
 
-  "Pluja":
+  "Pluie":
     ["title", "medium-rain"],
 
-  "Pluges Fortes":
+  "Pluie Forte":
     ["title", "heavy-rain"],
 
-  "Aiguaneu":
+  "Très Faible Neige Fondante Possible":
     ["title", "possible-very-light-sleet"],
 
-  "Aiguaneu":
+  "Très Faible Neige Fondante":
     ["title", "very-light-sleet"],
 
-  "Possible Aiguaneu":
+  "Faible Neige Fondante Possible":
     ["title", "possible-light-sleet"],
 
-  "Aiguaneu":
+  "Faible Neige Fondante":
     ["title", "light-sleet"],
 
-  "Aiguaneu":
+  "Neige Fondante":
     ["title", "medium-sleet"],
 
-  "Fortes Aiguaneu":
+  "Forte Neige Fondante":
     ["title", "heavy-sleet"],
 
-  "Possible Nevada Lleugera":
+  "Averses De Neige Possibles":
     ["title", "possible-very-light-snow"],
 
-  "Lleugeres Nevades":
+  "Averses De Neige":
     ["title", "very-light-snow"],
 
-  "Possible Nevada Lleugera":
+  "Neige Faible Possible":
     ["title", "possible-light-snow"],
 
-  "Lleugeres Nevades":
+  "Neige Faible":
     ["title", "light-snow"],
 
-  "Nevades":
+  "Neige":
     ["title", "medium-snow"],
 
-  "Fortes Nevades":
+  "Neige Abondante":
     ["title", "heavy-snow"],
 
-  "Ventós":
+  "Vent Moyen":
     ["title", "medium-wind"],
 
-  "Perillosament Ventós":
+  "Vent Fort":
     ["title", "heavy-wind"],
 
-  "Ennuvolat":
+  "Brumeux":
     ["title", "fog"],
   
-  "Majoritariament Clar":
+  "En Grande Partie Clair":
     ["title", "very-light-clouds"],
   
-  "Parcialment Ennuvolat":
+  "Faibles Passages Nuageux":
     ["title", "light-clouds"],
 
-  "Majoritariament Ennuvolat":
+  "Ciel Nuageux":
     ["title", "medium-clouds"],
 
-  "Ennuvolat":
+  "Ciel Couvert":
     ["title", "heavy-clouds"],
 
-  "Sec i Vents Fluixos":
+  "Temps Sec et Vent Faible":
     ["title", ["and", "low-humidity", "light-wind"]],
 
-  "Plugim i Perillosament Ventós":
+  "Bruine et Vent Fort":
     ["title", ["and", "very-light-rain", "heavy-wind"]],
 
-  "Humit i Parcialment Ennuvolat":
+  "Temps Humide et Faibles Passages Nuageux":
     ["title", ["and", "high-humidity", "light-clouds"]],
 
-  "Clar cada hora.":
+
+  "Ciel dégagé pendant la prochaine heure.":
     ["sentence", ["for-hour", "clear"]],
 
-  "Lleugeres nevades començant 35 min.":
+  "Averses de neige commençant dans 35 min.":
     ["sentence", ["starting-in", "very-light-snow", ["minutes", 35]]],
 
-  "Pluja lleugera parant a 15 min.":
+  "Pluie faible se terminant dans 15 min.":
     ["sentence", ["stopping-in", "light-rain", ["minutes", 15]]],
 
-  "Fortes aiguaneu començant d'aquí 20 min., després parant al cap 30 min.":
+  "Forte neige fondante commençant dans 20 min., se terminant 30 min. plus tard.":
     ["sentence",
       ["starting-then-stopping-later",
         "heavy-sleet",
         ["minutes", 20],
         ["minutes", 30]]],
 
-  "Pluja parant d'aquí 25 min., tornant a començar al cap 8 min.":
+  "Pluie se terminant dans 25 min., et reprenant 8 min. plus tard.":
     ["sentence",
       ["stopping-then-starting-later",
         "medium-rain",
         ["minutes", 25],
         ["minutes", 8]]],
 
-  "Majoritariament ennuvolat durant el dia.":
+
+  "Ciel nuageux toute la journée.":
     ["sentence", ["for-day", "medium-clouds"]],
 
-  "Aiguaneu començant al matí.":
+  "Très faible neige fondante commençant dans la matinée.":
     ["sentence", ["starting", "very-light-sleet", "morning"]],
 
-  "Ventós aquesta nit.":
+  "Vent moyen jusqu’à cette nuit.":
     ["sentence", ["until", "medium-wind", "today-night"]],
 
-  "Fortes precipitacions a la tarda.":
+  "Fortes précipitations jusque dans l’après-midi.":
     ["sentence", ["until", "heavy-precipitation", "afternoon"]],
 
-  "Vents fluixos a la tarda.":
+  "Vent faible dans l’après-midi.":
     ["sentence", ["during", "light-wind", "afternoon"]],
 
-  "Nevades durant el vespre i demà al matí.":
+  "Neige dans la soirée et demain matin.":
     ["sentence", ["during",
       "medium-snow",
       ["and", "later-today-evening", "tomorrow-morning"]]],
 
-  "Pluges fortes durant el matí, començant aquest vespre.":
+  "Pluie forte jusque dans la matinée, reprenant ce soir.":
     ["sentence", ["until-starting-again",
       "heavy-rain",
       "later-today-morning",
       "today-evening"]],
 
-  "Ennuvolat començant al vespre, continuant a la nit.":
+  "Ciel couvert commençant dans la soirée, se prolongeant jusque dans la nuit.":
     ["sentence", ["starting-continuing-until",
       "heavy-clouds",
       "evening",
       "night"]],
 
-  "Aiguaneu durant la tarda i ennuvolat demà al matí.":
+  "Faible neige fondante dans l’après-midi et brumeux demain matin.":
     ["sentence", ["and",
       ["during", "light-sleet", "later-today-afternoon"],
       ["during", "fog", "tomorrow-morning"]]],
 
-  "Perillosament ventós començant aquest matí, continuant aquesta tarda, i aiguaneu demà al matí.":
+  "Vent fort commençant ce matin, se prolongeant jusqu’à cet après-midi, et neige fondante demain matin.":
     ["sentence", ["and",
       ["starting-continuing-until",
         "heavy-wind",
@@ -172,12 +175,12 @@
         "today-afternoon"],
       ["during", "medium-sleet", "tomorrow-morning"]]],
 
-  "Ennuvolat començant durant la nit i fortes nevades demà a la tarda.":
+  "Ciel se couvrant dans la nuit et neige abondante demain après-midi.":
     ["sentence", ["and",
       ["starting", "heavy-clouds", "later-today-night"],
       ["during", "heavy-snow", "tomorrow-afternoon"]]],
 
-  "Sec aquesta nit i precipitacions lleugeres començant demà al vespre, continuant demà a la nit.":
+  "Temps sec cette nuit et faibles précipitations commençant demain soir, se prolongeant jusqu’à demain pendant la nuit.":
     ["sentence", ["and",
       ["during", "low-humidity", "today-night"],
       ["starting-continuing-until",
@@ -185,77 +188,75 @@
         "tomorrow-evening",
         "tomorrow-night"]]],
 
-  "Nevades (5 in.) a la nit.":
+  "Neige (5 in.) dans la nuit.":
     ["sentence", ["during",
       ["parenthetical", "medium-snow", ["inches", 5]],
       "night"]],
 
-  "Lleugeres nevades (2 cm.) durant el matí.":
+  "Neige faible (2 cm.) dans la matinée.":
     ["sentence", ["during",
       ["parenthetical", "light-snow", ["centimeters", 2]],
       "later-today-morning"]],
 
-  "Fortes nevades (8–12 in.) durant el dia.":
+  "Neige abondante (8\u201312 in.) toute la journée.":
     ["sentence", ["for-day",
       ["parenthetical", "heavy-snow", ["inches", ["range", 8, 12]]]]],
 
-  "Nevades (menys de 1 cm.) a la tarda.":
+  "Neige (moins de 1 cm.) dans l’après-midi.":
     ["sentence", ["during",
       ["parenthetical", "medium-snow", ["less-than", ["centimeters", 1]]],
       "afternoon"]],
 
 
-  "Sense precipitacions durant la setmana, amb temperatures aconseguint un màxim de 85\u00B0F demà.":
+  "Pas de précipitations pendant toute la semaine, avec des températures maximales atteignant 85\u00B0F demain.":
     ["sentence", ["with",
       ["for-week", "no-precipitation"],
       ["temperatures-peaking",
         ["fahrenheit", 85],
         "tomorrow"]]],
 
-  "Precipitacions mixtes cap al cap de setmana, amb temperatures arribant a 32\u00B0C el dijous.":
+  "Précipitations mixtes pendant tout le week-end, avec des températures maximales montant jusqu’à 32\u00B0C jeudi.":
     ["sentence", ["with",
       ["over-weekend", "mixed-precipitation"],
       ["temperatures-rising",
         ["celsius", 32],
         "thursday"]]],
 
-  "Plugim el dilluns, amb temperatures aconseguint un mínim de 15\u00B0F el divendres.":
+  "Bruine aujourd’hui, avec des températures maximales atteignant 15\u00B0F vendredi.":
     ["sentence", ["with",
-      ["during", "very-light-rain", "monday"],
+      ["during", "very-light-rain", "today"],
       ["temperatures-valleying",
         ["fahrenheit", 15],
         "friday"]]],
 
-  "Lleugeres nevades el dimarts i dimecres, amb temperatures per sota a 0\u00B0C el diumenge.":
+  "Neige faible lundi et mardi, avec des températures maximales descendant jusqu’à 0\u00B0C dimanche.":
     ["sentence", ["with",
-      ["during", "light-snow", ["and", "tuesday", "wednesday"]],
+      ["during", "light-snow", ["and", "monday", "tuesday"]],
       ["temperatures-falling",
         ["celsius", 0],
         "sunday"]]],
 
-  "Precipitació avui fins a el dissabte, amb temperatures aconseguint un màxim de 100\u00B0F el dilluns.":
+  "Précipitations mercredi jusqu’à samedi, avec des températures maximales atteignant 100\u00B0F lundi.":
     ["sentence", ["with",
       ["during",
         "medium-precipitation",
-        ["through", "today", "saturday"]],
+        ["through", "wednesday", "saturday"]],
       ["temperatures-peaking",
         ["fahrenheit", 100],
         "monday"]]],
 
-  "Precipitacions mixtes (1\u20133 in.) durant el dia.":
-    ["sentence",
-      ["for-day",
-        ["parenthetical", "mixed-precipitation", ["inches", ["range", 1, 3]]]]],
+  "Orages possibles mercredi prochain et jeudi prochain.":
+    ["sentence", ["during",
+      "possible-thunderstorm",
+        ["and", "next-wednesday", "next-thursday"]
+    ]],
 
-  "Fortes Nevades (1\u20133 In.)":
-    ["title", ["parenthetical", "heavy-snow", ["inches", ["range", 1, 3]]]],
+  "Les prévisions pour la prochaine heure sont temporairement indisponibles car les stations radars voisines sont hors-ligne.":
+  ["sentence",["next-hour-forecast-status", "temporarily-unavailable", "station-offline"]],
 
-  "Fortes Nevades (3\u20135 Cm.)":
-    ["title", ["parenthetical", "heavy-snow", ["centimeters", ["range", 3, 5]]]],
+  "Les prévisions pour la prochaine heure sont partiellement indisponibles car il y a des lacunes dans la couverture des stations radars voisines.":
+  ["sentence",["next-hour-forecast-status", "partially-unavailable", "station-incomplete"]],
 
-  "Possibles Tempestes":
-    ["title", "possible-thunderstorm"],
-
-  "Pluges Fortes i Tempesta":
-    ["title", ["and", "heavy-rain", "thunderstorm"]]
+  "Les prévisions pour la prochaine heure sont indisponibles car les stations radars voisines sont hors-ligne.":
+  ["sentence",["next-hour-forecast-status", "unavailable", "station-offline"]]
 }
