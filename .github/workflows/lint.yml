@@ -12,26 +12,26 @@ jobs:
     name: "Ruff"
     runs-on: "ubuntu-latest"
     steps:
-        - name: "Checkout the repository"
-          uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
+      - name: "Checkout the repository"
+        uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683" # v4.2.2
 
-        - name: "Set up Python"
-          uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
-          with:
-            python-version: "3.x"
+      - name: "Set up Python"
+        uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
+        with:
+          python-version: "3.x"
 
-        - name: "Install requirements"
-          run: |
-            python -m pip install --upgrade pip
-            pip install ruff
+      - name: "Install requirements"
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff
 
-        - name: "Format"
-          run: ruff format .
+      - name: "Format"
+        run: ruff format .
           
-        - name: "Check"
-          run: ruff check --output-format=github . --fix
+      - name: "Check"
+        run: ruff check --output-format=github . --fix
           
-        - name: "Auto Commit"
-          uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
-          with:
-            commit_message: 'style fixes by ruff
+      - name: "Auto Commit"
+        uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
+        with:
+          commit_message: 'style fixes by ruff'
