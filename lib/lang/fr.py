@@ -1,5 +1,6 @@
 import re
 
+
 def join_with_shared_prefix(a, b, joiner):
     i = 0
     min_len = min(len(a), len(b))
@@ -8,21 +9,20 @@ def join_with_shared_prefix(a, b, joiner):
         i += 1
 
     # Move back until we hit a space or start of string
-    while i > 0 and (i > len(a) or (i <= len(a) and a[i-1] != ' ')):
+    while i > 0 and (i > len(a) or (i <= len(a) and a[i - 1] != " ")):
         i -= 1
 
     # Return the joined string
     return a[:i] + a[i:] + joiner + b[i:]
 
+
 def and_function(stack, a, b):
-    return join_with_shared_prefix(
-        a,
-        b,
-        ", et " if "," in a else " et "
-    )
+    return join_with_shared_prefix(a, b, ", et " if "," in a else " et ")
+
 
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " jusqu’à ")
+
 
 def starting_in_function(stack, condition, period):
     if condition == "ciel couvert":
@@ -31,6 +31,7 @@ def starting_in_function(stack, condition, period):
         return f"ciel se dégageant dans {period}"
     return f"{condition} commençant dans {period}"
 
+
 def starting_then_stopping_later_function(stack, condition, start, end):
     if condition == "ciel couvert":
         return f"ciel se couvrant dans {start}, se terminant {end} plus tard"
@@ -38,8 +39,10 @@ def starting_then_stopping_later_function(stack, condition, start, end):
         return f"ciel se dégageant dans {start}, se terminant {end} plus tard"
     return f"{condition} commençant dans {start}, se terminant {end} plus tard"
 
+
 def stopping_then_starting_later_function(stack, a, b, c):
     return f"{a} se terminant dans {b}, et reprenant {c} plus tard"
+
 
 def starting_function(stack, condition, start):
     if condition == "ciel couvert":
@@ -48,31 +51,38 @@ def starting_function(stack, condition, start):
         return f"ciel se dégageant {start}"
     return f"{condition} commençant {start}"
 
+
 def until_function(stack, condition, period):
     # Replace "jusqu’à dans" with "jusque dans"
     res = condition + " jusqu’à " + period
     return res.replace("jusqu’à dans", "jusque dans")
 
+
 def until_starting_again_function(stack, condition, a, b):
     res = condition + " jusqu’à " + a + ", reprenant " + b
     return res.replace("jusqu’à dans", "jusque dans")
 
+
 def starting_continuing_until_function(stack, condition, a, b):
     res = condition + " commençant " + a + ", se prolongeant jusqu’à " + b
     return res.replace("jusqu’à dans", "jusque dans")
+
 
 def title_function(stack, s):
     # Capitalize first letter of every word except "et"
     def repl(m):
         word = m.group(0)
         return word if word == "et" else word[0].upper() + word[1:]
+
     return re.sub(r"\S+", repl, s)
+
 
 def sentence_function(stack, s):
     s = s[0].upper() + s[1:] if s else s
     if not s.endswith("."):
         s += "."
     return s
+
 
 template = {
     "clear": "ciel dégagé",
@@ -165,8 +175,8 @@ template = {
     "next-friday": "vendredi prochain",
     "next-saturday": "samedi prochain",
     "minutes": "$1 min.",
-    "fahrenheit": "$1\u00B0F",
-    "celsius": "$1\u00B0C",
+    "fahrenheit": "$1\u00b0F",
+    "celsius": "$1\u00b0C",
     "inches": "$1 in.",
     "centimeters": "$1 cm.",
     "less-than": "moins de $1",
@@ -199,5 +209,5 @@ template = {
     "temporarily-unavailable": "temporairement indisponibles",
     "partially-unavailable": "partiellement indisponibles",
     "station-offline": "les stations radars voisines sont hors-ligne",
-    "station-incomplete": "il y a des lacunes dans la couverture des stations radars voisines"
+    "station-incomplete": "il y a des lacunes dans la couverture des stations radars voisines",
 }

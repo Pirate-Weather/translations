@@ -1,5 +1,6 @@
 import re
 
+
 def join_with_shared_prefix(a, b, joiner):
     m = a
     i = 0
@@ -15,7 +16,7 @@ def join_with_shared_prefix(a, b, joiner):
 
     # ...except whitespace! We need that whitespace!
     # Move back until we hit a space or start of string
-    while i > 0 and (i > len(b) or (i <= len(b) and b[i-1] != ' ')):
+    while i > 0 and (i > len(b) or (i <= len(b) and b[i - 1] != " ")):
         i -= 1
 
     return a + joiner + b[i:]
@@ -168,8 +169,8 @@ template = {
     "next-friday": "next Friday",
     "next-saturday": "next Saturday",
     "minutes": "$1 min.",
-    "fahrenheit": "$1\u00B0F",
-    "celsius": "$1\u00B0C",
+    "fahrenheit": "$1\u00b0F",
+    "celsius": "$1\u00b0C",
     "inches": "$1 in.",
     "centimeters": "$1 cm.",
     "less-than": "< $1",
@@ -202,5 +203,5 @@ template = {
     "temporarily-unavailable": "temporarily unavailable",
     "partially-unavailable": "partially unavailable",
     "station-offline": "all nearby radar stations being offline",
-    "station-incomplete": "gaps in coverage from nearby radar stations"
+    "station-incomplete": "gaps in coverage from nearby radar stations",
 }

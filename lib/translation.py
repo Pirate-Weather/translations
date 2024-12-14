@@ -1,5 +1,6 @@
 import re
 
+
 def parse(template, expr, stack):
     # If the expression is a number, just return its string representation
     if isinstance(expr, int):
@@ -8,7 +9,7 @@ def parse(template, expr, stack):
     # If the expression is a string
     if isinstance(expr, str):
         if expr not in template:
-            raise ValueError(f"\"{expr}\" not found in language template.")
+            raise ValueError(f'"{expr}" not found in language template.')
 
         stack.append(expr)
 
@@ -18,7 +19,7 @@ def parse(template, expr, stack):
             # If the template value contains $n references, that's invalid in a value context
             if re.search(r"\$\d+", val):
                 raise ValueError(
-                    f"\"{expr}\" was used in a value context, "
+                    f'"{expr}" was used in a value context, '
                     f"but is expected in a template context."
                 )
             result = val
@@ -31,14 +32,14 @@ def parse(template, expr, stack):
             # Expecting only the context (stack) as single argument
             if argcount != 1:
                 raise ValueError(
-                    f"\"{expr}\" was used in a value context, "
+                    f'"{expr}" was used in a value context, '
                     f"but is expected in a template context."
                 )
             # Call the function with stack as the context (first argument)
             result = val(stack)
 
         else:
-            raise ValueError(f"\"{expr}\" is not a valid language template pattern.")
+            raise ValueError(f'"{expr}" is not a valid language template pattern.')
 
         stack.pop()
         return result
@@ -46,7 +47,7 @@ def parse(template, expr, stack):
     # If the expression is an array-like structure: [term, arg1, arg2, ...]
     elif isinstance(expr, list) and len(expr) > 0 and isinstance(expr[0], str):
         if expr[0] not in template:
-            raise ValueError(f"\"{expr[0]}\" not found in language template.")
+            raise ValueError(f'"{expr[0]}" not found in language template.')
 
         stack.append(expr[0])
         val = template[expr[0]]
@@ -88,7 +89,7 @@ def parse(template, expr, stack):
                 # but we are using it in a template context.
                 if argcount == 1:
                     raise ValueError(
-                        f"\"{expr[0]}\" was used in a template context, "
+                        f'"{expr[0]}" was used in a template context, '
                         f"but is expected in a value context."
                     )
                 # If argcount != 1, then it expects arguments, but we gave none.
@@ -96,7 +97,7 @@ def parse(template, expr, stack):
                 # expr.length - 1 = 0 in this case, so we must raise:
                 if argcount != 1 + len(expected_args):
                     raise ValueError(
-                        f"Template \"{expr[0]}\" did not expect {len(expected_args)} arguments."
+                        f'Template "{expr[0]}" did not expect {len(expected_args)} arguments.'
                     )
             else:
                 # If there are arguments, we must ensure argcount matches:
@@ -104,13 +105,13 @@ def parse(template, expr, stack):
                 if argcount == 1:
                     # The function expects no arguments, but we provided some:
                     raise ValueError(
-                        f"\"{expr[0]}\" was used in a template context, "
+                        f'"{expr[0]}" was used in a template context, '
                         f"but is expected in a value context."
                     )
 
                 if argcount != 1 + len(expected_args):
                     raise ValueError(
-                        f"Template \"{expr[0]}\" did not expect {len(expected_args)} arguments."
+                        f'Template "{expr[0]}" did not expect {len(expected_args)} arguments.'
                     )
 
             # Parse arguments
@@ -119,7 +120,7 @@ def parse(template, expr, stack):
             result = val(stack, *parsed_args)
 
         else:
-            raise ValueError(f"\"{expr[0]}\" is not a valid language template pattern.")
+            raise ValueError(f'"{expr[0]}" is not a valid language template pattern.')
 
         stack.pop()
         return result
