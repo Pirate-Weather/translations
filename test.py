@@ -113,44 +113,45 @@ def test_provide_context_to_functions():
     )
 
 
-def test_languages():
+def test_languages(subtests):
     test_dir = os.path.join(os.path.dirname(__file__), "test_cases")
     # Iterate over files in lang directory
     for filename in os.listdir(test_dir):
-        if filename.endswith(".py"):
-            match = re.match(r"^([^.].*)\.py$", filename)
-            # Extract the language name (e.g. 'en', 'fr', etc.)
-            lang_name = match.group(1)
+        with subtests.test(msg="custom message", filename=filename):
+            if filename.endswith(".py"):
+                match = re.match(r"^([^.].*)\.py$", filename)
+                # Extract the language name (e.g. 'en', 'fr', etc.)
+                lang_name = match.group(1)
 
-            # Construct the corresponding Python module path.
-            # Here we assume each .js has been replaced by a .py file with the same base name.
-            py_module_path = os.path.join(test_dir, lang_name + ".py")
+                # Construct the corresponding Python module path.
+                # Here we assume each .js has been replaced by a .py file with the same base name.
+                py_module_path = os.path.join(test_dir, lang_name + ".py")
 
-            # Dynamically load the Python module
-            spec = importlib.util.spec_from_file_location(lang_name, py_module_path)
-            mod = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(mod)
+                # Dynamically load the Python module
+                spec = importlib.util.spec_from_file_location(lang_name, py_module_path)
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
 
-            # `template` must be defined inside the Python module
-            if not hasattr(mod, "cases"):
-                raise Exception(f"No 'cases' found in {lang_name}.py")
+                # `template` must be defined inside the Python module
+                if not hasattr(mod, "cases"):
+                    raise Exception(f"No 'cases' found in {lang_name}.py")
 
-            template = mod.cases
+                template = mod.cases
 
-            lang_dir = os.path.join(os.path.dirname(__file__), "lib", "lang")
-            # Construct the corresponding Python module path.
-            # Here we assume each .js has been replaced by a .py file with the same base name.
-            py_module_path = os.path.join(lang_dir, lang_name + ".py")
+                lang_dir = os.path.join(os.path.dirname(__file__), "lib", "lang")
+                # Construct the corresponding Python module path.
+                # Here we assume each .js has been replaced by a .py file with the same base name.
+                py_module_path = os.path.join(lang_dir, lang_name + ".py")
 
-            # Dynamically load the Python module
-            l_spec = importlib.util.spec_from_file_location(lang_name, py_module_path)
-            l_mod = importlib.util.module_from_spec(l_spec)
-            l_spec.loader.exec_module(l_mod)
+                # Dynamically load the Python module
+                l_spec = importlib.util.spec_from_file_location(lang_name, py_module_path)
+                l_mod = importlib.util.module_from_spec(l_spec)
+                l_spec.loader.exec_module(l_mod)
 
-            l_template = l_mod.template
+                l_template = l_mod.template
 
-            # There's no direct equivalent to Object.freeze() in Python,
-            # but we trust that we won't modify 'template'.
-            for source, expected in template.items():
-                # translator = Translation(lang_name)
-                assert Translation(l_template).translate(expected) == source
+                # There's no direct equivalent to Object.freeze() in Python,
+                # but we trust that we won't modify 'template'.
+                for source, expected in template.items():
+                    with subtests.test(msg="custom message", l_template=l_template, expected=expected, source=source):
+                        assert Translation(l_template).translate(expected) == source

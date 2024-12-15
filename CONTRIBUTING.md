@@ -1,54 +1,61 @@
 Contributing Translations
 ---------------
 
-The API (and therefore this module as well) is written in JavaScript, and meant
-to be used as a [Node.JS][1] [module][2]. Knowledge of that environment is
+The API (and therefore this module as well) is written in [Python][1]. Knowledge of that environment is
 required in order to contribute to this software, but this document will do its
 best to provide a crash-course for developers that are not familiar with Node.
 
-[1]: http://nodejs.org/
-[2]: http://nodejs.org/api/modules.html
+[1]: https://www.python.org/
 
 Getting Started
 ---------------
 
-### Install Node
+### Install Python
 
-You will need to have [Node.JS][1] installed. You can check to see whether it
-is installed by running:
+You will need to have [Python][1] installed. You can check to see whether it is installed by running:
 
-    $ node -v
-    v23.0.0
+    $ python -V or python3 -V
+    v3.10.12
 
-If the command gives an error message, you should
-install Node from the Node.JS website and try again.
+If the command gives an error message, you should re-install Python and try again.
 
 ### Install Dependencies
 
 While this package requires no dependencies to run in production, if you want
-to develop against it you will need the testing library [Mocha][3]. Installing
+to develop against it you will need the testing library [Pytest][2]. Installing
 it is simple:
 
-    $ cd /path/to/translations
-    $ npm install
+    $ python3 -m pip install  -r requirements.txt
 
-[NPM][4] is the Node Package Manager, and is part of the Node software
-distribution. The above command will create the directory `node_modules` which
-will contain the testing library. After this, you can verify that everything is
+[pip][4] is the Python Package Manager, and is part of the Python software
+distribution. The above command will install the modules used for testing. After this, you can verify that everything is
 working by running the tests:
 
-    $ npm test
+    ======================================================================================== test session starts ========================================================================================
+    platform linux -- Python 3.10.12, pytest-8.3.4, pluggy-1.5.0
+    plugins: anyio-4.6.0, cov-6.0.0, subtests-0.14.1
+    collected 18 items                                                                                                                                                                                  
     
-    > translations@2.0.0 test /path/to/translations
-    > mocha --reporter dot --check-leaks
-      
-      ․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․․
-      [...]
+    test.py .................,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,.
 
-      2335 passing (732ms)
+    ---------- coverage: platform linux, python 3.10.12-final-0 ----------
+    Name                 Stmts   Miss  Cover
+    ----------------------------------------
+    lib/lang/en.py          46      0   100%
+    lib/lang/fr.py          53      5    91%
+    lib/translation.py      56      7    88%
+    test.py                 76      1    99%
+    test_cases/en.py         1      0   100%
+    test_cases/fr.py         1      0   100%
+    ----------------------------------------
+    TOTAL                  233     13    94%
 
-[3]: http://mochajs.org/
-[4]: https://npmjs.org/
+
+    ============================================================================== 18 passed, 154 subtests passed in 0.35s ==============================================================================
+
+
+[2]: https://docs.pytest.org/en/stable/
+[3]: https://pip.pypa.io/en/stable/
 
 Input Format
 ------------
