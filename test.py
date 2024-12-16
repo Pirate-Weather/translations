@@ -144,7 +144,9 @@ def test_languages(subtests):
                 py_module_path = os.path.join(lang_dir, lang_name + ".py")
 
                 # Dynamically load the Python module
-                l_spec = importlib.util.spec_from_file_location(lang_name, py_module_path)
+                l_spec = importlib.util.spec_from_file_location(
+                    lang_name, py_module_path
+                )
                 l_mod = importlib.util.module_from_spec(l_spec)
                 l_spec.loader.exec_module(l_mod)
 
@@ -153,5 +155,10 @@ def test_languages(subtests):
                 # There's no direct equivalent to Object.freeze() in Python,
                 # but we trust that we won't modify 'template'.
                 for source, expected in template.items():
-                    with subtests.test(msg="custom message", l_template=l_template, expected=expected, source=source):
+                    with subtests.test(
+                        msg="custom message",
+                        l_template=l_template,
+                        expected=expected,
+                        source=source,
+                    ):
                         assert Translation(l_template).translate(expected) == source
