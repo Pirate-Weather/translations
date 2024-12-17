@@ -16,7 +16,9 @@ def join_with_shared_prefix(a, b, joiner):
 
     # ...except whitespace! We need that whitespace!
     # Move back until we hit a space or start of string
-    while i > 0 and (i > len(b) or (i <= len(b) and b[i - 1] != " ")): # pragma: no cover
+    while i > 0 and (
+        i > len(b) or (i <= len(b) and b[i - 1] != " ")
+    ):  # pragma: no cover
         i -= 1
 
     return a + joiner + b[i:]

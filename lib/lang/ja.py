@@ -2,11 +2,11 @@ def join_with_shared_prefix(a, b, joiner):
     i = 0
 
     # Find the shared prefix length where characters match
-    while i != len(a) and i != len(b) and ord(a[i]) == ord(b[i]): # pragma: no cover
+    while i != len(a) and i != len(b) and ord(a[i]) == ord(b[i]):  # pragma: no cover
         i += 1
 
     # Move back to the last space character if needed
-    while i > 0 and a[i - 1] != " ": # pragma: no cover
+    while i > 0 and a[i - 1] != " ":  # pragma: no cover
         i -= 1
 
     # Return the concatenated result
