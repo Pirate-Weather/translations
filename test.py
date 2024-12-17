@@ -133,7 +133,7 @@ def test_languages(subtests):
                 spec.loader.exec_module(mod)
 
                 # `template` must be defined inside the Python module
-                if not hasattr(mod, "cases"):
+                if not hasattr(mod, "cases"): # pragma: no cover
                     raise Exception(f"No 'cases' found in {lang_name}.py")
 
                 template = mod.cases
