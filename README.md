@@ -4,8 +4,8 @@ Pirate Weather API Translation Module
 Introduction
 ------------
 
-The [Pirate Weather API][1] has, since version 2.5, included a [module for
-producing textual weather summaries][2] from its weather data.  These summaries
+The [Pirate Weather API][1] has, since version 2.5, included a module for
+producing textual weather summaries from its weather data.  These summaries
 have always been in English (since that's the only language we know) and have
 always been procedurally generated (since there are so many possible weather
 conditions). Procedural generation makes translating these summaries into other
@@ -14,7 +14,6 @@ lookup to replace an English sentence with one of a different language—becomes
 impractical, requiring a *very* large table to support!
 
 [1]: https://pirateweather.net/en/latest/
-[2]: http://www.kickstarter.com/projects/jackadam/dark-sky-hyperlocal-weather-prediction-and-visuali/posts/141049
 
 This software module was developed in order to work around these issues. We are
 modifying the Pirate Weather API text summary code to generate a machine-readable
@@ -351,8 +350,8 @@ in English, respectively.
 *   `"light-wind"`: Represents light wind at a location. (15 mph (~24.14 km/h) or greater)
 *   `"medium-wind"`: Represents moderate wind at a location. (~22.37 mph (36 km/h) or greater)
 *   `"heavy-wind"`: Represents strong wind at a location. (40 mph (~64.37 km/h) or greater)
-*   `"low-humidity"`: Represents when the air is unusually dry.
-*   `"high-humidity"`: Represents when the air is unusually humid.
+*   `"low-humidity"`: Represents when the humidity is below 15%
+*   `"high-humidity"`: Represents when the humidity is above 95% and the air temperature is above 20C (68F).
 *   `"fog"`: Represents when there is less than approximately 0.62 miles (1 kilometers) of
     visibility.
 *   `"very-light-clouds"`: Represents when clouds cover more less than 37.5% of the sky.
