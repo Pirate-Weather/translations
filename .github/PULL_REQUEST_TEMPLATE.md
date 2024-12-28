@@ -13,4 +13,5 @@
 - Link to documentation pull request in the API repo:
 - [ ] Tests have been added for the new language
 - [ ] Tests pasts locally. **Your pull request won't be merged unless tests pass**
-- [ ] Code has been formatted using eslint (`npm run lint`)
+- [ ] Code has been linted (`python3 -m ruff check . --fix`)
+- [ ] Code has been formatted using the ruff formatter (`python3 -m ruff format .`)
