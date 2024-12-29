@@ -27,7 +27,7 @@ it is simple:
 
     $ python3 -m pip install  -r requirements.txt
 
-[pip][4] is the Python Package Manager, and is part of the Python software
+[pip][3] is the Python Package Manager, and is part of the Python software
 distribution. The above command will install the modules used for testing. After this, you can verify that everything is
 working by running the tests:
 
@@ -70,7 +70,7 @@ the sentence above, `"light-wind"` represents the English term "breezy",
 
 In this way, the meaning (in English) of any given (machine-readable)
 expression is intended to be fairly intuitive. However, a complete description
-of the input format is given below in Appendix A anyway.
+of the input format is given in [Appendix A](https://github.com/Pirate-Weather/translations?tab=readme-ov-file#appendix-a-pirate-weather-summary-format) anyway.
 
 [7]: https://en.wikipedia.org/wiki/S-expression
 
@@ -82,22 +82,22 @@ Adding a Translation
 There is one translation submodule per language, all found in the `/lib/lang`
 directory. (Any source files in that directory are automatically loaded by the
 library at run-time, so nothing further needs to be done once the file is
-created.) Each submodule exports a JavaScript object, representing a collection
+created.) Each submodule is a Python object, representing a collection
 of *translation templates*. An expression (as described above) will get looked
 up in the object and translated as the object's value dictates, recursively as
 necessary.
 
 For example, suppose we have the following object:
 
-    {
-      "very-light-rain": "drizzle",
-      "minutes": function(n) {
-        return n + " minutes";
-      },
-      "starting-in": function(rain, time) {
-        return rain + " starting in " + time;
+      template = {
+          "very-light-rain": "drizzle",
       }
-    }
+      
+      def minutes_function(stack, n):
+          return n + " minutes"
+
+      def starting_in_function(stack, rain, time):
+          return rain + " starting in " + time
 
 And the expression noted above:
 
@@ -134,7 +134,7 @@ Any arbitrary Python code may be used in a function, but in many templating
 scenarios, only simple string concatenation is necessary. In these cases, a
 shortcut syntax is also allowed:
 
-    {
+    template = {
       "very-light-rain": "drizzle",
       "minutes": "$1 minutes",
       "starting-in": "$1 starting in $2"
@@ -143,9 +143,9 @@ shortcut syntax is also allowed:
 The [sigiled][8] expressions are replaced with the numbered argument to the
 function (`$1` with the first argument, `$2` with the second, and so on).
 
-Finally, if you need the extra power, each function's `this` parameter is set
+Finally, if you need the extra power, each function's `stack` parameter is set
 to an array representing the called function's position in the expression tree.
-For example, in the example above, the `"minutes"` function is passed `this`
+For example, in the example above, the `"minutes"` function is passed `stack`
 with a value of `["starting-in", "minutes"]` since `"minutes"` is a child of
 the `"starting-in"` template. (This is handy for languages like Dutch or German
 where, I hear, that the ordering of words are important.)
