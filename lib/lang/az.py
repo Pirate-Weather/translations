@@ -14,7 +14,7 @@ def through_function(stack, a, b):
 
 
 def parenthetical_function(stack, a, b):
-    return f'{a} ({b}{" qar)" if a == "qarışıq yağış" else ")"}'
+    return f"{a} ({b}{' qar)' if a == 'qarışıq yağış' else ')'}"
 
 
 def until_function(stack, condition, period):
