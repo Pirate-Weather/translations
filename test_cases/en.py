@@ -30,12 +30,12 @@ cases = {
     "Possible Heavy Sleet": ["title", "possible-heavy-sleet"],
     "Possible Snow": ["title", "possible-medium-snow"],
     "Possible Heavy Snow": ["title", "possible-heavy-snow"],
-    "Possible Freezing Drizzle": ["title", "possible-freezing-drizzle"],
-    "Freezing Drizzle": ["title", "freezing-drizzle"],
+    "Possible Freezing Drizzle": ["title", "possible-very-light-freezing-rain"],
+    "Freezing Drizzle": ["title", "very-light-freezing-rain"],
     "Possible Light Freezing Rain": ["title", "possible-light-freezing-rain"],
     "Light Freezing Rain": ["title", "light-freezing-rain"],
-    "Possible Freezing Rain": ["title", "possible-freezing-rain"],
-    "Freezing Rain": ["title", "freezing-rain"],
+    "Possible Freezing Rain": ["title", "possible-medium-freezing-rain"],
+    "Freezing Rain": ["title", "medium-freezing-rain"],
     "Possible Heavy Freezing Rain": ["title", "possible-heavy-freezing-rain"],
     "Heavy Freezing Rain": ["title", "heavy-freezing-rain"],
     "Possible Hail": ["title", "possible-hail"],
@@ -245,5 +245,66 @@ cases = {
     "Next hour forecasts are unavailable due to all nearby radar stations being offline.": [
         "sentence",
         ["next-hour-forecast-status", "unavailable", "station-offline"],
+    ],
+    "Drizzle and Thunderstorms": ["title", ["and", "very-light-rain", "thunderstorm"]],
+    "Snow and Thunderstorms": ["title", ["and", "medium-snow", "thunderstorm"]],
+    "Hail and Thunderstorms": ["title", ["and", "hail", "thunderstorm"]],
+    "Light Freezing Rain (with a Chance of 2–4 in. of Snow)": [
+        "title",
+        ["parenthetical", "light-freezing-rain", ["inches", ["range", 2, 4]]],
+    ],
+    "Possible thunderstorms and hail in the evening.": [
+        "sentence",
+        [
+            "during",
+            ["and", "possible-thunderstorm", "hail"],
+            "evening",
+        ],
+    ],
+    "Freezing drizzle throughout the day.": [
+        "sentence",
+        [
+            "for-day",
+            "very-light-freezing-rain",
+        ],
+    ],
+    "Freezing rain today and Sunday, with high temperatures peaking at 3°C on Wednesday.": [
+        "sentence",
+        [
+            "with",
+            ["during", "medium-freezing-rain", ["and", "today", "sunday"]],
+            ["temperatures-peaking", ["celsius", 3], "wednesday"],
+        ],
+    ],
+    "Possible thunderstorms over the weekend, with high temperatures rising to 104°F next Monday.": [
+        "sentence",
+        [
+            "with",
+            ["over-weekend", "possible-thunderstorm"],
+            ["temperatures-rising", ["fahrenheit", 104], "next-monday"],
+        ],
+    ],
+    "Thunderstorms for the hour.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Hail starting in 5 min., stopping 45 min. later.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Heavy freezing rain stopping in 10 min., starting again 32 min. later.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Freezing drizzle starting in 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
     ],
 }
