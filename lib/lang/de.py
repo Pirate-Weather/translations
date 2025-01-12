@@ -146,7 +146,7 @@ template = {
     "possible-light-freezing-rain": "leichter gefrierender Regen möglich",
     "light-freezing-rain": "leichter gefrierender Regen",
     "possible-medium-freezing-rain": "gefrierender Regen möglich",
-    "medium-freezing-rain": "freezing Regen",
+    "medium-freezing-rain": "gefrierender Regen",
     "possible-heavy-freezing-rain": "starker gefrierender Regen möglich",
     "heavy-freezing-rain": "starker gefrierender Regen",
     "possible-hail": "Hagel möglich",

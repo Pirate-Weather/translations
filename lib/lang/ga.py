@@ -62,7 +62,7 @@ template = {
     "possible-light-freezing-rain": "seans ar fearthainn reo éadrom",
     "light-freezing-rain": "fearthainn reo éadrom",
     "possible-medium-freezing-rain": "seans ar fearthainn reo",
-    "medium-freezing-rain": "freezing fearthainn",
+    "medium-freezing-rain": "fearthainn reo",
     "possible-heavy-freezing-rain": "seans ar fearthainn reo throm",
     "heavy-freezing-rain": "fearthainn reo throm",
     "possible-hail": "seans ar cailleach",

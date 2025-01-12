@@ -115,7 +115,7 @@ template = {
     "possible-light-freezing-rain": "πιθανή ελαφριά παγωμένη βροχή",
     "light-freezing-rain": "ελαφριά παγωμένη βροχή",
     "possible-medium-freezing-rain": "πιθανή παγωμένη βροχή",
-    "medium-freezing-rain": "freezing βροχή",
+    "medium-freezing-rain": "παγωμένη βροχή",
     "possible-heavy-freezing-rain": "πιθανή ισχυρή παγωμένη βροχή",
     "heavy-freezing-rain": "ισχυρή παγωμένη βροχή",
     "possible-hail": "πιθανή χαλάζι",

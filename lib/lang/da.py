@@ -125,7 +125,7 @@ template = {
     "possible-light-freezing-rain": "mulighed for let frysende regn",
     "light-freezing-rain": "let frysende regn",
     "possible-medium-freezing-rain": "mulighed for frysende regn",
-    "medium-freezing-rain": "freezing regn",
+    "medium-freezing-rain": "frysende regn",
     "possible-heavy-freezing-rain": "mulighed for kraftige frysende regn",
     "heavy-freezing-rain": "kraftig frysende regn",
     "possible-hail": "mulighed for hagl",

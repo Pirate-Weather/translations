@@ -117,7 +117,7 @@ template = {
     "possible-medium-snow": "възможна снеговалеж",
     "possible-heavy-snow": "възможна силен снеговалеж",
     "possible-very-light-freezing-rain": "възможна замразяване ръмеж",
-    "very-light-freezing-rain": "freezing ръмеж",
+    "very-light-freezing-rain": "замразяване ръмеж",
     "possible-light-freezing-rain": "възможна слаб замразяване дъжд",
     "light-freezing-rain": "слаб замразяване дъжд",
     "possible-medium-freezing-rain": "възможна замразяване дъжд",
