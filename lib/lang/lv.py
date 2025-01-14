@@ -131,7 +131,7 @@ template = {
     "possible-medium-sleet": "iespējams slapjš sniegs",
     "possible-heavy-sleet": "iespējams stiprs slapjš sniegs",
     "possible-medium-snow": "iespējams sniegs",
-    "possible-heavy-snow": "iespējams heavy sniegs",
+    "possible-heavy-snow": "iespējams stiprs sniegs",
     "possible-very-light-freezing-rain": "iespējams sasalstošs smidzinošs lietus",
     "very-light-freezing-rain": "sasalstošs smidzinošs lietus",
     "possible-light-freezing-rain": "iespējams neliels sasalstošs lietus",

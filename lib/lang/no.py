@@ -107,7 +107,7 @@ template = {
     "possible-light-freezing-rain": "sjanse for lett underkjølt regn",
     "light-freezing-rain": "lett underkjølt regn",
     "possible-medium-freezing-rain": "sjanse for underkjølt regn",
-    "medium-freezing-rain": "underkjølt rain",
+    "medium-freezing-rain": "underkjølt regn",
     "possible-heavy-freezing-rain": "sjanse for kraftig underkjølt regn",
     "heavy-freezing-rain": "kraftig underkjølt regn",
     "possible-hail": "sjanse for hagl",

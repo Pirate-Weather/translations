@@ -51,7 +51,7 @@ template = {
     "possible-light-freezing-rain": "მოსალოდნელია მცირე გაყინული წვიმა",
     "light-freezing-rain": "მცირე გაყინული წვიმა",
     "possible-medium-freezing-rain": "მოსალოდნელია გაყინული წვიმა",
-    "medium-freezing-rain": "freezing წვიმა",
+    "medium-freezing-rain": "გაყინული წვიმა",
     "possible-heavy-freezing-rain": "მოსალოდნელია ძლიერი გაყინული წვიმა",
     "heavy-freezing-rain": "ძლიერი გაყინული წვიმა",
     "possible-hail": "მოსალოდნელია სეტყვა",
