@@ -92,7 +92,7 @@ template = {
     "possible-medium-sleet": "líkur á slydda",
     "possible-heavy-sleet": "líkur á mikil slydda",
     "possible-medium-snow": "líkur á snjókoma",
-    "possible-heavy-snow": "líkur á heavy snjókoma",
+    "possible-heavy-snow": "líkur á mikil snjókoma",
     "possible-very-light-freezing-rain": "líkur á ískalt súld",
     "very-light-freezing-rain": "ískalt súld",
     "possible-light-freezing-rain": "líkur á smávægileg ískalt rigning",

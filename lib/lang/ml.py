@@ -37,7 +37,7 @@ template = {
     "possible-medium-snow": "സാധ്യമായ മഞ്ഞ്",
     "possible-heavy-snow": "സാധ്യമായ കനത്ത മഞ്ഞ്",
     "possible-very-light-freezing-rain": "സാധ്യമായ മരവിപ്പിക്കുന്ന ചാറ്റല്‍മഴ",
-    "very-light-freezing-rain": "freezing ചാറ്റല്‍മഴ",
+    "very-light-freezing-rain": "മരവിപ്പിക്കുന്ന ചാറ്റല്‍മഴ",
     "possible-light-freezing-rain": "സാധ്യമായ നേരിയ മരവിപ്പിക്കുന്ന മഴ",
     "light-freezing-rain": "നേരിയ മരവിപ്പിക്കുന്ന മഴ",
     "possible-medium-freezing-rain": "സാധ്യമായ മരവിപ്പിക്കുന്ന മഴ",
