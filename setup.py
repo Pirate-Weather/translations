@@ -27,7 +27,7 @@ setup(
     include_package_data=True,  # Include package data files
     package_data={
         "pirateweather_translations.lang": ["*.py"],  # Include all .py files in lang/
-    },    
+    },
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
 )
