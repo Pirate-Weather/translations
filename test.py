@@ -118,7 +118,7 @@ def test_languages(subtests):
     # Iterate over files in lang directory
     for filename in os.listdir(test_dir):
         with subtests.test(msg="custom message", filename=filename):
-            if filename.endswith(".py") and filename != "__init__.py":
+            if filename.endswith(".py"):
                 match = re.match(r"^([^.].*)\.py$", filename)
                 # Extract the language name (e.g. 'en', 'fr', etc.)
                 lang_name = match.group(1)
