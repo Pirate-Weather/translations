@@ -22,8 +22,13 @@ setup(
     keywords="weather API pirateweather translations",
     url=repo_url,
     download_url=f"{repo_url}/archive/{__version__}.tar.gz",
-    packages=find_packages(include=["pirateweather_translations", "pirateweather_translations.*"]),
-    py_modules=["pirateweather_translations.translation", "pirateweather_translations.dynamic_loader"],    
+    packages=find_packages(
+        include=["pirateweather_translations", "pirateweather_translations.*"]
+    ),
+    py_modules=[
+        "pirateweather_translations.translation",
+        "pirateweather_translations.dynamic_loader",
+    ],
     include_package_data=True,  # Include package data files
     package_data={
         "pirateweather_translations.lang": ["*.py"],  # Include all .py files in lang/
