@@ -138,7 +138,7 @@ def test_languages(subtests):
 
                 template = mod.cases
 
-                lang_dir = os.path.join(os.path.dirname(__file__), "lib", "lang")
+                lang_dir = os.path.join(os.path.dirname(__file__), "pirateweather_translations", "lang")
                 # Construct the corresponding Python module path.
                 # Here we assume each .js has been replaced by a .py file with the same base name.
                 py_module_path = os.path.join(lang_dir, lang_name + ".py")
