@@ -2,7 +2,7 @@ import pytest
 import os
 import re
 import importlib.util
-from lib.translation import Translation
+from pirateweather_translations.translation import Translation
 
 
 @pytest.fixture

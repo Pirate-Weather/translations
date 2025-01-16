@@ -4,7 +4,7 @@ import os
 
 from setuptools import find_packages, setup
 
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 
 
 with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.md")) as f:
@@ -22,7 +22,8 @@ setup(
     keywords="weather API pirateweather translations",
     url=repo_url,
     download_url=f"{repo_url}/archive/{__version__}.tar.gz",
-    packages=find_packages(),
+    packages=find_packages(where="pirateweather_translations"),
+    package_dir={"": "pirateweather_translations"},
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
 )

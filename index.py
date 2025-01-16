@@ -1,10 +1,10 @@
 import os
 import re
 import importlib.util
-from lib.translation import Translation
+from pirateweather_translations.translation import Translation
 
 # The directory containing language template files
-lang_dir = os.path.join(os.path.dirname(__file__), "lib", "lang")
+lang_dir = os.path.join(os.path.dirname(__file__), "pirateweather_translations", "lang")
 
 exports = {}
 
