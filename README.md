@@ -282,52 +282,54 @@ Snow intensities are (also very approximately) one-third of these. (That is,
 `"heavy-snow"` is more like 3 mm/hr.) However, these are only intended as a
 rough guide, as these values change over time as we fine-tune our system.
 
+The `"possible-X"` text is added to the summary if the precipitation intensity is below 0.02 mm/h or if the hourly/daily possibility of precipitation is below 25% for the hour or the day.
+
 ##### Generic Types
 
 Generic precipitation forms are used when we don't have information regarding
 the exact type of precipitation expected. (This is a rare occurance.)
 
-*   `"possible-very-light-precipitation"`
-*   `"very-light-precipitation"`
-*   `"possible-light-precipitation"`
-*   `"light-precipitation"`
-*   `"medium-precipitation"`
-*   `"heavy-precipitation"`
+*   `"possible-very-light-precipitation"` (Usually called "possible light precipitation" in English.)
+*   `"very-light-precipitation"` (Usually called "light precipitation" in English.)
+*   `"possible-light-precipitation"` (Usually called "possible light precipitation" in English.)
+*   `"light-precipitation"` (Usually called "light precipitation" in English.)
+*   `"medium-precipitation"` (Usually called "precipitation" in English.)
+*   `"heavy-precipitation"` (Usually called "heavy precipitation" in English.)
 
 ##### Rain Types
 
 Rain precipitation forms represent liquid precipitation.
 
-*   `"possible-very-light-rain"`
-*   `"very-light-rain"`
-*   `"possible-light-rain"`
-*   `"light-rain"`
-*   `"medium-rain"`
-*   `"heavy-rain"`
+*   `"possible-very-light-rain"` (Usually called "possible drizzle" in English.)
+*   `"very-light-rain"` (Usually called "drizzle" in English.)
+*   `"possible-light-rain"` (Usually called "possible light rain" in English.)
+*   `"light-rain"` (Usually called "light rain" in English.)
+*   `"medium-rain"` (Usually called "rain" in English.)
+*   `"heavy-rain"` (Usually called "heavy rain" in English.)
 
 ##### Sleet Types
 
 Sleet precipitation forms represent sleet, freezing rain, or ice pellets, of
 the sort that generally occur in winter when temperatures are around freezing.
 
-*   `"possible-very-light-sleet"`
-*   `"very-light-sleet"`
-*   `"possible-light-sleet"`
-*   `"light-sleet"`
-*   `"medium-sleet"`
-*   `"heavy-sleet"`
+*   `"possible-very-light-sleet"` (Usually called "possible light sleet" in English.)
+*   `"very-light-sleet"` (Usually called "light sleet" in English.)
+*   `"possible-light-sleet"` (Usually called "possible light sleet" in English.)
+*   `"light-sleet"` (Usually called "light sleet" in English.)
+*   `"medium-sleet"` (Usually called "sleet" in English.)
+*   `"heavy-sleet"` (Usually called "heavy sleet" in English.)
 
 ##### Snow Types
 
 Snow precipitation forms represent solid precipitation in the form of
 snowflakes.
 
-*   `"possible-very-light-snow"`
-*   `"very-light-snow"`
-*   `"possible-light-snow"`
-*   `"light-snow"`
-*   `"medium-snow"`
-*   `"heavy-snow"`
+*   `"possible-very-light-snow"` (Usually called "possible flurries" in English.)
+*   `"very-light-snow"` (Usually called "flurries" in English.)
+*   `"possible-light-snow"` (Usually called "possible light snow" in English.)
+*   `"light-snow"` (Usually called "light snow" in English.)
+*   `"medium-snow"` (Usually called "snow" in English.)
+*   `"heavy-snow"` (Usually called "heavy snow" in English.)
 
 ##### Snow Accumulation
 
