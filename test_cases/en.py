@@ -47,6 +47,7 @@ cases = {
     "Partly Cloudy": ["title", "light-clouds"],
     "Mostly Cloudy": ["title", "medium-clouds"],
     "Overcast": ["title", "heavy-clouds"],
+    "Not Available": ["title", "not-available"],
     "Dry and Breezy": ["title", ["and", "low-humidity", "light-wind"]],
     "Drizzle and Dangerously Windy": [
         "title",
