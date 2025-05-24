@@ -185,7 +185,7 @@ template = {
     "temperatures-falling": "tymheredd yn gostwng i $1 $2",
     "title": title_function,
     "sentence": sentence_function,
-    "next-hour-forecast-status": "Dydi rhagolygon yr awr nesa $1 oherwydd $2.",
+    "next-hour-forecast-status": "Dydi rhagolygon yr awr nesa $1 oherwydd $2",
     "unavailable": "ddim ar gael",
     "temporarily-unavailable": "ddim ar gael ar hyn o bryd",
     "partially-unavailable": "ddim yn gyflawn",
