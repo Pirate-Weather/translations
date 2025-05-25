@@ -144,10 +144,10 @@ template = {
     "title": "$1",
     # The period looks weird in Korean
     "sentence": "$1",
-    "next-hour-forecast-status": "next hour forecasts are $1 due to $2",
-    "unavailable": "unavailable",
-    "temporarily-unavailable": "temporarily unavailable",
-    "partially-unavailable": "partially unavailable",
-    "station-offline": "all nearby radar stations being offline",
-    "station-incomplete": "gaps in coverage from nearby radar stations",
+    "next-hour-forecast-status": "다음 시간 예측은 $2로 인해 $1입니다",
+    "unavailable": "이용할 수 없는",
+    "temporarily-unavailable": "일시적으로 사용할 수 없음",
+    "partially-unavailable": "부분적으로 이용 불가",
+    "station-offline": "근처 모든 레이더 스테이션이 오프라인 상태임",
+    "station-incomplete": "근처 레이더 스테이션의 적용 범위에 격차가 있음",
 }

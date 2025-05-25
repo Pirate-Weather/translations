@@ -234,8 +234,9 @@ template = {
     "title": title_function,
     "sentence": sentence_function,
     "unavailable": "unavailable",
-    "temporarily-unavailable": "temporarily unavailable",
-    "partially-unavailable": "partially unavailable",
-    "station-offline": "all nearby radar stations being offline",
-    "station-incomplete": "gaps in coverage from nearby radar stations",
+    "next-hour-forecast-status": "прогнозы на следующий час $1 из-за $2",
+    "temporarily-unavailable": "временно недоступно",
+    "partially-unavailable": "частично недоступно",
+    "station-offline": "все близлежащие радиолокационные станции отключены",
+    "station-incomplete": "пробелы в покрытии от близлежащих радиолокационных станций",
 }
