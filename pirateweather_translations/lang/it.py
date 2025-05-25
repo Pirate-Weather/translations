@@ -216,7 +216,7 @@ template = {
     "temperatures-falling": "temperature in diminuzione fino a $1 $2",
     "title": title_function,
     "sentence": sentence_function,
-    "next-hour-forecast-status": "le previsioni per la prossima ora sono di $1 a causa di $2,
+    "next-hour-forecast-status": "le previsioni per la prossima ora sono di $1 a causa di $2",
     "unavailable": "non disponibile",
     "temporarily-unavailable": "temporaneamente non disponibile",
     "partially-unavailable": "parzialmente non disponibile",

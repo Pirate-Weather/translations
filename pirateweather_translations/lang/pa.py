@@ -118,7 +118,7 @@ template = {
     "title": "$1",
     "sentence": "$1",
     "parenthetical": "$1 ($2)",
-    "next-hour-forecast-status": "ਅਗਲੇ ਘੰਟੇ ਦੇ ਅਨੁਮਾਨ $2 ਦੇ ਕਾਰਨ $1 ਹਨ।,
+    "next-hour-forecast-status": "ਅਗਲੇ ਘੰਟੇ ਦੇ ਅਨੁਮਾਨ $2 ਦੇ ਕਾਰਨ $1 ਹਨ।",
     "unavailable": "ਅਣਉਪਲਬਧ",
     "temporarily-unavailable": "ਅਸਥਾਈ ਤੌਰ 'ਤੇ ਅਣਉਪਲਬਧ",
     "partially-unavailable": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
