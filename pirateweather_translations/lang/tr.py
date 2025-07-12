@@ -200,4 +200,7 @@ template = {
     "partially-unavailable": "kısmen kullanılamıyor",
     "station-offline": "yakındaki tüm radar istasyonlarının çevrimdışı olması",
     "station-incomplete": "yakındaki tüm radar istasyonlarının kapsama alanı dışında olması",
+    "smoke": "duman",
+    "haze": "pus",
+    "mist": "sis",
 }

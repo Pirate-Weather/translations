@@ -145,4 +145,7 @@ template = {
     "partially-unavailable": "ar fáil go hiomlán",
     "station-offline": "gach stáisiún radair atá in aice láimhe as líne",
     "station-incomplete": "bearnaí san fhaisnéis ó na stáisiúin radair atá in aice láimhe",
+    "smoke": "deatach",
+    "haze": "ceo",
+    "mist": "ceobhrán",
 }

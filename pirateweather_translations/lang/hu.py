@@ -176,4 +176,7 @@ template = {
     "partially-unavailable": "részben nem elérhető",
     "station-offline": "minden közeli radarállomás offline állapotban van",
     "station-incomplete": "hiányos lefedettség a közeli radarállomásoktól",
+    "smoke": "füst",
+    "haze": "pára",
+    "mist": "köd",
 }

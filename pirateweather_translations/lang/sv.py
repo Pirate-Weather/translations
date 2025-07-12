@@ -259,4 +259,7 @@ template = {
     "partially-unavailable": "delvis otillgänglig",
     "station-offline": "alla närliggande radarstationer är offline",
     "station-incomplete": "luckor i täckningen från närliggande radarstationer",
+    "smoke": "rök",
+    "haze": "dis",
+    "mist": "dimma",
 }

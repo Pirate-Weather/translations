@@ -153,4 +153,7 @@ template = {
     "partially-unavailable": "一部利用不可",
     "station-offline": "近くのレーダーステーションはすべてオフライン",
     "station-incomplete": "近くのレーダー基地からのカバー範囲のギャップ",
+    "smoke": "煙",
+    "haze": "もや",
+    "mist": "霧",
 }

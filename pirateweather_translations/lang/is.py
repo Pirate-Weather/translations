@@ -181,4 +181,7 @@ template = {
     "partially-unavailable": "að hluta til ófáanlegt",
     "station-offline": "allar ratsjárstöðvar í nágrenninu eru ótengdar",
     "station-incomplete": "eyður í umfjöllun frá ratsjárstöðvum í nágrenninu",
+    "smoke": "reykur",
+    "haze": "þoka",
+    "mist": "mistur",
 }

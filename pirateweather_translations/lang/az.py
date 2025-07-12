@@ -173,4 +173,7 @@ template = {
     "partially-unavailable": "qismən əlçatmazdır",
     "station-offline": "bütün yaxınlıqdakı radar stansiyaları oflayndır",
     "station-incomplete": "yaxınlıqdakı radar stansiyalarından əhatə dairəsində boşluqlar",
+    "smoke": "tüstü",
+    "haze": "çiskin",
+    "mist": "duman",
 }

@@ -124,4 +124,7 @@ template = {
     "partially-unavailable": "अंशतः अनुपलब्ध",
     "station-offline": "जवळपासचे सर्व रडार स्टेशन ऑफलाइन आहेत.",
     "station-incomplete": "जवळच्या रडार स्टेशनवरील कव्हरेजमधील तफावत",
+    "smoke": "धूळ",
+    "haze": "धुके",
+    "mist": "धुके",
 }

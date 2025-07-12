@@ -210,4 +210,7 @@ template = {
     "partially-unavailable": "partiellement indisponibles",
     "station-offline": "les stations radars voisines sont hors-ligne",
     "station-incomplete": "il y a des lacunes dans la couverture des stations radars voisines",
+    "smoke": "fumée",
+    "haze": "brume",
+    "mist": "brume",
 }

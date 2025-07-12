@@ -217,4 +217,7 @@ template = {
     "partially-unavailable": "osittain saatavilla",
     "station-offline": "kaikki lähellä olevat tutka-asemat ovat offline-tilassa",
     "station-incomplete": "lähialueiden tutka-asemien kattavuusvaje",
+    "smoke": "savu",
+    "haze": "huntu",
+    "mist": "sumu",
 }

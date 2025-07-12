@@ -317,4 +317,7 @@ template = {
     "partially-unavailable": "częściowo niedostępny",
     "station-offline": "wszystkie pobliskie stacje radarowe są offline",
     "station-incomplete": "luki w zasięgu pobliskich stacji radarowych",
+    "smoke": "dym",
+    "haze": "mgła",
+    "mist": "zamglenie",
 }

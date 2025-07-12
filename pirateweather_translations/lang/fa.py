@@ -175,4 +175,7 @@ template = {
     "partially-unavailable": "تا حدی در دسترس نیست",
     "station-offline": "تمام ایستگاه‌های راداری نزدیک آفلاین هستند",
     "station-incomplete": "شکاف در پوشش ایستگاه‌های راداری مجاور",
+    "smoke": "دود",
+    "haze": "غبار",
+    "mist": "مه",
 }

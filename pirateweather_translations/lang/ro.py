@@ -211,4 +211,7 @@ template = {
     "partially-unavailable": "parțial indisponibil",
     "station-offline": "toate stațiile radar din apropiere sunt offline",
     "station-incomplete": "lacune în acoperirea de la stațiile radar din apropiere",
+    "smoke": "fum",
+    "haze": "ceață",
+    "mist": "abur",
 }

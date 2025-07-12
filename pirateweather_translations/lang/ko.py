@@ -150,4 +150,7 @@ template = {
     "partially-unavailable": "부분적으로 이용 불가",
     "station-offline": "근처 모든 레이더 스테이션이 오프라인 상태임",
     "station-incomplete": "근처 레이더 스테이션의 적용 범위에 격차가 있음",
+    "smoke": "연기",
+    "haze": "옅은 안개",
+    "mist": "안개",
 }

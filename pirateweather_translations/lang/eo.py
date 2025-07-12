@@ -220,4 +220,7 @@ template = {
     "partially-unavailable": "parte neatingebla",
     "station-offline": "ĉiuj proksimaj radarstacioj estas senkonektaj",
     "station-incomplete": "breĉoj en kovrado de proksimaj radarstacioj",
+    "smoke": "fumo",
+    "haze": "nebuleto",
+    "mist": "nebulo",
 }

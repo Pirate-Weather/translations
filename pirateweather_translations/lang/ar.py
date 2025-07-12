@@ -164,4 +164,7 @@ template = {
     "partially-unavailable": "غير متوفر جزئيًا",
     "station-offline": "جميع محطات الرادار القريبة غير متصلة بالإنترنت",
     "station-incomplete": "فجوات في التغطية من محطات الرادار القريبة",
+    "smoke": "دخان",
+    "haze": "ضباب",
+    "mist": "شبورة",
 }

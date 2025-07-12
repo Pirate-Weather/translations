@@ -307,4 +307,16 @@ cases = {
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
     ],
+    # Tests for 'smoke'
+    "Smoke": ["title", "smoke"],
+    "Smoke throughout the day.": ["sentence", ["for-day", "smoke"]],
+    "Smoke and Breezy": ["title", ["and", "smoke", "light-wind"]],
+    # Tests for 'haze'
+    "Hazy": ["title", "haze"],
+    "Hazy throughout the day.": ["sentence", ["for-day", "haze"]],
+    "Hazy and Breezy": ["title", ["and", "haze", "light-wind"]],
+    # Tests for 'mist'
+    "Misty": ["title", "mist"],
+    "Misty throughout the day.": ["sentence", ["for-day", "mist"]],
+    "Misty and Breezy": ["title", ["and", "mist", "light-wind"]],
 }

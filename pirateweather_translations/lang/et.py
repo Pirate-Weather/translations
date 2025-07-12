@@ -225,4 +225,7 @@ template = {
     "partially-unavailable": "osaliselt kättesaamatu",
     "station-offline": "kõik lähedalasuvad radarijaamad on võrguühenduseta",
     "station-incomplete": "lähedalasuvate radarijaamade leviala lüngad",
+    "smoke": "suits",
+    "haze": "udu",
+    "mist": "uduvihm",
 }

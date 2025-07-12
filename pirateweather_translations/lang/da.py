@@ -208,4 +208,7 @@ template = {
     "partially-unavailable": "delvist utilgængelig",
     "station-offline": "alle radarstationer i nærheden er offline",
     "station-incomplete": "huller i dækningen fra nærliggende radarstationer",
+    "smoke": "røg",
+    "haze": "dis",
+    "mist": "tåge",
 }

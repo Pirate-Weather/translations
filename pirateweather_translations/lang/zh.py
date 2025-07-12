@@ -158,4 +158,7 @@ template = {
     "partially-unavailable": "部分不可用",
     "station-offline": "附近所有雷達站均處於離線狀態",
     "station-incomplete": "附近雷達站覆蓋範圍的缺口",
+    "smoke": "煙",
+    "haze": "霾",
+    "mist": "薄霧",
 }
