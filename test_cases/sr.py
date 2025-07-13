@@ -2,9 +2,12 @@
 cases = {
     "Vedro": ["title", "clear"],
     "Moguće su veoma slabe padavine": ["title", "possible-very-light-precipitation"],
-    "Slabe padavine": ["title", "very-light-precipitation"],
-    "Moguće su slabe padavine": ["title", "possible-light-precipitation"],
-    "Slabe padavine": ["title", "light-precipitation"],
+    "Veoma slabe padavine": ["title", "very-light-precipitation"],
+    # "Moguće su slabe padavine" already exists and is correct for "possible-light-precipitation"
+    "Slabe padavine": [
+        "title",
+        "light-precipitation",
+    ],  # This was also "very-light-precipitation", corrected to "light-precipitation"
     "Padavine": ["title", "medium-precipitation"],
     "Jake padavine": ["title", "heavy-precipitation"],
     "Moguća je veoma sitna kiša": ["title", "possible-very-light-rain"],
@@ -13,8 +16,14 @@ cases = {
     "Sitna kiša": ["title", "light-rain"],
     "Kiša": ["title", "medium-rain"],
     "Jaka kiša": ["title", "heavy-rain"],
-    "Moguća je veoma slaba susnežica": ["title", "possible-very-light-sleet"],
-    "Veoma slaba susnežica": ["title", "very-light-sleet"],
+    "Moguća je veoma slaba susnežica": [
+        "title",
+        "possible-very-light-sleet",
+    ],  # Corrected from previous discussion
+    "Veoma slaba susnežica": [
+        "title",
+        "very-light-sleet",
+    ],  # Corrected from previous discussion
     "Moguća je slaba susnežica": ["title", "possible-light-sleet"],
     "Slaba susnežica": ["title", "light-sleet"],
     "Susnežica": ["title", "medium-sleet"],
@@ -25,19 +34,26 @@ cases = {
     "Sitan sneg": ["title", "light-snow"],
     "Sneg": ["title", "medium-snow"],
     "Jak sneg": ["title", "heavy-snow"],
-    "Vetrovito": ["title", "medium-wind"],
-    "Opasno vetrovito": ["title", "heavy-wind"],
+    "Slab vetar": ["title", "light-wind"],  # Changed from "Vetrovito"
+    "Umeren vetar": ["title", "medium-wind"],  # Changed from "Vetrovito"
+    "Jak vetar": ["title", "heavy-wind"],  # Changed from "Opasno vetrovito"
     "Maglovito": ["title", "fog"],
     "Pretežno vedro": ["title", "very-light-clouds"],
     "Mestimično oblačno": ["title", "light-clouds"],
     "Pretežno oblačno": ["title", "medium-clouds"],
     "Oblačno": ["title", "heavy-clouds"],
-    "Suvo i vetrovito": ["title", ["and", "low-humidity", "light-wind"]],
-    "Veoma sitna kiša i opasno vetrovito": [
+    "Niska vlažnost i slab vetar": [
+        "title",
+        ["and", "low-humidity", "light-wind"],
+    ],  # Updated humidity and wind
+    "Veoma sitna kiša i jak vetar": [  # Updated wind
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Vlažno i mestimično oblačno": ["title", ["and", "high-humidity", "light-clouds"]],
+    "Visoka vlažnost i mestimično oblačno": [
+        "title",
+        ["and", "high-humidity", "light-clouds"],
+    ],  # Updated humidity
     "Vedro za ovaj sat.": ["sentence", ["for-hour", "clear"]],
     "Veoma sitan sneg počinje za 35 minuta.": [
         "sentence",
@@ -70,12 +86,18 @@ cases = {
         "sentence",
         ["starting", "very-light-sleet", "morning"],
     ],
-    "Vetrovito do večeras.": ["sentence", ["until", "medium-wind", "today-night"]],
+    "Umeren vetar do večeras.": [
+        "sentence",
+        ["until", "medium-wind", "today-night"],
+    ],  # Updated wind
     "Jake padavine do popodne.": [
         "sentence",
         ["until", "heavy-precipitation", "afternoon"],
     ],
-    "Vetrovito popodne.": ["sentence", ["during", "light-wind", "afternoon"]],
+    "Slab vetar popodne.": [
+        "sentence",
+        ["during", "light-wind", "afternoon"],
+    ],  # Updated wind
     "Sneg kasno uveče i sutra ujutro.": [
         "sentence",
         ["during", "medium-snow", ["and", "later-today-evening", "tomorrow-morning"]],
@@ -96,7 +118,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Opasno vetrovito počev od ovog jutra, nastaviće se ovog popodneva, sutra ujutro susnežica.": [
+    "Jak vetar počev od ovog jutra, nastaviće se ovog popodneva, sutra ujutro susnežica.": [  # Updated wind
         "sentence",
         [
             "and",
@@ -113,11 +135,15 @@ cases = {
         "sentence",
         [
             "and",
-            ["starting", "heavy-clouds", "later-today-night"],
+            [
+                "starting",
+                "heavy-clouds",
+                "later-today-night",
+            ],  # Changed from "kasnije noć"
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Večeras suvo, slabe padavine počinju sutra uveče, nastaviće se tokom noći.": [
+    "Večeras niska vlažnost, slabe padavine počinju sutra uveče, nastaviće se tokom noći.": [  # Updated humidity
         "sentence",
         [
             "and",
@@ -242,4 +268,35 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 100], "sunday"],
         ],
     ],
+    "Dim": ["title", "smoke"],
+    "Dim tokom celog dana.": ["sentence", ["for-day", "smoke"]],
+    "Dim ujutro.": ["sentence", ["during", "smoke", "morning"]],
+    "Dim do uveče.": ["sentence", ["until", "smoke", "today-evening"]],
+    "Dim i mestimično oblačno": ["title", ["and", "smoke", "light-clouds"]],
+    "Maglica": ["title", "haze"],  # Changed from "Maglina"
+    "Maglica tokom celog dana.": [
+        "sentence",
+        ["for-day", "haze"],
+    ],  # Changed from "Maglina"
+    "Maglica popodne.": [
+        "sentence",
+        ["during", "haze", "afternoon"],
+    ],  # Changed from "Maglina"
+    "Maglica i visoka vlažnost": [
+        "title",
+        ["and", "haze", "high-humidity"],
+    ],  # Changed from "Maglina i vlažno"
+    "Izmaglica": ["title", "mist"],  # Changed from "Magla"
+    "Izmaglica tokom celog dana.": [
+        "sentence",
+        ["for-day", "mist"],
+    ],  # Changed from "Magla"
+    "Izmaglica tokom noći.": [
+        "sentence",
+        ["during", "mist", "night"],
+    ],  # Changed from "Magla"
+    "Izmaglica i oblačno": [
+        "title",
+        ["and", "mist", "heavy-clouds"],
+    ],  # Changed from "Magla"
 }
