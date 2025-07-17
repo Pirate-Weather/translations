@@ -124,4 +124,7 @@ template = {
     "partially-unavailable": "ਅੰਸ਼ਕ ਤੌਰ 'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ",
     "station-offline": "ਸਾਰੇ ਨੇੜਲੇ ਰਾਡਾਰ ਸਟੇਸ਼ਨ ਔਫਲਾਈਨ ਹਨ",
     "station-incomplete": "ਨੇੜਲੇ ਰਾਡਾਰ ਸਟੇਸ਼ਨਾਂ ਤੋਂ ਕਵਰੇਜ ਵਿੱਚ ਅੰਤਰ",
+    "smoke": "ਧੂੰਆਂ",
+    "haze": "ਧੁੰਦ",
+    "mist": "ਧੁੰਦ",
 }

@@ -161,4 +161,7 @@ template = {
     "partially-unavailable": "djelomično nedostupno",
     "station-offline": "sve obližnje radarske stanice su van mreže",
     "station-incomplete": "praznine u pokrivenosti obližnjih radarskih stanica",
+    "smoke": "dim",
+    "haze": "izmaglica",
+    "mist": "magla",
 }

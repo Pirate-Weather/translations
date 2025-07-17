@@ -241,4 +241,7 @@ template = {
     "partially-unavailable": "gedeeltelijk niet beschikbaar",
     "station-offline": "alle radar stations in de buurt offline zijn",
     "station-incomplete": "de dekking van radar stations in de buurt niet volledig is",
+    "smoke": "rook",
+    "haze": "nevel",
+    "mist": "mist",
 }

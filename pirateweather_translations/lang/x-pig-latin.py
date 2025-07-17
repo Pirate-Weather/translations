@@ -190,4 +190,7 @@ template = {
     "partially-unavailable": "artiallypay unavailableway",
     "station-offline": "allway earbynay adarray tationssay eingbay offlineway",
     "station-incomplete": "apsgay inway overagecay romfay earbynay adarray ationsstay",
+    "smoke": "okesmay",
+    "haze": "azehay",
+    "mist": "istymay",
 }

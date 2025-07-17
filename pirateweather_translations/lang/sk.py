@@ -313,4 +313,7 @@ template = {
     "partially-unavailable": "čiastočne nedostupná",
     "station-offline": "všetky radarové stanice v okolí sú v režime offline",
     "station-incomplete": "vznikli medzery v pokrytí radarovými stanicami v okolí",
+    "smoke": "dym",
+    "haze": "opar",
+    "mist": "hmla",
 }

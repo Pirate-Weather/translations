@@ -82,7 +82,7 @@ template = {
     "light-wind": "微風",
     "medium-wind": "有風",
     "heavy-wind": "推人大風",
-    "low-humidity": "干燥",
+    "low-humidity": "乾燥",
     "high-humidity": "潮濕",
     "fog": "有霧",
     "very-light-clouds": "基本晴朗",
@@ -157,4 +157,7 @@ template = {
     "partially-unavailable": "部分不可用",
     "station-offline": "附近所有雷达站均处于离线状态",
     "station-incomplete": "附近雷达站覆盖范围的缺口",
+    "smoke": "煙",
+    "haze": "霾",
+    "mist": "薄霧",
 }

@@ -32,7 +32,7 @@ cases = {
     "局部多雲": ["title", "light-clouds"],
     "多雲": ["title", "medium-clouds"],
     "多雲轉陰": ["title", "heavy-clouds"],
-    "干燥，微風": ["title", ["and", "low-humidity", "light-wind"]],
+    "乾燥，微風": ["title", ["and", "low-humidity", "light-wind"]],
     "毛毛雨，推人大風": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "潮濕，局部多雲": ["title", ["and", "high-humidity", "light-clouds"]],
     "多雲，可能有雷暴": ["title", ["and", "medium-clouds", "possible-thunderstorm"]],
@@ -117,7 +117,7 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "干燥持續至明晚，少量降水開始於明晚，將持續至明晚。": [
+    "乾燥持續至明晚，少量降水開始於明晚，將持續至明晚。": [
         "sentence",
         [
             "and",
@@ -209,4 +209,17 @@ cases = {
         "title",
         ["parenthetical", "heavy-snow", ["centimeters", ["range", 3, 5]]],
     ],
+    "煙": ["title", "smoke"],
+    "煙將持續一整天。": ["sentence", ["for-day", "smoke"]],
+    "煙持續至早上。": ["sentence", ["during", "smoke", "morning"]],
+    "煙將持續至今晚。": ["sentence", ["until", "smoke", "today-evening"]],
+    "煙，局部多雲": ["title", ["and", "smoke", "light-clouds"]],
+    "霾": ["title", "haze"],
+    "霾將持續一整天。": ["sentence", ["for-day", "haze"]],
+    "霾持續至下午。": ["sentence", ["during", "haze", "afternoon"]],
+    "霾，潮濕": ["title", ["and", "haze", "high-humidity"]],
+    "薄霧": ["title", "mist"],
+    "薄霧將持續一整天。": ["sentence", ["for-day", "mist"]],
+    "薄霧持續至當晚。": ["sentence", ["during", "mist", "night"]],
+    "薄霧，多雲轉陰": ["title", ["and", "mist", "heavy-clouds"]],
 }

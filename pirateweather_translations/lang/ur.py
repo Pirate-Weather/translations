@@ -469,4 +469,7 @@ template = {
     "partially-unavailable": "جزوی طور پر دستیاب نہیں",
     "station-offline": "تمام قریبی ریڈار اسٹیشن آف لائن ہیں۔",
     "station-incomplete": "قریبی ریڈار اسٹیشنوں سے کوریج میں فرق",
+    "smoke": "دھواں",
+    "haze": "دھند",
+    "mist": "دھند",
 }

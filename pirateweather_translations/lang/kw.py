@@ -233,4 +233,7 @@ template = {
     "partially-unavailable": "ankavadow yn rann",
     "station-offline": "pub gorsav radar y'n ranndir dhywarlinen",
     "station-incomplete": "aswaow y'n gorherans dhyworth gorsavow radar y'n ranndir",
+    "smoke": "mog",
+    "haze": "kemygi",
+    "mist": "niwl",
 }

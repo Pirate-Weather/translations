@@ -227,4 +227,7 @@ template = {
     "partially-unavailable": "parsialmente la disponivel",
     "station-offline": "estasaun radar sira ne'ebé besik hotu la iha liña",
     "station-incomplete": "lakuna sira iha kobertura hosi estasaun radar sira ne'ebé besik",
+    "smoke": "ahi-suar",
+    "haze": "rai-rahun",
+    "mist": "kalohan",
 }

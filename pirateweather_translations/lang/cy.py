@@ -191,4 +191,7 @@ template = {
     "partially-unavailable": "ddim yn gyflawn",
     "station-offline": "diffyg gwybodaeth o orsafoedd radar gerllaw",
     "station-incomplete": "bylchau yn narpariaeth gorsafoedd radar gerllaw",
+    "smoke": "mwg",
+    "haze": "niwl",
+    "mist": "llwch",
 }

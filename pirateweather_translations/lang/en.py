@@ -204,4 +204,7 @@ template = {
     "partially-unavailable": "partially unavailable",
     "station-offline": "all nearby radar stations being offline",
     "station-incomplete": "gaps in coverage from nearby radar stations",
+    "smoke": "smoke",
+    "haze": "hazy",
+    "mist": "misty",
 }

@@ -170,4 +170,7 @@ template = {
     "partially-unavailable": "sebagian tidak tersedia",
     "station-offline": "semua stasiun radar terdekat sedang offline",
     "station-incomplete": "kesenjangan dalam jangkauan dari stasiun radar terdekat",
+    "smoke": "asap",
+    "haze": "kabut",
+    "mist": "kabut",
 }

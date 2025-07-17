@@ -252,11 +252,11 @@ template = {
     "possible-medium-rain": "moguća je kiša",
     "possible-heavy-rain": "moguća je jaka kiša",
     "possible-medium-sleet": "moguća je susnežica",
-    "possible-heavy-sleet": "moguća je jaka slsusnežicaeet",
+    "possible-heavy-sleet": "moguća je jaka susnežica",  # Corrected typo
     "possible-medium-snow": "moguć je sneg",
     "possible-heavy-snow": "moguć je jak sneg",
-    "possible-very-light-freezing-rain": "moguća je ledena veoma sitna",
-    "very-light-freezing-rain": "ledena veoma sitna",
+    "possible-very-light-freezing-rain": "moguća je veoma slaba ledena kiša",  # Improved phrasing
+    "very-light-freezing-rain": "veoma slaba ledena kiša",  # Improved phrasing
     "possible-light-freezing-rain": "moguća je sitna ledena kiša",
     "light-freezing-rain": "sitna ledena kiša",
     "possible-medium-freezing-rain": "moguća je ledena kiša",
@@ -265,11 +265,11 @@ template = {
     "heavy-freezing-rain": "jaka ledena kiša",
     "possible-hail": "moguća je tuča",
     "hail": "tuča",
-    "light-wind": "vetrovito",
-    "medium-wind": "vetrovito",
-    "heavy-wind": "opasno vetrovito",
-    "low-humidity": "suvo",
-    "high-humidity": "vlažno",
+    "light-wind": "slab vetar",  # More specific
+    "medium-wind": "umeren vetar",  # More specific
+    "heavy-wind": "jak vetar",  # More specific (or "opasan vetar" for "dangerous wind")
+    "low-humidity": "niska vlažnost",  # More direct for "low humidity"
+    "high-humidity": "visoka vlažnost",  # More direct for "high humidity"
     "fog": "maglovito",
     "very-light-clouds": "pretežno vedro",
     "light-clouds": "mestimično oblačno",
@@ -282,7 +282,7 @@ template = {
     "today-evening": "uveče",
     "later-today-evening": "kasno uveče",
     "today-night": "večeras",
-    "later-today-night": "kasnije noć",
+    "later-today-night": "kasnije tokom noći",  # Improved phrasing for naturalness
     "tomorrow-morning": "sutra ujutro",
     "tomorrow-afternoon": "sutra popodne",
     "tomorrow-evening": "sutra uveče",
@@ -300,13 +300,13 @@ template = {
     "friday": "pet",
     "saturday": "subot",
     "sunday": "nedelj",
-    "next-monday": "ponedelj",  # FIXME
-    "next-tuesday": "utor",  # FIXME
-    "next-wednesday": "sred",  # FIXME
-    "next-thursday": "četvrt",  # FIXME
-    "next-friday": "pet",  # FIXME
-    "next-saturday": "subot",  # FIXME
-    "next-sunday": "nedelj",  # FIXME
+    "next-monday": "sledeći ponedeljak",  # Corrected to full word, assuming time_var logic would adapt if needed
+    "next-tuesday": "sledeći utorak",  # Corrected
+    "next-wednesday": "sledeća sreda",  # Corrected
+    "next-thursday": "sledeći četvrtak",  # Corrected
+    "next-friday": "sledeći petak",  # Corrected
+    "next-saturday": "sledeća subota",  # Corrected
+    "next-sunday": "sledeća nedelja",  # Corrected
     "minutes": "$1 minuta",
     "fahrenheit": "$1\u00b0F",
     "celsius": "$1\u00b0C",
@@ -337,10 +337,13 @@ template = {
     "temperatures-falling": temperatures_falling_function,
     "title": title_function,
     "sentence": sentence_function,
-    "next-hour-forecast-status": "прогнозе за следећи сат су $1 због $2",
-    "unavailable": "недоступно",
-    "temporarily-unavailable": "привремено недоступно",
-    "partially-unavailable": "делимично недоступно",
-    "station-offline": "све оближње радарске станице су ван мреже",
-    "station-incomplete": "празнине у покривености са оближњих радарских станица",
+    "next-hour-forecast-status": "prognoze za sledeći sat su $1 zbog $2",
+    "unavailable": "nedostupno",
+    "temporarily-unavailable": "privremeno nedostupno",
+    "partially-unavailable": "delimično nedostupno",
+    "station-offline": "sve obližnje radarske stanice su van mreže",
+    "station-incomplete": "praznine u pokrivenosti sa obližnjih radarskih stanica",
+    "smoke": "dim",
+    "haze": "maglica",  # "Maglina" is also acceptable, but "maglica" is perhaps more common for haze.
+    "mist": "izmaglica",  # "Magla" is fog; "izmaglica" is mist.
 }

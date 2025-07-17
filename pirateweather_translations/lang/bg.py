@@ -204,4 +204,7 @@ template = {
     "partially-unavailable": "е частична",
     "station-offline": "това че всички близки станции не са на линия",
     "station-incomplete": "пропуски в покритието от близки станции",
+    "smoke": "дим",
+    "haze": "мъгла",
+    "mist": "мъгла",
 }

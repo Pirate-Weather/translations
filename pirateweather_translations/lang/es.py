@@ -170,4 +170,7 @@ template = {
     "partially-unavailable": "parcialmente no disponible",
     "station-offline": "todas las estaciones de radar cercanas están fuera de línea",
     "station-incomplete": "lagunas en la cobertura de las estaciones de radar cercanas",
+    "smoke": "humo",
+    "haze": "calima",
+    "mist": "bruma",
 }

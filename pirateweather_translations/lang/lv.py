@@ -220,4 +220,7 @@ template = {
     "partially-unavailable": "daļēji nepieejamas,",
     "station-offline": "nav pieejami apgabala staciju radari",
     "station-incomplete": "ir traucējumi starp staciju radariem",
+    "smoke": "dūmi",
+    "haze": "dūmaka",
+    "mist": "migla",
 }

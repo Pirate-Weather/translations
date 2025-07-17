@@ -171,4 +171,7 @@ template = {
     "partially-unavailable": "ri fhaoitinn gu h-iomlan",
     "station-offline": "gu bheil a h-uile stèisean-radar a tha faisg air làimh far loidhne",
     "station-incomplete": "beàrnan anns an fhiosrachadh bho na stèisean-radar a tha faisg air làimh",
+    "smoke": "ceò",
+    "haze": "ceo-dhubh",
+    "mist": "ceòtharnach",
 }

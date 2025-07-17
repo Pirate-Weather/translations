@@ -157,9 +157,9 @@ Please see `/lib/lang/en.js` for an example of this in action.
 ### Writing Tests
 
 Once a new translation module has been created, it is advisable to write tests
-for it to ensure its correctness. (In fact, it may be advisable to write the
-tests beforehand!) Much of the work of this has been done for you; simply
-create the file `/test-cases/<language>.py`. This file should contain an
+for it to ensure its correctness. (In fact, it may be advisable to write the tests
+beforehand!) Much of the work of this has been done for you; simply create the
+file `/test_cases/<language>.py`. This file should contain an
 associative array of translated sentences to the expression used to generate
 them:
 

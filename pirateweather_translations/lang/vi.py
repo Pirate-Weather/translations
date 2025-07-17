@@ -192,4 +192,7 @@ template = {
     "partially-unavailable": "không có sẵn một phần",
     "station-offline": "tất cả các trạm radar gần đó đều ngoại tuyến",
     "station-incomplete": "khoảng trống trong phạm vi phủ sóng từ các trạm radar gần đó",
+    "smoke": "khói",
+    "haze": "sương mù",
+    "mist": "sương mù",
 }

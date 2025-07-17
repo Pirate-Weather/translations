@@ -246,4 +246,7 @@ template = {
     "partially-unavailable": "לא זמין באופן חלקי",
     "station-offline": "כל תחנות הרדאר הסמוכות לא מקוונות",
     "station-incomplete": 'פערים בכיסוי מתחנות מכ"ם סמוכות',
+    "smoke": "עשן",
+    "haze": "אובך",
+    "mist": "ערפל",
 }
