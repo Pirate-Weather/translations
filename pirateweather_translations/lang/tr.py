@@ -76,6 +76,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "açık hava",
+    "mostly-clear": "çoğunlukla açık",
     "no-precipitation": "yağış yok",
     "mixed-precipitation": "karışık yağış",
     "possible-very-light-precipitation": "çok hafif yağış ihtimali",

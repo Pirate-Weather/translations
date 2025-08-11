@@ -84,6 +84,7 @@ def temperatures_falling_function(stack, a, b):
 
 template = {
     "clear": "klart",
+    "mostly-clear": "overvejende klart",
     "no-precipitation": "ingen målbar nedbør",
     "mixed-precipitation": "blandet nedbør",
     "possible-very-light-precipitation": "mulighed for meget let nedbør",

@@ -1,5 +1,6 @@
 template = {
     "clear": "വ്യക്തമായ",
+    "mostly-clear": "കൂടുതലും വ്യക്തമായ",
     "no-precipitation": "വര്‍ഷപാതം ഇല്ല",
     "mixed-precipitation": "സമ്മിശ്രമായ വര്‍ഷപാതം",
     "possible-very-light-precipitation": "സാധ്യമായ നേരിയ വര്‍ഷപാതം",

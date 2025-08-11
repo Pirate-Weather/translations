@@ -66,6 +66,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "earclay",
+    "mostly-clear": "ostlymay earclay",
     "no-precipitation": "onay ecipitationpray",
     "mixed-precipitation": "ixedmay ecipitationpray",
     "possible-very-light-precipitation": "ossiblepay ightlay ecipitationpray",

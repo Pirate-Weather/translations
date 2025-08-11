@@ -1,5 +1,6 @@
 template = {
     "clear": "स्वच्छ",
+    "mostly-clear": "मुख्यतः स्पष्ट",
     "no-precipitation": "पाऊस नाही",
     "mixed-precipitation": "मिश्र पर्जन्य",
     "possible-very-light-precipitation": "पावसाच्या हलक्या सरींची शक्यता",

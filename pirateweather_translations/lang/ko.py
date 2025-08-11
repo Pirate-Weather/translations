@@ -24,6 +24,7 @@ def through_function(stack, a, b):
 
 template = {
     "clear": "맑음",
+    "mostly-clear": "대체로 맑음",
     "no-precipitation": "강수 없음",
     "mixed-precipitation": "진눈깨비",
     "possible-very-light-precipitation": "아주 약한 강수 가능성",

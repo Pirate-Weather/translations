@@ -52,6 +52,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "derült",
+    "mostly-clear": "többnyire tiszta",
     "no-precipitation": "csapadékmentes idő",
     "mixed-precipitation": "vegyes csapadék",
     "possible-very-light-precipitation": "szitáló csapadék lehetséges",

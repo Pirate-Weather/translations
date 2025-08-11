@@ -87,6 +87,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "senin",
+    "mostly-clear": "în mare parte senin",
     "no-precipitation": "fără precipitații",
     "mixed-precipitation": "precipitații mixte",
     "possible-very-light-precipitation": "posibile precipitații foarte slabe",

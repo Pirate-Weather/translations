@@ -10,6 +10,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "მოწმენდილი",
+    "mostly-clear": "ძირითადად მზიანი",
     "no-precipitation": "უნალექო",
     "mixed-precipitation": "ცვალებადი ნალექი",
     "possible-very-light-precipitation": "მოსალოდნელია სუსტი ნალექი",

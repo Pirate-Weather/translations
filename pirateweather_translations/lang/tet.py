@@ -103,6 +103,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "pas",
+    "mostly-clear": "liu-liu klaru",
     "no-precipitation": "udan la iha",
     "mixed-precipitation": "udan - maran kahur",
     "possible-very-light-precipitation": "karik udan uituan deit",

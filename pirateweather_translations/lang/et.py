@@ -101,6 +101,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "selge",
+    "mostly-clear": "peamiselt selge",
     "no-precipitation": "kuiv",
     "mixed-precipitation": "erinevad sademed",
     "possible-very-light-precipitation": "nõrga saju võimalus",

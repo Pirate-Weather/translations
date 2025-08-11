@@ -189,6 +189,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "jasno",
+    "mostly-clear": "prevažne jasno",
     "no-precipitation": "bez zrážok",
     "mixed-precipitation": "zmiešané zrážky",
     "possible-very-light-precipitation": "možnosť veľmi slabých zrážok",

@@ -46,6 +46,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "despejado",
+    "mostly-clear": "mayormente despejado",
     "no-precipitation": "sin precipitaciones",
     "mixed-precipitation": "precipitación mixta",
     "possible-very-light-precipitation": "posibles lluvias ligeras",

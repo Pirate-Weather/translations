@@ -29,6 +29,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "晴れ",
+    "mostly-clear": "おおむね晴れ",
     "no-precipitation": "降水なし",
     "mixed-precipitation": "みぞれ",
     "possible-very-light-precipitation": "弱い降水の可能性あり",

@@ -117,6 +117,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "helder",
+    "mostly-clear": "grotendeels helder",
     "no-precipitation": "geen neerslag",
     "mixed-precipitation": "wisselende neerslag",
     "possible-very-light-precipitation": "mogelijk lichte neerslag",

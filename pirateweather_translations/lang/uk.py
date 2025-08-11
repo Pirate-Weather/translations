@@ -155,6 +155,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "ясно",
+    "mostly-clear": "переважно ясно",
     "no-precipitation": "без опадів",
     "mixed-precipitation": "змішані опади",
     "possible-very-light-precipitation": "можливі незначні опади",

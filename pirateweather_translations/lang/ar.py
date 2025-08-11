@@ -40,6 +40,7 @@ def starting_continuing_until_function(stack, condition, a, b):
 
 template = {
     "clear": "صافِ",
+    "mostly-clear": "صافٍ في الغالب",
     "no-precipitation": "لا أمطار",
     "mixed-precipitation": "هطول أمطار وثلوج",
     "possible-very-light-precipitation": "إحتمالية هطول أمطار خفيفة",

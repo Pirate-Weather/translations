@@ -74,6 +74,7 @@ def temperatures_falling_function(stack, a, b):
 
 template = {
     "clear": "αίθριος",
+    "mostly-clear": "κυρίως καθαρός",
     "no-precipitation": "καθόλου υετός",
     "mixed-precipitation": "μικτός υετός",
     "possible-very-light-precipitation": "πιθανός ασθενής υετός",

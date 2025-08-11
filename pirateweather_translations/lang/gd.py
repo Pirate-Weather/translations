@@ -47,6 +47,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "soilleir",
+    "mostly-clear": "soilleir sa mhòr-chuid",
     "no-precipitation": "gun sileadh",
     "mixed-precipitation": "sileadh measgaichte",
     "possible-very-light-precipitation": "ma dh'fhaoidte gu sil i beagan",

@@ -219,6 +219,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "vedro",
+    "mostly-clear": "углавном ведро",
     "no-precipitation": "nema padavina",
     "mixed-precipitation": "različite padavine",
     "possible-very-light-precipitation": "moguće su veoma slabe padavine",

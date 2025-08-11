@@ -66,6 +66,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "klart",
+    "mostly-clear": "stort sett klart",
     "no-precipitation": "ingen målbar nedbør",
     "mixed-precipitation": "blandet nedbør",
     "possible-very-light-precipitation": "sjanse for veldig lett nedbør",

@@ -42,6 +42,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "clar",
+    "mostly-clear": "pràcticament despejat",
     "no-precipitation": "sense precipitacions",
     "mixed-precipitation": "precipitacions mixtes",
     "possible-very-light-precipitation": "possibles pluges lleugeres",

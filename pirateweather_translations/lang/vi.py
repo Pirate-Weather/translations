@@ -68,6 +68,7 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "quang mây",
+    "mostly-clear": "chủ yếu là rõ",
     "no-precipitation": "không mưa",
     "mixed-precipitation": "mưa rải rác",
     "possible-very-light-precipitation": "có thể có mưa nhỏ",
