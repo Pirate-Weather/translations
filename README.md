@@ -354,8 +354,14 @@ in English, respectively.
 *   `"heavy-wind"`: Represents strong wind at a location. (40 mph (~64.37 km/h) or greater)
 *   `"low-humidity"`: Represents when the humidity is below 15%
 *   `"high-humidity"`: Represents when the humidity is above 95% and the air temperature is above 20C (68F).
-*   `"fog"`: Represents when there is less than approximately 0.62 miles (1 kilometers) of
-    visibility.
+*   `"fog"`: Represents when there is less than approximately 0.62 miles (1 kilometer) of
+    visibility and the dew point difference is less than or equal to 2.5C (4.5F).
+*   `"smoke"`: Represents when it is not `fog`, and there is less than approximately 6.21 miles (10 kilometers) of
+    visibility and surface smoke is greater than or equal to 25 µg/m<sup>3</sup>.
+*   `"mist"`: Represents when it is not `fog` and not `smoke`, and there is less than approximately 6.21 miles (10 kilometers) of
+    visibility and the dew point difference is less than or equal to 3C (5.4F).
+*   `"haze"`: Represents when it is not `fog`, not `smoke`, and not `mist`, and there is less than approximately 6.21 miles (10 kilometers) of
+    visibility, surface smoke is less than 25 µg/m<sup>3</sup> and the dew point difference is greater than 3C (5.4F).
 *   `"very-light-clouds"`: Represents when clouds cover more less than 37.5% of the sky.
     (Usually called "mostly clear" in English.)
 *   `"light-clouds"`: Represents when clouds cover more than than 37.5% but less than 62.5% of the sky.
