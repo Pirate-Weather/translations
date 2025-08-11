@@ -359,7 +359,7 @@ in English, respectively.
 *   `"smoke"`: Represents when there is less than approximately 6.21 miles (10 kilometers) of
     visibility and surface smoke is greater than or equal to 25 µg/m<sup>3</sup>.
 *   `"mist"`: Represents when there is less than approximately 6.21 miles (10 kilometers) of
-    visibility and the dew point difference is less than or equal to 3 degrees Celsius.
+    visibility and the dew point difference is less than or equal to 3C (5.4F).
 *   `"haze"`: Represents when there is less than approximately 6.21 miles (10 kilometers) of
     visibility and surface smoke is less than 25 µg/m<sup>3</sup> and the dew point difference is greater than 3 degrees Celsius.
 *   `"very-light-clouds"`: Represents when clouds cover more less than 37.5% of the sky.
