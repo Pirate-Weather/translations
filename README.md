@@ -355,7 +355,7 @@ in English, respectively.
 *   `"low-humidity"`: Represents when the humidity is below 15%
 *   `"high-humidity"`: Represents when the humidity is above 95% and the air temperature is above 20C (68F).
 *   `"fog"`: Represents when there is less than approximately 0.62 miles (1 kilometers) of
-    visibility and the dew point difference is less than or equal to 2.5 degrees Celsius.
+    visibility and the dew point difference is less than or equal to 2.5C (4.5F).
 *   `"smoke"`: Represents when there is less than approximately 6.21 miles (10 kilometers) of
     visibility and surface smoke is greater than or equal to 25 µg/m<sup>3</sup>.
 *   `"mist"`: Represents when there is less than approximately 6.21 miles (10 kilometers) of
