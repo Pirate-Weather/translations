@@ -213,4 +213,38 @@ cases = {
         "title",
         ["parenthetical", "heavy-snow", ["centimeters", ["range", 3, 5]]],
     ],
+    "Asap": ["title", "smoke"],
+    "Asap selama sehari.": ["sentence", ["for-day", "smoke"]],
+    "Asap pada pagi hari.": ["sentence", ["during", "smoke", "morning"]],
+    "Asap sampai malam ini.": ["sentence", ["until", "smoke", "today-evening"]],
+    "Asap Dan Sedikit Berawan": ["title", ["and", "smoke", "light-clouds"]],
+    "Kabut": ["title", "mist"],
+    "Kabut selama sehari.": ["sentence", ["for-day", "mist"]],
+    "Kabut pada sore hari.": ["sentence", ["during", "haze", "afternoon"]],
+    "Kabut Dan Lembab": ["title", ["and", "haze", "high-humidity"]],
+    "Kabut tengah malam.": ["sentence", ["during", "mist", "night"]],
+    "Kabut Dan Berawan Besar": ["title", ["and", "mist", "heavy-clouds"]],
+    "Badai pada jam.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Hujan es mulai pada 5 min., berhenti 45 min. nanti.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Hujan yang membekukan lebat berhenti pada 10 min., berhenti lagi 32 min. nanti.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Hujan yang membekukan ringan mulai pada 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -219,4 +219,27 @@ cases = {
     "Dimma under dagen.": ["sentence", ["for-day", "mist"]],
     "Dimma över natten.": ["sentence", ["during", "mist", "night"]],
     "Dimma och mulet": ["title", ["and", "mist", "heavy-clouds"]],
+    "Åska under närmaste timme.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Hagel som startar om 5 min., avtar 45 min. senare.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Kraftigt underkylt regn avtar om 10 min., startar igen 32 min. senare.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Underkylt regnskurar som startar om 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

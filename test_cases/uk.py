@@ -214,4 +214,27 @@ cases = {
     "Туман протягом всього дня.": ["sentence", ["for-day", "mist"]],
     "Туман вночі.": ["sentence", ["during", "mist", "night"]],
     "Туман і Сильна Хмарність": ["title", ["and", "mist", "heavy-clouds"]],
+    "Грози протягом наступної години.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Град починається за 5 хв., і закінчується за 45 хв.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Сильний крижаний дощ закінчується за 10 хв., і починається знову за 32 хв.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Крижаний дощ починається за 49 хв.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

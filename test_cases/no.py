@@ -216,4 +216,42 @@ cases = {
         "sentence",
         ["next-hour-forecast-status", "unavailable", "station-offline"],
     ],
+    "Røyk": ["title", "smoke"],
+    "Røyk i løpet av dagen.": ["sentence", ["for-day", "smoke"]],
+    "Røyk om morgenen.": ["sentence", ["during", "smoke", "morning"]],
+    "Røyk fram til i løpet av kvelden.": [
+        "sentence",
+        ["until", "smoke", "today-evening"],
+    ],
+    "Røyk og lettskyet": ["title", ["and", "smoke", "light-clouds"]],
+    "Dis": ["title", "haze"],
+    "Dis i løpet av dagen.": ["sentence", ["for-day", "haze"]],
+    "Dis på ettermiddagen.": ["sentence", ["during", "haze", "afternoon"]],
+    "Dis og fuktig": ["title", ["and", "haze", "high-humidity"]],
+    "Tåke i løpet av dagen.": ["sentence", ["for-day", "mist"]],
+    "Tåke om natten.": ["sentence", ["during", "mist", "night"]],
+    "Tåke og overskyet": ["title", ["and", "mist", "heavy-clouds"]],
+    "Tordenvær i løpet av de neste timene.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Hagl som starter om 5 min., avtar 45 min. senere.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Kraftig underkjølt regn avtar om 10 min., starter igjen 32 min. senere.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Underkjølt duskregn som starter om 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -198,4 +198,42 @@ cases = {
             ["temperatures-falling", ["celsius", 0], "sunday"],
         ],
     ],
+    "Дым": ["title", "smoke"],
+    "Дым на працягу ўсяго дня.": ["sentence", ["for-day", "smoke"]],
+    "Дым раніцай.": ["sentence", ["during", "smoke", "morning"]],
+    "Дым да сённяшняга вечара.": ["sentence", ["until", "smoke", "today-evening"]],
+    "Дым і Невялікая Воблачнасць": ["title", ["and", "smoke", "light-clouds"]],
+    "Імгла": ["title", "haze"],
+    "Імгла на працягу ўсяго дня.": ["sentence", ["for-day", "haze"]],
+    "Імгла днём.": ["sentence", ["during", "haze", "afternoon"]],
+    "Імгла і Вільготна": ["title", ["and", "haze", "high-humidity"]],
+    "Туман на працягу ўсяго дня.": ["sentence", ["for-day", "mist"]],
+    "Туман ноччу.": ["sentence", ["during", "mist", "night"]],
+    "Туман і Моцная Воблачнасць": ["title", ["and", "mist", "heavy-clouds"]],
+    "Навальніцы на працягу наступнай гадзіны.": [
+        "sentence",
+        ["for-hour", "thunderstorm"],
+    ],
+    "Град пачынаецца на працягу 5 хв, і заканчваецца праз 45 хв.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Моцны замарожванне дождж заканчваецца на працягу 10 хв, і пачынаецца зноў праз 32 хв.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Замарожванне нязначны дождж пачынаецца на працягу 49 хв.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

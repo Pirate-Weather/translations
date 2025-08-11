@@ -213,4 +213,46 @@ cases = {
         "sentence",
         ["next-hour-forecast-status", "unavailable", "station-offline"],
     ],
+    "Ceò": ["title", "smoke"],
+    "Ceò fad an latha.": ["sentence", ["for-day", "smoke"]],
+    "Ceò anns a' mhadainn.": ["sentence", ["during", "smoke", "morning"]],
+    "Ceò a' stad anmoch feasgar an-diugh.": [
+        "sentence",
+        ["until", "smoke", "today-evening"],
+    ],
+    "Ceò Agus Sgothan Aotruime": ["title", ["and", "smoke", "light-clouds"]],
+    "Ceo-dhubh": ["title", "haze"],
+    "Ceo-dhubh fad an latha.": ["sentence", ["for-day", "haze"]],
+    "Ceo-dhubh tràth san fheasgar.": ["sentence", ["during", "haze", "afternoon"]],
+    "Ceo-dhubh Agus Tais": ["title", ["and", "haze", "high-humidity"]],
+    "Ceòtharnach": ["title", "mist"],
+    "Ceòtharnach fad an latha.": ["sentence", ["for-day", "mist"]],
+    "Ceòtharnach a-nochd.": ["sentence", ["during", "mist", "night"]],
+    "Ceòtharnach Agus Sgothan Truime": ["title", ["and", "mist", "heavy-clouds"]],
+    "Stoirmean tàirneanaich fad uair a thìde.": [
+        "sentence",
+        ["for-hour", "thunderstorm"],
+    ],
+    "Fàilinn a' tòiseachadh ann an 5 mion., a' stad as dèidh 45 mion.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Uisge reòta trom a' stad ann an 10 mion., a' tòiseachadh a-rithist as dèidh 32 mion.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Glè aotrom reòta a' tòiseachadh ann an 49 mion.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

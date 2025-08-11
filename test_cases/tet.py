@@ -203,4 +203,27 @@ cases = {
     "Kalohan loron tomak.": ["sentence", ["for-day", "mist"]],
     "Kalohan iha kalan bo'ot.": ["sentence", ["during", "mist", "night"]],
     "Kalohan Ho Abu-Abu Taka Loron": ["title", ["and", "mist", "heavy-clouds"]],
+    "Rai-tarutu ba oras ida.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Saudasaun hahu iha 5 min., hein 45 min. para.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Udan malirin bo'ot para iha 10 min., hein 32 min. hahu fali.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Uituan malirin deit hahu iha 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -219,4 +219,27 @@ cases = {
     "sương mù và độ ẩm cao": ["title", ["and", "haze", "high-humidity"]],
     "Sương mù vào đêm.": ["sentence", ["during", "mist", "night"]],
     "sương mù và trời âm u": ["title", ["and", "mist", "heavy-clouds"]],
+    "Có dông trong một giờ.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Kêu bắt đầu sau 5 phút, dừng lại 45 phút sau.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Mưa to lạnh giá dừng sau 10 phút, tiếp tục 32 phút sau.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Mưa phùn đóng băng bắt đầu sau 49 phút.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

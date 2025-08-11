@@ -204,4 +204,42 @@ cases = {
         "title",
         ["and", "heavy-rain", "thunderstorm"],
     ],
+    "Røg": ["title", "smoke"],
+    "Røg i løbet af dagen.": ["sentence", ["for-day", "smoke"]],
+    "Røg om morgenen.": ["sentence", ["during", "smoke", "morning"]],
+    "Røg indtil i aften.": ["sentence", ["until", "smoke", "today-evening"]],
+    "Røg og let skyet": ["title", ["and", "smoke", "light-clouds"]],
+    "Dis": ["title", "haze"],
+    "Dis i løbet af dagen.": ["sentence", ["for-day", "haze"]],
+    "Dis om eftermiddagen.": ["sentence", ["during", "haze", "afternoon"]],
+    "Dis og fugtigt": ["title", ["and", "haze", "high-humidity"]],
+    "Tåge i løbet af dagen.": ["sentence", ["for-day", "mist"]],
+    "Tåge om natten.": ["sentence", ["during", "mist", "night"]],
+    "Tåge og overskyet": ["title", ["and", "mist", "heavy-clouds"]],
+    "Tordenvejr i løbet af de næste par timer.": [
+        "sentence",
+        ["for-hour", "thunderstorm"],
+    ],
+    "Hagl om 5 min., aftager 45 min. senere.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Kraftig frysende regn aftager om 10 min., begynder igen 32 min. senere.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Frysende støvregn om 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

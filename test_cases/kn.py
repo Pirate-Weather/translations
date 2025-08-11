@@ -209,4 +209,37 @@ cases = {
         "sentence",
         ["starting-in", "very-light-rain", ["less-than", ["minutes", 1]]],
     ],
+    "ಹೊಗೆ": ["title", "smoke"],
+    "ಹೊಗೆ ದಿನಪೂರ್ತಿ": ["sentence", ["for-day", "smoke"]],
+    "ಹೊಗೆ ಬೆಳಿಗ್ಗೆ ವೇಳೆಯಲ್ಲಿ": ["sentence", ["during", "smoke", "morning"]],
+    "ಹೊಗೆ ಇಂದು ಸಂಜೆ ವರೆಗೂ": ["sentence", ["until", "smoke", "today-evening"]],
+    "ಹೊಗೆ ಮತ್ತೆ ಸ್ವಲ್ಪ ಮಟ್ಟಿಗೆ ಮೋಡ": ["title", ["and", "smoke", "light-clouds"]],
+    "ಮಂಜು ದಿನಪೂರ್ತಿ": ["sentence", ["for-day", "mist"]],
+    "ಮಂಜು ಮದ್ಯಾಹ್ನ ವೇಳೆಯಲ್ಲಿ": ["sentence", ["during", "haze", "afternoon"]],
+    "ಮಂಜು ಮತ್ತೆ ಆದ್ರವಾದ": ["title", ["and", "haze", "high-humidity"]],
+    "ಮಂಜು ಒಂದೇ ರಾತ್ರಿಯಲ್ಲಿ ವೇಳೆಯಲ್ಲಿ": ["sentence", ["during", "mist", "night"]],
+    "ಮಂಜು ಮತ್ತೆ ಕತ್ತಲು ಕವಿ": ["title", ["and", "mist", "heavy-clouds"]],
+    "ಗುಡುಗು ಗಂಟೆಗೆ": ["sentence", ["for-hour", "thunderstorm"]],
+    "ಆಲಿಕಲ್ಲು 5 ನಿಮಿಷ ಶುರುವಾಗುವುದು ನಂತರ 45 ನಿಮಿಷ ನಲ್ಲಿ ನಿಲ್ಲುವುದು": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "ಭಾರೀ ಘನೀಕರಿಸುವ ಮಳೆ 10 ನಿಮಿಷ ನಿಲ್ಲುವುದು ನಂತರ 32 ನಿಮಿಷ ನಲ್ಲಿ ಮತ್ತೆ ಶುರುವಾಗುವುದು": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "ಘನೀಕರಿಸುವ ಚಿಮುಕು 49 ನಿಮಿಷ ಅಲ್ಲಿ ಶುರುವಾಗುತ್ತದೆ": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -228,4 +228,27 @@ cases = {
     "பனிமூட்டம் நாள் முழுவதும்": ["sentence", ["for-day", "mist"]],
     "பனிமூட்டம் ஒரே இரவில் றின் போது": ["sentence", ["during", "mist", "night"]],
     "பனிமூட்டம் மற்றும் மேகம்": ["title", ["and", "mist", "heavy-clouds"]],
+    "இடிமழை மணி நேரத்திற்கு": ["sentence", ["for-hour", "thunderstorm"]],
+    "5 நிமிடங்கள் இல் கல்மழை துவக்கம், பின்னர் 45 நிமிடங்கள் இல் நிறுத்தம்": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "10 நிமிடங்கள் இல் கனத்த உறைபனி மழை இன் நிறுத்தம், பின்னர் 32 நிமிடங்கள் இல் மீண்டும் துவக்கம்": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "49 நிமிடங்கள் இல் உறைபனி தூறல் துவக்கம்": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

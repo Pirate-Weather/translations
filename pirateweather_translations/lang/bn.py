@@ -37,7 +37,7 @@ template = {
     "possible-medium-snow": "সম্ভাবিত তুষারাপাত",
     "possible-heavy-snow": "সম্ভাবিত ভারী তুষারাপাত",
     "possible-very-light-freezing-rain": "সম্ভাবিত জমে যাওয়া বৃষ্টি",
-    "freezing-drizzle": "জমে যাওয়া বৃষ্টি",
+    "very-light-freezing-rain": "জমে যাওয়া বৃষ্টি",
     "possible-light-freezing-rain": "সম্ভাবিত হাল্কা জমে যাওয়া বৃষ্টি",
     "light-freezing-rain": "হাল্কা জমে যাওয়া বৃষ্টি",
     "possible-medium-freezing-rain": "সম্ভাবিত জমে যাওয়া বৃষ্টি",
