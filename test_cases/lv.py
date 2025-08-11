@@ -239,4 +239,27 @@ cases = {
     "Visu dienu migla.": ['sentence', ['for-day', 'mist']],
     "Naktī migla.": ['sentence', ['during', 'mist', 'night']],
     "Migla un apmācies": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Nākamo stundu negaiss.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Krusa sāksies 5 min. laikā, beigsies 45 min. vēlāk.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Stiprs sasalstošs lietus beigsies 10 min. laikā, atsāksies 32 min. vēlāk.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Sasalstošs smidzinošs lietus sāksies nākamo 49 min. laikā.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

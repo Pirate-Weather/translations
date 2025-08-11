@@ -276,4 +276,27 @@ cases = {
     "Sis gün boyunca devam edecek.": ["sentence", ["for-day", "mist"]],
     "Gece sis.": ["sentence", ["during", "mist", "night"]],
     "Sis ve yoğun bulutlanma": ["title", ["and", "mist", "heavy-clouds"]],
+    " saat boyunca fırtına.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Dolu 5 dk. içinde başlayacak, 45 dk. sonra duracak.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Yoğun donan yağmur 10 dk. içinde duracak, 32 dk. sonra tekrar başlayacak.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Donan çok hafif 49 dk. içinde başlayacak.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

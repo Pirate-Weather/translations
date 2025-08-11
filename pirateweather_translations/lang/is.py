@@ -57,7 +57,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "heiðskýrt",
-    "mostly-clear": "að mestu skýlaust",
     "no-precipitation": "engin úrkoma",
     "mixed-precipitation": "úrkoma með köflum",
     "possible-very-light-precipitation": "möguleiki á lítilsháttar úrkomu",

@@ -204,4 +204,27 @@ cases = {
     "Nevoeiro durante todo o dia.": ['sentence', ['for-day', 'mist']],
     "Nevoeiro durante madrugada.": ['sentence', ['during', 'mist', 'night']],
     "Nevoeiro e Muito Nublado": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Tempestade na próxima hora.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Saraiva dentro de 5 min, termina 45 min mais tarde.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Chuva forte e gelada termina dentro de 10 min, recomeça 32 min mais tarde.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Chuvisco congelante dentro de 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

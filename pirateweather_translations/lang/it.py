@@ -98,7 +98,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "sereno",
-    "mostly-clear": "per lo più sereno",
     "no-precipitation": "nessuna precipitazione",
     "mixed-precipitation": "precipitazioni miste",
     "possible-very-light-precipitation": "possibilità di precipitazioni molto leggere",

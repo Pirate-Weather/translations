@@ -220,4 +220,27 @@ cases = {
     "Terve päev on uduvihm.": ['sentence', ['for-day', 'mist']],
     "Uduvihm öösel.": ['sentence', ['during', 'mist', 'night']],
     "Uduvihm ja pilves": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Äikesetorm järgmised tund aega.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Rahe algab 5 min. pärast, lõppeb 45 min. hiljem.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Tugev jääkülma vihmasadu lõppeb 10 min. pärast, algab uuesti 32 min. hiljem.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Jääkülma nõrk vihmasadu oodata 49 min. pärast.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

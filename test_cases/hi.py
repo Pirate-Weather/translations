@@ -217,4 +217,27 @@ cases = {
     "धुंध और आर्द्र": ['title', ['and', 'haze', 'high-humidity']],
     "धुंध रातोंरात के दौरान": ['sentence', ['during', 'mist', 'night']],
     "धुंध और मेघयुक्त": ['title', ['and', 'mist', 'heavy-clouds']],
+    "एक घंटे के लिए तड़ित वृष्टि": ["sentence", ["for-hour", "thunderstorm"]],
+    "ओलों 5 मिनट में शुरू हो रहा, बाद में 45 मिनट में बंद हो रहा": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "भारी हिमीकरण बारिश 10 मिनट में बंद हो रहा, बाद में फिर से 32 मिनट पर शुरू हो रहा": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "हिमीकरण बूंदाबांदी 49 मिनट में शुरू हो रहा": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

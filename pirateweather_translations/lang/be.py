@@ -94,7 +94,6 @@ def during_function(stack, condition, time):
 
 template = {
     "clear": "ясна",
-    "mostly-clear": "пераважна ясна",
     "no-precipitation": "без ападкаў",
     "mixed-precipitation": "змешаныя ападкі",
     "possible-very-light-precipitation": "магчымы нязначныя ападкі",

@@ -46,7 +46,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "cerah",
-    "mostly-clear": "sebagian besar cerah",
     "no-precipitation": "tidak hujan",
     "mixed-precipitation": "hujan ringan",
     "possible-very-light-precipitation": "kemungkinan hujan ringan",

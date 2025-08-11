@@ -345,7 +345,6 @@ def with_function(stack, first, second):
 
 template = {
     "clear": "صاف کریں",
-    "mostly-clear": "زیادہ تر صاف",
     "no-precipitation": "کوئی ورن نہیں",
     "mixed-precipitation": "مخلوط ورن",
     "possible-very-light-precipitation": "ممکنہ ورن",

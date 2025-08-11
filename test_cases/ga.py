@@ -232,4 +232,27 @@ cases = {
     "Ceobhrán ar feadh an lae.": ['sentence', ['for-day', 'mist']],
     "Ceobhrán anocht.": ['sentence', ['during', 'mist', 'night']],
     "Ceobhrán Agus Scamaill Throma": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Stoirm thoirní ar feadh uair an chloig.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Cailleach ag tosú i 5 nóim., ag stopadh i 45 nóim.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Fearthainn reo throm ag stopadh i 10 nóim., ag tosú arís i 32 nóim.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Fearthainn an-éadrom reo ag tosú i 49 nóim.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

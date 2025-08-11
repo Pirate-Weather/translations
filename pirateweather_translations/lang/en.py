@@ -80,7 +80,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "clear",
-    "mostly-clear": "mostly clear",
     "no-precipitation": "no precipitation",
     "mixed-precipitation": "mixed precipitation",
     "possible-very-light-precipitation": "possible light precipitation",

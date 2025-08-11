@@ -193,7 +193,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "bezchmurnie",
-    "mostly-clear": "przeważnie pogodnie",
     "no-precipitation": "brak opadów",
     "mixed-precipitation": "przelotne opady",
     "possible-very-light-precipitation": "możliwe słabe opady",

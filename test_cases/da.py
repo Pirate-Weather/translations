@@ -216,4 +216,27 @@ cases = {
     "Tåge i løbet af dagen.": ['sentence', ['for-day', 'mist']],
     "Tåge om natten.": ['sentence', ['during', 'mist', 'night']],
     "Tåge og overskyet": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Tordenvejr i løbet af de næste par timer.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Hagl om 5 min., aftager 45 min. senere.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Kraftig frysende regn aftager om 10 min., begynder igen 32 min. senere.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Frysende støvregn om 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

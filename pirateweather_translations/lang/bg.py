@@ -80,7 +80,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "ясно",
-    "mostly-clear": "предимно ясно",
     "no-precipitation": "без превалявания",
     "mixed-precipitation": "смесени превалявания",
     "possible-very-light-precipitation": "възможни незначителни превалявания",

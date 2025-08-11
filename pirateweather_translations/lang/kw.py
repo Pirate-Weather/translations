@@ -109,7 +109,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "kler",
-    "mostly-clear": "yn myns klir",
     "no-precipitation": "kodhans vyth",
     "mixed-precipitation": "kodhans kemyskys",
     "possible-very-light-precipitation": "kodhans skav possybyl",

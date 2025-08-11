@@ -1,6 +1,5 @@
 template = {
     "clear": "தெளிவு",
-    "mostly-clear": "பெரும்பாலும் தெளிவு",
     "no-precipitation": "நீர்க்கசிவு இல்லை",
     "mixed-precipitation": "கலவையான நீர்க்கசிவு",
     "possible-very-light-precipitation": "மிக லேசான நீர்க்கசிவுச் சாத்தியம்",

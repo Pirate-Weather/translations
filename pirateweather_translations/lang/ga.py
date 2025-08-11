@@ -21,7 +21,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "glan",
-    "mostly-clear": "glan go mór",
     "no-precipitation": "ní bheidh frasaíocht ann",
     "mixed-precipitation": "frasaíocht éagsúil",
     "possible-very-light-precipitation": "seans ar frasaíocht an-éadrom",

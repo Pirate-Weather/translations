@@ -247,4 +247,27 @@ cases = {
     "Abur de-a lungul zilei.": ['sentence', ['for-day', 'mist']],
     "Abur la noapte.": ['sentence', ['during', 'mist', 'night']],
     "Abur și Noros": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Furtună în următoarea oră.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Grindină peste 5 minute, durează 45 de minute.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Ploaie înghețată torențială, se oprește în 10 minute, începe din nou 32 de minute mai târziu.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Burniță înghețată, în 49 de minute.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -96,7 +96,6 @@ def temperatures_falling_function(stack, a, b):
 
 template = {
     "clear": "klara ĉielo",
-    "mostly-clear": "pleje klara",
     "no-precipitation": "neniu precipitaĵo",
     "mixed-precipitation": "miksita precipitaĵo",
     "possible-very-light-precipitation": "malforta precipitaĵo eblas",

@@ -234,4 +234,27 @@ cases = {
     "Zamglenie w ciągu dnia.": ['sentence', ['for-day', 'mist']],
     "Nocą zamglenie.": ['sentence', ['during', 'mist', 'night']],
     "Zamglenie, duże zachmurzenie": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Burza przez godzinę.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Grad za 5 min., skończy się po 45 min.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Ulewny marznący deszcz skończy się za 10 min., ponownie zacznie 32 min. później.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Marznąca mżawka za 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

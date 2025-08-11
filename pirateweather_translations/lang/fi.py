@@ -93,7 +93,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "selkeää",
-    "mostly-clear": "suurimmaksi osaksi selkeä",
     "no-precipitation": "poutaa",
     "mixed-precipitation": "räntäsadetta",
     "possible-very-light-precipitation": "heikon sateen mahdollisuus",

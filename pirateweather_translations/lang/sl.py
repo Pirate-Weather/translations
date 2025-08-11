@@ -42,7 +42,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "jasno",
-    "mostly-clear": "večinoma jasno",
     "no-precipitation": "brez padavin",
     "mixed-precipitation": "možne padavine",
     "possible-very-light-precipitation": "možne so rahle padavine",

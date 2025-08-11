@@ -220,4 +220,27 @@ cases = {
     "نمی اور دھند": ["title", ["and", "haze", "high-humidity"]],
     "کے دوران رات بھر دھند": ["sentence", ["during", "mist", "night"]],
     "ابر آلود اور دھند": ["title", ["and", "mist", "heavy-clouds"]],
+    "برق و باراں ایک گھنٹے کے لئے": ["sentence", ["for-hour", "thunderstorm"]],
+    "رک رہا ہے منٹ 45 شروع ہو رہا، بعد میں اولے میں منٹ 5": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "شروع ہو رہا ہے منٹ 32 رک رہا، بعد میں شدید منجمد بارش میں منٹ 10": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "شروع ہو رہا جمنے والی بوندا باندی میں منٹ 49": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

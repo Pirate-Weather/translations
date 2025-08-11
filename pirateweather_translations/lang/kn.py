@@ -1,6 +1,5 @@
 template = {
     "clear": "ಸ್ಪಷ್ಟ",
-    "mostly-clear": "ಹೆಚ್ಚಾಗಿ ಸ್ಪಷ್ಟ",
     "no-precipitation": "ಸೋರುವಿಕೆ ಇಲ್ಲ",
     "mixed-precipitation": "ಮಿಶ್ರಿತ ಸೋರುವಿಕೆ",
     "possible-very-light-precipitation": "ಕಡಿಮೆಯಾದ ಸೋರುವಿಕೆ ಸಾಧ್ಯ",

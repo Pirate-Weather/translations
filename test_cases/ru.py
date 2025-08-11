@@ -213,4 +213,27 @@ cases = {
     "Туман в течение всего дня.": ['sentence', ['for-day', 'mist']],
     "Туман ночью.": ['sentence', ['during', 'mist', 'night']],
     "Туман и Сильная Облачность": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Грозы в течение следующего часа.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Град начинается в течение 5 мин, и заканчивается через 45 мин.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Сильный ледяной дождь заканчивается в течение 10 мин, и начинается снова через 32 мин.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Ледяная морось начинается в течение 49 мин.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

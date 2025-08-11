@@ -86,7 +86,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "ciel dégagé",
-    "mostly-clear": "en grande partie clair",
     "no-precipitation": "pas de précipitations",
     "mixed-precipitation": "précipitations mixtes",
     "possible-very-light-precipitation": "très faibles précipitations possibles",

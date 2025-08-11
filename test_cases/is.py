@@ -221,4 +221,27 @@ cases = {
     "Mistur yfir daginn.": ['sentence', ['for-day', 'mist']],
     "Mistur yfir nóttina.": ['sentence', ['during', 'mist', 'night']],
     "Mistur og alskýjað": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Þrumuveður næsta klukkutímann.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Haglél sem byrjar eftir 5 mín., líkur 45 mín. seinna.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Mikil ískalt rigning sem líkur eftir 10 mín., byrjar aftur 32 mín. seinna.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Ískalt súld sem byrjar eftir 49 mín.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

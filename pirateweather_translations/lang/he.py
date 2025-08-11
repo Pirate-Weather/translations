@@ -122,7 +122,6 @@ def temperatures_falling_function(stack, temp, at):
 
 template = {
     "clear": "בהיר",
-    "mostly-clear": "בעיקר בהיר",
     "no-precipitation": "ללא משקעים",
     "mixed-precipitation": "משקעים מעורבים",
     "possible-very-light-precipitation": "אפשרות נמוך מאוד למשקעים",

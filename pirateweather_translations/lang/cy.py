@@ -67,7 +67,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "clir",
-    "mostly-clear": "mwyaf clir",
     "no-precipitation": "dim gwlybaniaeth",
     "mixed-precipitation": "gwlybaniaeth cymysg",
     "possible-very-light-precipitation": "gwlybaniaeth ysgafn yn bosib",

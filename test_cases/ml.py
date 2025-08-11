@@ -224,4 +224,27 @@ cases = {
     "കോട ദിവസം മുഴുവന്‍": ['sentence', ['for-day', 'mist']],
     "കോട രാത്രി കാലത്തില്‍": ['sentence', ['during', 'mist', 'night']],
     "കോട ഉം മഴക്കാര്‍ മൂടിയ ഉം": ['title', ['and', 'mist', 'heavy-clouds']],
+    "മണിക്കൂറിനു ഇടിമിന്നല്‍": ["sentence", ["for-hour", "thunderstorm"]],
+    "ആലിപ്പഴം 5 മിനിട്ടു ഇല്‍ ആരംഭിക്കുന്നു, പിന്നീട് 45 മിനിട്ടു ഇല്‍ അവസാനിക്കുന്നു": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "ശക്തിയേറിയ മരവിപ്പിക്കുന്ന മഴ 10 മിനിട്ടു ഇല്‍ അവസാനിക്കുന്നു, പിന്നീട് 32 മിനിട്ടു ഇല്‍ വീണ്ടും ആരംഭിക്കുന്നു": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "മരവിപ്പിക്കുന്ന ചാറ്റല്‍മഴ 49 മിനിട്ടു ഇല്‍ ആരംഭിക്കുന്നു": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

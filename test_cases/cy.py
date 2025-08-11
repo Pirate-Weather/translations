@@ -201,4 +201,27 @@ cases = {
     "Llwch drwy’r dydd.": ['sentence', ['for-day', 'mist']],
     "Llwch dros nos.": ['sentence', ['during', 'mist', 'night']],
     "Llwch a chymylau trwchus": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Mellt a tharannau am yr awr.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Cenllysg yn cychwyn mewn 5 munud, ac yn dod i ben 45 munud wedyn.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Glaw rhewllyd trwm yn dod i ben mewn 10 munud, gan gychwyn eto 32 munud wedyn.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Glaw mân rhewllyd yn cychwyn mewn 49 munud.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -222,4 +222,27 @@ cases = {
     "Sumu päivän aikana.": ['sentence', ['for-day', 'mist']],
     "Sumu yöllä.": ['sentence', ['during', 'mist', 'night']],
     "Sumu ja pilvistä": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Ukkosmyrskyjä seuraavan tunnin ajan.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Rakeita 5 min. kuluessa, päättyen 45 min. myöhemmin.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Rankkaa jäätävää sadetta vielä 10 min., alkaen uudestaan 32 min. myöhemmin.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Jäätävää tihkusadetta odotettavissa 49 min. kuluessa.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

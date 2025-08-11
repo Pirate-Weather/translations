@@ -52,7 +52,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "limpo",
-    "mostly-clear": "em grande parte claro",
     "no-precipitation": "sem aguaceiros",
     "mixed-precipitation": "aguaceiros variados",
     "possible-very-light-precipitation": "possíveis aguaceiros muito fracos",

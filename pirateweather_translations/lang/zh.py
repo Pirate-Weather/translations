@@ -33,7 +33,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "晴朗",
-    "mostly-clear": "大部分晴朗",
     "no-precipitation": "无降水",
     "mixed-precipitation": "多云转雨",
     "possible-very-light-precipitation": "可能有少量降水",

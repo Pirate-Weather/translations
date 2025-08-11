@@ -214,4 +214,27 @@ cases = {
     "Bruma durante el día.": ['sentence', ['for-day', 'mist']],
     "Bruma por la noche.": ['sentence', ['during', 'mist', 'night']],
     "Bruma y Nublado": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Tormenta por la hora.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Granizo comenzando en 5 min., después parando en 45 min.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Fuertes lluvia helada parando en 10 min., comenzando de nuevo 32 min. después.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Llovizna helada comenzando en 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

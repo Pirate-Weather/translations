@@ -224,4 +224,27 @@ cases = {
     "ערפל לאורך היום.": ['sentence', ['for-day', 'mist']],
     "ערפל הלילה.": ['sentence', ['during', 'mist', 'night']],
     "ערפל ועננות": ['title', ['and', 'mist', 'heavy-clouds']],
+    "סופת ברקים לשעה הקרובה.": ["sentence", ["for-hour", "thunderstorm"]],
+    "ברד יתחיל בעוד 5 דקות, יפסק אחרי 45 דקות.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "גשם קפוא חזק יפסק בעוד 10 דקות, יתחדש לאחר 32 דקות.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "טפטוף מקפיא יתחיל בעוד 49 דקות.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

@@ -247,4 +247,27 @@ cases = {
     "Počas dňa hmla.": ['sentence', ['for-day', 'mist']],
     "V noci hmla.": ['sentence', ['during', 'mist', 'night']],
     "Hmla a zamračené": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Búrky hodinu.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Krupobitie o 5 min., skončí o 45 min. neskôr.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Vydatný mrznúce dážď skončí o 10 min. a začne znovu o 32 min. neskôr.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Mrznúce mrholenie o 49 min.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

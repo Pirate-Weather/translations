@@ -105,7 +105,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "Klar",
-    "mostly-clear": "überwiegend klar",
     "no-precipitation": "kein Niederschlag",
     "mixed-precipitation": "wechselnder Niederschlag",
     "possible-very-light-precipitation": "leichter Niederschlag möglich",

@@ -96,7 +96,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "skaidrs",
-    "mostly-clear": "pārsvarā skaidrs",
     "no-precipitation": "bez nokrišņiem",
     "mixed-precipitation": "jaukti nokrišņi",
     "possible-very-light-precipitation": "iespējami nelieli nokrišņi",

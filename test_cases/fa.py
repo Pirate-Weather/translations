@@ -224,4 +224,27 @@ cases = {
     "مه در طول روز": ['sentence', ['for-day', 'mist']],
     "مه در طول شب": ['sentence', ['during', 'mist', 'night']],
     "مه و آسمان ابری": ['title', ['and', 'mist', 'heavy-clouds']],
+    "آذرخش و تندر برای این ساعت": ["sentence", ["for-hour", "thunderstorm"]],
+    "تگرگ در 5 دقیقه آغاز می‌شود و 45 دقیقه بعد پایان می‌یابد": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "باران یخبندان شدید در 10 دقیقه پایان می‌یابد و 32 دقیقه بعد دوباره آغاز می‌شود": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "نم نم باران یخ زده در 49 دقیقه آغاز می‌شود": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

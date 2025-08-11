@@ -115,7 +115,6 @@ def sentence_function(stack, s):
 
 template = {
     "clear": "ясно",
-    "mostly-clear": "в основном ясно",
     "no-precipitation": "без осадков",
     "mixed-precipitation": "смешанные осадки",
     "possible-very-light-precipitation": "возможны незначительные осадки",

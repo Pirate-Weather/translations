@@ -222,4 +222,27 @@ cases = {
     "Köd egész nap.": ['sentence', ['for-day', 'mist']],
     "Köd éjjel.": ['sentence', ['during', 'mist', 'night']],
     "Köd és borult idő": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Zivatarok ebben az órában.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Fagyos 5 perc múlva, 45 percig.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Intenzív fagyos eső 10 perc múlva véget ér, de 32 perc elteltével újra várható.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Fagyos gyenge szitálás 49 perc múlva.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

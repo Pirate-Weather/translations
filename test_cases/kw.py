@@ -240,4 +240,27 @@ cases = {
     "Niwl dres oll an jydh.": ['sentence', ['for-day', 'mist']],
     "Niwl y'n nos.": ['sentence', ['during', 'mist', 'night']],
     "Niwl Ha Komolek Poos": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Tewedhow-taran rag an our.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Storm hael ow talleth yn 5 myn., ow hedhi 45 myn. diwettha.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Glaw rewl poos ow hedhi yn 10 myn., ow tastalleth 32 myn. diwettha.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Glaw rewl pur skav ow talleth yn 49 myn.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }

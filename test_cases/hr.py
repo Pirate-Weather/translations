@@ -209,4 +209,27 @@ cases = {
     "Magla tijekom cijelog dana.": ['sentence', ['for-day', 'mist']],
     "Magla u noći.": ['sentence', ['during', 'mist', 'night']],
     "Magla i oblačno": ['title', ['and', 'mist', 'heavy-clouds']],
+    "Grmljavina za sat.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Tuča počinje za 5 minuta, pa prestaje za 45 minuta.": [
+        "sentence",
+        [
+            "starting-then-stopping-later",
+            "hail",
+            ["minutes", 5],
+            ["minutes", 45],
+        ],
+    ],
+    "Jaka ledena kiša prestaje za 10 minuta, pa počinje za 32 minuta.": [
+        "sentence",
+        [
+            "stopping-then-starting-later",
+            "heavy-freezing-rain",
+            ["minutes", 10],
+            ["minutes", 32],
+        ],
+    ],
+    "Ledena sitna kiša počinje za 49 minuta.": [
+        "sentence",
+        ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
 }
