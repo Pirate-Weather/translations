@@ -18,7 +18,7 @@ cases = {
     "Możliwe niewielkie opady deszczu ze śniegiem": ["title", "possible-light-sleet"],
     "Niewielkie opady deszczu ze śniegiem": ["title", "light-sleet"],
     "Deszcz ze śniegiem": ["title", "medium-sleet"],
-    "Deszcz ze śniegiem": ["title", "heavy-sleet"],
+    "Silny deszcz ze śniegiem": ["title", "heavy-sleet"],
     "Możliwy drobny śnieg": ["title", "possible-very-light-snow"],
     "Drobny śnieg": ["title", "very-light-snow"],
     "Możliwy niewielki śnieg": ["title", "possible-light-snow"],
