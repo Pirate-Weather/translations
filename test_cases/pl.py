@@ -197,7 +197,7 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 100], "monday"],
         ],
     ],
-    "Przelotne opady (1\u20133 in śniegu) w ciągu dnia.": [
+    "Opady mieszane (1\u20133 in śniegu) w ciągu dnia.": [
         "sentence",
         [
             "for-day",
@@ -227,9 +227,9 @@ cases = {
     "Rano dym.": ["sentence", ["during", "smoke", "morning"]],
     "Dym, ustanie wieczorem.": ["sentence", ["until", "smoke", "today-evening"]],
     "Dym, niewielkie zachmurzenie": ["title", ["and", "smoke", "light-clouds"]],
-    "Mgła w ciągu dnia.": ["sentence", ["for-day", "haze"]],
-    "Po południu mgła.": ["sentence", ["during", "haze", "afternoon"]],
-    "Mgła, duża wilgotność": ["title", ["and", "haze", "high-humidity"]],
+    "Zmętnienie w ciągu dnia.": ["sentence", ["for-day", "haze"]],
+    "Po południu zmętnienie.": ["sentence", ["during", "haze", "afternoon"]],
+    "Zmętnienie, duża wilgotność": ["title", ["and", "haze", "high-humidity"]],
     "Zamglenie": ["title", "mist"],
     "Zamglenie w ciągu dnia.": ["sentence", ["for-day", "mist"]],
     "Nocą zamglenie.": ["sentence", ["during", "mist", "night"]],
