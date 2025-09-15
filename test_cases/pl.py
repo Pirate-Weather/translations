@@ -47,7 +47,7 @@ cases = {
         "sentence",
         ["stopping-in", "light-rain", ["minutes", 15]],
     ],
-    "Deszcz ze śniegiem za 20 min., skończy się po 30 min.": [
+    "Silny deszcz ze śniegiem za 20 min., skończy się po 30 min.": [
         "sentence",
         [
             "starting-then-stopping-later",
