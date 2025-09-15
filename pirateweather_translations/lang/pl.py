@@ -212,7 +212,7 @@ template = {
     "possible-light-sleet": "możliwe niewielkie opady deszczu ze śniegiem",
     "light-sleet": "niewielkie opady deszczu ze śniegiem",
     "medium-sleet": "deszcz ze śniegiem",
-    "heavy-sleet": "deszcz ze śniegiem",
+    "heavy-sleet": "silny deszcz ze śniegiem",
     "possible-very-light-snow": "możliwy drobny śnieg",
     "very-light-snow": "drobny śnieg",
     "possible-light-snow": "możliwy niewielki śnieg",
