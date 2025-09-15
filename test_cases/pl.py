@@ -28,7 +28,7 @@ cases = {
     "Umiarkowany wiatr": ["title", "medium-wind"],
     "Silny wiatr": ["title", "heavy-wind"],
     "Mgła": ["title", "fog"],
-    "Średnie bezchmurnie": ["title", "very-light-clouds"],
+    "Przeważnie bezchmurnie": ["title", "very-light-clouds"],
     "Niewielkie zachmurzenie": ["title", "light-clouds"],
     "Średnie zachmurzenie": ["title", "medium-clouds"],
     "Duże zachmurzenie": ["title", "heavy-clouds"],
