@@ -197,7 +197,7 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 100], "monday"],
         ],
     ],
-    "Opady mieszane (1\u20133 in śniegu) w ciągu dnia.": [
+    "Przelotne opady (1\u20133 in śniegu) w ciągu dnia.": [
         "sentence",
         [
             "for-day",
