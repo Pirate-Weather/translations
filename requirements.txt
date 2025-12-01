@@ -1,4 +1,4 @@
-ruff==0.14.6
+ruff==0.14.7
 pytest==9.0.1
 pytest-subtests==0.15.0
 coverage==7.12.0
