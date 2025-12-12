@@ -51,15 +51,6 @@ def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " through ")
 
 
-def parenthetical_function(stack, a, b):
-    # If a does not end with "flurries" or "snow", we adjust b.
-    if not a.endswith("flurries") and not a.endswith("snow"):
-        if not a.startswith("mixed"):
-            b = "with a chance of " + b
-        b += " of snow"
-    return a + " (" + b + ")"
-
-
 def until_function(stack, condition, period):
     return condition + " until " + strip_prefix(period)
 
@@ -82,6 +73,16 @@ def sentence_function(stack, s):
     if not s.endswith("."):
         s += "."
     return s
+
+
+def multiple_sentences_function(stack, a, b):
+    a = custom_capitalize(a)
+    if not a.endswith("."):
+        a += "."
+
+    if not b.endswith("."):
+        b += "."
+    return a + " " + b
 
 
 def format_period_with_preposition(period):
@@ -201,17 +202,18 @@ template = {
     "next-thursday": "next Thursday",
     "next-friday": "next Friday",
     "next-saturday": "next Saturday",
-    "minutes": "$1 min.",
+    "minutes": "$1 min",
     "fahrenheit": "$1\u00b0F",
     "celsius": "$1\u00b0C",
-    "inches": "$1 in.",
-    "centimeters": "$1 cm.",
+    "inches": "$1 in",
+    "centimeters": "$1 cm",
+    "millimeters": "$1 mm",
     "less-than": "< $1",
     "and": and_function,
     "through": through_function,
     "with": "$1, with $2",
     "range": "$1\u2013$2",
-    "parenthetical": parenthetical_function,
+    "parenthetical": "$1 of $2 expected",
     "for-hour": "$1 for the hour",
     "starting-in": "$1 starting in $2",
     "stopping-in": "$1 ending in $2",
@@ -231,6 +233,7 @@ template = {
     "temperatures-falling": "highs falling to $1 $2",
     "title": title_function,
     "sentence": sentence_function,
+    "multiple-sentences": multiple_sentences_function,
     "next-hour-forecast-status": "next hour forecasts are $1 due to $2",
     "unavailable": "unavailable",
     "temporarily-unavailable": "temporarily unavailable",

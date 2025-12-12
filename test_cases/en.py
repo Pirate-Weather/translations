@@ -78,7 +78,7 @@ cases = {
     ],
     "Hail": ["title", "hail"],
     "Hail and Thunderstorms": ["title", ["and", "hail", "thunderstorm"]],
-    "Hail starting in 5 min., ending 45 min. later.": [
+    "Hail starting in 5 min, ending 45 min later.": [
         "sentence",
         ["starting-then-stopping-later", "hail", ["minutes", 5], ["minutes", 45]],
     ],
@@ -92,15 +92,17 @@ cases = {
     "Heavy Rain and Thunderstorms": ["title", ["and", "heavy-rain", "thunderstorm"]],
     "Heavy Sleet": ["title", "heavy-sleet"],
     "Heavy Snow": ["title", "heavy-snow"],
-    "Heavy Snow (1–3 in.)": [
-        "title",
-        ["parenthetical", "heavy-snow", ["inches", ["range", 1, 3]]],
+    "Heavy snow. 1–3 in of snow expected.": [
+        "multiple-sentences",
+        "heavy-snow",
+        ["parenthetical", ["inches", ["range", 1, 3]], "medium-snow"],
     ],
-    "Heavy Snow (3–5 cm.)": [
-        "title",
-        ["parenthetical", "heavy-snow", ["centimeters", ["range", 3, 5]]],
+    "Heavy snow. 3–5 cm of snow expected.": [
+        "multiple-sentences",
+        "heavy-snow",
+        ["parenthetical", ["centimeters", ["range", 3, 5]], "medium-snow"],
     ],
-    "Heavy freezing rain ending in 10 min., returning 32 min. later.": [
+    "Heavy freezing rain ending in 10 min, returning 32 min later.": [
         "sentence",
         [
             "stopping-then-starting-later",
@@ -117,7 +119,7 @@ cases = {
         "sentence",
         ["until-starting-again", "heavy-rain", "later-today-morning", "today-evening"],
     ],
-    "Heavy sleet starting in 20 min., ending 30 min. later.": [
+    "Heavy sleet starting in 20 min, ending 30 min later.": [
         "sentence",
         [
             "starting-then-stopping-later",
@@ -126,15 +128,17 @@ cases = {
             ["minutes", 30],
         ],
     ],
-    "Heavy snow (8–12 in.) throughout the day.": [
-        "sentence",
-        ["for-day", ["parenthetical", "heavy-snow", ["inches", ["range", 8, 12]]]],
+    "Heavy snow throughout the day. 8–12 in of snow expected.": [
+        "multiple-sentences",
+        ["for-day", "heavy-snow"],
+        ["parenthetical", ["inches", ["range", 8, 12]], "medium-snow"],
     ],
     "Humid and Partly Cloudy": ["title", ["and", "high-humidity", "light-clouds"]],
     "Light Freezing Rain": ["title", "light-freezing-rain"],
-    "Light Freezing Rain (with a Chance of 2–4 in. of Snow)": [
-        "title",
-        ["parenthetical", "light-freezing-rain", ["inches", ["range", 2, 4]]],
+    "Light freezing rain. 2–4 in of snow expected.": [
+        "multiple-sentences",
+        "light-freezing-rain",
+        ["parenthetical", ["inches", ["range", 2, 4]], "medium-snow"],
     ],
     "Light Precipitation": ["title", "very-light-precipitation"],
     "Light Rain": ["title", "light-rain"],
@@ -156,13 +160,14 @@ cases = {
         "sentence",
         ["starting", "very-light-sleet", "morning"],
     ],
-    "Light snow (2 cm.) later this morning.": [
-        "sentence",
+    "Light snow later this morning. 2 cm of snow expected.": [
+        "multiple-sentences",
         [
             "during",
-            ["parenthetical", "light-snow", ["centimeters", 2]],
+            "light-snow",
             "later-today-morning",
         ],
+        ["parenthetical", ["centimeters", 2], "medium-snow"],
     ],
     "Light snow on Tuesday and next Wednesday, with highs falling to 0°C on Sunday.": [
         "sentence",
@@ -176,12 +181,10 @@ cases = {
     "Misty and Overcast": ["title", ["and", "mist", "heavy-clouds"]],
     "Misty overnight.": ["sentence", ["during", "mist", "night"]],
     "Misty throughout the day.": ["sentence", ["for-day", "mist"]],
-    "Mixed precipitation (1–3 in. of snow) throughout the day.": [
-        "sentence",
-        [
-            "for-day",
-            ["parenthetical", "mixed-precipitation", ["inches", ["range", 1, 3]]],
-        ],
+    "Mixed precipitation throughout the day. 1–3 in of snow expected.": [
+        "multiple-sentences",
+        ["for-day", "mixed-precipitation"],
+        ["parenthetical", ["inches", ["range", 1, 3]], "medium-snow"],
     ],
     "Mixed precipitation over the weekend, with highs climbing to 32°C on Thursday.": [
         "sentence",
@@ -270,11 +273,12 @@ cases = {
         ],
     ],
     "Rain": ["title", "medium-rain"],
-    "Rain (with a Chance of 2–4 in. of Snow)": [
-        "title",
-        ["parenthetical", "medium-rain", ["inches", ["range", 2, 4]]],
+    "Rain and snow. 2–4 in of snow expected.": [
+        "multiple-sentences",
+        ["and", "medium-rain", "medium-snow"],
+        ["parenthetical", ["inches", ["range", 2, 4]], "medium-snow"],
     ],
-    "Rain ending in 25 min., returning 8 min. later.": [
+    "Rain ending in 25 min, returning 8 min later.": [
         "sentence",
         [
             "stopping-then-starting-later",
@@ -290,17 +294,19 @@ cases = {
     "Smoke throughout the day.": ["sentence", ["for-day", "smoke"]],
     "Smoke until this evening.": ["sentence", ["until", "smoke", "today-evening"]],
     "Snow": ["title", "medium-snow"],
-    "Snow (5 in.) overnight.": [
-        "sentence",
-        ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
+    "Snow overnight. 5 in of snow expected.": [
+        "multiple-sentences",
+        ["during", "medium-snow", "night"],
+        ["parenthetical", ["inches", 5], "medium-snow"],
     ],
-    "Snow (< 1 cm.) in the afternoon.": [
-        "sentence",
+    "Snow in the afternoon. < 1 cm of snow expected.": [
+        "multiple-sentences",
         [
             "during",
-            ["parenthetical", "medium-snow", ["less-than", ["centimeters", 1]]],
+            "medium-snow",
             "afternoon",
         ],
+        ["parenthetical", ["less-than", ["centimeters", 1]], "medium-snow"],
     ],
     "Snow and Thunderstorms": ["title", ["and", "medium-snow", "thunderstorm"]],
     "Snow later this evening and tomorrow morning.": [
