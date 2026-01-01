@@ -112,7 +112,6 @@ def during_function(stack, condition, period):
 
 def starting_function(stack, condition, period):
     # Logic: "Rain starting" + "in the morning" OR "Rain starting" + "overnight"
-    print(period)
     return condition + " starting " + format_period_with_preposition(period)
 
 
