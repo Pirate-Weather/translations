@@ -137,7 +137,7 @@ template = {
     "possible-very-light-freezing-rain": "possibilità di pioggia leggera molto gelata",
     "very-light-freezing-rain": "pioggia leggera molto gelata",
     "possible-light-freezing-rain": "possibilità di pioggia gelata leggera",
-    "light-freezing-rain": "freezing pioggia leggera",
+    "light-freezing-rain": "pioggia gelata leggera",
     "possible-medium-freezing-rain": "possibilità di pioggia gelata",
     "medium-freezing-rain": "pioggia gelata",
     "possible-heavy-freezing-rain": "possibilità di forte pioggia gelata",
