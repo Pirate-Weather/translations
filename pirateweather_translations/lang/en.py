@@ -78,16 +78,6 @@ def sentence_function(stack, s):
     return s
 
 
-def multiple_sentences_function(stack, a, b):
-    a = custom_capitalize(a)
-    if not a.endswith("."):
-        a += "."
-
-    if not b.endswith("."):
-        b += "."
-    return a + " " + b
-
-
 def format_period_with_preposition(period):
     # If the period is effectively an adverb, don't add "in the"
     # "later-today-morning" becomes "later this morning" via templates,
@@ -211,7 +201,6 @@ template = {
     "celsius": "$1\u00b0C",
     "inches": "$1 in",
     "centimeters": "$1 cm",
-    "millimeters": "$1 mm",
     "less-than": "< $1",
     "and": and_function,
     "through": through_function,
@@ -237,7 +226,6 @@ template = {
     "temperatures-falling": "highs falling to $1 $2",
     "title": title_function,
     "sentence": sentence_function,
-    "multiple-sentences": multiple_sentences_function,
     "next-hour-forecast-status": "next hour forecasts are $1 due to $2",
     "unavailable": "unavailable",
     "temporarily-unavailable": "temporarily unavailable",
