@@ -58,11 +58,11 @@ cases = {
         "sentence",
         ["starting-in", "very-light-snow", ["minutes", 35]],
     ],
-    "Light rain stopping in 15 min.": [
+    "Light rain ending in 15 min.": [
         "sentence",
         ["stopping-in", "light-rain", ["minutes", 15]],
     ],
-    "Heavy sleet starting in 20 min., stopping 30 min. later.": [
+    "Heavy sleet starting in 20 min, ending 30 min later.": [
         "sentence",
         [
             "starting-then-stopping-later",
@@ -71,7 +71,7 @@ cases = {
             ["minutes", 30],
         ],
     ],
-    "Rain stopping in 25 min., starting again 8 min. later.": [
+    "Rain ending in 25 min, returning 8 min later.": [
         "sentence",
         [
             "stopping-then-starting-later",
@@ -95,11 +95,11 @@ cases = {
         "sentence",
         ["during", "medium-snow", ["and", "later-today-evening", "tomorrow-morning"]],
     ],
-    "Heavy rain until later this morning, starting again this evening.": [
+    "Heavy rain until later this morning, returning this evening.": [
         "sentence",
         ["until-starting-again", "heavy-rain", "later-today-morning", "today-evening"],
     ],
-    "Overcast starting in the evening, continuing until night.": [
+    "Overcast from evening until night.": [
         "sentence",
         ["starting-continuing-until", "heavy-clouds", "evening", "night"],
     ],
@@ -111,7 +111,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Dangerously windy starting this morning, continuing until this afternoon, and sleet tomorrow morning.": [
+    "Dangerously windy from this morning until this afternoon and sleet tomorrow morning.": [
         "sentence",
         [
             "and",
@@ -132,7 +132,7 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Dry tonight and light precipitation starting tomorrow evening, continuing until tomorrow night.": [
+    "Dry tonight and light precipitation from tomorrow evening until tomorrow night.": [
         "sentence",
         [
             "and",
@@ -145,11 +145,11 @@ cases = {
             ],
         ],
     ],
-    "Snow (5 in.) overnight.": [
+    "Snow (5 in) overnight.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
     ],
-    "Light snow (2 cm.) later this morning.": [
+    "Light snow (2 cm) later this morning.": [
         "sentence",
         [
             "during",
@@ -157,11 +157,11 @@ cases = {
             "later-today-morning",
         ],
     ],
-    "Heavy snow (8–12 in.) throughout the day.": [
+    "Heavy snow (8–12 in) throughout the day.": [
         "sentence",
         ["for-day", ["parenthetical", "heavy-snow", ["inches", ["range", 8, 12]]]],
     ],
-    "Snow (< 1 cm.) in the afternoon.": [
+    "Snow (< 1 cm) in the afternoon.": [
         "sentence",
         [
             "during",
@@ -169,7 +169,7 @@ cases = {
             "afternoon",
         ],
     ],
-    "No precipitation throughout the week, with high temperatures peaking at 85°F tomorrow.": [
+    "No precipitation throughout the week, with highs reaching 85°F tomorrow.": [
         "sentence",
         [
             "with",
@@ -177,7 +177,7 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 85], "tomorrow"],
         ],
     ],
-    "Mixed precipitation over the weekend, with high temperatures rising to 32°C on Thursday.": [
+    "Mixed precipitation over the weekend, with highs climbing to 32°C on Thursday.": [
         "sentence",
         [
             "with",
@@ -185,7 +185,7 @@ cases = {
             ["temperatures-rising", ["celsius", 32], "thursday"],
         ],
     ],
-    "Drizzle on Monday, with high temperatures bottoming out at 15°F on Friday.": [
+    "Drizzle on Monday, with highs dipping to 15°F on Friday.": [
         "sentence",
         [
             "with",
@@ -193,7 +193,7 @@ cases = {
             ["temperatures-valleying", ["fahrenheit", 15], "friday"],
         ],
     ],
-    "Light snow on Tuesday and next Wednesday, with high temperatures falling to 0°C on Sunday.": [
+    "Light snow on Tuesday and next Wednesday, with highs falling to 0°C on Sunday.": [
         "sentence",
         [
             "with",
@@ -201,7 +201,7 @@ cases = {
             ["temperatures-falling", ["celsius", 0], "sunday"],
         ],
     ],
-    "Precipitation today through Saturday, with high temperatures peaking at 100°F on Monday.": [
+    "Precipitation today through Saturday, with highs reaching 100°F on Monday.": [
         "sentence",
         [
             "with",
@@ -209,22 +209,22 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 100], "monday"],
         ],
     ],
-    "Mixed precipitation (1–3 in. of snow) throughout the day.": [
+    "Mixed precipitation (1–3 in of snow) throughout the day.": [
         "sentence",
         [
             "for-day",
             ["parenthetical", "mixed-precipitation", ["inches", ["range", 1, 3]]],
         ],
     ],
-    "Heavy Snow (1–3 in.)": [
+    "Heavy Snow (1–3 in)": [
         "title",
         ["parenthetical", "heavy-snow", ["inches", ["range", 1, 3]]],
     ],
-    "Heavy Snow (3–5 cm.)": [
+    "Heavy Snow (3–5 cm)": [
         "title",
         ["parenthetical", "heavy-snow", ["centimeters", ["range", 3, 5]]],
     ],
-    "Rain (with a Chance of 2–4 in. of Snow)": [
+    "Rain (with a Chance of 2–4 in of Snow)": [
         "title",
         ["parenthetical", "medium-rain", ["inches", ["range", 2, 4]]],
     ],
@@ -249,7 +249,7 @@ cases = {
     "Drizzle and Thunderstorms": ["title", ["and", "very-light-rain", "thunderstorm"]],
     "Snow and Thunderstorms": ["title", ["and", "medium-snow", "thunderstorm"]],
     "Hail and Thunderstorms": ["title", ["and", "hail", "thunderstorm"]],
-    "Light Freezing Rain (with a Chance of 2–4 in. of Snow)": [
+    "Light Freezing Rain (with a Chance of 2–4 in of Snow)": [
         "title",
         ["parenthetical", "light-freezing-rain", ["inches", ["range", 2, 4]]],
     ],
@@ -268,7 +268,7 @@ cases = {
             "very-light-freezing-rain",
         ],
     ],
-    "Freezing rain today and Sunday, with high temperatures peaking at 3°C on Wednesday.": [
+    "Freezing rain today and Sunday, with highs reaching 3°C on Wednesday.": [
         "sentence",
         [
             "with",
@@ -276,7 +276,7 @@ cases = {
             ["temperatures-peaking", ["celsius", 3], "wednesday"],
         ],
     ],
-    "Possible thunderstorms over the weekend, with high temperatures rising to 104°F next Monday.": [
+    "Possible thunderstorms over the weekend, with highs climbing to 104°F next Monday.": [
         "sentence",
         [
             "with",
@@ -285,7 +285,7 @@ cases = {
         ],
     ],
     "Thunderstorms for the hour.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Hail starting in 5 min., stopping 45 min. later.": [
+    "Hail starting in 5 min, ending 45 min later.": [
         "sentence",
         [
             "starting-then-stopping-later",
@@ -294,7 +294,7 @@ cases = {
             ["minutes", 45],
         ],
     ],
-    "Heavy freezing rain stopping in 10 min., starting again 32 min. later.": [
+    "Heavy freezing rain ending in 10 min, returning 32 min later.": [
         "sentence",
         [
             "stopping-then-starting-later",
