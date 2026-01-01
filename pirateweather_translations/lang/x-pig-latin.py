@@ -45,11 +45,11 @@ def until_function(stack, condition, period):
 
 
 def until_starting_again_function(stack, condition, a, b):
-    return condition + " untilway " + strip_prefix(a) + ", artingstay againway " + b
+    return condition + " untilway " + strip_prefix(a) + ", eturningray " + b
 
 
 def starting_continuing_until_function(stack, condition, a, b):
-    return condition + " artingstay " + a + ", ontinuingcay untilway " + strip_prefix(b)
+    return condition + " omfray " + a + " untilway " + strip_prefix(b)
 
 
 def title_function(stack, s):
@@ -62,6 +62,33 @@ def sentence_function(stack, s):
     if not s.endswith("."):
         s += "."
     return s
+
+
+def format_period_with_preposition(period):
+    # If the period is effectively an adverb, don't add "inway ethay"
+    # "later-today-morning" becomes "later this morning" via templates,
+    # so we usually don't need "inway ethay" for those either.
+
+    # Simple check: (morning, afternoon, evening), add "inway ethay"
+    if (
+        period.startswith("orningmay")
+        or period.startswith("afternoonway")
+        or period.startswith("eveningway")
+    ):
+        return "inway ethay " + period
+
+    # Otherwise return the period
+    return period
+
+
+def during_function(stack, condition, period):
+    # Logic: "Ainray" + "inway ethay orningmay" OR "Ainray" + "overnightway"
+    return condition + " " + format_period_with_preposition(period)
+
+
+def starting_function(stack, condition, period):
+    # Logic: "Ainray artingstay" + "inway ethay orningmay" OR "Ainray artingstay" + "overnightway"
+    return condition + " artingstay " + format_period_with_preposition(period)
 
 
 template = {
@@ -134,9 +161,9 @@ template = {
     "tomorrow-afternoon": "omorrowtay afternoonway",
     "tomorrow-evening": "omorrowtay eveningway",
     "tomorrow-night": "omorrowtay ightnay",
-    "morning": "inway ethay orningmay",
-    "afternoon": "inway ethay afternoonway",
-    "evening": "inway ethay eveningway",
+    "morning": "orningmay",
+    "afternoon": "afternoonway",
+    "evening": "eveningway",
     "night": "overnightway",
     "today": "odaytay",
     "tomorrow": "omorrowtay",
@@ -154,11 +181,11 @@ template = {
     "next-thursday": "extnay ursdaythay",
     "next-friday": "extnay idayfray",
     "next-saturday": "extnay aturdaysay",
-    "minutes": "$1 min.",
+    "minutes": "$1 min",
     "fahrenheit": "$1\u00b0F",
     "celsius": "$1\u00b0C",
-    "inches": "$1 in.",
-    "centimeters": "$1 cm.",
+    "inches": "$1 in",
+    "centimeters": "$1 cm",
     "less-than": "underway $1",
     "and": and_function,
     "through": through_function,
@@ -167,21 +194,21 @@ template = {
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 orfay ethay hourway",
     "starting-in": "$1 artingstay inway $2",
-    "stopping-in": "$1 oppingstay inway $2",
-    "starting-then-stopping-later": "$1 artingstay inway $2, oppingstay $3 aterlay",
-    "stopping-then-starting-later": "$1 oppingstay inway $2, artingstay againway $3 aterlay",
+    "stopping-in": "$1 endingway inway $2",
+    "starting-then-stopping-later": "$1 artingstay inway $2, endingway $3 aterlay",
+    "stopping-then-starting-later": "$1 endingway inway $2, eturningray $3 aterlay",
     "for-day": "$1 oughoutthray ethay ayday",
-    "starting": "$1 artingstay $2",
+    "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,
     "starting-continuing-until": starting_continuing_until_function,
-    "during": "$1 $2",
+    "during": during_function,
     "for-week": "$1 oughoutthray ethay eekway",
     "over-weekend": "$1 overway ethay eekendway",
-    "temperatures-peaking": "emperaturestay eakingpay atway $1 $2",
-    "temperatures-rising": "emperaturestay isingray otay $1 $2",
-    "temperatures-valleying": "emperaturestay ottomingbay outway atway $1 $2",
-    "temperatures-falling": "emperaturestay allingfay otay $1 $2",
+    "temperatures-peaking": "ighshay eachingray $1 $2",
+    "temperatures-rising": "ighshay imbingclay otay $1 $2",
+    "temperatures-valleying": "ighshay ippingday otay $1 $2",
+    "temperatures-falling": "ighshay allingfay otay $1 $2",
     "title": title_function,
     "sentence": sentence_function,
     "next-hour-forecast-status": "extnay hourway orecastsfay areway $1 ueday otay $2.",
