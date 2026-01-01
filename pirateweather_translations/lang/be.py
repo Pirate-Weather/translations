@@ -133,7 +133,7 @@ template = {
     "possible-very-light-freezing-rain": "магчымы замарожванне нязначны дождж",
     "very-light-freezing-rain": "замарожванне нязначны дождж",
     "possible-light-freezing-rain": "магчымы невялікі замарожванне дождж",
-    "light-freezing-rain": "light замарожванне дождж",
+    "light-freezing-rain": "невялікі замарожванне дождж",
     "possible-medium-freezing-rain": "магчымы замарожванне дождж",
     "medium-freezing-rain": "замарожванне дождж",
     "possible-heavy-freezing-rain": "магчымы моцны замарожванне дождж",
