@@ -70,11 +70,7 @@ def format_period_with_preposition(period):
     # so we usually don't need "inway ethay" for those either.
 
     # Simple check: (morning, afternoon, evening), add "inway ethay"
-    if (
-        period.startswith("orningmay")
-        or period.startswith("afternoonway")
-        or period.startswith("eveningway")
-    ):
+    if period.startswith(("orningmay", "afternoonway", "eveningway")):
         return "inway ethay " + period
 
     # Otherwise return the period

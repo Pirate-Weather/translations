@@ -84,11 +84,7 @@ def format_period_with_preposition(period):
     # so we usually don't need "in the" for those either.
 
     # Simple check: (morning, afternoon, evening), add "in the"
-    if (
-        period.startswith("morning")
-        or period.startswith("afternoon")
-        or period.startswith("evening")
-    ):
+    if period.startswith(("morning", "afternoon", "evening")):
         return "in the " + period
 
     # Otherwise return the period
