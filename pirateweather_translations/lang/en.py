@@ -59,11 +59,11 @@ def until_function(stack, condition, period):
 
 
 def until_starting_again_function(stack, condition, a, b):
-    return condition + " until " + strip_prefix(a) + ", starting again " + b
+    return condition + " until " + strip_prefix(a) + ", returning " + b
 
 
 def starting_continuing_until_function(stack, condition, a, b):
-    return condition + " starting " + a + ", continuing until " + strip_prefix(b)
+    return condition + " from " + a + " until " + strip_prefix(b)
 
 
 def title_function(stack, s):
@@ -76,6 +76,29 @@ def sentence_function(stack, s):
     if not s.endswith("."):
         s += "."
     return s
+
+
+def format_period_with_preposition(period):
+    # If the period is effectively an adverb, don't add "in the"
+    # "later-today-morning" becomes "later this morning" via templates,
+    # so we usually don't need "in the" for those either.
+
+    # Simple check: (morning, afternoon, evening), add "in the"
+    if period.startswith(("morning", "afternoon", "evening")):
+        return "in the " + period
+
+    # Otherwise return the period
+    return period
+
+
+def during_function(stack, condition, period):
+    # Logic: "Rain" + "in the morning" OR "Rain" + "overnight"
+    return condition + " " + format_period_with_preposition(period)
+
+
+def starting_function(stack, condition, period):
+    # Logic: "Rain starting" + "in the morning" OR "Rain starting" + "overnight"
+    return condition + " starting " + format_period_with_preposition(period)
 
 
 template = {
@@ -148,9 +171,9 @@ template = {
     "tomorrow-afternoon": "tomorrow afternoon",
     "tomorrow-evening": "tomorrow evening",
     "tomorrow-night": "tomorrow night",
-    "morning": "in the morning",
-    "afternoon": "in the afternoon",
-    "evening": "in the evening",
+    "morning": "morning",
+    "afternoon": "afternoon",
+    "evening": "evening",
     "night": "overnight",
     "today": "today",
     "tomorrow": "tomorrow",
@@ -168,11 +191,11 @@ template = {
     "next-thursday": "next Thursday",
     "next-friday": "next Friday",
     "next-saturday": "next Saturday",
-    "minutes": "$1 min.",
+    "minutes": "$1 min",
     "fahrenheit": "$1\u00b0F",
     "celsius": "$1\u00b0C",
-    "inches": "$1 in.",
-    "centimeters": "$1 cm.",
+    "inches": "$1 in",
+    "centimeters": "$1 cm",
     "less-than": "< $1",
     "and": and_function,
     "through": through_function,
@@ -181,21 +204,21 @@ template = {
     "parenthetical": parenthetical_function,
     "for-hour": "$1 for the hour",
     "starting-in": "$1 starting in $2",
-    "stopping-in": "$1 stopping in $2",
-    "starting-then-stopping-later": "$1 starting in $2, stopping $3 later",
-    "stopping-then-starting-later": "$1 stopping in $2, starting again $3 later",
+    "stopping-in": "$1 ending in $2",
+    "starting-then-stopping-later": "$1 starting in $2, ending $3 later",
+    "stopping-then-starting-later": "$1 ending in $2, returning $3 later",
     "for-day": "$1 throughout the day",
-    "starting": "$1 starting $2",
+    "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,
     "starting-continuing-until": starting_continuing_until_function,
-    "during": "$1 $2",
+    "during": during_function,
     "for-week": "$1 throughout the week",
     "over-weekend": "$1 over the weekend",
-    "temperatures-peaking": "high temperatures peaking at $1 $2",
-    "temperatures-rising": "high temperatures rising to $1 $2",
-    "temperatures-valleying": "high temperatures bottoming out at $1 $2",
-    "temperatures-falling": "high temperatures falling to $1 $2",
+    "temperatures-peaking": "highs reaching $1 $2",
+    "temperatures-rising": "highs climbing to $1 $2",
+    "temperatures-valleying": "highs dipping to $1 $2",
+    "temperatures-falling": "highs falling to $1 $2",
     "title": title_function,
     "sentence": sentence_function,
     "next-hour-forecast-status": "next hour forecasts are $1 due to $2",

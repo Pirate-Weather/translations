@@ -47,11 +47,11 @@ cases = {
         "sentence",
         ["starting-in", "very-light-snow", ["minutes", 35]],
     ],
-    "Ightlay ainray oppingstay inway 15 min.": [
+    "Ightlay ainray endingway inway 15 min.": [
         "sentence",
         ["stopping-in", "light-rain", ["minutes", 15]],
     ],
-    "Eavyhay eetslay artingstay inway 20 min., oppingstay 30 min. aterlay.": [
+    "Eavyhay eetslay artingstay inway 20 min, endingway 30 min aterlay.": [
         "sentence",
         [
             "starting-then-stopping-later",
@@ -60,7 +60,7 @@ cases = {
             ["minutes", 30],
         ],
     ],
-    "Ainray oppingstay inway 25 min., artingstay againway 8 min. aterlay.": [
+    "Ainray endingway inway 25 min, eturningray 8 min aterlay.": [
         "sentence",
         [
             "stopping-then-starting-later",
@@ -93,11 +93,11 @@ cases = {
         "sentence",
         ["during", "medium-snow", ["and", "later-today-evening", "tomorrow-morning"]],
     ],
-    "Eavyhay ainray untilway aterlay isthay orningmay, artingstay againway isthay eveningway.": [
+    "Eavyhay ainray untilway aterlay isthay orningmay, eturningray isthay eveningway.": [
         "sentence",
         ["until-starting-again", "heavy-rain", "later-today-morning", "today-evening"],
     ],
-    "Overcastway artingstay inway ethay eveningway, ontinuingcay untilway ightnay.": [
+    "Overcastway omfray eveningway untilway ightnay.": [
         "sentence",
         ["starting-continuing-until", "heavy-clouds", "evening", "night"],
     ],
@@ -109,7 +109,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Angerouslyday indyway artingstay isthay orningmay, ontinuingcay untilway isthay afternoonway, andway eetslay omorrowtay orningmay.": [
+    "Angerouslyday indyway omfray isthay orningmay untilway isthay afternoonway andway eetslay omorrowtay orningmay.": [
         "sentence",
         [
             "and",
@@ -130,7 +130,7 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Ydray onighttay andway ightlay ecipitationpray artingstay omorrowtay eveningway, ontinuingcay untilway omorrowtay ightnay.": [
+    "Ydray onighttay andway ightlay ecipitationpray omfray omorrowtay eveningway untilway omorrowtay ightnay.": [
         "sentence",
         [
             "and",
@@ -143,11 +143,11 @@ cases = {
             ],
         ],
     ],
-    "Owsnay (5 in.) overnightway.": [
+    "Owsnay (5 in) overnightway.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
     ],
-    "Ightlay owsnay (2 cm.) aterlay isthay orningmay.": [
+    "Ightlay owsnay (2 cm) aterlay isthay orningmay.": [
         "sentence",
         [
             "during",
@@ -155,11 +155,11 @@ cases = {
             "later-today-morning",
         ],
     ],
-    "Eavyhay owsnay (8\u201312 in.) oughoutthray ethay ayday.": [
+    "Eavyhay owsnay (8\u201312 in) oughoutthray ethay ayday.": [
         "sentence",
         ["for-day", ["parenthetical", "heavy-snow", ["inches", ["range", 8, 12]]]],
     ],
-    "Owsnay (underway 1 cm.) inway ethay afternoonway.": [
+    "Owsnay (underway 1 cm) inway ethay afternoonway.": [
         "sentence",
         [
             "during",
@@ -167,7 +167,7 @@ cases = {
             "afternoon",
         ],
     ],
-    "Onay ecipitationpray oughoutthray ethay eekway, ithway emperaturestay eakingpay atway 85\u00b0F omorrowtay.": [
+    "Onay ecipitationpray oughoutthray ethay eekway, ithway ighshay eachingray 85\u00b0F omorrowtay.": [
         "sentence",
         [
             "with",
@@ -175,7 +175,7 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 85], "tomorrow"],
         ],
     ],
-    "Ixedmay ecipitationpray overway ethay eekendway, ithway emperaturestay isingray otay 32\u00b0C onway ursdaythay.": [
+    "Ixedmay ecipitationpray overway ethay eekendway, ithway ighshay imbingclay otay 32\u00b0C onway ursdaythay.": [
         "sentence",
         [
             "with",
@@ -183,7 +183,7 @@ cases = {
             ["temperatures-rising", ["celsius", 32], "thursday"],
         ],
     ],
-    "Izzledray onway ondaymay, ithway emperaturestay ottomingbay outway atway 15\u00b0F onway idayfray.": [
+    "Izzledray onway ondaymay, ithway ighshay ippingday otay 15\u00b0F onway idayfray.": [
         "sentence",
         [
             "with",
@@ -191,7 +191,7 @@ cases = {
             ["temperatures-valleying", ["fahrenheit", 15], "friday"],
         ],
     ],
-    "Ightlay owsnay onway uesdaytay andway extnay ednesdayway, ithway emperaturestay allingfay otay 0\u00b0C onway undaysay.": [
+    "Ightlay owsnay onway uesdaytay andway extnay ednesdayway, ithway ighshay allingfay otay 0\u00b0C onway undaysay.": [
         "sentence",
         [
             "with",
@@ -199,7 +199,7 @@ cases = {
             ["temperatures-falling", ["celsius", 0], "sunday"],
         ],
     ],
-    "Ecipitationpray odaytay oughthray aturdaysay, ithway emperaturestay eakingpay atway 100\u00b0F onway ondaymay.": [
+    "Ecipitationpray odaytay oughthray aturdaysay, ithway ighshay eachingray 100\u00b0F onway ondaymay.": [
         "sentence",
         [
             "with",

@@ -85,7 +85,7 @@ template = {
     "possible-heavy-snow": "ma dh'fhaoidte gum bi sneachd trom",
     "possible-very-light-freezing-rain": "ma dh'fhaoidte gum bi glè reòta aotrom",
     "very-light-freezing-rain": "glè aotrom reòta",
-    "possible-light-freezing-rain": "ma dh'fhaoidte gum bi light uisge reòta aotrom",
+    "possible-light-freezing-rain": "ma dh'fhaoidte gum bi uisge reòta aotrom",
     "light-freezing-rain": "uisge reòta aotrom",
     "possible-medium-freezing-rain": "ma dh'fhaoidte gum bi uisge reòta",
     "medium-freezing-rain": "uisge reòta",

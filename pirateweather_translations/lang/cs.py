@@ -179,7 +179,7 @@ template = {
     "possible-very-light-freezing-rain": "možnost slabého mrazivý mrholení",
     "very-light-freezing-rain": "mrazivý mrholení",
     "possible-light-freezing-rain": "možnost slabého slabý mrazivý déšť",
-    "light-freezing-rain": "slabý freezing déšť",
+    "light-freezing-rain": "slabý mrazivý déšť",
     "possible-medium-freezing-rain": "možnost slabého mrazivý déšť",
     "medium-freezing-rain": "mrazivý déšť",
     "possible-heavy-freezing-rain": "možnost slabého vydatný mrazivý déšť",
