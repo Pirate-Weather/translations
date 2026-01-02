@@ -45,7 +45,7 @@ def until_function(stack, condition, period):
 
 
 def until_starting_again_function(stack, condition, a, b):
-    return condition + " untilway " + strip_prefix(a) + ", eturningray " + b
+    return condition + " untilway " + strip_prefix(a) + ", eturningray " + format_period_with_preposition(b)
 
 
 def starting_continuing_until_function(stack, condition, a, b):

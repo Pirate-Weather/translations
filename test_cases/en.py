@@ -99,6 +99,18 @@ cases = {
         "sentence",
         ["until-starting-again", "heavy-rain", "later-today-morning", "today-evening"],
     ],
+    "Drizzle until afternoon, returning this evening.": [
+        "sentence",
+        ["until-starting-again", "very-light-rain", "afternoon", "today-evening"],
+    ],
+    "Drizzle until this afternoon, returning tomorrow morning.": [
+        "sentence",
+        ["until-starting-again", "very-light-rain", "today-afternoon", "tomorrow-morning"],
+    ],
+    "Drizzle until night, returning tomorrow morning.": [
+        "sentence",
+        ["until-starting-again", "very-light-rain", "night", "tomorrow-morning"],
+    ],
     "Overcast from evening until night.": [
         "sentence",
         ["starting-continuing-until", "heavy-clouds", "evening", "night"],
