@@ -105,7 +105,12 @@ cases = {
     ],
     "Drizzle until this afternoon, returning tomorrow morning.": [
         "sentence",
-        ["until-starting-again", "very-light-rain", "today-afternoon", "tomorrow-morning"],
+        [
+            "until-starting-again",
+            "very-light-rain",
+            "today-afternoon",
+            "tomorrow-morning",
+        ],
     ],
     "Drizzle until night, returning tomorrow morning.": [
         "sentence",

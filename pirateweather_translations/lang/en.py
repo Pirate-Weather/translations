@@ -59,7 +59,13 @@ def until_function(stack, condition, period):
 
 
 def until_starting_again_function(stack, condition, a, b):
-    return condition + " until " + strip_prefix(a) + ", returning " + format_period_with_preposition(b)
+    return (
+        condition
+        + " until "
+        + strip_prefix(a)
+        + ", returning "
+        + format_period_with_preposition(b)
+    )
 
 
 def starting_continuing_until_function(stack, condition, a, b):
