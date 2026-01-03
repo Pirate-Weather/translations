@@ -45,15 +45,6 @@ def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " through ")
 
 
-def parenthetical_function(stack, a, b):
-    # If a does not end with "flurries" or "snow", we adjust b.
-    if not a.endswith("flurries") and not a.endswith("snow"):
-        if not a.startswith("mixed"):
-            b = "with a chance of " + b
-        b += " of snow"
-    return a + " (" + b + ")"
-
-
 def until_function(stack, condition, period):
     return condition + " until " + strip_prefix(period)
 
@@ -107,53 +98,42 @@ def starting_function(stack, condition, period):
     return condition + " starting " + format_period_with_preposition(period)
 
 
+def multiple_sentences_function(stack, a, b):
+    a = custom_capitalize(a)
+    b = custom_capitalize(b)
+    if not a.endswith("."):
+        a += "."
+
+    if not b.endswith("."):
+        b += "."
+    return a + " " + b
+
+
 template = {
     "clear": "clear",
     "no-precipitation": "no precipitation",
     "mixed-precipitation": "mixed precipitation",
-    "possible-very-light-precipitation": "possible light precipitation",
     "very-light-precipitation": "light precipitation",
-    "possible-light-precipitation": "possible light precipitation",
     "light-precipitation": "light precipitation",
     "medium-precipitation": "precipitation",
     "heavy-precipitation": "heavy precipitation",
-    "possible-very-light-rain": "possible drizzle",
     "very-light-rain": "drizzle",
-    "possible-light-rain": "possible light rain",
     "light-rain": "light rain",
     "medium-rain": "rain",
     "heavy-rain": "heavy rain",
-    "possible-very-light-sleet": "possible light sleet",
     "very-light-sleet": "light sleet",
-    "possible-light-sleet": "possible light sleet",
     "light-sleet": "light sleet",
     "medium-sleet": "sleet",
     "heavy-sleet": "heavy sleet",
-    "possible-very-light-snow": "possible flurries",
     "very-light-snow": "flurries",
-    "possible-light-snow": "possible light snow",
     "light-snow": "light snow",
     "medium-snow": "snow",
     "heavy-snow": "heavy snow",
-    "possible-thunderstorm": "possible thunderstorms",
     "thunderstorm": "thunderstorms",
-    "possible-medium-precipitation": "possible precipitation",
-    "possible-heavy-precipitation": "possible heavy precipitation",
-    "possible-medium-rain": "possible rain",
-    "possible-heavy-rain": "possible heavy rain",
-    "possible-medium-sleet": "possible sleet",
-    "possible-heavy-sleet": "possible heavy sleet",
-    "possible-medium-snow": "possible snow",
-    "possible-heavy-snow": "possible heavy snow",
-    "possible-very-light-freezing-rain": "possible freezing drizzle",
     "very-light-freezing-rain": "freezing drizzle",
-    "possible-light-freezing-rain": "possible light freezing rain",
     "light-freezing-rain": "light freezing rain",
-    "possible-medium-freezing-rain": "possible freezing rain",
     "medium-freezing-rain": "freezing rain",
-    "possible-heavy-freezing-rain": "possible heavy freezing rain",
     "heavy-freezing-rain": "heavy freezing rain",
-    "possible-hail": "possible hail",
     "hail": "hail",
     "light-wind": "breezy",
     "medium-wind": "windy",
@@ -161,18 +141,17 @@ template = {
     "low-humidity": "dry",
     "high-humidity": "humid",
     "fog": "foggy",
+    "smoke": "smoke",
+    "haze": "hazy",
+    "mist": "misty",
     "very-light-clouds": "mostly clear",
     "light-clouds": "partly cloudy",
     "medium-clouds": "mostly cloudy",
     "heavy-clouds": "overcast",
     "today-morning": "this morning",
-    "later-today-morning": "later this morning",
     "today-afternoon": "this afternoon",
-    "later-today-afternoon": "later this afternoon",
     "today-evening": "this evening",
-    "later-today-evening": "later this evening",
     "today-night": "tonight",
-    "later-today-night": "later tonight",
     "tomorrow-morning": "tomorrow morning",
     "tomorrow-afternoon": "tomorrow afternoon",
     "tomorrow-evening": "tomorrow evening",
@@ -202,12 +181,13 @@ template = {
     "celsius": "$1\u00b0C",
     "inches": "$1 in",
     "centimeters": "$1 cm",
-    "less-than": "< $1",
+    "millimeters": "$1 mm",
+    "less-than": "less than $1",
     "and": and_function,
     "through": through_function,
     "with": "$1, with $2",
     "range": "$1\u2013$2",
-    "parenthetical": parenthetical_function,
+    "parenthetical": "$1 accumulations of $2 expected",
     "for-hour": "$1 for the hour",
     "starting-in": "$1 starting in $2",
     "stopping-in": "$1 ending in $2",
@@ -227,13 +207,18 @@ template = {
     "temperatures-falling": "highs falling to $1 $2",
     "title": title_function,
     "sentence": sentence_function,
+    "multiple-sentences": multiple_sentences_function,
     "next-hour-forecast-status": "next hour forecasts are $1 due to $2",
     "unavailable": "unavailable",
     "temporarily-unavailable": "temporarily unavailable",
-    "partially-unavailable": "partially unavailable",
-    "station-offline": "all nearby radar stations being offline",
-    "station-incomplete": "gaps in coverage from nearby radar stations",
-    "smoke": "smoke",
-    "haze": "hazy",
-    "mist": "misty",
+    "station-offline": "missing model data",
+    "chance-of": "chance of $1",
+    "risk-of": "risk of $1",
+    "at-times": "$1 at times",
+    "occasional": "occasional $1",
+    "off-and-on": "off and on $1",
+    "to": "$1 to $2",
+    "generally": "generally $1",
+    "increasing": "increasing clouds $1",
+    "clearing": "clearing $1",
 }

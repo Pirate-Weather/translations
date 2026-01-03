@@ -1,44 +1,47 @@
 # This would be one of your translations, as a Python dictionary
 cases = {
     "Clear": ["title", "clear"],
-    "Possible Light Precipitation": ["title", "possible-very-light-precipitation"],
+    "Chance of Light Precipitation": [
+        "title",
+        ["chance-of", "very-light-precipitation"],
+    ],
     "Light Precipitation": ["title", "very-light-precipitation"],
     "Precipitation": ["title", "medium-precipitation"],
     "Heavy Precipitation": ["title", "heavy-precipitation"],
-    "Possible Drizzle": ["title", "possible-very-light-rain"],
+    "Chance of Drizzle": ["title", ["chance-of", "very-light-rain"]],
     "Drizzle": ["title", "very-light-rain"],
-    "Possible Light Rain": ["title", "possible-light-rain"],
+    "Chance of Light Rain": ["title", ["chance-of", "light-rain"]],
     "Light Rain": ["title", "light-rain"],
     "Rain": ["title", "medium-rain"],
     "Heavy Rain": ["title", "heavy-rain"],
-    "Possible Light Sleet": ["title", "possible-very-light-sleet"],
+    "Chance of Light Sleet": ["title", ["chance-of", "very-light-sleet"]],
     "Light Sleet": ["title", "very-light-sleet"],
     "Sleet": ["title", "medium-sleet"],
     "Heavy Sleet": ["title", "heavy-sleet"],
-    "Possible Flurries": ["title", "possible-very-light-snow"],
+    "Chance of Flurries": ["title", ["chance-of", "very-light-snow"]],
     "Flurries": ["title", "very-light-snow"],
-    "Possible Light Snow": ["title", "possible-light-snow"],
+    "Chance of Light Snow": ["title", ["chance-of", "light-snow"]],
     "Light Snow": ["title", "light-snow"],
     "Snow": ["title", "medium-snow"],
     "Heavy Snow": ["title", "heavy-snow"],
     "Thunderstorms": ["title", "thunderstorm"],
-    "Possible Precipitation": ["title", "possible-medium-precipitation"],
-    "Possible Heavy Precipitation": ["title", "possible-heavy-precipitation"],
-    "Possible Rain": ["title", "possible-medium-rain"],
-    "Possible Heavy Rain": ["title", "possible-heavy-rain"],
-    "Possible Sleet": ["title", "possible-medium-sleet"],
-    "Possible Heavy Sleet": ["title", "possible-heavy-sleet"],
-    "Possible Snow": ["title", "possible-medium-snow"],
-    "Possible Heavy Snow": ["title", "possible-heavy-snow"],
-    "Possible Freezing Drizzle": ["title", "possible-very-light-freezing-rain"],
+    "Chance of Precipitation": ["title", ["chance-of", "medium-precipitation"]],
+    "Chance of Heavy Precipitation": ["title", ["chance-of", "heavy-precipitation"]],
+    "Chance of Rain": ["title", ["chance-of", "medium-rain"]],
+    "Chance of Heavy Rain": ["title", ["chance-of", "heavy-rain"]],
+    "Chance of Sleet": ["title", ["chance-of", "medium-sleet"]],
+    "Chance of Heavy Sleet": ["title", ["chance-of", "heavy-sleet"]],
+    "Chance of Snow": ["title", ["chance-of", "medium-snow"]],
+    "Chance of Heavy Snow": ["title", ["chance-of", "heavy-snow"]],
+    "Chance of Freezing Drizzle": ["title", ["chance-of", "very-light-freezing-rain"]],
     "Freezing Drizzle": ["title", "very-light-freezing-rain"],
-    "Possible Light Freezing Rain": ["title", "possible-light-freezing-rain"],
+    "Chance of Light Freezing Rain": ["title", ["chance-of", "light-freezing-rain"]],
     "Light Freezing Rain": ["title", "light-freezing-rain"],
-    "Possible Freezing Rain": ["title", "possible-medium-freezing-rain"],
+    "Chance of Freezing Rain": ["title", ["chance-of", "medium-freezing-rain"]],
     "Freezing Rain": ["title", "medium-freezing-rain"],
-    "Possible Heavy Freezing Rain": ["title", "possible-heavy-freezing-rain"],
+    "Chance of Heavy Freezing Rain": ["title", ["chance-of", "heavy-freezing-rain"]],
     "Heavy Freezing Rain": ["title", "heavy-freezing-rain"],
-    "Possible Hail": ["title", "possible-hail"],
+    "Chance of Hail": ["title", ["chance-of", "hail"]],
     "Hail": ["title", "hail"],
     "Windy": ["title", "medium-wind"],
     "Dangerously Windy": ["title", "heavy-wind"],
@@ -91,13 +94,13 @@ cases = {
         ["until", "heavy-precipitation", "afternoon"],
     ],
     "Breezy in the afternoon.": ["sentence", ["during", "light-wind", "afternoon"]],
-    "Snow later this evening and tomorrow morning.": [
+    "Snow this evening and tomorrow morning.": [
         "sentence",
-        ["during", "medium-snow", ["and", "later-today-evening", "tomorrow-morning"]],
+        ["during", "medium-snow", ["and", "today-evening", "tomorrow-morning"]],
     ],
-    "Heavy rain until later this morning, returning this evening.": [
+    "Heavy rain until this morning, returning this evening.": [
         "sentence",
-        ["until-starting-again", "heavy-rain", "later-today-morning", "today-evening"],
+        ["until-starting-again", "heavy-rain", "today-morning", "today-evening"],
     ],
     "Drizzle until afternoon, returning this evening.": [
         "sentence",
@@ -120,11 +123,11 @@ cases = {
         "sentence",
         ["starting-continuing-until", "heavy-clouds", "evening", "night"],
     ],
-    "Light sleet later this afternoon and foggy tomorrow morning.": [
+    "Light sleet this afternoon and foggy tomorrow morning.": [
         "sentence",
         [
             "and",
-            ["during", "light-sleet", "later-today-afternoon"],
+            ["during", "light-sleet", "today-afternoon"],
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
@@ -141,11 +144,11 @@ cases = {
             ["during", "medium-sleet", "tomorrow-morning"],
         ],
     ],
-    "Overcast starting later tonight and heavy snow tomorrow afternoon.": [
+    "Overcast starting tonight and heavy snow tomorrow afternoon.": [
         "sentence",
         [
             "and",
-            ["starting", "heavy-clouds", "later-today-night"],
+            ["starting", "heavy-clouds", "today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
@@ -162,23 +165,23 @@ cases = {
             ],
         ],
     ],
-    "Snow (5 in) overnight.": [
+    "Snow accumulations of 5 in expected overnight.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
     ],
-    "Light snow (2 cm) later this morning.": [
+    "Light snow accumulations of 2 cm expected this morning.": [
         "sentence",
         [
             "during",
             ["parenthetical", "light-snow", ["centimeters", 2]],
-            "later-today-morning",
+            "today-morning",
         ],
     ],
-    "Heavy snow (8–12 in) throughout the day.": [
+    "Heavy snow accumulations of 8–12 in expected throughout the day.": [
         "sentence",
         ["for-day", ["parenthetical", "heavy-snow", ["inches", ["range", 8, 12]]]],
     ],
-    "Snow (< 1 cm) in the afternoon.": [
+    "Snow accumulations of less than 1 cm expected in the afternoon.": [
         "sentence",
         [
             "during",
@@ -226,55 +229,55 @@ cases = {
             ["temperatures-peaking", ["fahrenheit", 100], "monday"],
         ],
     ],
-    "Mixed precipitation (1–3 in of snow) throughout the day.": [
+    "Mixed precipitation accumulations of 1–3 in expected throughout the day.": [
         "sentence",
         [
             "for-day",
             ["parenthetical", "mixed-precipitation", ["inches", ["range", 1, 3]]],
         ],
     ],
-    "Heavy Snow (1–3 in)": [
+    "Heavy Snow Accumulations of 1–3 in Expected": [
         "title",
         ["parenthetical", "heavy-snow", ["inches", ["range", 1, 3]]],
     ],
-    "Heavy Snow (3–5 cm)": [
+    "Heavy Snow Accumulations of 3–5 cm Expected": [
         "title",
         ["parenthetical", "heavy-snow", ["centimeters", ["range", 3, 5]]],
     ],
-    "Rain (with a Chance of 2–4 in of Snow)": [
+    "Rain Accumulations of 2–4 in Expected": [
         "title",
         ["parenthetical", "medium-rain", ["inches", ["range", 2, 4]]],
     ],
-    "Possible Thunderstorms": ["title", "possible-thunderstorm"],
+    "Chance of Thunderstorms": ["title", ["chance-of", "thunderstorm"]],
     "Heavy Rain and Thunderstorms": ["title", ["and", "heavy-rain", "thunderstorm"]],
-    "Drizzle starting in < 1 min.": [
+    "Drizzle starting in less than 1 min.": [
         "sentence",
         ["starting-in", "very-light-rain", ["less-than", ["minutes", 1]]],
     ],
-    "Next hour forecasts are temporarily unavailable due to all nearby radar stations being offline.": [
+    "Next hour forecasts are temporarily unavailable due to missing model data.": [
         "sentence",
         ["next-hour-forecast-status", "temporarily-unavailable", "station-offline"],
     ],
-    "Next hour forecasts are partially unavailable due to gaps in coverage from nearby radar stations.": [
+    "Next hour forecasts are temporarily unavailable due to missing model data.": [
         "sentence",
-        ["next-hour-forecast-status", "partially-unavailable", "station-incomplete"],
+        ["next-hour-forecast-status", "temporarily-unavailable", "station-offline"],
     ],
-    "Next hour forecasts are unavailable due to all nearby radar stations being offline.": [
+    "Next hour forecasts are unavailable due to missing model data.": [
         "sentence",
         ["next-hour-forecast-status", "unavailable", "station-offline"],
     ],
     "Drizzle and Thunderstorms": ["title", ["and", "very-light-rain", "thunderstorm"]],
     "Snow and Thunderstorms": ["title", ["and", "medium-snow", "thunderstorm"]],
     "Hail and Thunderstorms": ["title", ["and", "hail", "thunderstorm"]],
-    "Light Freezing Rain (with a Chance of 2–4 in of Snow)": [
+    "Light Freezing Rain Accumulations of 2–4 in Expected": [
         "title",
         ["parenthetical", "light-freezing-rain", ["inches", ["range", 2, 4]]],
     ],
-    "Possible thunderstorms and hail in the evening.": [
+    "Chance of thunderstorms and hail in the evening.": [
         "sentence",
         [
             "during",
-            ["and", "possible-thunderstorm", "hail"],
+            ["and", ["chance-of", "thunderstorm"], "hail"],
             "evening",
         ],
     ],
@@ -293,11 +296,11 @@ cases = {
             ["temperatures-peaking", ["celsius", 3], "wednesday"],
         ],
     ],
-    "Possible thunderstorms over the weekend, with highs climbing to 104°F next Monday.": [
+    "Chance of thunderstorms over the weekend, with highs climbing to 104°F next Monday.": [
         "sentence",
         [
             "with",
-            ["over-weekend", "possible-thunderstorm"],
+            ["over-weekend", ["chance-of", "thunderstorm"]],
             ["temperatures-rising", ["fahrenheit", 104], "next-monday"],
         ],
     ],
@@ -337,4 +340,7 @@ cases = {
     "Misty throughout the day.": ["sentence", ["for-day", "mist"]],
     "Misty overnight.": ["sentence", ["during", "mist", "night"]],
     "Misty and Overcast": ["title", ["and", "mist", "heavy-clouds"]],
+    "Clear. Light rain.": ["sentence", ["multiple-sentences", "clear", "light-rain"]],
+    "Clearing partly cloudy.": ["sentence", ["clearing", "light-clouds"]],
+    "Increasing clouds tonight.": ["sentence", ["increasing", "today-night"]],
 }
