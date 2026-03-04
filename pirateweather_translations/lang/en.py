@@ -221,4 +221,5 @@ template = {
     "generally": "generally $1",
     "increasing": "increasing clouds $1",
     "clearing": "clearing $1",
+    "ending": "$1 ending $2",
 }
