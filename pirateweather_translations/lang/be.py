@@ -65,9 +65,9 @@ def title_function(stack, s):
     # Apply custom_capitalize to every word
     return re.sub(
         r"\S+",
-        lambda word: word.group(0).capitalize()
-        if word.group(0) != "і"
-        else word.group(0),
+        lambda word: (
+            word.group(0).capitalize() if word.group(0) != "і" else word.group(0)
+        ),
         s,
     )
 
