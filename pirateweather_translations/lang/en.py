@@ -219,7 +219,7 @@ template = {
     "off-and-on": "off and on $1",
     "to": "$1 to $2",
     "generally": "generally $1",
-    "increasing": "increasing clouds $1",
-    "clearing": "clearing $1",
+    "increasing": "increasing clouds",
+    "clearing": "clearing",
     "ending": "$1 ending $2",
 }
