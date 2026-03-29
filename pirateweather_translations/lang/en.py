@@ -236,4 +236,14 @@ template = {
     "smoke": "smoke",
     "haze": "hazy",
     "mist": "misty",
+    # These translations likely won't be used in Pirate Weather but are useful for other APIs
+    "freezing-fog": "freezing fog",
+    "snow-grains": "snow grains",
+    "light-rain-shower": "light rainshower",
+    "rain-shower": "rainshower",
+    "heavy-rain-shower": "heavy rainshower",
+    "light-snow-shower": "light snowshower",
+    "snow-shower": "snowshower",
+    "heavy-snow-shower": "heavy snowshower",
+    "thunderstorm-with-hail": "thunderstorm with hail",
 }
