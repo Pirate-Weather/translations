@@ -38,7 +38,7 @@ cases = {
     "Vento Moderado": ["title", "medium-wind"],
     "Vento Forte": ["title", "heavy-wind"],
     "Tempo Seco": ["title", "low-humidity"],
-    "Tempo [h]úmido": ["title", "high-humidity"],
+    "Tempo Úmido": ["title", "high-humidity"],
     "Nevoeiro": ["title", "fog"],
     "Céu Quase Limpo": ["title", "very-light-clouds"],
     "Céu Pouco Nublado": ["title", "light-clouds"],
@@ -46,7 +46,7 @@ cases = {
     "Céu Encoberto": ["title", "heavy-clouds"],
     "Tempo Seco e Vento Fraco": ["title", ["and", "low-humidity", "light-wind"]],
     "Chuviscos e Vento Forte": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Tempo [h]úmido e Céu Pouco Nublado": [
+    "Tempo Úmido e Céu Pouco Nublado": [
         "title",
         ["and", "high-humidity", "light-clouds"],
     ],
@@ -212,7 +212,7 @@ cases = {
     "Névoa Seca": ["title", "haze"],
     "Névoa seca até ao fim do dia.": ["sentence", ["for-day", "haze"]],
     "Névoa seca durante tarde.": ["sentence", ["during", "haze", "afternoon"]],
-    "Névoa Seca e Tempo [h]úmido": ["title", ["and", "haze", "high-humidity"]],
+    "Névoa Seca e Tempo Úmido": ["title", ["and", "haze", "high-humidity"]],
     "Neblina até ao fim do dia.": ["sentence", ["for-day", "mist"]],
     "Neblina durante madrugada.": ["sentence", ["during", "mist", "night"]],
     "Neblina e Céu Encoberto": ["title", ["and", "mist", "heavy-clouds"]],

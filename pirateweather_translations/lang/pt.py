@@ -102,7 +102,7 @@ template = {
     "medium-wind": "vento moderado",
     "heavy-wind": "vento forte",
     "low-humidity": "tempo seco",
-    "high-humidity": "tempo [h]úmido",
+    "high-humidity": "tempo úmido",
     "fog": "nevoeiro",
     "very-light-clouds": "céu quase limpo",
     "light-clouds": "céu pouco nublado",
