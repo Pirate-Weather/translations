@@ -1,53 +1,53 @@
 # This would be one of your translations, as a Python dictionary
 cases = {
-    "Limpo": ["title", "clear"],
-    "Possíveis Aguaceiros Muito Fracos": ["title", "possible-very-light-precipitation"],
+    "Céu Limpo": ["title", "clear"],
+    "Possibilidade De Aguaceiros Muito Fracos": ["title", "possible-very-light-precipitation"],
     "Aguaceiros Muito Fracos": ["title", "very-light-precipitation"],
-    "Possíveis Aguaceiros Fracos": ["title", "possible-light-precipitation"],
+    "Possibilidade De Aguaceiros Fracos": ["title", "possible-light-precipitation"],
     "Aguaceiros Fracos": ["title", "light-precipitation"],
     "Aguaceiros": ["title", "medium-precipitation"],
     "Aguaceiros Fortes": ["title", "heavy-precipitation"],
-    "Possíveis Chuviscos": ["title", "possible-very-light-rain"],
+    "Possibilidade De Chuviscos": ["title", "possible-very-light-rain"],
     "Chuviscos": ["title", "very-light-rain"],
-    "Possível Chuva Fraca": ["title", "possible-light-rain"],
+    "Possibilidade De Chuva Fraca": ["title", "possible-light-rain"],
     "Chuva Fraca": ["title", "light-rain"],
     "Chuva": ["title", "medium-rain"],
     "Chuva Forte": ["title", "heavy-rain"],
-    "Possível Granizo Muito Fraco": ["title", "possible-very-light-sleet"],
-    "Granizo Muito Fraco": ["title", "very-light-sleet"],
-    "Possível Granizo Fraco": ["title", "possible-light-sleet"],
-    "Granizo Fraco": ["title", "light-sleet"],
-    "Granizo": ["title", "medium-sleet"],
-    "Granizo Forte": ["title", "heavy-sleet"],
-    "Possível Neve Muito Fraca": ["title", "possible-very-light-snow"],
+    "Possibilidade De Chuva Congelada (chuva e Neve) Muito Fraca": ["title", "possible-very-light-sleet"],
+    "Chuva Congelada (chuva e Neve) Muito Fraca": ["title", "very-light-sleet"],
+    "Possibilidade De Chuva Congelada (chuva e Neve) Fraca": ["title", "possible-light-sleet"],
+    "Chuva Congelada (chuva e Neve) Fraca": ["title", "light-sleet"],
+    "Chuva Congelada (chuva e Neve)": ["title", "medium-sleet"],
+    "Chuva Congelada (chuva e Neve) Forte": ["title", "heavy-sleet"],
+    "Possibilidade De Neve Muito Fraca": ["title", "possible-very-light-snow"],
     "Neve Muito Fraca": ["title", "very-light-snow"],
-    "Possível Neve Fraca": ["title", "possible-light-snow"],
+    "Possibilidade De Neve Fraca": ["title", "possible-light-snow"],
     "Neve Fraca": ["title", "light-snow"],
     "Neve": ["title", "medium-snow"],
     "Neve Forte": ["title", "heavy-snow"],
     "Vento Fraco": ["title", "light-wind"],
-    "Vento": ["title", "medium-wind"],
+    "Vento Moderado": ["title", "medium-wind"],
     "Vento Forte": ["title", "heavy-wind"],
-    "Seco": ["title", "low-humidity"],
-    "Úmido": ["title", "high-humidity"],
+    "Tempo Seco": ["title", "low-humidity"],
+    "Tempo [h]úmido": ["title", "high-humidity"],
     "Nevoeiro": ["title", "fog"],
-    "Principalmente Claro": ["title", "very-light-clouds"],
-    "Ligeiramente Nublado": ["title", "light-clouds"],
-    "Nublado": ["title", "medium-clouds"],
-    "Muito Nublado": ["title", "heavy-clouds"],
-    "Seco e Vento Fraco": ["title", ["and", "low-humidity", "light-wind"]],
+    "Céu Quase Limpo": ["title", "very-light-clouds"],
+    "Céu Pouco Nublado": ["title", "light-clouds"],
+    "Céu Nublado": ["title", "medium-clouds"],
+    "Céu Encoberto": ["title", "heavy-clouds"],
+    "Tempo Seco e Vento Fraco": ["title", ["and", "low-humidity", "light-wind"]],
     "Chuviscos e Vento Forte": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Úmido e Ligeiramente Nublado": ["title", ["and", "high-humidity", "light-clouds"]],
-    "Limpo na próxima hora.": ["sentence", ["for-hour", "clear"]],
-    "Neve muito fraca dentro de 35 min.": [
+    "Tempo [h]úmido e Céu Pouco Nublado": ["title", ["and", "high-humidity", "light-clouds"]],
+    "Céu limpo na próxima hora.": ["sentence", ["for-hour", "clear"]],
+    "Neve muito fraca começando em 35 min.": [
         "sentence",
         ["starting-in", "very-light-snow", ["minutes", 35]],
     ],
-    "Chuva fraca termina daqui a 15 min.": [
+    "Chuva fraca terminando em 15 min.": [
         "sentence",
         ["stopping-in", "light-rain", ["minutes", 15]],
     ],
-    "Granizo forte dentro de 20 min, termina 30 min mais tarde.": [
+    "Chuva congelada (chuva e neve) forte começando de 20 min, terminando ao fim da 30 min.": [
         "sentence",
         [
             "starting-then-stopping-later",
@@ -56,7 +56,7 @@ cases = {
             ["minutes", 30],
         ],
     ],
-    "Chuva termina dentro de 25 min, recomeça 8 min mais tarde.": [
+    "Chuva terminando em 25 min e recomeçando em 8 min.": [
         "sentence",
         [
             "stopping-then-starting-later",
@@ -65,33 +65,33 @@ cases = {
             ["minutes", 8],
         ],
     ],
-    "Nublado durante todo o dia.": ["sentence", ["for-day", "medium-clouds"]],
-    "Granizo muito fraco começa durante a manhã.": [
+    "Céu nublado até ao fim do dia.": ["sentence", ["for-day", "medium-clouds"]],
+    "Chuva congelada (chuva e neve) muito fraca começando de manhã.": [
         "sentence",
         ["starting", "very-light-sleet", "morning"],
     ],
-    "Vento até hoje de madrugada.": [
+    "Vento moderado até à amanhã de madrugada.": [
         "sentence",
         ["until", "medium-wind", "today-night"],
     ],
-    "Aguaceiros fortes até tarde.": [
+    "Aguaceiros fortes até à tarde.": [
         "sentence",
         ["until", "heavy-precipitation", "afternoon"],
     ],
     "Vento fraco durante tarde.": ["sentence", ["during", "light-wind", "afternoon"]],
-    "Neve durante noite de hoje e amanhã de manhã.": [
+    "Neve durante hoje ao final da noite e amanhã de manhã.": [
         "sentence",
         ["during", "medium-snow", ["and", "later-today-evening", "tomorrow-morning"]],
     ],
-    "Chuva forte até manhã de hoje, recomeça hoje à noite.": [
+    "Chuva forte até à hoje ao final da manhã, recomeçando de hoje à noite.": [
         "sentence",
         ["until-starting-again", "heavy-rain", "later-today-morning", "today-evening"],
     ],
-    "Muito nublado começa esta noite, continua até à madrugada.": [
+    "Céu encoberto começando de noite, continuando até de madrugada.": [
         "sentence",
         ["starting-continuing-until", "heavy-clouds", "evening", "night"],
     ],
-    "Granizo fraco durante tarde de hoje e nevoeiro durante amanhã de manhã.": [
+    "Chuva congelada (chuva e neve) fraca durante hoje ao final da tarde e nevoeiro durante amanhã de manhã.": [
         "sentence",
         [
             "and",
@@ -99,7 +99,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Vento forte começa esta manhã, continua até à tarde, e granizo durante amanhã de manhã.": [
+    "Vento forte começando de manhã, continuando até de tarde, e chuva congelada (chuva e neve) durante amanhã de manhã.": [
         "sentence",
         [
             "and",
@@ -107,7 +107,7 @@ cases = {
             ["during", "medium-sleet", "tomorrow-morning"],
         ],
     ],
-    "Muito nublado começa durante a de madrugada e neve forte durante amanhã à tarde.": [
+    "Céu encoberto começando de ao final da madrugada e neve forte durante amanhã à tarde.": [
         "sentence",
         [
             "and",
@@ -115,7 +115,7 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Seco durante hoje de madrugada e aguaceiros fracos começa esta amanhã à noite, continua até à amanhã de madrugada.": [
+    "Tempo seco durante amanhã de madrugada e aguaceiros fracos começando de amanhã à noite, continuando até de amanhã ao final da noite.": [
         "sentence",
         [
             "and",
@@ -128,11 +128,11 @@ cases = {
             ],
         ],
     ],
-    "Neve (5 cm.) durante madrugada.": [
+    "Neve (5 cm) durante madrugada.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["centimeters", 5]], "night"],
     ],
-    "Neve fraca (2 cm.) durante manhã de hoje.": [
+    "Neve fraca (2 cm) durante manhã de hoje.": [
         "sentence",
         [
             "during",
@@ -140,7 +140,7 @@ cases = {
             "later-today-morning",
         ],
     ],
-    "Neve (menos de 1 cm.) durante tarde.": [
+    "Neve (menos de 1 cm) durante tarde.": [
         "sentence",
         [
             "during",
@@ -148,7 +148,7 @@ cases = {
             "afternoon",
         ],
     ],
-    "Sem aguaceiros durante toda a semana, com as temperaturas a chegar a um máximo de 35\u00b0C amanhã.": [
+    "Sem precipitação durante a semana, com temperatura máxima de 35 \u00b0C, amanhã.": [
         "sentence",
         [
             "with",
@@ -156,7 +156,7 @@ cases = {
             ["temperatures-peaking", ["celsius", 35], "tomorrow"],
         ],
     ],
-    "Aguaceiros variados durante todo o fim de semana, com as temperaturas a subir aos 32\u00b0C quinta-feira.": [
+    "Aguaceiros mistos durante o fim de semana, com subida de temperatura até aos 32 \u00b0C, até quinta-feira.": [
         "sentence",
         [
             "with",
@@ -164,7 +164,7 @@ cases = {
             ["temperatures-rising", ["celsius", 32], "thursday"],
         ],
     ],
-    "Chuviscos durante segunda-feira, com as temperaturas a descer até 15\u00b0C sexta-feira.": [
+    "Chuviscos durante segunda-feira, com descida de temperatura até aos 15 \u00b0C, sexta-feira.": [
         "sentence",
         [
             "with",
@@ -172,7 +172,7 @@ cases = {
             ["temperatures-valleying", ["celsius", 15], "friday"],
         ],
     ],
-    "Neve fraca durante terça-feira e quarta-feira, com as temperaturas a descer até um minimo de 0\u00b0C domingo.": [
+    "Neve fraca durante terça-feira e quarta-feira, com temperatura mínima de 0 \u00b0C, domingo.": [
         "sentence",
         [
             "with",
@@ -180,7 +180,7 @@ cases = {
             ["temperatures-falling", ["celsius", 0], "sunday"],
         ],
     ],
-    "Aguaceiros durante hoje durante sábado, com as temperaturas a chegar a um máximo de 37\u00b0C segunda-feira.": [
+    "Aguaceiros durante hoje durante sábado, com temperatura máxima de 37 \u00b0C, segunda-feira.": [
         "sentence",
         [
             "with",
@@ -188,24 +188,24 @@ cases = {
             ["temperatures-peaking", ["celsius", 37], "monday"],
         ],
     ],
-    "Tempestades possíveis até próxima quarta-feira.": [
+    "Possibilidade de trovoada até à próxima quarta-feira.": [
         "sentence",
         ["until", "possible-thunderstorm", "next-wednesday"],
     ],
     "Fumo": ["title", "smoke"],
-    "Fumo durante todo o dia.": ["sentence", ["for-day", "smoke"]],
+    "Fumo até ao fim do dia.": ["sentence", ["for-day", "smoke"]],
     "Fumo durante manhã.": ["sentence", ["during", "smoke", "morning"]],
-    "Fumo até hoje à noite.": ["sentence", ["until", "smoke", "today-evening"]],
-    "Fumo e Ligeiramente Nublado": ["title", ["and", "smoke", "light-clouds"]],
+    "Fumo até à hoje à noite.": ["sentence", ["until", "smoke", "today-evening"]],
+    "Fumo e Céu Pouco Nublado": ["title", ["and", "smoke", "light-clouds"]],
     "Névoa Seca": ["title", "haze"],
-    "Névoa seca durante todo o dia.": ["sentence", ["for-day", "haze"]],
+    "Névoa seca até ao fim do dia.": ["sentence", ["for-day", "haze"]],
     "Névoa seca durante tarde.": ["sentence", ["during", "haze", "afternoon"]],
-    "Névoa Seca e Úmido": ["title", ["and", "haze", "high-humidity"]],
-    "Nevoeiro durante todo o dia.": ["sentence", ["for-day", "mist"]],
-    "Nevoeiro durante madrugada.": ["sentence", ["during", "mist", "night"]],
-    "Nevoeiro e Muito Nublado": ["title", ["and", "mist", "heavy-clouds"]],
-    "Tempestade na próxima hora.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Saraiva dentro de 5 min, termina 45 min mais tarde.": [
+    "Névoa Seca e Tempo [h]úmido": ["title", ["and", "haze", "high-humidity"]],
+    "Neblina até ao fim do dia.": ["sentence", ["for-day", "mist"]],
+    "Neblina durante madrugada.": ["sentence", ["during", "mist", "night"]],
+    "Neblina e Céu Encoberto": ["title", ["and", "mist", "heavy-clouds"]],
+    "Trovoada na próxima hora.": ["sentence", ["for-hour", "thunderstorm"]],
+    "Granizo começando de 5 min, terminando ao fim da 45 min.": [
         "sentence",
         [
             "starting-then-stopping-later",
@@ -223,7 +223,7 @@ cases = {
             ["minutes", 32],
         ],
     ],
-    "Chuvisco congelante dentro de 49 min.": [
+    "Chuvisco congelante começando em 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
     ],
