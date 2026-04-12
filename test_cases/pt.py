@@ -144,7 +144,7 @@ cases = {
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["centimeters", 5]], "night"],
     ],
-    "Neve fraca (2 cm) durante manhã de hoje.": [
+    "Neve fraca (2 cm) durante hoje ao final da manhã.": [
         "sentence",
         [
             "during",
@@ -176,7 +176,7 @@ cases = {
             ["temperatures-rising", ["celsius", 32], "thursday"],
         ],
     ],
-    "Chuviscos durante segunda-feira, com descida de temperatura até aos 15 \u00b0C, sexta-feira.": [
+    "Chuviscos durante segunda-feira, com descida de temperatura até aos 15 \u00b0C, até sexta-feira.": [
         "sentence",
         [
             "with",
@@ -226,7 +226,7 @@ cases = {
             ["minutes", 45],
         ],
     ],
-    "Chuva forte e gelada termina dentro de 10 min, recomeça 32 min mais tarde.": [
+    "Chuva congelante forte terminando em 10 min e recomeçando em 32 min.": [
         "sentence",
         [
             "stopping-then-starting-later",
