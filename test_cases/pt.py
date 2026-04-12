@@ -1,7 +1,10 @@
 # This would be one of your translations, as a Python dictionary
 cases = {
     "Céu Limpo": ["title", "clear"],
-    "Possibilidade De Aguaceiros Muito Fracos": ["title", "possible-very-light-precipitation"],
+    "Possibilidade De Aguaceiros Muito Fracos": [
+        "title",
+        "possible-very-light-precipitation",
+    ],
     "Aguaceiros Muito Fracos": ["title", "very-light-precipitation"],
     "Possibilidade De Aguaceiros Fracos": ["title", "possible-light-precipitation"],
     "Aguaceiros Fracos": ["title", "light-precipitation"],
@@ -13,9 +16,15 @@ cases = {
     "Chuva Fraca": ["title", "light-rain"],
     "Chuva": ["title", "medium-rain"],
     "Chuva Forte": ["title", "heavy-rain"],
-    "Possibilidade De Chuva Congelada (chuva e Neve) Muito Fraca": ["title", "possible-very-light-sleet"],
+    "Possibilidade De Chuva Congelada (chuva e Neve) Muito Fraca": [
+        "title",
+        "possible-very-light-sleet",
+    ],
     "Chuva Congelada (chuva e Neve) Muito Fraca": ["title", "very-light-sleet"],
-    "Possibilidade De Chuva Congelada (chuva e Neve) Fraca": ["title", "possible-light-sleet"],
+    "Possibilidade De Chuva Congelada (chuva e Neve) Fraca": [
+        "title",
+        "possible-light-sleet",
+    ],
     "Chuva Congelada (chuva e Neve) Fraca": ["title", "light-sleet"],
     "Chuva Congelada (chuva e Neve)": ["title", "medium-sleet"],
     "Chuva Congelada (chuva e Neve) Forte": ["title", "heavy-sleet"],
@@ -37,7 +46,10 @@ cases = {
     "Céu Encoberto": ["title", "heavy-clouds"],
     "Tempo Seco e Vento Fraco": ["title", ["and", "low-humidity", "light-wind"]],
     "Chuviscos e Vento Forte": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Tempo [h]úmido e Céu Pouco Nublado": ["title", ["and", "high-humidity", "light-clouds"]],
+    "Tempo [h]úmido e Céu Pouco Nublado": [
+        "title",
+        ["and", "high-humidity", "light-clouds"],
+    ],
     "Céu limpo na próxima hora.": ["sentence", ["for-hour", "clear"]],
     "Neve muito fraca começando em 35 min.": [
         "sentence",
