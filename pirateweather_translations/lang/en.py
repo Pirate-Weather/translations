@@ -194,6 +194,7 @@ template = {
     "starting-then-stopping-later": "$1 starting in $2, ending $3 later",
     "stopping-then-starting-later": "$1 ending in $2, returning $3 later",
     "for-day": "$1 throughout the day",
+    "for-night": "$1 throughout the night",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,
@@ -223,5 +224,4 @@ template = {
     "generally": "generally $1",
     "increasing": "increasing clouds",
     "clearing": "clearing",
-    "ending": "$1 ending $2",
 }
