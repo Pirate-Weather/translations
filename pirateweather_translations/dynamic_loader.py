@@ -1,6 +1,8 @@
-import os
 import importlib
+import os
+
 import pirateweather_translations.lang
+
 from .translation import Translation
 
 

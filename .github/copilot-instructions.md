@@ -33,16 +33,18 @@ Pirate Weather Translations is a Python library that translates machine-readable
   ```python
   from pirateweather_translations.translation import Translation
   from pirateweather_translations.lang.en import template
+
   t = Translation(template)
-  result = t.translate(['title', 'heavy-rain'])  # Returns "Heavy Rain"
+  result = t.translate(["title", "heavy-rain"])  # Returns "Heavy Rain"
   ```
 - Test dynamic loading:
   ```python
   from pirateweather_translations.dynamic_loader import load_translation
   from pirateweather_translations.translation import Translation
-  template = load_translation('en')
+
+  template = load_translation("en")
   t = Translation(template)
-  result = t.translate(['title', 'clear'])  # Returns "Clear"
+  result = t.translate(["title", "clear"])  # Returns "Clear"
   ```
 
 ## Validation
