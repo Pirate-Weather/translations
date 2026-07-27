@@ -134,16 +134,14 @@ def until_starting_again_function(stack, condition, a, b):
     if condition.endswith("zrážky"):
         starting = ", ktoré začnú znovu "
     elif (
-        condition.endswith("dážď")
-        or condition.endswith("dážď so snehom")
-        or condition.endswith("vietor")
+        condition.endswith(("dážď", "dážď so snehom", "vietor"))
     ):
         starting = ", ktorý začne znovu "
-    elif condition.endswith("sneženie") or condition.endswith("mrholenie"):
+    elif condition.endswith(("sneženie", "mrholenie")):
         starting = ", ktoré začne znovu "
     elif condition.endswith("vlhkosť"):
         starting = ", ktorá začne znovu "
-    elif condition.endswith("zamračené") or condition.endswith("hmlisto"):
+    elif condition.endswith(("zamračené", "hmlisto")):
         starting = "a začne znovu "
 
     return condition + " až do " + remove_prefix_and_use_genitive(a) + starting + b
@@ -155,16 +153,14 @@ def starting_continuing_until_function(stack, condition, a, b):
     if condition.endswith("zrážky"):
         continuing = ", ktoré pretrvajú až do "
     elif (
-        condition.endswith("dážď")
-        or condition.endswith("dážď so snehom")
-        or condition.endswith("vietor")
+        condition.endswith(("dážď", "dážď so snehom", "vietor"))
     ):
         continuing = ", ktorý pretrvá až do "
-    elif condition.endswith("sneženie") or condition.endswith("mrholenie"):
+    elif condition.endswith(("sneženie", "mrholenie")):
         continuing = ", ktoré pretrvá až do "
     elif condition.endswith("vlhkosť"):
         continuing = ", ktorá pretrvá až do "
-    elif condition.endswith("zamračené") or condition.endswith("hmlisto"):
+    elif condition.endswith(("zamračené", "hmlisto")):
         continuing = " a pretrvá až do "
 
     return f"od {remove_prefix_and_use_genitive(a)} {condition}{continuing}{remove_prefix_and_use_genitive(b)}"

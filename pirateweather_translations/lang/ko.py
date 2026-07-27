@@ -14,7 +14,7 @@ def join_with_shared_prefix(a, b, joiner):
 
 
 def and_function(stack, a, b):
-    joiner = ", " if "," in a else ", "
+    joiner = ", "
     return join_with_shared_prefix(a, b, joiner)
 
 

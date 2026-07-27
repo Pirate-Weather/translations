@@ -19,7 +19,7 @@ def join_with_shared_prefix(a, b, joiner):
 
 
 def and_function(stack, a, b):
-    return join_with_shared_prefix(a, b, " și " if "," in a else " și ")
+    return join_with_shared_prefix(a, b, " și ")
 
 
 def through_function(stack, a, b):
