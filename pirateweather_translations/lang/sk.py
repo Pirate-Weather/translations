@@ -133,9 +133,7 @@ def until_starting_again_function(stack, condition, a, b):
 
     if condition.endswith("zrážky"):
         starting = ", ktoré začnú znovu "
-    elif (
-        condition.endswith(("dážď", "dážď so snehom", "vietor"))
-    ):
+    elif condition.endswith(("dážď", "dážď so snehom", "vietor")):
         starting = ", ktorý začne znovu "
     elif condition.endswith(("sneženie", "mrholenie")):
         starting = ", ktoré začne znovu "
@@ -152,9 +150,7 @@ def starting_continuing_until_function(stack, condition, a, b):
 
     if condition.endswith("zrážky"):
         continuing = ", ktoré pretrvajú až do "
-    elif (
-        condition.endswith(("dážď", "dážď so snehom", "vietor"))
-    ):
+    elif condition.endswith(("dážď", "dážď so snehom", "vietor")):
         continuing = ", ktorý pretrvá až do "
     elif condition.endswith(("sneženie", "mrholenie")):
         continuing = ", ktoré pretrvá až do "

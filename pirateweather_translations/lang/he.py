@@ -25,9 +25,7 @@ SATURDAY = "שבת"
 
 
 def proper_at_time_prefix(at):
-    if (
-        at.startswith((SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY))
-    ):
+    if at.startswith((SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY)):
         return "ב"
     # default, return no prefix
     return ""
