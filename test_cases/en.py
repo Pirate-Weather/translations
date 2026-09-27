@@ -44,14 +44,14 @@ cases = {
     "Chance of Hail": ["title", ["chance-of", "hail"]],
     "Hail": ["title", "hail"],
     "Windy": ["title", "medium-wind"],
-    "Dangerously Windy": ["title", "heavy-wind"],
+    "Very Windy": ["title", "heavy-wind"],
     "Foggy": ["title", "fog"],
     "Mostly Clear": ["title", "very-light-clouds"],
     "Partly Cloudy": ["title", "light-clouds"],
     "Mostly Cloudy": ["title", "medium-clouds"],
     "Overcast": ["title", "heavy-clouds"],
     "Dry and Breezy": ["title", ["and", "low-humidity", "light-wind"]],
-    "Drizzle and Dangerously Windy": [
+    "Drizzle and Very Windy": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
@@ -131,7 +131,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Dangerously windy from this morning until this afternoon and sleet tomorrow morning.": [
+    "Very windy from this morning until this afternoon and sleet tomorrow morning.": [
         "sentence",
         [
             "and",
