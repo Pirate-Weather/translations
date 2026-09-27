@@ -78,7 +78,7 @@ def and_function(stack, a, b):
     - str: The two strings joined together with the appropriate joiner.
     """
     # Determine the joiner based on whether a contains a comma
-    joiner = " och " if "," in a else " och "
+    joiner = " och "
 
     # Use the join_with_shared_prefix function to join the two strings
     return join_with_shared_prefix(a, b, joiner)

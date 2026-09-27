@@ -1,7 +1,9 @@
-import pytest
+import importlib.util
 import os
 import re
-import importlib.util
+
+import pytest
+
 from pirateweather_translations.translation import Translation
 
 
@@ -134,7 +136,7 @@ def test_languages(subtests):
 
                 # `template` must be defined inside the Python module
                 if not hasattr(mod, "cases"):  # pragma: no cover
-                    raise Exception(f"No 'cases' found in {lang_name}.py")
+                    raise AssertionError(f"No 'cases' found in {lang_name}.py")
 
                 template = mod.cases
 

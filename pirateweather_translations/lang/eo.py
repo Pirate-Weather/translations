@@ -20,10 +20,7 @@ def make_accusative(a):
     """
     words = a.split(" ")
     accusative_words = [
-        w + "n"
-        if w.endswith("j") or w.endswith("o") or (w.endswith("a") and w != "la")
-        else w
-        for w in words
+        w + "n" if (w.endswith(("j", "o", "a")) and w != "la") else w for w in words
     ]
     return " ".join(accusative_words)
 

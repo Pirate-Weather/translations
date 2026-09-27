@@ -2,6 +2,7 @@
 
 ignore = [
     "F601", # Duplicate literal
+    "N999", # Invalid module name
 ]
 
 [lint.flake8-pytest-style]

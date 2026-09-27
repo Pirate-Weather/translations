@@ -4,7 +4,7 @@ import os
 
 from setuptools import find_packages, setup
 
-__version__ = "1.5.0"
+__version__ = "1.5.1"
 
 
 with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "README.md")) as f:
@@ -33,6 +33,6 @@ setup(
     package_data={
         "pirateweather_translations.lang": ["*.py"],  # Include all .py files in lang/
     },
-    long_description=open("README.md").read(),
+    long_description=README,
     long_description_content_type="text/markdown",
 )

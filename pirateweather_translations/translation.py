@@ -39,7 +39,7 @@ def parse(template, expr, stack):
             result = val(stack)
 
         else:
-            raise ValueError(f'"{expr}" is not a valid language template pattern.')
+            raise TypeError(f'"{expr}" is not a valid language template pattern.')
 
         stack.pop()
         return result
@@ -120,7 +120,7 @@ def parse(template, expr, stack):
             result = val(stack, *parsed_args)
 
         else:
-            raise ValueError(f'"{expr[0]}" is not a valid language template pattern.')
+            raise TypeError(f'"{expr[0]}" is not a valid language template pattern.')
 
         stack.pop()
         return result

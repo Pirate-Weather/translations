@@ -27,7 +27,7 @@ def and_function(stack, a, b):
     """
     Combines two strings with a shared prefix and an appropriate joiner.
     """
-    joiner = " og " if "," not in a else " og "
+    joiner = " og "
     return join_with_shared_prefix(a, b, joiner)
 
 
