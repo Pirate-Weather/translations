@@ -32,12 +32,10 @@ cases = {
     "Puolipilvistä": ["title", "light-clouds"],
     "Enimmäkseen pilvistä": ["title", "medium-clouds"],
     "Pilvistä": ["title", "heavy-clouds"],
-    "Kuivaa ja heikkoa tuulta": ["title", ["and", "low-humidity", "light-wind"]],
     "Heikkoa sadetta ja myrskyisää": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Kosteaa ja puolipilvistä": ["title", ["and", "high-humidity", "light-clouds"]],
     "Selkeää seuraavan tunnin ajan.": ["sentence", ["for-hour", "clear"]],
     "Heikkoa lumisadetta odotettavissa 35 min. kuluessa.": [
         "sentence",
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Kuivaa yöllä ja sadekuuroja huomisesta illasta huomiseen yöhön asti.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Lumisadetta (5 tuumaa) yöllä.": [
@@ -217,21 +202,11 @@ cases = {
     "Huntu": ["title", "haze"],
     "Huntu päivän aikana.": ["sentence", ["for-day", "haze"]],
     "Huntu iltapäivällä.": ["sentence", ["during", "haze", "afternoon"]],
-    "Huntu ja kosteaa": ["title", ["and", "haze", "high-humidity"]],
     "Sumu": ["title", "mist"],
     "Sumu päivän aikana.": ["sentence", ["for-day", "mist"]],
     "Sumu yöllä.": ["sentence", ["during", "mist", "night"]],
     "Sumu ja pilvistä": ["title", ["and", "mist", "heavy-clouds"]],
     "Ukkosmyrskyjä seuraavan tunnin ajan.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Rakeita 5 min. kuluessa, päättyen 45 min. myöhemmin.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Rankkaa jäätävää sadetta vielä 10 min., alkaen uudestaan 32 min. myöhemmin.": [
         "sentence",
         [
@@ -244,5 +219,25 @@ cases = {
     "Jäätävää tihkusadetta odotettavissa 49 min. kuluessa.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Sadetta tänään, perjantaina, sunnuntaina ja keskiviikkona, lämpötilan pysyessä lähellä lukemaa 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Sadetta, lisäksi ukkosmyrskyjä mahdollisuus iltapäivästä.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

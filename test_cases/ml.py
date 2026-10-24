@@ -26,15 +26,13 @@ cases = {
     "മഞ്ഞ്": ["title", "medium-snow"],
     "കനത്ത മഞ്ഞ്": ["title", "heavy-snow"],
     "ശീതളമായ": ["title", "medium-wind"],
-    "അപകടകരമായ കാറ്റ്": ["title", "heavy-wind"],
+    "ശക്തമായ കാറ്റ്": ["title", "heavy-wind"],
     "മൂടല്‍മഞ്ഞ്(മൂടിക്കെട്ടിയ)": ["title", "fog"],
     "മിക്കവാറും വ്യക്തമാണ്": ["title", "very-light-clouds"],
     "ഭാഗീകമായി മേഘാവൃതം": ["title", "light-clouds"],
     "മിക്കപ്പോഴും മേഘാവൃതമായ": ["title", "medium-clouds"],
     "മഴക്കാര്‍ മൂടിയ": ["title", "heavy-clouds"],
-    "വരണ്ട ഉം കാറ്റ് ഉം": ["title", ["and", "low-humidity", "light-wind"]],
-    "ചാറ്റല്‍മഴ ഉം അപകടകരമായ കാറ്റ് ഉം": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "ഈര്‍പ്പം ഉം ഭാഗീകമായി മേഘാവൃതം ഉം": ["title", ["and", "high-humidity", "light-clouds"]],
+    "ചാറ്റല്‍മഴ ഉം ശക്തമായ കാറ്റ് ഉം": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "മണിക്കൂറിനു വ്യക്തമായ": ["sentence", ["for-hour", "clear"]],
     "കാറ്റും മഴയും 35 മിനിട്ടു ഇല്‍ ആരംഭിക്കുന്നു": [
         "sentence",
@@ -93,7 +91,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "അപകടകരമായ കാറ്റ് ഇന്നത്തെ പ്രഭാതം വരെ, ഇന്നത്തെ അപരാഹ്നം (ഉച്ച കഴിഞ്ഞുള്ള സമയം ) വരെ തുടരുന്നു ഉം ഹിമവര്‍ഷം നാളത്തെ പ്രഭാതം കാലത്തില്‍ ഉം": [
+    "ശക്തമായ കാറ്റ് ഇന്നത്തെ പ്രഭാതം വരെ, ഇന്നത്തെ അപരാഹ്നം (ഉച്ച കഴിഞ്ഞുള്ള സമയം ) വരെ തുടരുന്നു ഉം ഹിമവര്‍ഷം നാളത്തെ പ്രഭാതം കാലത്തില്‍ ഉം": [
         "sentence",
         [
             "and",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "വരണ്ട ഇന്നു രാത്രി കാലത്തില്‍ ഉം നേരിയ വര്‍ഷപാതം നാളത്തെ സായാഹ്നം വരെ, നാളത്തെ രാത്രി വരെ തുടരുന്നു ഉം": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "മഞ്ഞ് (5 ഇഞ്ച്‌) രാത്രി കാലത്തില്‍": [
@@ -219,21 +204,11 @@ cases = {
     "പുക ഉം ഭാഗീകമായി മേഘാവൃതം ഉം": ["title", ["and", "smoke", "light-clouds"]],
     "മഞ്ഞ് ദിവസം മുഴുവന്‍": ["sentence", ["for-day", "haze"]],
     "മഞ്ഞ് അപരാഹ്നം കാലത്തില്‍": ["sentence", ["during", "haze", "afternoon"]],
-    "മഞ്ഞ് ഉം ഈര്‍പ്പം ഉം": ["title", ["and", "haze", "high-humidity"]],
     "കോട": ["title", "mist"],
     "കോട ദിവസം മുഴുവന്‍": ["sentence", ["for-day", "mist"]],
     "കോട രാത്രി കാലത്തില്‍": ["sentence", ["during", "mist", "night"]],
     "കോട ഉം മഴക്കാര്‍ മൂടിയ ഉം": ["title", ["and", "mist", "heavy-clouds"]],
     "മണിക്കൂറിനു ഇടിമിന്നല്‍": ["sentence", ["for-hour", "thunderstorm"]],
-    "ആലിപ്പഴം 5 മിനിട്ടു ഇല്‍ ആരംഭിക്കുന്നു, പിന്നീട് 45 മിനിട്ടു ഇല്‍ അവസാനിക്കുന്നു": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "ശക്തിയേറിയ മരവിപ്പിക്കുന്ന മഴ 10 മിനിട്ടു ഇല്‍ അവസാനിക്കുന്നു, പിന്നീട് 32 മിനിട്ടു ഇല്‍ വീണ്ടും ആരംഭിക്കുന്നു": [
         "sentence",
         [
@@ -246,5 +221,25 @@ cases = {
     "മരവിപ്പിക്കുന്ന ചാറ്റല്‍മഴ 49 മിനിട്ടു ഇല്‍ ആരംഭിക്കുന്നു": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "മഴ ഇന്ന് ഉം, വെള്ളിയാഴ്ച ഉം, ഞായറാഴ്ച ഉം, അടുത്ത ബുധനാഴ്ച ഉം കാലത്തില്‍, ഉയര്‍ന്ന താപനില 20°C ന് ചുറ്റും സ്ഥിരമായി നു ഒപ്പം": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "മഴ, ഒപ്പം സാധ്യമായ ഇടിമിന്നല്‍ ഇന്നത്തെ അപരാഹ്നം (ഉച്ച കഴിഞ്ഞുള്ള സമയം ) ആരംഭിക്കുന്നു": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

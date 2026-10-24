@@ -32,15 +32,7 @@ cases = {
     "Malmultaj Nuboj": ["title", "light-clouds"],
     "Nuboj": ["title", "medium-clouds"],
     "Multaj Nuboj": ["title", "heavy-clouds"],
-    "Seka Humideco kaj Malforta Vento": [
-        "title",
-        ["and", "low-humidity", "light-wind"],
-    ],
     "Drizlo kaj Forta Vento": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Alta Humideco kaj Malmultaj Nuboj": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Fulmotondroj Eblas": ["title", "possible-thunderstorm"],
     "Forta Pluvo kaj Fulmotondroj": ["title", ["and", "heavy-rain", "thunderstorm"]],
     "Klara ĉielo por unu horo.": ["sentence", ["for-hour", "clear"]],
@@ -127,19 +119,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Seka humideco dum la nokto kaj malforta precipitaĵo komenciĝos je morgaŭ vespero, daŭros ĝis morgaŭ nokto.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Neĝo (5 in.) dum la nokto.": [
@@ -246,8 +225,27 @@ cases = {
     "Nebuleto": ["title", "haze"],
     "Nebuleto dum la tago.": ["sentence", ["for-day", "haze"]],
     "Nebuleto dum la tagmezo.": ["sentence", ["during", "haze", "afternoon"]],
-    "Nebuleto kaj Alta Humideco": ["title", ["and", "haze", "high-humidity"]],
     "Nebulo dum la tago.": ["sentence", ["for-day", "mist"]],
     "Nebulo dum la nokto.": ["sentence", ["during", "mist", "night"]],
     "Nebulo kaj Multaj Nuboj": ["title", ["and", "mist", "heavy-clouds"]],
+    "Pluvo dum hodiaŭ, vendredo, dimanĉo kaj la venonta mekredo, kaj temperaturoj stabilaj ĉirkaŭ 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Pluvo, kun fulmotondroj eblas komenciĝos je la tagmezo.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

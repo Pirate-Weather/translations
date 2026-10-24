@@ -26,15 +26,13 @@ cases = {
     "ಮಂಜು": ["title", "medium-snow"],
     "ಭಾರೀ ಮಂಜು": ["title", "heavy-snow"],
     "ಗಾಳಿಯಾಗಿ": ["title", "medium-wind"],
-    "ಅಪಾಯಕಾರಿ ಗಾಳಿ": ["title", "heavy-wind"],
+    "ತುಂಬಾ ಗಾಳಿ": ["title", "heavy-wind"],
     "ಮಂಜಿನ": ["title", "fog"],
     "ಹೆಚ್ಚಾಗಿ ಸ್ಪಷ್ಟ": ["title", "very-light-clouds"],
     "ಸ್ವಲ್ಪ ಮಟ್ಟಿಗೆ ಮೋಡ": ["title", "light-clouds"],
     "ಹೆಚ್ಚಾಗಿ ಮೋಡ": ["title", "medium-clouds"],
     "ಕತ್ತಲು ಕವಿ": ["title", "heavy-clouds"],
-    "ಒಣಗಿದ ಮತ್ತೆ ತಂಗಾಳಿಯಾಗಿ": ["title", ["and", "low-humidity", "light-wind"]],
-    "ಚಿಮುಕು ಮತ್ತೆ ಅಪಾಯಕಾರಿ ಗಾಳಿ": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "ಆದ್ರವಾದ ಮತ್ತೆ ಸ್ವಲ್ಪ ಮಟ್ಟಿಗೆ ಮೋಡ": ["title", ["and", "high-humidity", "light-clouds"]],
+    "ಚಿಮುಕು ಮತ್ತೆ ತುಂಬಾ ಗಾಳಿ": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "ಸ್ಪಷ್ಟ ಗಂಟೆಗೆ": ["sentence", ["for-hour", "clear"]],
     "ಹಿಮಸುರಿತ 35 ನಿಮಿಷ ಅಲ್ಲಿ ಶುರುವಾಗುತ್ತದೆ": [
         "sentence",
@@ -90,7 +88,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "ಅಪಾಯಕಾರಿ ಗಾಳಿ ರಿಂದ ಪ್ರಾರಂಭವಾಗಿ ಇಂದು ಬೆಳಿಗ್ಗೆ ವರೆಗೆ, ಮತ್ತು ಇಂದು ಮಧ್ಯಾಹ್ನ ವರೆಗೂ ಮುಂದುವರೆಯುವುದು ಮತ್ತೆ ಹಿಮ ಮಳೆ ನಾಳೆ ಬೆಳಿಗ್ಗೆ ವೇಳೆಯಲ್ಲಿ": [
+    "ತುಂಬಾ ಗಾಳಿ ರಿಂದ ಪ್ರಾರಂಭವಾಗಿ ಇಂದು ಬೆಳಿಗ್ಗೆ ವರೆಗೆ, ಮತ್ತು ಇಂದು ಮಧ್ಯಾಹ್ನ ವರೆಗೂ ಮುಂದುವರೆಯುವುದು ಮತ್ತೆ ಹಿಮ ಮಳೆ ನಾಳೆ ಬೆಳಿಗ್ಗೆ ವೇಳೆಯಲ್ಲಿ": [
         "sentence",
         [
             "and",
@@ -109,19 +107,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "ಒಣಗಿದ ಇಂದು ರಾತ್ರಿ ವೇಳೆಯಲ್ಲಿ ಮತ್ತೆ ಕಡಿಮೆ ಸೋರುವಿಕೆ ರಿಂದ ಪ್ರಾರಂಭವಾಗಿ ನಾಳೆ ಸಂಜೆ ವರೆಗೆ, ಮತ್ತು ನಾಳೆ ರಾತ್ರಿ ವರೆಗೂ ಮುಂದುವರೆಯುವುದು": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "ಮಂಜು (5 ಇಂಚುಗಳು) ಒಂದೇ ರಾತ್ರಿಯಲ್ಲಿ ವೇಳೆಯಲ್ಲಿ": [
@@ -216,19 +201,9 @@ cases = {
     "ಹೊಗೆ ಮತ್ತೆ ಸ್ವಲ್ಪ ಮಟ್ಟಿಗೆ ಮೋಡ": ["title", ["and", "smoke", "light-clouds"]],
     "ಮಂಜು ದಿನಪೂರ್ತಿ": ["sentence", ["for-day", "mist"]],
     "ಮಂಜು ಮದ್ಯಾಹ್ನ ವೇಳೆಯಲ್ಲಿ": ["sentence", ["during", "haze", "afternoon"]],
-    "ಮಂಜು ಮತ್ತೆ ಆದ್ರವಾದ": ["title", ["and", "haze", "high-humidity"]],
     "ಮಂಜು ಒಂದೇ ರಾತ್ರಿಯಲ್ಲಿ ವೇಳೆಯಲ್ಲಿ": ["sentence", ["during", "mist", "night"]],
     "ಮಂಜು ಮತ್ತೆ ಕತ್ತಲು ಕವಿ": ["title", ["and", "mist", "heavy-clouds"]],
     "ಗುಡುಗು ಗಂಟೆಗೆ": ["sentence", ["for-hour", "thunderstorm"]],
-    "ಆಲಿಕಲ್ಲು 5 ನಿಮಿಷ ಶುರುವಾಗುವುದು ನಂತರ 45 ನಿಮಿಷ ನಲ್ಲಿ ನಿಲ್ಲುವುದು": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "ಭಾರೀ ಘನೀಕರಿಸುವ ಮಳೆ 10 ನಿಮಿಷ ನಿಲ್ಲುವುದು ನಂತರ 32 ನಿಮಿಷ ನಲ್ಲಿ ಮತ್ತೆ ಶುರುವಾಗುವುದು": [
         "sentence",
         [
@@ -241,5 +216,25 @@ cases = {
     "ಘನೀಕರಿಸುವ ಚಿಮುಕು 49 ನಿಮಿಷ ಅಲ್ಲಿ ಶುರುವಾಗುತ್ತದೆ": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "ಮಳೆ ಇಂದು, ಶುಕ್ರವಾರದಂದು, ಭಾನುವಾರದಂದು ಮತ್ತು ಮುಂದಿನ ಬುಧವಾರ ವೇಳೆಯಲ್ಲಿ ಅಧಿಕ ತಾಪಮಾನವು 20°C ರ ಆಸುಪಾಸಿನಲ್ಲಿ ಸ್ಥಿರವಾಗಿದೆ ಒಂದಿಗೆ": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "ಮಳೆ, ಜೊತೆಗೆ ಗುಡುಗು ಸಾಧ್ಯ ಇಂದು ಮಧ್ಯಾಹ್ನ ಅಲ್ಲಿ ಶುರುವಾಗುತ್ತದೆ": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

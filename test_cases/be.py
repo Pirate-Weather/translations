@@ -28,19 +28,12 @@ cases = {
     "Слабы Вецер": ["title", "light-wind"],
     "Вецер": ["title", "medium-wind"],
     "Моцны Вецер": ["title", "heavy-wind"],
-    "Суха": ["title", "low-humidity"],
-    "Вільготна": ["title", "high-humidity"],
     "Туман": ["title", "fog"],
     "Моцная Ясна": ["title", "very-light-clouds"],
     "Невялікая Воблачнасць": ["title", "light-clouds"],
     "Воблачна": ["title", "medium-clouds"],
     "Моцная Воблачнасць": ["title", "heavy-clouds"],
-    "Суха і Слабы Вецер": ["title", ["and", "low-humidity", "light-wind"]],
     "Нязначны Дождж і Моцны Вецер": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Вільготна і Невялікая Воблачнасць": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Ясна на працягу наступнай гадзіны.": ["sentence", ["for-hour", "clear"]],
     "Нязначны снег пачынаецца на працягу 35 хв.": [
         "sentence",
@@ -113,19 +106,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Суха сёння ноччу і невялікія ападкі, пачынаючыся з заўтрашняга вечара, і да заўтрашняй ночы.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Снег (5 см.) ноччу.": [
@@ -206,22 +186,12 @@ cases = {
     "Імгла": ["title", "haze"],
     "Імгла на працягу ўсяго дня.": ["sentence", ["for-day", "haze"]],
     "Імгла днём.": ["sentence", ["during", "haze", "afternoon"]],
-    "Імгла і Вільготна": ["title", ["and", "haze", "high-humidity"]],
     "Туман на працягу ўсяго дня.": ["sentence", ["for-day", "mist"]],
     "Туман ноччу.": ["sentence", ["during", "mist", "night"]],
     "Туман і Моцная Воблачнасць": ["title", ["and", "mist", "heavy-clouds"]],
     "Навальніцы на працягу наступнай гадзіны.": [
         "sentence",
         ["for-hour", "thunderstorm"],
-    ],
-    "Град пачынаецца на працягу 5 хв, і заканчваецца праз 45 хв.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
     ],
     "Моцны замарожванне дождж заканчваецца на працягу 10 хв, і пачынаецца зноў праз 32 хв.": [
         "sentence",
@@ -235,5 +205,25 @@ cases = {
     "Замарожванне нязначны дождж пачынаецца на працягу 49 хв.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Дождж сёння, у пятніцу, нядзелю і наступную сераду, з стабільнай тэмпературай каля 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Дождж, а таксама магчымы навальніцы пачынаецца сёння днём.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

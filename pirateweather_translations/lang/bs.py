@@ -19,6 +19,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", i " if "," in a else " i ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " do ")
 
@@ -81,13 +95,9 @@ template = {
     "medium-freezing-rain": "ledena kiša",
     "possible-heavy-freezing-rain": "moguće je jaka ledena kiša",
     "heavy-freezing-rain": "jaka ledena kiša",
-    "possible-hail": "moguća grmljavina sa gradom",
-    "hail": "grmljavina sa gradom",
     "light-wind": "vjetrovito",
     "medium-wind": "vjetrovito",
-    "heavy-wind": "opasno vjetrovito",
-    "low-humidity": "suho",
-    "high-humidity": "vlažno",
+    "heavy-wind": "vrlo vjetrovito",
     "fog": "maglovito",
     "very-light-clouds": "pretežno vedro",
     "light-clouds": "djelom oblačno",
@@ -132,8 +142,10 @@ template = {
     "centimeters": "$1 centimetra",
     "less-than": "ispod $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, sa $2",
+    "accompanied-by": "$1, kao i $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 za ovaj sat",
@@ -164,4 +176,18 @@ template = {
     "smoke": "dim",
     "haze": "izmaglica",
     "mist": "magla",
+    "millimeters": "$1 milimetara",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "očekuje se $1 ($2)",
+    "for-night": "$1 tokom cijele noći",
+    "intermittent": "$1 s prekidima",
+    "occasional": "povremeno $1",
+    "periods-of": "periodično $1",
+    "tapering-off": "$1 postepeno prestaje",
+    "to": "$1 do $2",
+    "generally": "uglavnom $1",
+    "increasing": "povećanje oblačnosti",
+    "clearing": "razvedravanje",
+    "becoming": "$1, zatim $2",
+    "temperatures-steady": "temperaturom stabilnom oko $1",
 }

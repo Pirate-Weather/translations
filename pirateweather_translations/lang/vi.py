@@ -33,6 +33,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", và " if "," in a else " và ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " cho tới ")
 
@@ -112,13 +126,9 @@ template = {
     "medium-freezing-rain": "mưa đóng băng",
     "possible-heavy-freezing-rain": "có thể có mưa to lạnh giá",
     "heavy-freezing-rain": "mưa to lạnh giá",
-    "possible-hail": "có thể cóle kêu",
-    "hail": "kêu",
     "light-wind": "gió nhẹ",
     "medium-wind": "có gió",
     "heavy-wind": "gió to",
-    "low-humidity": "trời hanh khô",
-    "high-humidity": "độ ẩm cao",
     "fog": "có sương mù",
     "very-light-clouds": "có quang mây",
     "light-clouds": "ít mây",
@@ -163,8 +173,10 @@ template = {
     "centimeters": "$1 cm",
     "less-than": "dưới $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, với $2",
+    "accompanied-by": "$1, kèm theo $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 trong một giờ",
@@ -195,4 +207,18 @@ template = {
     "smoke": "khói",
     "haze": "sương mù",
     "mist": "sương mù",
+    "millimeters": "$1 mm",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "dự kiến $1 $2",
+    "for-night": "$1 suốt đêm",
+    "intermittent": "$1 ngắt quãng",
+    "occasional": "thỉnh thoảng $1",
+    "periods-of": "từng đợt $1",
+    "tapering-off": "$1 giảm dần",
+    "to": "$1 đến $2",
+    "generally": "nhìn chung $1",
+    "increasing": "mây tăng dần",
+    "clearing": "trời quang dần",
+    "becoming": "$1 chuyển sang $2",
+    "temperatures-steady": "nhiệt độ ổn định quanh mức $1",
 }

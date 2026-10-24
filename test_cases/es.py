@@ -26,20 +26,15 @@ cases = {
     "Nevadas": ["title", "medium-snow"],
     "Fuertes Nevadas": ["title", "heavy-snow"],
     "Ventoso": ["title", "medium-wind"],
-    "Peligrosamente Ventoso": ["title", "heavy-wind"],
+    "Muy Ventoso": ["title", "heavy-wind"],
     "Niebla": ["title", "fog"],
     "Mayormente Despejado": ["title", "very-light-clouds"],
     "Parcialmente Nublado": ["title", "light-clouds"],
     "Mayormente Nublado": ["title", "medium-clouds"],
     "Nublado": ["title", "heavy-clouds"],
-    "Seco y Vientos Suaves": ["title", ["and", "low-humidity", "light-wind"]],
-    "Llovizna y Peligrosamente Ventoso": [
+    "Llovizna y Muy Ventoso": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
-    ],
-    "Húmedo y Parcialmente Nublado": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
     ],
     "Despejado por la hora.": ["sentence", ["for-hour", "clear"]],
     "Nevadas ligeras comenzando en 35 min.": [
@@ -99,7 +94,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Peligrosamente ventoso comenzando esta mañana, continuando hasta esta tarde, y aguanieve mañana por la mañana.": [
+    "Muy ventoso comenzando esta mañana, continuando hasta esta tarde, y aguanieve mañana por la mañana.": [
         "sentence",
         [
             "and",
@@ -118,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Seco esta noche y precipitación ligera comenzando mañana por la noche, continuando hasta mañana por la noche.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Nevadas (5 in.) por la noche.": [
@@ -209,21 +191,11 @@ cases = {
     "Calima": ["title", "haze"],
     "Calima durante el día.": ["sentence", ["for-day", "haze"]],
     "Calima por la tarde.": ["sentence", ["during", "haze", "afternoon"]],
-    "Calima y Húmedo": ["title", ["and", "haze", "high-humidity"]],
     "Bruma": ["title", "mist"],
     "Bruma durante el día.": ["sentence", ["for-day", "mist"]],
     "Bruma por la noche.": ["sentence", ["during", "mist", "night"]],
     "Bruma y Nublado": ["title", ["and", "mist", "heavy-clouds"]],
     "Tormenta por la hora.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Granizo comenzando en 5 min., después parando en 45 min.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Fuertes lluvia helada parando en 10 min., comenzando de nuevo 32 min. después.": [
         "sentence",
         [
@@ -236,5 +208,25 @@ cases = {
     "Llovizna helada comenzando en 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Lluvia hoy, el Viernes, Domingo y próximo Miércoles, con temperaturas estables alrededor de 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Lluvia, con tormentas posibles comenzando esta tarde.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

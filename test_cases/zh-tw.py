@@ -32,9 +32,7 @@ cases = {
     "局部多雲": ["title", "light-clouds"],
     "多雲": ["title", "medium-clouds"],
     "多雲轉陰": ["title", "heavy-clouds"],
-    "乾燥，微風": ["title", ["and", "low-humidity", "light-wind"]],
     "毛毛雨，推人大風": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "潮濕，局部多雲": ["title", ["and", "high-humidity", "light-clouds"]],
     "多雲，可能有雷暴": ["title", ["and", "medium-clouds", "possible-thunderstorm"]],
     "多雲，雷暴": ["title", ["and", "medium-clouds", "thunderstorm"]],
     "在接下來一個小時內晴朗。": ["sentence", ["for-hour", "clear"]],
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "乾燥持續至明晚，少量降水開始於明晚，將持續至明晚。": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "降雪(5英寸)持續至當晚。": [
@@ -217,9 +202,28 @@ cases = {
     "霾": ["title", "haze"],
     "霾將持續一整天。": ["sentence", ["for-day", "haze"]],
     "霾持續至下午。": ["sentence", ["during", "haze", "afternoon"]],
-    "霾，潮濕": ["title", ["and", "haze", "high-humidity"]],
     "薄霧": ["title", "mist"],
     "薄霧將持續一整天。": ["sentence", ["for-day", "mist"]],
     "薄霧持續至當晚。": ["sentence", ["during", "mist", "night"]],
     "薄霧，多雲轉陰": ["title", ["and", "mist", "heavy-clouds"]],
+    "降雨持續至今天、周五、周日和下周三，且最高氣溫穩定在20°C左右。": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "降雨，並伴有可能有雷暴開始於今天下午。": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

@@ -8,6 +8,11 @@ def sentence_function(stack, s):
     return s
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " და " + items[-1]
+
+
 template = {
     "clear": "მოწმენდილი",
     "no-precipitation": "უნალექო",
@@ -54,13 +59,9 @@ template = {
     "medium-freezing-rain": "გაყინული წვიმა",
     "possible-heavy-freezing-rain": "მოსალოდნელია ძლიერი გაყინული წვიმა",
     "heavy-freezing-rain": "ძლიერი გაყინული წვიმა",
-    "possible-hail": "მოსალოდნელია სეტყვა",
-    "hail": "სეტყვა",
     "light-wind": "სუსტი ქარი",
     "medium-wind": "ქარი",
     "heavy-wind": "ძლიერი ქარი",
-    "low-humidity": "მშრალი",
-    "high-humidity": "ტენიანი",
     "fog": "ნისლი",
     "very-light-clouds": "უმეტესად მოწმენდილი",
     "light-clouds": "ნაწილობრივ ღრუბლიანი",
@@ -105,8 +106,10 @@ template = {
     "centimeters": "$1 სმ.",
     "less-than": "< $1",
     "and": "$1 და $2",
+    "list": list_function,
     "through": "$1 $2",
     "with": "$1, $2",
+    "accompanied-by": "$1, ასევე $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 ამ დროისთვის",
@@ -137,4 +140,18 @@ template = {
     "smoke": "კვამლი",
     "haze": "ბურუსი",
     "mist": "ნისლი",
+    "millimeters": "$1 მმ.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "მოსალოდნელია $1 $2",
+    "for-night": "$1 მთელი ღამის განმავლობაში",
+    "intermittent": "წყვეტილი $1",
+    "occasional": "დროდადრო $1",
+    "periods-of": "პერიოდულად $1",
+    "tapering-off": "$1 თანდათან შესუსტდება",
+    "to": "$1 ან $2",
+    "generally": "ძირითადად $1",
+    "increasing": "ღრუბლიანობის მატება",
+    "clearing": "გამოდარება",
+    "becoming": "$1, შემდეგ $2",
+    "temperatures-steady": "ტემპერატურა სტაბილური იქნება დაახლოებით $1",
 }

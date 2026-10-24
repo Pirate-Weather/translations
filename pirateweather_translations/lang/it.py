@@ -51,6 +51,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, joiner)
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     if len(b) > 8 and b[:8] == "prossimo":
         joiner = " fino al "
@@ -142,13 +156,9 @@ template = {
     "medium-freezing-rain": "pioggia gelata",
     "possible-heavy-freezing-rain": "possibilità di forte pioggia gelata",
     "heavy-freezing-rain": "forte pioggia gelata",
-    "possible-hail": "possibilità di grandine",
-    "hail": "grandine",
     "light-wind": "venticello",
     "medium-wind": "vento",
     "heavy-wind": "forte vento",
-    "low-humidity": "bassa umidità",
-    "high-humidity": "umido",
     "fog": "nebbia",
     "very-light-clouds": "prevalentemente sereno",
     "light-clouds": "poco nuvoloso",
@@ -193,8 +203,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "meno di $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, con $2",
+    "accompanied-by": "$1, con $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 per un ora",
@@ -225,4 +237,18 @@ template = {
     "smoke": "fumo",
     "haze": "foschia",
     "mist": "nebbia",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "previsti $1 di $2",
+    "for-night": "$1 durante la notte",
+    "intermittent": "$1 intermittente",
+    "occasional": "$1 occasionale",
+    "periods-of": "fasi di $1",
+    "tapering-off": "$1 in attenuazione",
+    "to": "da $1 a $2",
+    "generally": "generalmente $1",
+    "increasing": "nuvolosità in aumento",
+    "clearing": "schiarite",
+    "becoming": "$1, poi $2",
+    "temperatures-steady": "temperature stabili intorno a $1",
 }

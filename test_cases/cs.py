@@ -32,12 +32,7 @@ cases = {
     "Částečně oblačno": ["title", "light-clouds"],
     "Převážně oblačno": ["title", "medium-clouds"],
     "Zataženo": ["title", "heavy-clouds"],
-    "Nízká vlhkost a slabý vítr": ["title", ["and", "low-humidity", "light-wind"]],
     "Mrholení a silný vítr": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Vysoká vlhkost a částečně oblačno": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Jasno hodinu.": ["sentence", ["for-hour", "clear"]],
     "Slabé sněžení za 35 min.": [
         "sentence",
@@ -119,19 +114,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Dnes v noci nízká vlhkost a od zítřejšího večera slabé srážky, které přetrvají až do zítřejší noci.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "V noci sněžení (5 in).": [
@@ -231,9 +213,28 @@ cases = {
     "Opar": ["title", "haze"],
     "Během dne opar.": ["sentence", ["for-day", "haze"]],
     "Odpoledne opar.": ["sentence", ["during", "haze", "afternoon"]],
-    "Opar a vysoká vlhkost": ["title", ["and", "haze", "high-humidity"]],
     "Mlha": ["title", "mist"],
     "Během dne mlha.": ["sentence", ["for-day", "mist"]],
     "V noci mlha.": ["sentence", ["during", "mist", "night"]],
     "Mlha a zataženo": ["title", ["and", "mist", "heavy-clouds"]],
+    "Dnes, v pátek, neděli a příští středu déšť, s teplotami kolem 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Déšť, a také od dnešního odpoledne možnost bouřek.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

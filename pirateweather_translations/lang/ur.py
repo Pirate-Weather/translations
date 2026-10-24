@@ -315,6 +315,12 @@ def and_function(stack, first, second):
     return f"{second} اور {first}"
 
 
+def list_function(stack, *items):
+    # Matches and_function, which places the second item first.
+    items = items[::-1]
+    return "، ".join(items[:-1]) + " اور " + items[-1]
+
+
 def through_function(stack, first, second):
     """
     Returns a string indicating that something happens through a specific event or time.
@@ -389,13 +395,9 @@ template = {
     "medium-freezing-rain": "منجمد بارش",
     "possible-heavy-freezing-rain": "ممکنہ شدید منجمد بارش",
     "heavy-freezing-rain": "شدید منجمد بارش",
-    "possible-hail": "ممکنہ ژالہ باری",
-    "hail": "اولے",
     "light-wind": "ہوائی",
     "medium-wind": "طوفانی ہوا",
-    "heavy-wind": "خطرناک ہوائی",
-    "low-humidity": "روکھا",
-    "high-humidity": "نمی",
+    "heavy-wind": "بہت تیز ہوا",
     "fog": "دھندلا",
     "very-light-clouds": "زیادہ تر واضح",
     "light-clouds": "جزوی طور پر ابر آلود",
@@ -440,8 +442,10 @@ template = {
     "centimeters": centimeters_function,
     "less-than": less_than_function,
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": with_function,
+    "accompanied-by": "$1، ساتھ ہی $2",
     "for-hour": "$1 ایک گھنٹے کے لئے",
     "starting-in": starting_in_function,
     "stopping-in": stopping_in_function,
@@ -472,4 +476,18 @@ template = {
     "smoke": "دھواں",
     "haze": "دھند",
     "mist": "دھند",
+    "millimeters": "ملی میٹر $1",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 متوقع",
+    "for-night": "پوری رات $1",
+    "intermittent": "وقفے وقفے سے $1",
+    "occasional": "کبھی کبھار $1",
+    "periods-of": "کچھ وقت کے لیے $1",
+    "tapering-off": "$1 بتدریج کم ہو رہی ہے",
+    "to": "$1 سے $2",
+    "generally": "عام طور پر $1",
+    "increasing": "بڑھتے ہوئے بادل",
+    "clearing": "آسمان صاف ہو رہا ہے",
+    "becoming": "$1، پھر $2",
+    "temperatures-steady": "زیادہ سے زیادہ درجہ حرارت $1 کے قریب مستحکم",
 }

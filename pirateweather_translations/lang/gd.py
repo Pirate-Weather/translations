@@ -23,6 +23,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, joiner)
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " tro ")
 
@@ -91,13 +105,9 @@ template = {
     "medium-freezing-rain": "uisge reòta",
     "possible-heavy-freezing-rain": "ma dh'fhaoidte gum bi uisge reòta trom",
     "heavy-freezing-rain": "uisge reòta trom",
-    "possible-hail": "possma dh'fhaoidte gum biible fàilinn",
-    "hail": "fàilinn",
     "light-wind": "oiteag shocair",
     "medium-wind": "gaoth",
     "heavy-wind": "gaoth làidir",
-    "low-humidity": "tioram",
-    "high-humidity": "tais",
     "fog": "ceòthach",
     "very-light-clouds": "soilleir sa mhòr-chuid",
     "light-clouds": "sgothan aotruime",
@@ -142,8 +152,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "< $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, le $2",
+    "accompanied-by": "$1, le $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 fad uair a thìde",
@@ -174,4 +186,18 @@ template = {
     "smoke": "ceò",
     "haze": "ceo-dhubh",
     "mist": "ceòtharnach",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "dùil ri $1 de $2",
+    "for-night": "$1 fad na h-oidhche",
+    "intermittent": "$1 bho àm gu àm",
+    "occasional": "$1 an-dràsta ’s a-rithist",
+    "periods-of": "amannan de $1",
+    "tapering-off": "$1 a’ sìoladh",
+    "to": "$1 gu $2",
+    "generally": "$1 sa mhòr-chuid",
+    "increasing": "sgòthan a’ meudachadh",
+    "clearing": "a’ glanadh",
+    "becoming": "$1 a’ fàs na $2",
+    "temperatures-steady": "an teòthachd as àirde seasmhach timcheall air $1",
 }

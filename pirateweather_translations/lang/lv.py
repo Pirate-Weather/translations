@@ -59,6 +59,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, " un ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return "no " + accusativus(a) + " līdz " + dativus(b)
 
@@ -140,13 +154,9 @@ template = {
     "medium-freezing-rain": "sasalstošs lietus",
     "possible-heavy-freezing-rain": "iespējams stiprs sasalstošs lietus",
     "heavy-freezing-rain": "stiprs sasalstošs lietus",
-    "possible-hail": "iespējams krusa",
-    "hail": "krusa",
     "light-wind": "lēns vējš",
     "medium-wind": "vējš",
     "heavy-wind": "stiprs vējš",
-    "low-humidity": "sauss",
-    "high-humidity": "mitrs",
     "fog": "migla",
     "very-light-clouds": "pārsvarā skaidrs",
     "light-clouds": "daļēji mākoņains",
@@ -191,8 +201,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "< $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, kā arī $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "nākamo stundu $1",
@@ -223,4 +235,18 @@ template = {
     "smoke": "dūmi",
     "haze": "dūmaka",
     "mist": "migla",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "gaidāms $1 ($2)",
+    "for-night": "visu nakti $1",
+    "intermittent": "$1 ar pārtraukumiem",
+    "occasional": "laiku pa laikam $1",
+    "periods-of": "periodiski $1",
+    "tapering-off": "$1 pakāpeniski mitējas",
+    "to": "$1 līdz $2",
+    "generally": "pārsvarā $1",
+    "increasing": "mākoņainības pieaugums",
+    "clearing": "skaidrošanās",
+    "becoming": "$1, vēlāk $2",
+    "temperatures-steady": "temperatūrai saglabājoties ap $1",
 }

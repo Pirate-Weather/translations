@@ -38,21 +38,17 @@ cases = {
     "Freezing Rain": ["title", "medium-freezing-rain"],
     "Possible Heavy Freezing Rain": ["title", "possible-heavy-freezing-rain"],
     "Heavy Freezing Rain": ["title", "heavy-freezing-rain"],
-    "Possible Hail": ["title", "possible-hail"],
-    "Hail": ["title", "hail"],
     "Windy": ["title", "medium-wind"],
-    "Dangerously Windy": ["title", "heavy-wind"],
+    "Very Windy": ["title", "heavy-wind"],
     "Foggy": ["title", "fog"],
     "Mostly Clear": ["title", "very-light-clouds"],
     "Partly Cloudy": ["title", "light-clouds"],
     "Mostly Cloudy": ["title", "medium-clouds"],
     "Overcast": ["title", "heavy-clouds"],
-    "Dry and Breezy": ["title", ["and", "low-humidity", "light-wind"]],
-    "Drizzle and Dangerously Windy": [
+    "Drizzle and Very Windy": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Humid and Partly Cloudy": ["title", ["and", "high-humidity", "light-clouds"]],
     "Clear for the hour.": ["sentence", ["for-hour", "clear"]],
     "Flurries starting in 35 min.": [
         "sentence",
@@ -128,7 +124,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Dangerously windy from this morning until this afternoon and sleet tomorrow morning.": [
+    "Very windy from this morning until this afternoon and sleet tomorrow morning.": [
         "sentence",
         [
             "and",
@@ -149,11 +145,11 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Dry tonight and light precipitation from tomorrow evening until tomorrow night.": [
+    "Foggy tonight and light precipitation from tomorrow evening until tomorrow night.": [
         "sentence",
         [
             "and",
-            ["during", "low-humidity", "today-night"],
+            ["during", "fog", "today-night"],
             [
                 "starting-continuing-until",
                 "light-precipitation",
@@ -265,18 +261,9 @@ cases = {
     ],
     "Drizzle and Thunderstorms": ["title", ["and", "very-light-rain", "thunderstorm"]],
     "Snow and Thunderstorms": ["title", ["and", "medium-snow", "thunderstorm"]],
-    "Hail and Thunderstorms": ["title", ["and", "hail", "thunderstorm"]],
     "Light Freezing Rain (with a Chance of 2–4 in of Snow)": [
         "title",
         ["parenthetical", "light-freezing-rain", ["inches", ["range", 2, 4]]],
-    ],
-    "Possible thunderstorms and hail in the evening.": [
-        "sentence",
-        [
-            "during",
-            ["and", "possible-thunderstorm", "hail"],
-            "evening",
-        ],
     ],
     "Freezing drizzle throughout the day.": [
         "sentence",
@@ -302,15 +289,6 @@ cases = {
         ],
     ],
     "Thunderstorms for the hour.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Hail starting in 5 min, ending 45 min later.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Heavy freezing rain ending in 10 min, returning 32 min later.": [
         "sentence",
         [
@@ -332,9 +310,44 @@ cases = {
     "Hazy": ["title", "haze"],
     "Hazy throughout the day.": ["sentence", ["for-day", "haze"]],
     "Hazy in the afternoon.": ["sentence", ["during", "haze", "afternoon"]],
-    "Hazy and Humid": ["title", ["and", "haze", "high-humidity"]],
     "Misty": ["title", "mist"],
     "Misty throughout the day.": ["sentence", ["for-day", "mist"]],
     "Misty overnight.": ["sentence", ["during", "mist", "night"]],
     "Misty and Overcast": ["title", ["and", "mist", "heavy-clouds"]],
+    "Rain today, Friday, Sunday and next Wednesday.": [
+        "sentence",
+        [
+            "during",
+            "medium-rain",
+            ["list", "today", "friday", "sunday", "next-wednesday"],
+        ],
+    ],
+    "Rain on Friday, Saturday and Sunday.": [
+        "sentence",
+        ["during", "medium-rain", ["list", "friday", "saturday", "sunday"]],
+    ],
+    "Light snow tomorrow, Wednesday and next Tuesday.": [
+        "sentence",
+        ["during", "light-snow", ["list", "tomorrow", "wednesday", "next-tuesday"]],
+    ],
+    "Rain this morning, afternoon and evening.": [
+        "sentence",
+        [
+            "during",
+            "medium-rain",
+            ["list", "today-morning", "today-afternoon", "today-evening"],
+        ],
+    ],
+    "Rain, with possible thunderstorms starting this afternoon.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
+    "Overcast, with drizzle in the evening.": [
+        "sentence",
+        ["accompanied-by", "heavy-clouds", ["during", "very-light-rain", "evening"]],
+    ],
 }

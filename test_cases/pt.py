@@ -37,19 +37,12 @@ cases = {
     "Vento Fraco": ["title", "light-wind"],
     "Vento Moderado": ["title", "medium-wind"],
     "Vento Forte": ["title", "heavy-wind"],
-    "Tempo Seco": ["title", "low-humidity"],
-    "Tempo Úmido": ["title", "high-humidity"],
     "Nevoeiro": ["title", "fog"],
     "Céu Quase Limpo": ["title", "very-light-clouds"],
     "Céu Pouco Nublado": ["title", "light-clouds"],
     "Céu Nublado": ["title", "medium-clouds"],
     "Céu Encoberto": ["title", "heavy-clouds"],
-    "Tempo Seco e Vento Fraco": ["title", ["and", "low-humidity", "light-wind"]],
     "Chuviscos e Vento Forte": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Tempo Úmido e Céu Pouco Nublado": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Céu limpo na próxima hora.": ["sentence", ["for-hour", "clear"]],
     "Neve muito fraca começando em 35 min.": [
         "sentence",
@@ -127,19 +120,6 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Tempo seco durante amanhã de madrugada e aguaceiros fracos começando de amanhã à noite, continuando até de amanhã ao final da noite.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
-        ],
-    ],
     "Neve (5 cm) durante madrugada.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["centimeters", 5]], "night"],
@@ -212,20 +192,10 @@ cases = {
     "Névoa Seca": ["title", "haze"],
     "Névoa seca até ao fim do dia.": ["sentence", ["for-day", "haze"]],
     "Névoa seca durante tarde.": ["sentence", ["during", "haze", "afternoon"]],
-    "Névoa Seca e Tempo Úmido": ["title", ["and", "haze", "high-humidity"]],
     "Neblina até ao fim do dia.": ["sentence", ["for-day", "mist"]],
     "Neblina durante madrugada.": ["sentence", ["during", "mist", "night"]],
     "Neblina e Céu Encoberto": ["title", ["and", "mist", "heavy-clouds"]],
     "Trovoada na próxima hora.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Granizo começando de 5 min, terminando ao fim da 45 min.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Chuva congelante forte terminando em 10 min e recomeçando em 32 min.": [
         "sentence",
         [
@@ -238,5 +208,25 @@ cases = {
     "Chuvisco congelante começando em 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Chuva durante hoje, sexta-feira, domingo e próxima quarta-feira, com temperaturas estáveis em torno de 20 °C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Chuva, com possibilidade de trovoada começando de hoje à tarde.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

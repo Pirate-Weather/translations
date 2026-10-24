@@ -19,6 +19,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", in " if "," in a else " in ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " do ")
 
@@ -86,13 +100,9 @@ template = {
     "medium-freezing-rain": "leden dež",
     "possible-heavy-freezing-rain": "možen je močan leden dež",
     "heavy-freezing-rain": "močan leden dež",
-    "possible-hail": "možen je toča",
-    "hail": "toča",
     "light-wind": "vetrovno",
     "medium-wind": "vetrovno",
     "heavy-wind": "močni sunki vetra",
-    "low-humidity": "suho",
-    "high-humidity": "vlažno",
     "fog": "megleno",
     "very-light-clouds": "pretežno jasno",
     "light-clouds": "delno oblačno",
@@ -137,8 +147,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "manj kot $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, s $2",
+    "accompanied-by": "$1, pa tudi $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 za uro",
@@ -169,4 +181,18 @@ template = {
     "smoke": "dim",
     "haze": "meglica",
     "mist": "megla",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "pričakuje se $1 ($2)",
+    "for-night": "$1 čez noč",
+    "intermittent": "$1 s prekinitvami",
+    "occasional": "občasno $1",
+    "periods-of": "periodično $1",
+    "tapering-off": "$1 postopoma ponehuje",
+    "to": "$1 do $2",
+    "generally": "pretežno $1",
+    "increasing": "naraščanje oblačnosti",
+    "clearing": "razjasnitev",
+    "becoming": "$1, nato $2",
+    "temperatures-steady": "temperaturami okoli $1",
 }

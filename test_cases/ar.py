@@ -32,9 +32,7 @@ cases = {
     "غائم جزئياً": ["title", "light-clouds"],
     "اجواء غائمة": ["title", "medium-clouds"],
     "اجواء غائمة": ["title", "heavy-clouds"],
-    "اجواء جافة و رياح خفيفة": ["title", ["and", "low-humidity", "light-wind"]],
     "أمطار خفيفة و عواصف": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "اجواء رطبة و غائم جزئياً": ["title", ["and", "high-humidity", "light-clouds"]],
     "صافِ لهذه الساعة": ["sentence", ["for-hour", "clear"]],
     "رياح خفيفة تبدأ خلال 35 دقيقة": [
         "sentence",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "اجواء جافة الليلة و أمطار خفيفة تبدأ في الغد مساءً وتستمر حتى الغد ليلاً": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "ثلوج (5 انش) خلال الليل": [
@@ -224,9 +209,28 @@ cases = {
     "ضباب": ["title", "haze"],
     "ضباب خلال اليوم": ["sentence", ["for-day", "haze"]],
     "ضباب بعد الظهيرة": ["sentence", ["during", "haze", "afternoon"]],
-    "ضباب و اجواء رطبة": ["title", ["and", "haze", "high-humidity"]],
     "شبورة": ["title", "mist"],
     "شبورة خلال اليوم": ["sentence", ["for-day", "mist"]],
     "شبورة خلال الليل": ["sentence", ["during", "mist", "night"]],
     "شبورة و اجواء غائمة": ["title", ["and", "mist", "heavy-clouds"]],
+    "أمطار متوسطة اليوم، يوم الجمعة، يوم الأحد و الأربعاء القادم مع درجات حرارة مستقرة حول 20°C": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "أمطار متوسطة، مع عواصف محتملة تبدأ بعد الظهر": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

@@ -32,9 +32,7 @@ cases = {
     "آسمان کمی ابری": ["title", "light-clouds"],
     "آسمان کمی تا قسمتی ابری": ["title", "medium-clouds"],
     "آسمان ابری": ["title", "heavy-clouds"],
-    "رطوبت پایین و نسیم": ["title", ["and", "low-humidity", "light-wind"]],
     "رگبار پراکنده و باد شدید": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "رطوبت بالا و آسمان کمی ابری": ["title", ["and", "high-humidity", "light-clouds"]],
     "صاف برای این ساعت": ["sentence", ["for-hour", "clear"]],
     "برف بسیار پراکنده در 35 دقیقه آغاز می‌شود": [
         "sentence",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "رطوبت پایین امشب و بارش پراکنده عصر فردا شروع می‌شود و تا فردا شب ادامه می‌یابد": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "برف (5 اینچ) در طول شب": [
@@ -220,20 +205,10 @@ cases = {
     "غبار": ["title", "haze"],
     "غبار در طول روز": ["sentence", ["for-day", "haze"]],
     "غبار در طول بعد از ظهر": ["sentence", ["during", "haze", "afternoon"]],
-    "غبار و رطوبت بالا": ["title", ["and", "haze", "high-humidity"]],
     "مه در طول روز": ["sentence", ["for-day", "mist"]],
     "مه در طول شب": ["sentence", ["during", "mist", "night"]],
     "مه و آسمان ابری": ["title", ["and", "mist", "heavy-clouds"]],
     "آذرخش و تندر برای این ساعت": ["sentence", ["for-hour", "thunderstorm"]],
-    "تگرگ در 5 دقیقه آغاز می‌شود و 45 دقیقه بعد پایان می‌یابد": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "باران یخبندان شدید در 10 دقیقه پایان می‌یابد و 32 دقیقه بعد دوباره آغاز می‌شود": [
         "sentence",
         [
@@ -246,5 +221,25 @@ cases = {
     "نم نم باران یخ زده در 49 دقیقه آغاز می‌شود": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "باران امروز، آدینه، یک‌شنبه و چهارشنبه آینده، به همراه دما ثابت در حدود 20°C": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "باران، به همراه احتمال آذرخش و تندر ظهر امروز آغاز می‌شود": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

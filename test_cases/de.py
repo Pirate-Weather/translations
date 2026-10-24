@@ -24,14 +24,6 @@ cases = {
     "Leicht bewölkt": ["title", "light-clouds"],
     "Überwiegend bewölkt": ["title", "medium-clouds"],
     "Stark bewölkt": ["title", "heavy-clouds"],
-    "Niedrige Luftfeuchtigkeit und leichter Wind": [
-        "title",
-        ["and", "low-humidity", "light-wind"],
-    ],
-    "Hohe Luftfeuchtigkeit und leicht bewölkt": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "In der kommenden Stunde Klar.": ["sentence", ["for-hour", "clear"]],
     "In 35 Min. leichter Schneefall.": [
         "sentence",
@@ -121,19 +113,6 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Heute Nacht niedrige Luftfeuchtigkeit sowie leichter Niederschlag von morgen Abend bis morgen Nacht.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
-        ],
-    ],
     "Schneefall (5 Zoll) in der Nacht.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
@@ -221,9 +200,28 @@ cases = {
     "Dunstig": ["title", "haze"],
     "Den ganzen Tag lang dunstig.": ["sentence", ["for-day", "haze"]],
     "Dunstig am Nachmittag.": ["sentence", ["during", "haze", "afternoon"]],
-    "Dunstig und hohe Luftfeuchtigkeit": ["title", ["and", "haze", "high-humidity"]],
     "Neblig": ["title", "mist"],
     "Den ganzen Tag lang neblig.": ["sentence", ["for-day", "mist"]],
     "Neblig in der Nacht.": ["sentence", ["during", "mist", "night"]],
     "Neblig und stark bewölkt": ["title", ["and", "mist", "heavy-clouds"]],
+    "Regen heute, am Freitag, Sonntag und nächsten Mittwoch mit gleichbleibender Temperatur um 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Regen, dazu Gewitter möglich heute Nachmittag.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

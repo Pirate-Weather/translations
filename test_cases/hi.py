@@ -26,15 +26,13 @@ cases = {
     "बर्फ़बारी": ["title", "medium-snow"],
     "भारी बर्फ़बारी": ["title", "heavy-snow"],
     "तेज़ हवाएं": ["title", "medium-wind"],
-    "गंभीर रूप से तेज़ हवाएं": ["title", "heavy-wind"],
+    "बहुत तेज़ हवाएं": ["title", "heavy-wind"],
     "धुंधला": ["title", "fog"],
     "अधिकतर साफ़": ["title", "very-light-clouds"],
     "सामान्य बादल": ["title", "light-clouds"],
     "बादलों से आच्छादित": ["title", "medium-clouds"],
     "मेघयुक्त": ["title", "heavy-clouds"],
-    "शुष्क और तूफानी": ["title", ["and", "low-humidity", "light-wind"]],
-    "बूंदाबांदी और गंभीर रूप से तेज़ हवाएं": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "आर्द्र और सामान्य बादल": ["title", ["and", "high-humidity", "light-clouds"]],
+    "बूंदाबांदी और बहुत तेज़ हवाएं": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "एक घंटे के लिए साफ़": ["sentence", ["for-hour", "clear"]],
     "आंधी 35 मिनट में शुरू हो रहा": [
         "sentence",
@@ -87,7 +85,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "गंभीर रूप से तेज़ हवाएं इस सुबह तक, इस दोपहर तक जारी और ओला वृष्टि कल सुबह के दौरान": [
+    "बहुत तेज़ हवाएं इस सुबह तक, इस दोपहर तक जारी और ओला वृष्टि कल सुबह के दौरान": [
         "sentence",
         [
             "and",
@@ -106,19 +104,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "शुष्क आज रात के दौरान और हल्की वर्षा कल शाम तक, कल रात तक जारी": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "बर्फ़बारी(5 इंच) रातोंरात के दौरान": [
@@ -214,19 +199,9 @@ cases = {
     "धुंध": ["title", "mist"],
     "सारे दिन धुंध": ["sentence", ["for-day", "mist"]],
     "धुंध दोपहर के दौरान": ["sentence", ["during", "haze", "afternoon"]],
-    "धुंध और आर्द्र": ["title", ["and", "haze", "high-humidity"]],
     "धुंध रातोंरात के दौरान": ["sentence", ["during", "mist", "night"]],
     "धुंध और मेघयुक्त": ["title", ["and", "mist", "heavy-clouds"]],
     "एक घंटे के लिए तड़ित वृष्टि": ["sentence", ["for-hour", "thunderstorm"]],
-    "ओलों 5 मिनट में शुरू हो रहा, बाद में 45 मिनट में बंद हो रहा": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "भारी हिमीकरण बारिश 10 मिनट में बंद हो रहा, बाद में फिर से 32 मिनट पर शुरू हो रहा": [
         "sentence",
         [
@@ -239,5 +214,25 @@ cases = {
     "हिमीकरण बूंदाबांदी 49 मिनट में शुरू हो रहा": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "बारिश आज, शुक्रवार को, रविवार को और अगले बुधवार के दौरान के साथ उच्च तापमान 20°C के आसपास स्थिर": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "बारिश, साथ में संभावित तड़ित वृष्टि इस दोपहर से शुरू": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

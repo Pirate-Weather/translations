@@ -28,19 +28,15 @@ cases = {
     "Слабкий Вітер": ["title", "light-wind"],
     "Вітер": ["title", "medium-wind"],
     "Сильний Вітер": ["title", "heavy-wind"],
-    "Сухо": ["title", "low-humidity"],
-    "Волого": ["title", "high-humidity"],
     "Туман": ["title", "fog"],
     "Переважно Ясно": ["title", "very-light-clouds"],
     "Невелика Хмарність": ["title", "light-clouds"],
     "Хмарно": ["title", "medium-clouds"],
     "Сильна Хмарність": ["title", "heavy-clouds"],
-    "Сухо і Слабкий Вітер": ["title", ["and", "low-humidity", "light-wind"]],
     "Незначний Дощ і Сильний Вітер": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Волого і Невелика Хмарність": ["title", ["and", "high-humidity", "light-clouds"]],
     "Ясно протягом наступної години.": ["sentence", ["for-hour", "clear"]],
     "Незначний сніг починається за 35 хв.": [
         "sentence",
@@ -116,19 +112,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Сухо сьогодні вночі і невеликі опади, починаючись з завтрашнього вечору, і до завтрашньої ночі.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Сніг (5 см.) вночі.": [
@@ -209,21 +192,11 @@ cases = {
     "Імла": ["title", "haze"],
     "Імла протягом всього дня.": ["sentence", ["for-day", "haze"]],
     "Імла вдень.": ["sentence", ["during", "haze", "afternoon"]],
-    "Імла і Волого": ["title", ["and", "haze", "high-humidity"]],
     "Туман": ["title", "mist"],
     "Туман протягом всього дня.": ["sentence", ["for-day", "mist"]],
     "Туман вночі.": ["sentence", ["during", "mist", "night"]],
     "Туман і Сильна Хмарність": ["title", ["and", "mist", "heavy-clouds"]],
     "Грози протягом наступної години.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Град починається за 5 хв., і закінчується за 45 хв.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Сильний крижаний дощ закінчується за 10 хв., і починається знову за 32 хв.": [
         "sentence",
         [
@@ -236,5 +209,25 @@ cases = {
     "Крижаний дощ починається за 49 хв.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Дощ сьогодні, в п'ятницю, неділю і наступної середи, з стабільною температурою близько 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Дощ, а також можливі грози починається сьогодні вдень.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

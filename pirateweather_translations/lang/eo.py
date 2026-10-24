@@ -52,6 +52,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", kaj " if "," in a else " kaj ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def title_function(stack, s):
     """
     Convert a string to title case, but skip certain words and words containing a period.
@@ -137,13 +151,9 @@ template = {
     "medium-freezing-rain": "frosta pluvo",
     "possible-heavy-freezing-rain": "forta frosta pluvo eblas",
     "heavy-freezing-rain": "forta frosta pluvo",
-    "possible-hail": "hajlo eblas",
-    "hail": "hajlo",
     "light-wind": "malforta vento",
     "medium-wind": "vento",
     "heavy-wind": "forta vento",
-    "low-humidity": "seka humideco",
-    "high-humidity": "alta humideco",
     "fog": "nebulo",
     "very-light-clouds": "plejparte klara",
     "light-clouds": "malmultaj nuboj",
@@ -188,8 +198,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "malpli ol $1",
     "and": and_function,
+    "list": list_function,
     "through": "$1 ĝis $2",
     "with": "$1, kaj $2",
+    "accompanied-by": "$1, kun $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 por unu horo",
@@ -220,4 +232,18 @@ template = {
     "smoke": "fumo",
     "haze": "nebuleto",
     "mist": "nebulo",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "atendataj $1 da $2",
+    "for-night": "$1 dum la nokto",
+    "intermittent": "$1 kun paŭzoj",
+    "occasional": "kelkfoje $1",
+    "periods-of": "periodoj de $1",
+    "tapering-off": "$1, iom post iom ĉesanta",
+    "to": "$1 ĝis $2",
+    "generally": "ĝenerale $1",
+    "increasing": "pliiĝantaj nuboj",
+    "clearing": "sklariĝo",
+    "becoming": "$1 iĝanta $2",
+    "temperatures-steady": "temperaturoj stabilaj ĉirkaŭ $1",
 }

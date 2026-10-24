@@ -32,12 +32,10 @@ cases = {
     "Sedikit Berawan": ["title", "light-clouds"],
     "Berawan": ["title", "medium-clouds"],
     "Berawan Besar": ["title", "heavy-clouds"],
-    "Kering Dan Berangin Ringan": ["title", ["and", "low-humidity", "light-wind"]],
     "Hujan Ringan Dan Berangin Besar": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Lembab Dan Sedikit Berawan": ["title", ["and", "high-humidity", "light-clouds"]],
     "Cerah pada jam.": ["sentence", ["for-hour", "clear"]],
     "Salju ringan mulai pada 35 min.": [
         "sentence",
@@ -118,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Kering malam ini dan hujan ringan mulai besok malam, berlanjut sampai besok tengah malam.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Salju (5 in.) tengah malam.": [
@@ -221,19 +206,9 @@ cases = {
     "Kabut": ["title", "mist"],
     "Kabut selama sehari.": ["sentence", ["for-day", "mist"]],
     "Kabut pada sore hari.": ["sentence", ["during", "haze", "afternoon"]],
-    "Kabut Dan Lembab": ["title", ["and", "haze", "high-humidity"]],
     "Kabut tengah malam.": ["sentence", ["during", "mist", "night"]],
     "Kabut Dan Berawan Besar": ["title", ["and", "mist", "heavy-clouds"]],
     "Badai pada jam.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Hujan es mulai pada 5 min., berhenti 45 min. nanti.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Hujan yang membekukan lebat berhenti pada 10 min., berhenti lagi 32 min. nanti.": [
         "sentence",
         [
@@ -246,5 +221,25 @@ cases = {
     "Hujan yang membekukan ringan mulai pada 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Hujan hari ini, pada hari Jum'at, Minggu dan Rabu minggu depan, dengan suhu stabil sekitar 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Hujan, disertai kemungkinan badai mulai sore ini.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

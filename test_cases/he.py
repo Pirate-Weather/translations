@@ -32,9 +32,7 @@ cases = {
     "עננות חלקית": ["title", "light-clouds"],
     "מעונן חלקית": ["title", "medium-clouds"],
     "עננות": ["title", "heavy-clouds"],
-    "יבש ורוח קלה": ["title", ["and", "low-humidity", "light-wind"]],
     "טפטוף ורוח חזקה": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "לחות גבוהה ועננות חלקית": ["title", ["and", "high-humidity", "light-clouds"]],
     "בהיר לשעה הקרובה.": ["sentence", ["for-hour", "clear"]],
     "שלג קל מאוד יתחיל בעוד 35 דקות.": [
         "sentence",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "יבש הלילה ומשקעים קלים ממחר בערב, ימשך עד מחר בלילה.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "שלג (5 אינץ׳) הלילה.": [
@@ -220,20 +205,10 @@ cases = {
     "אובך": ["title", "haze"],
     "אובך לאורך היום.": ["sentence", ["for-day", "haze"]],
     "אובך אחר הצהרים.": ["sentence", ["during", "haze", "afternoon"]],
-    "אובך ולחות גבוהה": ["title", ["and", "haze", "high-humidity"]],
     "ערפל לאורך היום.": ["sentence", ["for-day", "mist"]],
     "ערפל הלילה.": ["sentence", ["during", "mist", "night"]],
     "ערפל ועננות": ["title", ["and", "mist", "heavy-clouds"]],
     "סופת ברקים לשעה הקרובה.": ["sentence", ["for-hour", "thunderstorm"]],
-    "ברד יתחיל בעוד 5 דקות, יפסק אחרי 45 דקות.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "גשם קפוא חזק יפסק בעוד 10 דקות, יתחדש לאחר 32 דקות.": [
         "sentence",
         [
@@ -246,5 +221,25 @@ cases = {
     "טפטוף מקפיא יתחיל בעוד 49 דקות.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "גשם היום, שישי, ראשון ורביעי הבא, וטמפרטורות יציבות סביב 20 מעלות צלסיוס.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "גשם, בליווי אפשרות לסופת ברקים מתחיל אחרי הצהרים.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

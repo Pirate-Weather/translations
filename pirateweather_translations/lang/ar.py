@@ -18,6 +18,13 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, " و ")
 
 
+def list_function(stack, *items):
+    # "يوم الجمعة"، "يوم الأحد" and "يوم الاثنين" become "أيام الجمعة، الأحد و الاثنين"
+    if all(item[:4] == "يوم " for item in items):
+        return "أيام " + "، ".join(i[4:] for i in items[:-1]) + " و " + items[-1][4:]
+    return "، ".join(items[:-1]) + " و " + items[-1]
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " حتى ")
 
@@ -84,13 +91,9 @@ template = {
     "medium-freezing-rain": "أمطار متجمدة",
     "possible-heavy-freezing-rain": "أمطار متجمدة غزيرة محتملة",
     "heavy-freezing-rain": "أمطار متجمدة غزيرة",
-    "possible-hail": "بَرَد محتمل",
-    "hail": "البَرَد",
     "light-wind": "رياح خفيفة",
     "medium-wind": "رياح متوسطة",
     "heavy-wind": "عواصف",
-    "low-humidity": "اجواء جافة",
-    "high-humidity": "اجواء رطبة",
     "fog": "اجواء غائمة",
     "very-light-clouds": "واضح في الغالب",
     "light-clouds": "غائم جزئياً",
@@ -135,8 +138,10 @@ template = {
     "centimeters": "$1 سم",
     "less-than": "أقل من $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1 مع $2",
+    "accompanied-by": "$1، مع $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 لهذه الساعة",
@@ -167,4 +172,18 @@ template = {
     "smoke": "دخان",
     "haze": "ضباب",
     "mist": "شبورة",
+    "millimeters": "$1 مم",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "يتوقع $1 من $2",
+    "for-night": "$1 طوال الليل",
+    "intermittent": "$1 متقطعة",
+    "occasional": "$1 من حين لآخر",
+    "periods-of": "فترات من $1",
+    "tapering-off": "$1 تتلاشى تدريجياً",
+    "to": "$1 إلى $2",
+    "generally": "$1 بشكل عام",
+    "increasing": "غيوم متزايدة",
+    "clearing": "صفاء السماء",
+    "becoming": "$1 تتحول إلى $2",
+    "temperatures-steady": "درجات حرارة مستقرة حول $1",
 }

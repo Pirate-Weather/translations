@@ -17,6 +17,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ",及び" if "," in a else "及び")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], "、")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, "から")
 
@@ -73,13 +87,9 @@ template = {
     "medium-freezing-rain": "凍雨",
     "possible-heavy-freezing-rain": "大凍雨の可能性あり",
     "heavy-freezing-rain": "大凍雨",
-    "possible-hail": "雹の可能性あり",
-    "hail": "雹",
     "light-wind": "弱い風",
     "medium-wind": "強い風",
     "heavy-wind": "猛烈な風",
-    "low-humidity": "乾燥",
-    "high-humidity": "多湿",
     "fog": "霧",
     "very-light-clouds": "ほぼ晴れ",
     "light-clouds": "薄曇り",
@@ -124,8 +134,10 @@ template = {
     "centimeters": "$1センチメートル",
     "less-than": "$1未満",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1$2",
+    "accompanied-by": "$1、また$2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "一時間$1。",
@@ -156,4 +168,18 @@ template = {
     "smoke": "煙",
     "haze": "もや",
     "mist": "霧",
+    "millimeters": "$1ミリメートル",
+    "multiple-sentences": "$1$2",
+    "of-expected": "$2は$1の見込み",
+    "for-night": "一晩中$1。",
+    "intermittent": "断続的な$1",
+    "occasional": "時々$1",
+    "periods-of": "一時$1",
+    "tapering-off": "$1は次第に止む",
+    "to": "$1から$2",
+    "generally": "おおむね$1",
+    "increasing": "雲が増える",
+    "clearing": "晴れ間が広がる",
+    "becoming": "$1のち$2",
+    "temperatures-steady": "気温は$1前後で安定",
 }

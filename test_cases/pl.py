@@ -32,12 +32,7 @@ cases = {
     "Niewielkie zachmurzenie": ["title", "light-clouds"],
     "Średnie zachmurzenie": ["title", "medium-clouds"],
     "Duże zachmurzenie": ["title", "heavy-clouds"],
-    "Niska wilgotność, słaby wiatr": ["title", ["and", "low-humidity", "light-wind"]],
     "Mżawka, silny wiatr": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Duża wilgotność, niewielkie zachmurzenie": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Bezchmurnie przez godzinę.": ["sentence", ["for-hour", "clear"]],
     "Drobny śnieg za 35 min.": [
         "sentence",
@@ -118,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Nocą niska wilgotność, jutro wieczorem niewielkie opady, skończą się jutro w nocy.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Nocą śnieg (5 in).": [
@@ -229,21 +211,11 @@ cases = {
     "Dym, niewielkie zachmurzenie": ["title", ["and", "smoke", "light-clouds"]],
     "Zmętnienie w ciągu dnia.": ["sentence", ["for-day", "haze"]],
     "Po południu zmętnienie.": ["sentence", ["during", "haze", "afternoon"]],
-    "Zmętnienie, duża wilgotność": ["title", ["and", "haze", "high-humidity"]],
     "Zamglenie": ["title", "mist"],
     "Zamglenie w ciągu dnia.": ["sentence", ["for-day", "mist"]],
     "Nocą zamglenie.": ["sentence", ["during", "mist", "night"]],
     "Zamglenie, duże zachmurzenie": ["title", ["and", "mist", "heavy-clouds"]],
     "Burza przez godzinę.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Grad za 5 min., skończy się po 45 min.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Ulewny marznący deszcz skończy się za 10 min., ponownie zacznie 32 min. później.": [
         "sentence",
         [
@@ -256,5 +228,25 @@ cases = {
     "Marznąca mżawka za 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Dzisiaj, w piątek, niedzielę i przyszłą środę deszcz, stabilna temperatura około 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Deszcz, a także po południu możliwa burza.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

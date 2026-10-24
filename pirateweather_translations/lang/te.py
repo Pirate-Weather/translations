@@ -1,3 +1,8 @@
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " మరియు " + items[-1]
+
+
 template = {
     "clear": "స్పష్టమైన",
     "no-precipitation": "వర్షపాతం లేదు",
@@ -44,13 +49,9 @@ template = {
     "medium-freezing-rain": "గడ్డకట్టే వర్షం",
     "possible-heavy-freezing-rain": "కాగల భారీ గడ్డకట్టే వర్షం",
     "heavy-freezing-rain": "భారీ గడ్డకట్టే వర్షం",
-    "possible-hail": "కాగల వడగళ్ళు",
-    "hail": "వడగళ్ళు",
     "light-wind": "గాలులతో",
     "medium-wind": "గాలులతో",
-    "heavy-wind": "ప్రమాదకరమైన గాలులతో",
-    "low-humidity": "పొడి",
-    "high-humidity": "ఆర్ద్ర",
+    "heavy-wind": "బలమైన గాలులతో",
     "fog": "పొగమంచు",
     "very-light-clouds": "చాలావరకు స్పష్టమైన",
     "light-clouds": "పాక్షికంగా మేఘావృతం",
@@ -95,8 +96,10 @@ template = {
     "centimeters": "$1 సెంటీమీటర్",
     "less-than": "< $1",
     "and": "$1 మరియు $2",
+    "list": list_function,
     "through": "$2 ద్వారా $1",
     "with": "$1 తో $2",
+    "accompanied-by": "$1, తో పాటు $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1($2)",
     "for-hour": "ఒక గంట కు $1",
@@ -127,4 +130,18 @@ template = {
     "smoke": "పొగ",
     "haze": "పొగమంచు",
     "mist": "పొగమంచు",
+    "millimeters": "$1 మిల్లీమీటర్",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 అంచనా",
+    "for-night": "రాత్రంతా $1",
+    "intermittent": "అడపాదడపా $1",
+    "occasional": "అప్పుడప్పుడు $1",
+    "periods-of": "కొంతసేపు $1",
+    "tapering-off": "$1 క్రమంగా తగ్గుతుంది",
+    "to": "$1 నుండి $2",
+    "generally": "సాధారణంగా $1",
+    "increasing": "పెరుగుతున్న మేఘాలు",
+    "clearing": "ఆకాశం నిర్మలమవుతోంది",
+    "becoming": "$1, తర్వాత $2",
+    "temperatures-steady": "అధిక ఉష్ణోగ్రతలు $1 వద్ద స్థిరంగా ఉన్నాయి",
 }

@@ -27,20 +27,15 @@ cases = {
     "Owsnay": ["title", "medium-snow"],
     "Eavyhay Owsnay": ["title", "heavy-snow"],
     "Indyway": ["title", "medium-wind"],
-    "Angerouslyday Indyway": ["title", "heavy-wind"],
+    "Eryvay Indyway": ["title", "heavy-wind"],
     "Oggyfay": ["title", "fog"],
     "Ostlymay Earclay": ["title", "very-light-clouds"],
     "Artlypay Oudyclay": ["title", "light-clouds"],
     "Ostlymay Oudyclay": ["title", "medium-clouds"],
     "Overcastway": ["title", "heavy-clouds"],
-    "Ydray andway Eezybray": ["title", ["and", "low-humidity", "light-wind"]],
-    "Izzledray andway Angerouslyday Indyway": [
+    "Izzledray andway Eryvay Indyway": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
-    ],
-    "Umidhay andway Artlypay Oudyclay": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
     ],
     "Earclay orfay ethay hourway.": ["sentence", ["for-hour", "clear"]],
     "Urriesflay artingstay inway 35 min.": [
@@ -109,7 +104,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Angerouslyday indyway omfray isthay orningmay untilway isthay afternoonway andway eetslay omorrowtay orningmay.": [
+    "Eryvay indyway omfray isthay orningmay untilway isthay afternoonway andway eetslay omorrowtay orningmay.": [
         "sentence",
         [
             "and",
@@ -128,19 +123,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Ydray onighttay andway ightlay ecipitationpray omfray omorrowtay eveningway untilway omorrowtay ightnay.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Owsnay (5 in) overnightway.": [
@@ -235,9 +217,28 @@ cases = {
     "Azehay": ["title", "haze"],
     "Azehay oughoutthray ethay ayday.": ["sentence", ["for-day", "haze"]],
     "Azehay inway ethay afternoonway.": ["sentence", ["during", "haze", "afternoon"]],
-    "Azehay andway Umidhay": ["title", ["and", "haze", "high-humidity"]],
     "Istymay": ["title", "mist"],
     "Istymay oughoutthray ethay ayday.": ["sentence", ["for-day", "mist"]],
     "Istymay overnightway.": ["sentence", ["during", "mist", "night"]],
     "Istymay andway Overcastway": ["title", ["and", "mist", "heavy-clouds"]],
+    "Ainray odaytay, idayfray, undaysay andway extnay ednesdayway, ithway ighshay eadystay aroundway 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Ainray, ithway ossiblepay understormsthay artingstay isthay afternoonway.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

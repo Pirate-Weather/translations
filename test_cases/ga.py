@@ -32,17 +32,9 @@ cases = {
     "Scamaill Bhána": ["title", "light-clouds"],
     "Scamaill Mheasartha": ["title", "medium-clouds"],
     "Scamaill Throma": ["title", "heavy-clouds"],
-    "Bogthaise Íseal Agus Laoithne Éadrom": [
-        "title",
-        ["and", "low-humidity", "light-wind"],
-    ],
     "Fearthainn An-éadrom Agus Laoithne Láidir": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
-    ],
-    "Bogthaise Ard Agus Scamaill Bhána": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
     ],
     "Glan ar feadh uair an chloig.": ["sentence", ["for-hour", "clear"]],
     "Sneachta an-éadrom ag tosú i 35 nóim.": [
@@ -124,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Bogthaise íseal anocht agus frasaíocht éadrom ag tosú tráthnóna amárach, ag stopadh oiche amárach.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Sneachta (5 orl.) anocht.": [
@@ -230,7 +209,6 @@ cases = {
     "Ceo": ["title", "haze"],
     "Ceo ar feadh an lae.": ["sentence", ["for-day", "haze"]],
     "Ceo iarnóin.": ["sentence", ["during", "haze", "afternoon"]],
-    "Ceo Agus Bogthaise Ard": ["title", ["and", "haze", "high-humidity"]],
     "Ceobhrán": ["title", "mist"],
     "Ceobhrán ar feadh an lae.": ["sentence", ["for-day", "mist"]],
     "Ceobhrán anocht.": ["sentence", ["during", "mist", "night"]],
@@ -238,15 +216,6 @@ cases = {
     "Stoirm thoirní ar feadh uair an chloig.": [
         "sentence",
         ["for-hour", "thunderstorm"],
-    ],
-    "Cailleach ag tosú i 5 nóim., ag stopadh i 45 nóim.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
     ],
     "Fearthainn reo throm ag stopadh i 10 nóim., ag tosú arís i 32 nóim.": [
         "sentence",
@@ -260,5 +229,25 @@ cases = {
     "Fearthainn an-éadrom reo ag tosú i 49 nóim.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Fearthainn inniu, Dé hAoine, Dé Domhnaigh agus Dé Céadaoin seo chugainn, le an teocht seasmhach timpeall 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Fearthainn, le seans ar stoirm thoirní ag tosú iarnóin inniu.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

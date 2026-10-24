@@ -32,12 +32,10 @@ cases = {
     "Daļēji mākoņains": ["title", "light-clouds"],
     "Pārsvarā mākoņains": ["title", "medium-clouds"],
     "Apmācies": ["title", "heavy-clouds"],
-    "Sauss un lēns vējš": ["title", ["and", "low-humidity", "light-wind"]],
     "Smidzinošs lietus un stiprs vējš": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Mitrs un daļēji mākoņains": ["title", ["and", "high-humidity", "light-clouds"]],
     "Nākamo stundu skaidrs.": ["sentence", ["for-hour", "clear"]],
     "Neliels sniegs sāksies nākamo 35 min. laikā.": [
         "sentence",
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Naktī sauss un no rītvakara līdz rītdienas naktij nelieli nokrišņi.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Naktī sniegs (5 collas).": [
@@ -235,20 +220,10 @@ cases = {
     "Dūmaka": ["title", "haze"],
     "Visu dienu dūmaka.": ["sentence", ["for-day", "haze"]],
     "Pēcpusdienā dūmaka.": ["sentence", ["during", "haze", "afternoon"]],
-    "Dūmaka un mitrs": ["title", ["and", "haze", "high-humidity"]],
     "Visu dienu migla.": ["sentence", ["for-day", "mist"]],
     "Naktī migla.": ["sentence", ["during", "mist", "night"]],
     "Migla un apmācies": ["title", ["and", "mist", "heavy-clouds"]],
     "Nākamo stundu negaiss.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Krusa sāksies 5 min. laikā, beigsies 45 min. vēlāk.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Stiprs sasalstošs lietus beigsies 10 min. laikā, atsāksies 32 min. vēlāk.": [
         "sentence",
         [
@@ -261,5 +236,25 @@ cases = {
     "Sasalstošs smidzinošs lietus sāksies nākamo 49 min. laikā.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Šodien, piektdien, svētdien un nākamtrešdien lietus, temperatūrai saglabājoties ap 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Lietus, kā arī pēcpusdienā sāksies iespējams negaiss.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

@@ -32,12 +32,7 @@ cases = {
     "Čiastočne zamračené": ["title", "light-clouds"],
     "Prevažne zamračené": ["title", "medium-clouds"],
     "Zamračené": ["title", "heavy-clouds"],
-    "Nízka vlhkosť a slabý vietor": ["title", ["and", "low-humidity", "light-wind"]],
     "Mrholenie a silný vietor": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Vysoká vlhkosť a čiastočne zamračené": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Jasno hodinu.": ["sentence", ["for-hour", "clear"]],
     "Slabé sneženie o 35 min.": [
         "sentence",
@@ -122,19 +117,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Dnes v noci nízka vlhkosť a od zajtrajšieho večera slabé zrážky, ktoré pretrvajú až do zajtrajšej noci.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "V noci sneženie (5 in).": [
@@ -242,21 +224,11 @@ cases = {
     "Opar": ["title", "haze"],
     "Počas dňa opar.": ["sentence", ["for-day", "haze"]],
     "Popoludní opar.": ["sentence", ["during", "haze", "afternoon"]],
-    "Opar a vysoká vlhkosť": ["title", ["and", "haze", "high-humidity"]],
     "Hmla": ["title", "mist"],
     "Počas dňa hmla.": ["sentence", ["for-day", "mist"]],
     "V noci hmla.": ["sentence", ["during", "mist", "night"]],
     "Hmla a zamračené": ["title", ["and", "mist", "heavy-clouds"]],
     "Búrky hodinu.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Krupobitie o 5 min., skončí o 45 min. neskôr.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Vydatný mrznúce dážď skončí o 10 min. a začne znovu o 32 min. neskôr.": [
         "sentence",
         [
@@ -269,5 +241,25 @@ cases = {
     "Mrznúce mrholenie o 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Dnes, v piatok, nedeľu a budúcu stredu dážď, s teplotami okolo 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Dážď, a tiež od dnešného popoludnia možnosť búrok.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

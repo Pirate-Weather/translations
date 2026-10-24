@@ -1,3 +1,8 @@
+def list_function(stack, *items):
+    # Matches "and", which adds "ഉം" after every item.
+    return ", ".join(item + " ഉം" for item in items)
+
+
 template = {
     "clear": "വ്യക്തമായ",
     "no-precipitation": "വര്‍ഷപാതം ഇല്ല",
@@ -44,13 +49,9 @@ template = {
     "medium-freezing-rain": "മരവിപ്പിക്കുന്ന മഴ",
     "possible-heavy-freezing-rain": "സാധ്യമായ ശക്തിയേറിയ മരവിപ്പിക്കുന്ന മഴ",
     "heavy-freezing-rain": "ശക്തിയേറിയ മരവിപ്പിക്കുന്ന മഴ",
-    "possible-hail": "സാധ്യമായ ആലിപ്പഴം",
-    "hail": "ആലിപ്പഴം",
     "light-wind": "കാറ്റ്",
     "medium-wind": "ശീതളമായ",
-    "heavy-wind": "അപകടകരമായ കാറ്റ്",
-    "low-humidity": "വരണ്ട",
-    "high-humidity": "ഈര്‍പ്പം",
+    "heavy-wind": "ശക്തമായ കാറ്റ്",
     "fog": "മൂടല്‍മഞ്ഞ്(മൂടിക്കെട്ടിയ)",
     "very-light-clouds": "മിക്കവാറും വ്യക്തമാണ്",
     "light-clouds": "ഭാഗീകമായി മേഘാവൃതം",
@@ -112,8 +113,10 @@ template = {
     "temperatures-valleying": "$1 $2 ഇല്‍ ആയി താഴുന്ന ഉയര്‍ന്ന താപനില",
     "temperatures-falling": "$1 $2 ആയി കുറയുന്ന ഉയര്‍ന്ന താപനില",
     "and": "$1 ഉം $2 ഉം",
+    "list": list_function,
     "through": "$1, $2 വില്‍ ഉടനീളം",
     "with": "$1, $2 നു ഒപ്പം",
+    "accompanied-by": "$1, ഒപ്പം $2",
     "range": "$1\u2013$2",
     "title": "$1",
     "parenthetical": "$1 ($2)",
@@ -127,4 +130,18 @@ template = {
     "smoke": "പുക",
     "haze": "മഞ്ഞ്",
     "mist": "കോട",
+    "millimeters": "$1 മില്ലിമീറ്റര്‍",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 പ്രതീക്ഷിക്കുന്നു",
+    "for-night": "$1 രാത്രി മുഴുവന്‍",
+    "intermittent": "ഇടവിട്ടുള്ള $1",
+    "occasional": "ഇടയ്ക്കിടെ $1",
+    "periods-of": "ചില സമയങ്ങളില്‍ $1",
+    "tapering-off": "$1 ക്രമേണ കുറയുന്നു",
+    "to": "$1 മുതല്‍ $2 വരെ",
+    "generally": "പൊതുവെ $1",
+    "increasing": "മേഘങ്ങള്‍ വര്‍ദ്ധിക്കുന്നു",
+    "clearing": "ആകാശം തെളിയുന്നു",
+    "becoming": "$1, പിന്നീട് $2",
+    "temperatures-steady": "ഉയര്‍ന്ന താപനില $1 ന് ചുറ്റും സ്ഥിരമായി",
 }

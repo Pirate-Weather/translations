@@ -32,8 +32,6 @@ cases = {
     "Abu-Abu Uituan": ["title", "light-clouds"],
     "Abu-Abu": ["title", "medium-clouds"],
     "Abu-Abu Taka Loron": ["title", "heavy-clouds"],
-    "Maran Ho Anin Ki'ik": ["title", ["and", "low-humidity", "light-wind"]],
-    "Bokon Ho Abu-Abu Uituan": ["title", ["and", "high-humidity", "light-clouds"]],
     "Pas ba oras ida.": ["sentence", ["for-hour", "clear"]],
     "Salju uituan deit hahu iha 35 min.": [
         "sentence",
@@ -113,19 +111,6 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Maran ohin kalan bo'ot ho udan uituan hahu aban kalan, kontinua to aban kalan bo'ot.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
-        ],
-    ],
     "Salju (5 in.) iha kalan bo'ot.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
@@ -198,21 +183,11 @@ cases = {
     "Rai-Rahun": ["title", "haze"],
     "Rai-rahun loron tomak.": ["sentence", ["for-day", "haze"]],
     "Rai-rahun lokraik.": ["sentence", ["during", "haze", "afternoon"]],
-    "Rai-Rahun Ho Bokon": ["title", ["and", "haze", "high-humidity"]],
     "Kalohan": ["title", "mist"],
     "Kalohan loron tomak.": ["sentence", ["for-day", "mist"]],
     "Kalohan iha kalan bo'ot.": ["sentence", ["during", "mist", "night"]],
     "Kalohan Ho Abu-Abu Taka Loron": ["title", ["and", "mist", "heavy-clouds"]],
     "Rai-tarutu ba oras ida.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Saudasaun hahu iha 5 min., hein 45 min. para.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Udan malirin bo'ot para iha 10 min., hein 32 min. hahu fali.": [
         "sentence",
         [
@@ -225,5 +200,25 @@ cases = {
     "Uituan malirin deit hahu iha 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Udan ohin, iha Sexta, Domingu ho Kuarta, ho temperatur estavel besik 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Udan, ho karik rai-tarutu hahu ohin lokraik.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

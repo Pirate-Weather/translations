@@ -37,6 +37,18 @@ def and_function(stack, a, b):
     return result
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        if i == len(items) - 1:
+            prev = items[i - 1]
+            result += and_function(stack, prev, items[i])[len(prev) :]
+        else:
+            result += ", " + items[i]
+    return result
+
+
 def through_function(stack, a, b):
     return "o " + strip_prefix(a) + " hyd at " + strip_prefix(b)
 
@@ -111,13 +123,9 @@ template = {
     "medium-freezing-rain": "glaw rhewllyd",
     "possible-heavy-freezing-rain": "glaw rhewllyd trwm yn bosib",
     "heavy-freezing-rain": "glaw rhewllyd trwm",
-    "possible-hail": "cenllysg yn bosib",
-    "hail": "cenllysg",
     "light-wind": "gwyntoedd ysgafn",
     "medium-wind": "gwyntog",
     "heavy-wind": "gwyntoedd cryfion",
-    "low-humidity": "sych",
-    "high-humidity": "clòs",
     "fog": "niwlog",
     "very-light-clouds": "clir gan mwyaf",
     "light-clouds": "rhannol gymylog",
@@ -162,8 +170,10 @@ template = {
     "centimeters": "$1cm",
     "less-than": less_than_function,
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, gyda\u2019r $2",
+    "accompanied-by": "$1, gyda $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 am yr awr",
@@ -194,4 +204,18 @@ template = {
     "smoke": "mwg",
     "haze": "niwl",
     "mist": "llwch",
+    "millimeters": "$1mm",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "disgwyl $1 o $2",
+    "for-night": "$1 drwy’r nos",
+    "intermittent": "$1 ysbeidiol",
+    "occasional": "$1 achlysurol",
+    "periods-of": "cyfnodau o $1",
+    "tapering-off": "$1 yn cilio",
+    "to": "$1 i $2",
+    "generally": "$1 gan amlaf",
+    "increasing": "cymylau’n cynyddu",
+    "clearing": "clirio",
+    "becoming": "$1 yn troi’n $2",
+    "temperatures-steady": "tymheredd yn aros tua $1",
 }

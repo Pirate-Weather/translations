@@ -9,6 +9,18 @@ def and_function(stack, a, b):
     return a + " və " + b
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        if i == len(items) - 1:
+            prev = items[i - 1]
+            result += and_function(stack, prev, items[i])[len(prev) :]
+        else:
+            result += ", " + items[i]
+    return result
+
+
 def through_function(stack, a, b):
     return a + " ilə " + b + " arası"
 
@@ -93,13 +105,9 @@ template = {
     "medium-freezing-rain": "donmuş yağış",
     "possible-heavy-freezing-rain": "mümkün güclü donmuş yağış",
     "heavy-freezing-rain": "güclü donmuş yağış",
-    "possible-hail": "mümkün dolu",
-    "hail": "dolu",
     "light-wind": "sərin",
     "medium-wind": "külək",
     "heavy-wind": "güclü külək",
-    "low-humidity": "rütubətsiz",
-    "high-humidity": "rütubətli",
     "fog": "dumanlı",
     "very-light-clouds": "əsasən buludsuz",
     "light-clouds": "qismən buludlu",
@@ -144,8 +152,10 @@ template = {
     "centimeters": "$1 sm.",
     "less-than": "$1-dən aşağı",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, həmçinin $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "1 saat boyunca $1 olacaq",
@@ -176,4 +186,18 @@ template = {
     "smoke": "tüstü",
     "haze": "çiskin",
     "mist": "duman",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 gözlənilir",
+    "for-night": "gecə boyu $1 olacaq",
+    "intermittent": "fasilələrlə $1",
+    "occasional": "arabir $1",
+    "periods-of": "dövri $1",
+    "tapering-off": "$1 tədricən kəsiləcək",
+    "to": "$1 və ya $2",
+    "generally": "əsasən $1",
+    "increasing": "artan buludluluq",
+    "clearing": "aydınlaşma",
+    "becoming": "$1, sonra $2",
+    "temperatures-steady": "temperatur $1 ətrafında sabit qalacaq",
 }

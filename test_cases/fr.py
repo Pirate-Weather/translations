@@ -35,12 +35,7 @@ cases = {
     "Faibles Passages Nuageux": ["title", "light-clouds"],
     "Ciel Nuageux": ["title", "medium-clouds"],
     "Ciel Couvert": ["title", "heavy-clouds"],
-    "Temps Sec et Vent Faible": ["title", ["and", "low-humidity", "light-wind"]],
     "Bruine et Vent Fort": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Temps Humide et Faibles Passages Nuageux": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Ciel dégagé pendant la prochaine heure.": ["sentence", ["for-hour", "clear"]],
     "Averses de neige commençant dans 35 min.": [
         "sentence",
@@ -124,19 +119,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Temps sec cette nuit et faibles précipitations commençant demain soir, se prolongeant jusqu’à demain pendant la nuit.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Neige (5 in.) dans la nuit.": [
@@ -227,7 +209,26 @@ cases = {
     "Brume": ["title", "mist"],
     "Brume toute la journée.": ["sentence", ["for-day", "mist"]],
     "Brume dans l’après-midi.": ["sentence", ["during", "haze", "afternoon"]],
-    "Brume et Temps Humide": ["title", ["and", "haze", "high-humidity"]],
     "Brume dans la nuit.": ["sentence", ["during", "mist", "night"]],
     "Brume et Ciel Couvert": ["title", ["and", "mist", "heavy-clouds"]],
+    "Pluie aujourd’hui, vendredi, dimanche et mercredi prochain, avec des températures maximales stables autour de 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Pluie, avec orages possibles commençant cet après-midi.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

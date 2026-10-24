@@ -19,6 +19,11 @@ def sentence_function(stack, s):
     return s
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " agus " + items[-1]
+
+
 template = {
     "clear": "glan",
     "no-precipitation": "ní bheidh frasaíocht ann",
@@ -65,13 +70,9 @@ template = {
     "medium-freezing-rain": "fearthainn reo",
     "possible-heavy-freezing-rain": "seans ar fearthainn reo throm",
     "heavy-freezing-rain": "fearthainn reo throm",
-    "possible-hail": "seans ar cailleach",
-    "hail": "cailleach",
     "light-wind": "laoithne éadrom",
     "medium-wind": "laoithne mheasarth",
     "heavy-wind": "laoithne láidir",
-    "low-humidity": "bogthaise íseal",
-    "high-humidity": "bogthaise ard",
     "fog": "ceoch",
     "very-light-clouds": "scamaill glan",
     "light-clouds": "scamaill bhána",
@@ -116,8 +117,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "< $1",
     "and": "$1 agus $2",
+    "list": list_function,
     "through": "$1 go dtí $2",
     "with": "$1, le $2",
+    "accompanied-by": "$1, le $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 ar feadh uair an chloig",
@@ -148,4 +151,18 @@ template = {
     "smoke": "deatach",
     "haze": "ceo",
     "mist": "ceobhrán",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "súiltear le $1 de $2",
+    "for-night": "$1 i rith na hoíche",
+    "intermittent": "$1 eatramhach",
+    "occasional": "$1 ó am go chéile",
+    "periods-of": "tréimhsí $1",
+    "tapering-off": "$1 ag maolú",
+    "to": "$1 go $2",
+    "generally": "$1 den chuid is mó",
+    "increasing": "scamaill ag méadú",
+    "clearing": "ag glanadh",
+    "becoming": "$1 ag iompú ina $2",
+    "temperatures-steady": "an teocht seasmhach timpeall $1",
 }

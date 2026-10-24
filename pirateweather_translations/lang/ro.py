@@ -22,6 +22,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, " și ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix("de " + a, b, " până ")
 
@@ -131,13 +145,9 @@ template = {
     "medium-freezing-rain": "ploaie înghețată",
     "possible-heavy-freezing-rain": "posibil ploaie înghețată torențială",
     "heavy-freezing-rain": "ploaie înghețată torențială",
-    "possible-hail": "posibil grindină",
-    "hail": "grindină",
     "light-wind": "vânt ușor",
     "medium-wind": "bate vântul",
     "heavy-wind": "vânt puternic",
-    "low-humidity": "umiditate scăzută",
-    "high-humidity": "umiditate ridicată",
     "fog": "ceață",
     "very-light-clouds": "predominant senin",
     "light-clouds": "parțial noros",
@@ -182,8 +192,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "mai puțin de $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, cu $2",
+    "accompanied-by": "$1, cu $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 în următoarea oră",
@@ -214,4 +226,18 @@ template = {
     "smoke": "fum",
     "haze": "ceață",
     "mist": "abur",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "se așteaptă $1 de $2",
+    "for-night": "$1 pe parcursul nopții",
+    "intermittent": "$1 cu intermitențe",
+    "occasional": "ocazional $1",
+    "periods-of": "perioade cu $1",
+    "tapering-off": "$1 în slăbire",
+    "to": "$1 până la $2",
+    "generally": "în general $1",
+    "increasing": "creșterea nebulozității",
+    "clearing": "înseninări",
+    "becoming": "$1, apoi $2",
+    "temperatures-steady": "temperaturi stabile în jur de $1",
 }

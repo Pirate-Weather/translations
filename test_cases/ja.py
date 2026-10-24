@@ -32,9 +32,7 @@ cases = {
     "薄曇り": ["title", "light-clouds"],
     "曇り": ["title", "medium-clouds"],
     "曇り": ["title", "heavy-clouds"],
-    "乾燥及び弱い風": ["title", ["and", "low-humidity", "light-wind"]],
     "霧雨及び猛烈な風": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "多湿及び薄曇り": ["title", ["and", "high-humidity", "light-clouds"]],
     "一時間晴れ。": ["sentence", ["for-hour", "clear"]],
     "にわか雪が35分に始まる。": [
         "sentence",
@@ -109,19 +107,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "今夜にかけて乾燥。及び弱い降水が明日の夕方から始まり明日の夜まで続く。": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "夜にかけて雪 (5インチ)。": [
@@ -217,8 +202,27 @@ cases = {
     "もや": ["title", "haze"],
     "一日中もや。": ["sentence", ["for-day", "haze"]],
     "昼過ぎにかけてもや。": ["sentence", ["during", "haze", "afternoon"]],
-    "もや及び多湿": ["title", ["and", "haze", "high-humidity"]],
     "一日中霧。": ["sentence", ["for-day", "mist"]],
     "夜にかけて霧。": ["sentence", ["during", "mist", "night"]],
     "霧及び曇り": ["title", ["and", "mist", "heavy-clouds"]],
+    "今日、金曜日、日曜日及び次の水曜日にかけて雨。気温は20°C前後で安定。": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "雨、また今日の昼過ぎから激しい雷雨の可能性ありが始まる。": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

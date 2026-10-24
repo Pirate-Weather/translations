@@ -22,6 +22,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", dan " if "," in a else " dan ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " melalui ")
 
@@ -90,13 +104,9 @@ template = {
     "medium-freezing-rain": "hujan yang membekukan",
     "possible-heavy-freezing-rain": "kemungkinan hujan yang membekukan lebat",
     "heavy-freezing-rain": "hujan yang membekukan lebat",
-    "possible-hail": "kemungkinan hujan es",
-    "hail": "hujan es",
     "light-wind": "berangin ringan",
     "medium-wind": "berangin",
     "heavy-wind": "berangin besar",
-    "low-humidity": "kering",
-    "high-humidity": "lembab",
     "fog": "berkabut",
     "very-light-clouds": "sebagian besar cerah",
     "light-clouds": "sedikit berawan",
@@ -141,8 +151,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "dibawah $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, dengan $2",
+    "accompanied-by": "$1, disertai $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 pada jam",
@@ -173,4 +185,18 @@ template = {
     "smoke": "asap",
     "haze": "kabut",
     "mist": "kabut",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "diperkirakan $1 $2",
+    "for-night": "$1 sepanjang malam",
+    "intermittent": "$1 berselang",
+    "occasional": "sesekali $1",
+    "periods-of": "periode $1",
+    "tapering-off": "$1 yang mereda",
+    "to": "$1 hingga $2",
+    "generally": "umumnya $1",
+    "increasing": "awan yang bertambah",
+    "clearing": "cerah kembali",
+    "becoming": "$1 menjadi $2",
+    "temperatures-steady": "suhu stabil sekitar $1",
 }

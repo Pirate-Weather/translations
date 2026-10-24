@@ -32,9 +32,7 @@ cases = {
     "Vähene pilvisus": ["title", "light-clouds"],
     "Mõõdukas pilvisus": ["title", "medium-clouds"],
     "Pilves": ["title", "heavy-clouds"],
-    "Kuiv ja kerge tuul": ["title", ["and", "low-humidity", "light-wind"]],
     "Nõrk vihmasadu ja tugev tuul": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Niiske ja vähene pilvisus": ["title", ["and", "high-humidity", "light-clouds"]],
     "Selge järgmised tund aega.": ["sentence", ["for-hour", "clear"]],
     "Nõrk lumesadu oodata 35 min. pärast.": [
         "sentence",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Kuiv öösel ja kerge sadu homsest õhtust homse ööni.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Mõõdukas lumesadu (5 tolli) öösel.": [
@@ -215,21 +200,11 @@ cases = {
     "Suits ja vähene pilvisus": ["title", ["and", "smoke", "light-clouds"]],
     "Terve päev on udu.": ["sentence", ["for-day", "haze"]],
     "Udu pärastlõunal.": ["sentence", ["during", "haze", "afternoon"]],
-    "Udu ja niiske": ["title", ["and", "haze", "high-humidity"]],
     "Uduvihm": ["title", "mist"],
     "Terve päev on uduvihm.": ["sentence", ["for-day", "mist"]],
     "Uduvihm öösel.": ["sentence", ["during", "mist", "night"]],
     "Uduvihm ja pilves": ["title", ["and", "mist", "heavy-clouds"]],
     "Äikesetorm järgmised tund aega.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Rahe algab 5 min. pärast, lõppeb 45 min. hiljem.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Tugev jääkülma vihmasadu lõppeb 10 min. pärast, algab uuesti 32 min. hiljem.": [
         "sentence",
         [
@@ -242,5 +217,25 @@ cases = {
     "Jääkülma nõrk vihmasadu oodata 49 min. pärast.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Mõõdukas vihmasadu täna, reedel, pühapäeval ja järgmisel kolmapäeval, temperatuur püsib umbes 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Mõõdukas vihmasadu, lisaks äikesetormi võimalus alates pärastlõunast.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

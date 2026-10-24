@@ -32,14 +32,9 @@ cases = {
     "Hafif bulutlanma": ["title", "light-clouds"],
     "Bulutlanma": ["title", "medium-clouds"],
     "Yoğun bulutlanma": ["title", "heavy-clouds"],
-    "Düşük nem ve hafif rüzgar": ["title", ["and", "low-humidity", "light-wind"]],
     "Çok hafif yağmur ve yoğun rüzgar": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
-    ],
-    "Yoğun nem ve hafif bulutlanma": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
     ],
     " saat boyunca açık hava.": ["sentence", ["for-hour", "clear"]],
     "Çok hafif kar 35 dk. içinde başlayacak.": [
@@ -136,19 +131,6 @@ cases = {
                 "today-afternoon",
             ],
             ["during", "medium-sleet", "tomorrow-morning"],
-        ],
-    ],
-    "Bu gece düşük nem ve hafif yağış yarın akşam başlayacak, yarın gece sona erecek.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Bu öğleden sonradan itibaren hafif karla karışık yağmur ve yarın sabah sis.": [
@@ -271,21 +253,11 @@ cases = {
     "Pus": ["title", "haze"],
     "Pus gün boyunca devam edecek.": ["sentence", ["for-day", "haze"]],
     "Öğleden sonra pus.": ["sentence", ["during", "haze", "afternoon"]],
-    "Pus ve yoğun nem": ["title", ["and", "haze", "high-humidity"]],
     "Sis": ["title", "mist"],
     "Sis gün boyunca devam edecek.": ["sentence", ["for-day", "mist"]],
     "Gece sis.": ["sentence", ["during", "mist", "night"]],
     "Sis ve yoğun bulutlanma": ["title", ["and", "mist", "heavy-clouds"]],
     " saat boyunca fırtına.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Dolu 5 dk. içinde başlayacak, 45 dk. sonra duracak.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Yoğun donan yağmur 10 dk. içinde duracak, 32 dk. sonra tekrar başlayacak.": [
         "sentence",
         [
@@ -298,5 +270,25 @@ cases = {
     "Donan çok hafif 49 dk. içinde başlayacak.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Bugün, Cuma, Pazar ve Haftaya Çarşamba'ya kadar yağmur, sıcaklık 20°C civarında sabit.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Yağmur, ayrıca bugün öğleden sonra fırtına olasılığı başlayacak.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

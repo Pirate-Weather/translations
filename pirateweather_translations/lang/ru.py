@@ -64,6 +64,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", и " if "," in a else " и ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, time2(b), " и до ")
 
@@ -159,13 +173,9 @@ template = {
     "medium-freezing-rain": "ледяной дождь",
     "possible-heavy-freezing-rain": "возможен сильный ледяной дождь",
     "heavy-freezing-rain": "сильный ледяной дождь",
-    "possible-hail": "возможен град",
-    "hail": "град",
     "light-wind": "слабый ветер",
     "medium-wind": "ветер",
     "heavy-wind": "сильный ветер",
-    "low-humidity": "сухо",
-    "high-humidity": "влажно",
     "fog": "туман",
     "very-light-clouds": "почти ясно",
     "light-clouds": "небольшая облачность",
@@ -210,8 +220,10 @@ template = {
     "centimeters": "$1 см.",
     "less-than": "меньше $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, с $2",
+    "accompanied-by": "$1, а также $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 в течение следующего часа",
@@ -242,4 +254,18 @@ template = {
     "smoke": "дым",
     "haze": "мгла",
     "mist": "туман",
+    "millimeters": "$1 мм.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "ожидается $1 ($2)",
+    "for-night": "$1 в течение всей ночи",
+    "intermittent": "$1 с перерывами",
+    "occasional": "временами $1",
+    "periods-of": "периодически $1",
+    "tapering-off": "$1 с постепенным ослаблением",
+    "to": "$1 или $2",
+    "generally": "преимущественно $1",
+    "increasing": "увеличение облачности",
+    "clearing": "прояснение",
+    "becoming": "$1, затем $2",
+    "temperatures-steady": "стабильной температурой около $1",
 }

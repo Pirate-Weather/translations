@@ -33,6 +33,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, " ve ", b, "")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, ", ", items[i], "")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, " ile ", b, " arası")
 
@@ -120,13 +134,9 @@ template = {
     "medium-freezing-rain": "donan yağmur",
     "possible-heavy-freezing-rain": "yoğun donan yağmur ihtimali",
     "heavy-freezing-rain": "yoğun donan yağmur",
-    "possible-hail": "dolu ihtimali",
-    "hail": "dolu",
     "light-wind": "hafif rüzgar",
     "medium-wind": "rüzgar",
     "heavy-wind": "yoğun rüzgar",
-    "low-humidity": "düşük nem",
-    "high-humidity": "yoğun nem",
     "fog": "sis",
     "very-light-clouds": "çoğunlukla net",
     "light-clouds": "hafif bulutlanma",
@@ -171,8 +181,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "$1'nin altında",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, ayrıca $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": " saat boyunca $1",
@@ -203,4 +215,18 @@ template = {
     "smoke": "duman",
     "haze": "pus",
     "mist": "sis",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 bekleniyor",
+    "for-night": "$1 gece boyunca devam edecek",
+    "intermittent": "aralıklı $1",
+    "occasional": "zaman zaman $1",
+    "periods-of": "dönem dönem $1",
+    "tapering-off": "$1 giderek azalacak",
+    "to": "$1 ile $2 arası",
+    "generally": "genellikle $1",
+    "increasing": "artan bulutlanma",
+    "clearing": "açılan gökyüzü",
+    "becoming": "$1, ardından $2",
+    "temperatures-steady": "sıcaklık $1 civarında sabit",
 }

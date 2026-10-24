@@ -26,15 +26,13 @@ cases = {
     "তুষারাপাত": ["title", "medium-snow"],
     "ভারী তুষারাপাত": ["title", "heavy-snow"],
     "ঝড়ো": ["title", "medium-wind"],
-    "গম্ভীর রূপে ঝড়ো": ["title", "heavy-wind"],
+    "খুব ঝড়ো": ["title", "heavy-wind"],
     "কুয়াশাছন্ন": ["title", "fog"],
     "প্রায় পরিষ্কার": ["title", "very-light-clouds"],
     "হাল্কা মেঘাছন্ন": ["title", "light-clouds"],
     "প্রায় মেঘাছন্ন": ["title", "medium-clouds"],
     "তমসাচ্ছন্ন": ["title", "heavy-clouds"],
-    "শুকনো এবং বায়ুময়": ["title", ["and", "low-humidity", "light-wind"]],
-    "বৃষ্টি এবং গম্ভীর রূপে ঝড়ো": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "আর্দ্র এবং হাল্কা মেঘাছন্ন": ["title", ["and", "high-humidity", "light-clouds"]],
+    "বৃষ্টি এবং খুব ঝড়ো": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "পরিষ্কার ঘন্টার জন্য": ["sentence", ["for-hour", "clear"]],
     "প্রবাহ 35 মিনিট এ শুরু হচ্ছে": [
         "sentence",
@@ -90,7 +88,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "গম্ভীর রূপে ঝড়ো এই সকালে অব্দি, এই বিকেলে অব্দি চলছে এবং শিলাবৃষ্টি কাল সকাল এর সময়ে": [
+    "খুব ঝড়ো এই সকালে অব্দি, এই বিকেলে অব্দি চলছে এবং শিলাবৃষ্টি কাল সকাল এর সময়ে": [
         "sentence",
         [
             "and",
@@ -109,19 +107,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "শুকনো আজ রাতে এর সময়ে এবং হাল্কা বর্ষা কাল বিকেল অব্দি, কাল রাত অব্দি চলছে": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "তুষারাপাত (5 ইঞ্চি) রাতারাতি এর সময়ে": [
@@ -217,9 +202,28 @@ cases = {
     "ধোঁয়াশা": ["title", "haze"],
     "সারাদিন ধোঁয়াশা": ["sentence", ["for-day", "haze"]],
     "ধোঁয়াশা দুপুর এর সময়ে": ["sentence", ["during", "haze", "afternoon"]],
-    "ধোঁয়াশা এবং আর্দ্র": ["title", ["and", "haze", "high-humidity"]],
     "কুয়াশা": ["title", "mist"],
     "সারাদিন কুয়াশা": ["sentence", ["for-day", "mist"]],
     "কুয়াশা রাতারাতি এর সময়ে": ["sentence", ["during", "mist", "night"]],
     "কুয়াশা এবং তমসাচ্ছন্ন": ["title", ["and", "mist", "heavy-clouds"]],
+    "বৃষ্টি আজ, শুক্রবারে, রবিবারে এবং পরের বুধবারে এর সময়ে সাথে উচ্চ তাপমান 20°C এর কাছাকাছি স্থির": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "বৃষ্টি, সাথে সম্ভাবিত বজ্রঝড় এই বিকেলে এ শুরু হচ্ছে": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

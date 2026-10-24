@@ -26,15 +26,13 @@ cases = {
     "பனி": ["title", "medium-snow"],
     "கடும் பனி": ["title", "heavy-snow"],
     "வேகக்காற்று": ["title", "medium-wind"],
-    "ஆபத்தான வேகக்காற்று": ["title", "heavy-wind"],
+    "பலத்த காற்று": ["title", "heavy-wind"],
     "மூடுபனி": ["title", "fog"],
     "பெரும்பாலும் தெளிவு": ["title", "very-light-clouds"],
     "லேசான மேகமூட்டம்": ["title", "light-clouds"],
     "பெரும்பாலும் மேகமூட்டம்": ["title", "medium-clouds"],
     "மேகம்": ["title", "heavy-clouds"],
-    "வறட்சி மற்றும் தென்றல் காற்று": ["title", ["and", "low-humidity", "light-wind"]],
-    "தூரல் மற்றும் ஆபத்தான வேகக்காற்று": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "ஈரப்பதம் மற்றும் லேசான மேகமூட்டம்": ["title", ["and", "high-humidity", "light-clouds"]],
+    "தூரல் மற்றும் பலத்த காற்று": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "தெளிவு மணி நேரத்திற்கு": ["sentence", ["for-hour", "clear"]],
     "35 நிமிடங்கள் இல் பனிப்பொழிவு துவக்கம்": [
         "sentence",
@@ -96,7 +94,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "ஆபத்தான வேகக்காற்று, இக்காலை வரையிலும், இன்று மதியம் வரை தொடர்ச்சியாக மற்றும் ஆலங்கட்டி மழை நாளைக் காலை றின் போது": [
+    "பலத்த காற்று, இக்காலை வரையிலும், இன்று மதியம் வரை தொடர்ச்சியாக மற்றும் ஆலங்கட்டி மழை நாளைக் காலை றின் போது": [
         "sentence",
         [
             "and",
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "வறட்சி இன்றிரவு றின் போது மற்றும் லேசான நீர்க்கசிவு, நாளை மாலை வரையிலும், நாளை இரவு வரை தொடர்ச்சியாக": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "பனி(5 இன்ச்) ஒரே இரவில் றின் போது": [
@@ -223,21 +208,11 @@ cases = {
     "மூடுபனி": ["title", "haze"],
     "மூடுபனி நாள் முழுவதும்": ["sentence", ["for-day", "haze"]],
     "மூடுபனி மதியம் றின் போது": ["sentence", ["during", "haze", "afternoon"]],
-    "மூடுபனி மற்றும் ஈரப்பதம்": ["title", ["and", "haze", "high-humidity"]],
     "பனிமூட்டம்": ["title", "mist"],
     "பனிமூட்டம் நாள் முழுவதும்": ["sentence", ["for-day", "mist"]],
     "பனிமூட்டம் ஒரே இரவில் றின் போது": ["sentence", ["during", "mist", "night"]],
     "பனிமூட்டம் மற்றும் மேகம்": ["title", ["and", "mist", "heavy-clouds"]],
     "இடிமழை மணி நேரத்திற்கு": ["sentence", ["for-hour", "thunderstorm"]],
-    "5 நிமிடங்கள் இல் கல்மழை துவக்கம், பின்னர் 45 நிமிடங்கள் இல் நிறுத்தம்": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "10 நிமிடங்கள் இல் கனத்த உறைபனி மழை இன் நிறுத்தம், பின்னர் 32 நிமிடங்கள் இல் மீண்டும் துவக்கம்": [
         "sentence",
         [
@@ -250,5 +225,25 @@ cases = {
     "49 நிமிடங்கள் இல் உறைபனி தூறல் துவக்கம்": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "மழை இன்று, வெள்ளி அன்று, ஞாயிறு அன்று மற்றும் அடுத்த புதன் றின் போது, உயர் வெப்பம் 20°C அளவில் நிலையாக உள்ளது உடன்": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "மழை, உடன் இடிமழைச் சாத்தியம் துவக்கம் இன்று மதியம்": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

@@ -32,9 +32,7 @@ cases = {
     "Lätt molnighet": ["title", "light-clouds"],
     "Molnigt": ["title", "medium-clouds"],
     "Mulet": ["title", "heavy-clouds"],
-    "Torka och måttlig vind": ["title", ["and", "low-humidity", "light-wind"]],
     "Duggregn och storm": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Fuktigt och lätt molnighet": ["title", ["and", "high-humidity", "light-clouds"]],
     "Klart under närmaste timme.": ["sentence", ["for-hour", "clear"]],
     "Lätt snöby som startar om 35 min.": [
         "sentence",
@@ -120,19 +118,6 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Torka ikväll och lätt nederbörd som startar imorgon kväll, fortsätter fram till imorgon natt.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
-        ],
-    ],
     "Snöby (5 in.) över natten.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
@@ -215,20 +200,10 @@ cases = {
     "Dis": ["title", "haze"],
     "Dis under dagen.": ["sentence", ["for-day", "haze"]],
     "Dis under eftermiddagen.": ["sentence", ["during", "haze", "afternoon"]],
-    "Dis och fuktigt": ["title", ["and", "haze", "high-humidity"]],
     "Dimma under dagen.": ["sentence", ["for-day", "mist"]],
     "Dimma över natten.": ["sentence", ["during", "mist", "night"]],
     "Dimma och mulet": ["title", ["and", "mist", "heavy-clouds"]],
     "Åska under närmaste timme.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Hagel som startar om 5 min., avtar 45 min. senare.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Kraftigt underkylt regn avtar om 10 min., startar igen 32 min. senare.": [
         "sentence",
         [
@@ -241,5 +216,25 @@ cases = {
     "Underkylt regnskurar som startar om 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Regn idag, på fredag, söndag och nästa onsdag, med temperaturer stabila kring 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Regn, med risk för åska som startar på eftermiddagen.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

@@ -96,6 +96,19 @@ def test_fail_to_apply_function_template_given_value(test_translation):
         test_translation.translate("baz")
 
 
+def test_apply_variadic_function():
+    test = Translation({"foo": "bar", "list": lambda stack, *items: "|".join(items)})
+    assert test.translate(["list", "foo", 1, 2, 3]) == "bar|1|2|3"
+
+
+def test_fail_to_apply_variadic_function_given_no_arguments():
+    test = Translation({"list": lambda stack, *items: "|".join(items)})
+    with pytest.raises(ValueError):
+        test.translate(["list"])
+    with pytest.raises(ValueError):
+        test.translate("list")
+
+
 def test_provide_context_to_functions():
     test = Translation(
         {

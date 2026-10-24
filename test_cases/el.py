@@ -32,12 +32,10 @@ cases = {
     "Αραιή νέφωση": ["title", "light-clouds"],
     "Μερική νέφωση": ["title", "medium-clouds"],
     "Συννεφιά": ["title", "heavy-clouds"],
-    "Ξηρασία και ασθενής άνεμος": ["title", ["and", "low-humidity", "light-wind"]],
     "Ασθενής βροχή και ισχυρός άνεμος": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Υγρασία και αραιή νέφωση": ["title", ["and", "high-humidity", "light-clouds"]],
     "Αίθριος για αυτή την ώρα.": ["sentence", ["for-hour", "clear"]],
     "Ασθενής χιονόπτωση που θα αρχίσει σε 35 λεπτά.": [
         "sentence",
@@ -121,19 +119,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Ξηρασία απόψε και ελαφρύς υετός που θα αρχίσει αύριο το απόγευμα, και θα συνεχιστεί μέχρι αύριο το βράδυ.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Χιονόπτωση (5 ιν.) το βράδυ.": [
@@ -237,8 +222,27 @@ cases = {
     "Ελαφριά ομίχλη": ["title", "haze"],
     "Ελαφριά ομίχλη κατά τη διάρκεια της ημέρας.": ["sentence", ["for-day", "haze"]],
     "Ελαφριά ομίχλη το μεσημέρι.": ["sentence", ["during", "haze", "afternoon"]],
-    "Ελαφριά ομίχλη και υγρασία": ["title", ["and", "haze", "high-humidity"]],
     "Ομίχλη κατά τη διάρκεια της ημέρας.": ["sentence", ["for-day", "mist"]],
     "Ομίχλη το βράδυ.": ["sentence", ["during", "mist", "night"]],
     "Ομίχλη και συννεφιά": ["title", ["and", "mist", "heavy-clouds"]],
+    "Βροχή σήμερα, την Παρασκευή, την Κυριακή και την επόμενη Τετάρτη, με θερμοκρασίες σταθερές γύρω στους 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Βροχή, καθώς και πιθανή καταιγίδα που θα αρχίσει σήμερα το μεσημέρι.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }
