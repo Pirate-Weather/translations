@@ -32,9 +32,7 @@ cases = {
     "Delno oblačno": ["title", "light-clouds"],
     "Pretežno oblačno": ["title", "medium-clouds"],
     "Oblačno": ["title", "heavy-clouds"],
-    "Suho in vetrovno": ["title", ["and", "low-humidity", "light-wind"]],
     "Rosenje in močni sunki vetra": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Vlažno in delno oblačno": ["title", ["and", "high-humidity", "light-clouds"]],
     "Jasno za uro.": ["sentence", ["for-hour", "clear"]],
     "Rahlo sneženje od 35 min.": [
         "sentence",
@@ -108,19 +106,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Suho danes ponoči in rahle padavine začel jutri zvečer, do jutri zvečer.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Sneg (5 in.) zvečer.": [
@@ -222,9 +207,28 @@ cases = {
     "Meglica": ["title", "haze"],
     "Meglica čez dan.": ["sentence", ["for-day", "haze"]],
     "Meglica popoldan.": ["sentence", ["during", "haze", "afternoon"]],
-    "Meglica in vlažno": ["title", ["and", "haze", "high-humidity"]],
     "Megla": ["title", "mist"],
     "Megla čez dan.": ["sentence", ["for-day", "mist"]],
     "Megla zvečer.": ["sentence", ["during", "mist", "night"]],
     "Megla in oblačno": ["title", ["and", "mist", "heavy-clouds"]],
+    "Dež danes, v petek, nedeljo in naslednjo sredo, s temperaturami okoli 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Dež, pa tudi možen je nevihte z grmenjem od danes popoldan.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

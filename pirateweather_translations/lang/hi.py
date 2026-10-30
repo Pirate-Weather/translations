@@ -1,3 +1,8 @@
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " और " + items[-1]
+
+
 template = {
     "clear": "साफ़",
     "no-precipitation": "कोई वर्षा नहीं",
@@ -44,13 +49,9 @@ template = {
     "medium-freezing-rain": "हिमीकरण बारिश",
     "possible-heavy-freezing-rain": "संभावित भारी हिमीकरण बारिश",
     "heavy-freezing-rain": "भारी हिमीकरण बारिश",
-    "possible-hail": "संभावित ओलों",
-    "hail": "ओलों",
     "light-wind": "तूफानी",
     "medium-wind": "तेज़ हवाएं",
-    "heavy-wind": "गंभीर रूप से तेज़ हवाएं",
-    "low-humidity": "शुष्क",
-    "high-humidity": "आर्द्र",
+    "heavy-wind": "बहुत तेज़ हवाएं",
     "fog": "धुंधला",
     "very-light-clouds": "अधिकतर साफ़",
     "light-clouds": "सामान्य बादल",
@@ -95,8 +96,10 @@ template = {
     "centimeters": "$1 सेंटीमीटर",
     "less-than": "$1 से कम",
     "and": "$1 और $2",
+    "list": list_function,
     "through": "$2 के माध्यम से $1",
     "with": "$1 के साथ $2",
+    "accompanied-by": "$1, साथ में $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1($2)",
     "for-hour": "एक घंटे के लिए $1",
@@ -127,4 +130,18 @@ template = {
     "smoke": "धुआँ",
     "haze": "धुंध",
     "mist": "धुंध",
+    "millimeters": "$1 मिलीमीटर",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 की संभावना",
+    "for-night": "सारी रात $1",
+    "intermittent": "रुक-रुक कर $1",
+    "occasional": "कभी-कभी $1",
+    "periods-of": "बीच-बीच में $1",
+    "tapering-off": "$1 धीरे-धीरे थमती हुई",
+    "to": "$1 से $2",
+    "generally": "आम तौर पर $1",
+    "increasing": "बढ़ते बादल",
+    "clearing": "आसमान साफ़ होना",
+    "becoming": "$1, बाद में $2",
+    "temperatures-steady": "उच्च तापमान $1 के आसपास स्थिर",
 }

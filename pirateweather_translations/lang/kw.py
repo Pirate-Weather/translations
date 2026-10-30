@@ -28,6 +28,18 @@ def and_function(stack, a, b):
     return a + andy + " " + b
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        if i == len(items) - 1:
+            prev = items[i - 1]
+            result += and_function(stack, prev, items[i])[len(prev) :]
+        else:
+            result += ", " + items[i]
+    return result
+
+
 def through_function(stack, a, b):
     return a + until_the(b)
 
@@ -153,13 +165,9 @@ template = {
     "medium-freezing-rain": "glaw rewl",
     "possible-heavy-freezing-rain": "glaw rewl poos possybyl",
     "heavy-freezing-rain": "glaw rewl poos",
-    "possible-hail": "storm hael possybyl",
-    "hail": "storm hael",
     "light-wind": "nebes gwynsek",
     "medium-wind": "gwynsek",
-    "heavy-wind": "gwynsek bys yn peryl",
-    "low-humidity": "sygh",
-    "high-humidity": "glyb",
+    "heavy-wind": "gwynsek fest",
     "fog": "niwlek",
     "very-light-clouds": "soprattuttu chjaru",
     "light-clouds": "nebes komolek",
@@ -204,8 +212,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "le ages $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, gans $2",
+    "accompanied-by": "$1, gans $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 rag an our",
@@ -236,4 +246,18 @@ template = {
     "smoke": "mog",
     "haze": "kemygi",
     "mist": "niwl",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 a $2 gwaytys",
+    "for-night": "$1 dres oll an nos",
+    "intermittent": "$1 gans hedhyansow",
+    "occasional": "$1 treweythyow",
+    "periods-of": "prysyow a $1",
+    "tapering-off": "$1 ow lehe",
+    "to": "$1 dhe $2",
+    "generally": "$1 dre vras",
+    "increasing": "kommolow ow kressya",
+    "clearing": "ow klerhe",
+    "becoming": "$1 ow treylya dhe $2",
+    "temperatures-steady": "tempredhow sad a-dro dhe $1",
 }

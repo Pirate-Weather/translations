@@ -26,18 +26,16 @@ cases = {
     "Snijeg": ["title", "medium-snow"],
     "Jak snijeg": ["title", "heavy-snow"],
     "Vjetrovito": ["title", "medium-wind"],
-    "Opasno vjetrovito": ["title", "heavy-wind"],
+    "Vrlo vjetrovito": ["title", "heavy-wind"],
     "Maglovito": ["title", "fog"],
     "Pretežno vedro": ["title", "very-light-clouds"],
     "Djelom oblačno": ["title", "light-clouds"],
     "Pretežno oblačno": ["title", "medium-clouds"],
     "Oblačno": ["title", "heavy-clouds"],
-    "Suho i vjetrovito": ["title", ["and", "low-humidity", "light-wind"]],
-    "Sitna kiša i opasno vjetrovito": [
+    "Sitna kiša i vrlo vjetrovito": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Vlažno i djelom oblačno": ["title", ["and", "high-humidity", "light-clouds"]],
     "Vedro za ovaj sat.": ["sentence", ["for-hour", "clear"]],
     "Sitan snijeg počinje za 35 minuta.": [
         "sentence",
@@ -96,7 +94,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Opasno vjetrovito poćinje ovo jutro, ostaje do ove podne, i susnježica sutra ujutro.": [
+    "Vrlo vjetrovito poćinje ovo jutro, ostaje do ove podne, i susnježica sutra ujutro.": [
         "sentence",
         [
             "and",
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Suho u noć i slabe padavine poćinje sutra uveče, ostaje do sutra u noć.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Snijeg (5 inča) u noć.": [
@@ -202,21 +187,11 @@ cases = {
     "Izmaglica": ["title", "haze"],
     "Izmaglica tokom cijelog dana.": ["sentence", ["for-day", "haze"]],
     "Izmaglica popodne.": ["sentence", ["during", "haze", "afternoon"]],
-    "Izmaglica i vlažno": ["title", ["and", "haze", "high-humidity"]],
     "Magla": ["title", "mist"],
     "Magla tokom cijelog dana.": ["sentence", ["for-day", "mist"]],
     "Magla u noć.": ["sentence", ["during", "mist", "night"]],
     "Magla i oblačno": ["title", ["and", "mist", "heavy-clouds"]],
     "Grmljavine za ovaj sat.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Grmljavina sa gradom počinje za 5 minuta, ondak prekida za 45 minuta.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Jaka ledena kiša prekida za 10 minuta, ondak počinje za 32 minuta.": [
         "sentence",
         [
@@ -229,5 +204,25 @@ cases = {
     "Ledena kiša počinje za 49 minuta.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Kiša danas, u petak, nedjelju i srijeda, sa temperaturom stabilnom oko 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Kiša, kao i moguće je grmljavine počinje ove podne.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

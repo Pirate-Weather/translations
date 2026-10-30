@@ -26,15 +26,13 @@ cases = {
     "ਬਰਫ਼": ["title", "medium-snow"],
     "ਭਾਰੀ ਬਰਫ": ["title", "heavy-snow"],
     "ਤੇਜ ਹਵਾ": ["title", "medium-wind"],
-    "ਖਤਰਨਾਕ ਤੇਜ ਹਵਾ": ["title", "heavy-wind"],
+    "ਬਹੁਤ ਤੇਜ਼ ਹਵਾ": ["title", "heavy-wind"],
     "ਧੁੰਧ": ["title", "fog"],
     "ਜਿਆਦਾਤਰ ਸਾਫ": ["title", "very-light-clouds"],
     "ਕੁਝ ਹੱਦ ਤਕ ਬੱਦਲ ਹੋਣਾ": ["title", "light-clouds"],
     "ਜ੍ਯਾਦਾ ਬੱਦਲ ਹੋਣਾ": ["title", "medium-clouds"],
     "ਘਣੇ ਬੱਦਲ": ["title", "heavy-clouds"],
-    "ਸੁਖਾ ਹੋਰ ਤੁਫਾਨੀ": ["title", ["and", "low-humidity", "light-wind"]],
-    "ਕਿਣ-ਮਿਣ ਹੋਰ ਖਤਰਨਾਕ ਤੇਜ ਹਵਾ": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "ਨਮੀ ਹੋਰ ਕੁਝ ਹੱਦ ਤਕ ਬੱਦਲ ਹੋਣਾ": ["title", ["and", "high-humidity", "light-clouds"]],
+    "ਕਿਣ-ਮਿਣ ਹੋਰ ਬਹੁਤ ਤੇਜ਼ ਹਵਾ": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "ਘੰਟੇ ਲਈ ਸਾਫ਼": ["sentence", ["for-hour", "clear"]],
     "ਬਰਫਬਾਰੀ ਘਟ ਤੋਂ ਘਟ 35 ਵਿਚ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ": [
         "sentence",
@@ -90,7 +88,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "ਖਤਰਨਾਕ ਤੇਜ ਹਵਾ ਅੱਜ ਸਵੇਰੇ ਤਕ, ਅੱਜ ਦੋਪਹਰ ਤਕ ਚਲ ਰਿਹਾ ਹੈ ਹੋਰ ਔਲੇਯਾਂ ਨਾਲ ਮੀਂਹ ਕਲ ਸਵੇਰੇ ਦੇ ਦੌਰਾਨ": [
+    "ਬਹੁਤ ਤੇਜ਼ ਹਵਾ ਅੱਜ ਸਵੇਰੇ ਤਕ, ਅੱਜ ਦੋਪਹਰ ਤਕ ਚਲ ਰਿਹਾ ਹੈ ਹੋਰ ਔਲੇਯਾਂ ਨਾਲ ਮੀਂਹ ਕਲ ਸਵੇਰੇ ਦੇ ਦੌਰਾਨ": [
         "sentence",
         [
             "and",
@@ -109,19 +107,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "ਸੁਖਾ ਅੱਜ ਰਾਤ ਦੇ ਦੌਰਾਨ ਹੋਰ ਹਲਕਾ ਮੀਂਹ ਕਲ ਸ਼ਾਮ ਤਕ, ਕਲ ਰਾਤ ਤਕ ਚਲ ਰਿਹਾ ਹੈ": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "ਬਰਫ਼ (5 ਇੰਚ) ਰਾਤ ਭਰ ਦੇ ਦੌਰਾਨ": [
@@ -217,7 +202,26 @@ cases = {
     "ਧੁੰਦ": ["title", "mist"],
     "ਧੁੰਦ ਪੂਰਾ ਦਿਨ": ["sentence", ["for-day", "mist"]],
     "ਧੁੰਦ ਦੋਪਹਰ ਦੇ ਦੌਰਾਨ": ["sentence", ["during", "haze", "afternoon"]],
-    "ਧੁੰਦ ਹੋਰ ਨਮੀ": ["title", ["and", "haze", "high-humidity"]],
     "ਧੁੰਦ ਰਾਤ ਭਰ ਦੇ ਦੌਰਾਨ": ["sentence", ["during", "mist", "night"]],
     "ਧੁੰਦ ਹੋਰ ਘਣੇ ਬੱਦਲ": ["title", ["and", "mist", "heavy-clouds"]],
+    "ਮੀਂਹ ਆਜ, ਸ਼ੁਕਰਵਾਰ ਨੂੰ, ਇਤਵਾਰ ਨੂੰ ਅਤੇ ਅਗਲੇ ਬੁਧਵਾਰ ਦੇ ਦੌਰਾਨ ਨਾਲ ਉੱਚ ਤਾਪਮਾਨ 20°C ਦੇ ਆਸਪਾਸ ਸਥਿਰ": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "ਮੀਂਹ, ਨਾਲ ਸੰਭਾਵਿਤ ਤੂਫ਼ਾਨ ਅੱਜ ਦੋਪਹਰ ਤੋਂ ਸ਼ੁਰੂ": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

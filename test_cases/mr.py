@@ -32,12 +32,10 @@ cases = {
     "अंशतः ढगाळ": ["title", "light-clouds"],
     "मुख्यतः ढगाळ": ["title", "medium-clouds"],
     "ढगाळ": ["title", "heavy-clouds"],
-    "कमी आर्द्रता आणि वादळ": ["title", ["and", "low-humidity", "light-wind"]],
     "थोड्या प्रमाणात पाऊस आणि सोसाट्याचा वारा": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "उच्च आर्द्रता आणि अंशतः ढगाळ": ["title", ["and", "high-humidity", "light-clouds"]],
     "स्वच्छ तासासाठी": ["sentence", ["for-hour", "clear"]],
     "अल्प हिमवर्षावाची शक्यता 35 मिनट चालू होत आहे": [
         "sentence",
@@ -118,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "दरम्यान कमी आर्द्रता आज रात्री आणि थोडासा पाऊस उद्या संध्याकाळी पर्यंत सुरू पुढे होईपर्यंत उद्या रात्री": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "दरम्यान मध्यम प्रमाणात हिमवर्षाव (5 इंच) रात्री": [
@@ -225,7 +210,26 @@ cases = {
     "धूळ आणि अंशतः ढगाळ": ["title", ["and", "smoke", "light-clouds"]],
     "धुके दिवसासाठी": ["sentence", ["for-day", "mist"]],
     "दरम्यान धुके दुपारी": ["sentence", ["during", "haze", "afternoon"]],
-    "धुके आणि उच्च आर्द्रता": ["title", ["and", "haze", "high-humidity"]],
     "दरम्यान धुके रात्री": ["sentence", ["during", "mist", "night"]],
     "धुके आणि ढगाळ": ["title", ["and", "mist", "heavy-clouds"]],
+    "दरम्यान मध्यम स्वरूपाच्या पावसाची शक्यता आज, शुक्रवारी, रविवारी आणि पुढच्या बुधवारी च्या बरोबर तापमान 20°C च्या आसपास स्थिर": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "मध्यम स्वरूपाच्या पावसाची शक्यता, सोबत गडगडाटी वादळाची शक्यता सुरु आज दुपारी": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

@@ -32,12 +32,7 @@ cases = {
     "Közepes felhősödés": ["title", "light-clouds"],
     "Erős felhősödés": ["title", "medium-clouds"],
     "Borult idő": ["title", "heavy-clouds"],
-    "Száraz idő és enyhe szél": ["title", ["and", "low-humidity", "light-wind"]],
     "Gyenge szitálás és erős szél": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Párás idő és közepes felhősödés": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Derült ebben az órában.": ["sentence", ["for-hour", "clear"]],
     "Hószállingózás 35 perc múlva.": [
         "sentence",
@@ -115,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Száraz idő ma éjjel és gyenge csapadék kezdődik holnap este, holnap éjjel folytatódik.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Havazás (5 in.) éjjel.": [
@@ -217,21 +199,11 @@ cases = {
     "Pára": ["title", "haze"],
     "Pára egész nap.": ["sentence", ["for-day", "haze"]],
     "Pára délután.": ["sentence", ["during", "haze", "afternoon"]],
-    "Pára és párás idő": ["title", ["and", "haze", "high-humidity"]],
     "Köd": ["title", "mist"],
     "Köd egész nap.": ["sentence", ["for-day", "mist"]],
     "Köd éjjel.": ["sentence", ["during", "mist", "night"]],
     "Köd és borult idő": ["title", ["and", "mist", "heavy-clouds"]],
     "Zivatarok ebben az órában.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Fagyos 5 perc múlva, 45 percig.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Intenzív fagyos eső 10 perc múlva véget ér, de 32 perc elteltével újra várható.": [
         "sentence",
         [
@@ -244,5 +216,25 @@ cases = {
     "Fagyos gyenge szitálás 49 perc múlva.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Eső ma, pénteki nap, vasárnap és szerdai nap, 20°C körüli állandó hőmérséklettel.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Eső, valamint zivatarok lehetséges lesz ma délután.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

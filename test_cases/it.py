@@ -35,12 +35,10 @@ cases = {
     "Poco Nuvoloso": ["title", "light-clouds"],
     "Nubi Sparse": ["title", "medium-clouds"],
     "Nuvoloso": ["title", "heavy-clouds"],
-    "Bassa Umidità e Venticello": ["title", ["and", "low-humidity", "light-wind"]],
     "Pioggia Molto Leggera e Forte Vento": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Umido e Poco Nuvoloso": ["title", ["and", "high-humidity", "light-clouds"]],
     "Sereno per un ora.": ["sentence", ["for-hour", "clear"]],
     "Nevicate molto leggere tra 35 min.": [
         "sentence",
@@ -118,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Bassa umidità stanotte e precipitazioni leggere a partire da domani sera, fino a domani notte.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Nevicate (5 in.) nella notte.": [
@@ -222,8 +207,27 @@ cases = {
     "Foschia": ["title", "haze"],
     "Foschia durante il giorno.": ["sentence", ["for-day", "haze"]],
     "Foschia nel pomeriggio.": ["sentence", ["during", "haze", "afternoon"]],
-    "Foschia e Umido": ["title", ["and", "haze", "high-humidity"]],
     "Nebbia durante il giorno.": ["sentence", ["for-day", "mist"]],
     "Nebbia nella notte.": ["sentence", ["during", "mist", "night"]],
     "Nebbia e Nuvoloso": ["title", ["and", "mist", "heavy-clouds"]],
+    "Pioggia oggi, Venerdì, Domenica e il prossimo Mercoledì, con temperature stabili intorno a 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Pioggia, con possibili nubifragi a partire da questo pomeriggio.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

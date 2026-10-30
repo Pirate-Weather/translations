@@ -28,6 +28,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, joiner)
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " þangað til ")
 
@@ -101,13 +115,9 @@ template = {
     "medium-freezing-rain": "ískalt rigning",
     "possible-heavy-freezing-rain": "líkur á mikil ískalt rigning",
     "heavy-freezing-rain": "mikil ískalt rigning",
-    "possible-hail": "líkur á haglél",
-    "hail": "haglél",
     "light-wind": "gola",
     "medium-wind": "rok",
     "heavy-wind": "hávaðarok",
-    "low-humidity": "lítill raki",
-    "high-humidity": "mikill raki",
     "fog": "þoka",
     "very-light-clouds": "að mestu leyti skýrt",
     "light-clouds": "skýjað að hluta til",
@@ -152,8 +162,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "undir $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, með $2",
+    "accompanied-by": "$1, auk þess $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 næsta klukkutímann",
@@ -184,4 +196,18 @@ template = {
     "smoke": "reykur",
     "haze": "þoka",
     "mist": "mistur",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "búist er við $1 ($2)",
+    "for-night": "$1 yfir nóttina",
+    "intermittent": "$1 með hléum",
+    "occasional": "$1 öðru hverju",
+    "periods-of": "$1 á köflum",
+    "tapering-off": "$1 sem dregur úr",
+    "to": "$1 til $2",
+    "generally": "að mestu $1",
+    "increasing": "vaxandi skýjahula",
+    "clearing": "léttir til",
+    "becoming": "$1, síðar $2",
+    "temperatures-steady": "stöðugum hita í kringum $1",
 }

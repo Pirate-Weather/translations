@@ -58,6 +58,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, joiner)
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " to ")
 
@@ -147,13 +161,9 @@ template = {
     "medium-freezing-rain": "udan malirin",
     "possible-heavy-freezing-rain": "karik udan malirin bo'ot",
     "heavy-freezing-rain": "udan malirin bo'ot",
-    "possible-hail": "karik saudasaun",
-    "hail": "saudasaun",
     "light-wind": "anin ki'ik",
     "medium-wind": "anin",
     "heavy-wind": "anin bo'ot",
-    "low-humidity": "maran",
-    "high-humidity": "bokon",
     "fog": "abu-abu taka rai",
     "very-light-clouds": "klaru liu",
     "light-clouds": "abu-abu uituan",
@@ -198,8 +208,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "$1 mai kraik",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, ho $2",
+    "accompanied-by": "$1, ho $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 ba oras ida",
@@ -230,4 +242,18 @@ template = {
     "smoke": "ahi-suar",
     "haze": "rai-rahun",
     "mist": "kalohan",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "espera $1 $2",
+    "for-night": "$1 kalan tomak",
+    "intermittent": "$1 la kontinua",
+    "occasional": "$1 dala ruma",
+    "periods-of": "periodu $1",
+    "tapering-off": "$1 sei menus",
+    "to": "$1 to’o $2",
+    "generally": "jeralmente $1",
+    "increasing": "abu-abu aumenta",
+    "clearing": "lalehan moos",
+    "becoming": "$1, depois $2",
+    "temperatures-steady": "temperatur estavel besik $1",
 }

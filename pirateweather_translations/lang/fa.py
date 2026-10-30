@@ -15,6 +15,18 @@ def and_function(stack, a, b):
     return a + " و " + b
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        if i == len(items) - 1:
+            prev = items[i - 1]
+            result += and_function(stack, prev, items[i])[len(prev) :]
+        else:
+            result += "، " + items[i]
+    return result
+
+
 def through_function(stack, a, b):
     return a + " تا " + b
 
@@ -95,13 +107,9 @@ template = {
     "medium-freezing-rain": "باران یخ زده",
     "possible-heavy-freezing-rain": "باران یخبندان شدید احتمالی",
     "heavy-freezing-rain": "باران یخبندان شدید",
-    "possible-hail": "تگرگ احتمالی",
-    "hail": "تگرگ",
     "light-wind": "نسیم",
     "medium-wind": "باد",
     "heavy-wind": "باد شدید",
-    "low-humidity": "رطوبت پایین",
-    "high-humidity": "رطوبت بالا",
     "fog": "مه",
     "very-light-clouds": "عمدتا روشن",
     "light-clouds": "آسمان کمی ابری",
@@ -146,8 +154,10 @@ template = {
     "centimeters": "$1 سانتیمتر",
     "less-than": "کمتر از $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1، به همراه $2",
+    "accompanied-by": "$1، به همراه $2",
     "range": "$1 تا $2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 برای این ساعت",
@@ -178,4 +188,18 @@ template = {
     "smoke": "دود",
     "haze": "غبار",
     "mist": "مه",
+    "millimeters": "$1 میلی‌متر",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 انتظار می‌رود",
+    "for-night": "$1 در طول شب",
+    "intermittent": "$1 متناوب",
+    "occasional": "$1 گاه‌به‌گاه",
+    "periods-of": "دوره‌هایی از $1",
+    "tapering-off": "$1 که به تدریج کاهش می‌یابد",
+    "to": "$1 تا $2",
+    "generally": "عموماً $1",
+    "increasing": "افزایش ابرها",
+    "clearing": "صاف شدن آسمان",
+    "becoming": "$1 که به $2 تبدیل می‌شود",
+    "temperatures-steady": "دما ثابت در حدود $1",
 }

@@ -1,3 +1,8 @@
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " এবং " + items[-1]
+
+
 template = {
     "clear": "পরিষ্কার",
     "no-precipitation": "বর্ষার সম্ভাবনা নেই",
@@ -44,13 +49,9 @@ template = {
     "medium-freezing-rain": "জমে যাওয়া বৃষ্টি",
     "possible-heavy-freezing-rain": "সম্ভাবিত ভারী জমে যাওয়া বৃষ্টি",
     "heavy-freezing-rain": "ভারী জমে যাওয়া বৃষ্টি",
-    "possible-hail": "সম্ভাবিত শিলাবৃষ্টি",
-    "hail": "শিলাবৃষ্টি",
     "light-wind": "বায়ুময়",
     "medium-wind": "ঝড়ো",
-    "heavy-wind": "গম্ভীর রূপে ঝড়ো",
-    "low-humidity": "শুকনো",
-    "high-humidity": "আর্দ্র",
+    "heavy-wind": "খুব ঝড়ো",
     "fog": "কুয়াশাছন্ন",
     "very-light-clouds": "প্রায় পরিষ্কার",
     "light-clouds": "হাল্কা মেঘাছন্ন",
@@ -112,8 +113,10 @@ template = {
     "temperatures-valleying": "উচ্চ তাপমান যা $1 $2 তে কমে আসছে",
     "temperatures-falling": "উচ্চ তাপমান যা $1 $2 অব্দি কমে যাচ্ছে",
     "and": "$1 এবং $2",
+    "list": list_function,
     "through": "$1 এর মাধ্যমে $2",
     "with": "$1 সাথে $2",
+    "accompanied-by": "$1, সাথে $2",
     "range": "$1\u2013$2",
     "sentence": "$1",
     "parenthetical": "$1 ($2)",
@@ -127,4 +130,18 @@ template = {
     "smoke": "ধোঁয়া",
     "haze": "ধোঁয়াশা",
     "mist": "কুয়াশা",
+    "millimeters": "$1 মিলিমিটার",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 প্রত্যাশিত",
+    "for-night": "সারারাত $1",
+    "intermittent": "থেমে থেমে $1",
+    "occasional": "মাঝে মাঝে $1",
+    "periods-of": "কিছু সময় ধরে $1",
+    "tapering-off": "$1 ধীরে ধীরে কমে আসবে",
+    "to": "$1 থেকে $2",
+    "generally": "সাধারণত $1",
+    "increasing": "মেঘ বাড়ছে",
+    "clearing": "আকাশ পরিষ্কার হচ্ছে",
+    "becoming": "$1, পরে $2",
+    "temperatures-steady": "উচ্চ তাপমান $1 এর কাছাকাছি স্থির",
 }

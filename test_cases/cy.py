@@ -2,9 +2,7 @@
 cases = {
     "Clir": ["title", "clear"],
     "Gwlybaniaeth ysgafn yn bosib": ["title", "possible-very-light-precipitation"],
-    "Sych a gwyntoedd ysgafn": ["title", ["and", "low-humidity", "light-wind"]],
     "Glaw mân a gwyntoedd cryfion": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Clòs a chymylog": ["title", ["and", "high-humidity", "medium-clouds"]],
     "Clir am yr awr.": ["sentence", ["for-hour", "clear"]],
     "Eira ysgafn yn cychwyn mewn 35 munud.": [
         "sentence",
@@ -85,19 +83,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Sych heno a gwlybaniaeth ysgafn yn cychwyn fin nos yfory, gan barhau hyd at nos yfory.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Eira (5 modfedd) dros nos.": [
@@ -196,21 +181,11 @@ cases = {
     "Niwl": ["title", "haze"],
     "Niwl drwy’r dydd.": ["sentence", ["for-day", "haze"]],
     "Niwl yn y prynhawn.": ["sentence", ["during", "haze", "afternoon"]],
-    "Niwl a chlòs": ["title", ["and", "haze", "high-humidity"]],
     "Llwch": ["title", "mist"],
     "Llwch drwy’r dydd.": ["sentence", ["for-day", "mist"]],
     "Llwch dros nos.": ["sentence", ["during", "mist", "night"]],
     "Llwch a chymylau trwchus": ["title", ["and", "mist", "heavy-clouds"]],
     "Mellt a tharannau am yr awr.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Cenllysg yn cychwyn mewn 5 munud, ac yn dod i ben 45 munud wedyn.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Glaw rhewllyd trwm yn dod i ben mewn 10 munud, gan gychwyn eto 32 munud wedyn.": [
         "sentence",
         [
@@ -223,5 +198,25 @@ cases = {
     "Glaw mân rhewllyd yn cychwyn mewn 49 munud.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Glaw heddiw, ar ddydd Gwener, ar ddydd Sul a ddydd Mercher nesaf, gyda’r tymheredd yn aros tua 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Glaw, gyda mellt a tharannau yn bosib yn cychwyn y prynhawn yma.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

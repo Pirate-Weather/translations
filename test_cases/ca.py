@@ -26,20 +26,15 @@ cases = {
     "Nevades": ["title", "medium-snow"],
     "Fortes Nevades": ["title", "heavy-snow"],
     "Ventós": ["title", "medium-wind"],
-    "Perillosament Ventós": ["title", "heavy-wind"],
+    "Molt Ventós": ["title", "heavy-wind"],
     "Ennuvolat": ["title", "fog"],
     "Majoritariament Clar": ["title", "very-light-clouds"],
     "Parcialment Ennuvolat": ["title", "light-clouds"],
     "Majoritariament Ennuvolat": ["title", "medium-clouds"],
     "Ennuvolat": ["title", "heavy-clouds"],
-    "Sec i Vents Fluixos": ["title", ["and", "low-humidity", "light-wind"]],
-    "Plugim i Perillosament Ventós": [
+    "Plugim i Molt Ventós": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
-    ],
-    "Humit i Parcialment Ennuvolat": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
     ],
     "Clar cada hora.": ["sentence", ["for-hour", "clear"]],
     "Lleugeres nevades començant 35 min.": [
@@ -102,7 +97,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Perillosament ventós començant aquest matí, continuant aquesta tarda, i aiguaneu demà al matí.": [
+    "Molt ventós començant aquest matí, continuant aquesta tarda, i aiguaneu demà al matí.": [
         "sentence",
         [
             "and",
@@ -121,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Sec aquesta nit i precipitacions lleugeres començant demà al vespre, continuant demà a la nit.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Nevades (5 in.) a la nit.": [
@@ -225,9 +207,28 @@ cases = {
     "Calitja": ["title", "haze"],
     "Calitja durant el dia.": ["sentence", ["for-day", "haze"]],
     "Calitja a la tarda.": ["sentence", ["during", "haze", "afternoon"]],
-    "Calitja i Humit": ["title", ["and", "haze", "high-humidity"]],
     "Boira": ["title", "mist"],
     "Boira durant el dia.": ["sentence", ["for-day", "mist"]],
     "Boira a la nit.": ["sentence", ["during", "mist", "night"]],
     "Boira i Ennuvolat": ["title", ["and", "mist", "heavy-clouds"]],
+    "Pluja avui, el divendres, diumenge i pròxim dimecres, amb temperatures estables al voltant de 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Pluja, amb possibles tempestes començant aquesta tarda.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

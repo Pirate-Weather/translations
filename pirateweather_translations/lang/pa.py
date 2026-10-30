@@ -1,3 +1,8 @@
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " ਅਤੇ " + items[-1]
+
+
 template = {
     "clear": "ਸਾਫ਼",
     "no-precipitation": "ਮੀਂਹ ਨਹੀਂ ਹੈ",
@@ -44,13 +49,9 @@ template = {
     "medium-freezing-rain": "freezing ਮੀਂਹ",
     "possible-heavy-freezing-rain": "ਸੰਭਾਵੀ ਭਾਰੀ ਜਮਾਅ ਵਾਲਾ ਮੀਂਹ",
     "heavy-freezing-rain": "ਭਾਰੀ ਜਮਾਅ ਵਾਲਾ ਮੀਂਹ",
-    "possible-hail": "ਸੰਭਾਵਿਤ ਗੜੇ",
-    "hail": "ਗੜੇ",
     "light-wind": "ਤੁਫਾਨੀ",
     "medium-wind": "ਤੇਜ ਹਵਾ",
-    "heavy-wind": "ਖਤਰਨਾਕ ਤੇਜ ਹਵਾ",
-    "low-humidity": "ਸੁਖਾ",
-    "high-humidity": "ਨਮੀ",
+    "heavy-wind": "ਬਹੁਤ ਤੇਜ਼ ਹਵਾ",
     "fog": "ਧੁੰਧ",
     "very-light-clouds": "ਜਿਆਦਾਤਰ ਸਾਫ",
     "light-clouds": "ਕੁਝ ਹੱਦ ਤਕ ਬੱਦਲ ਹੋਣਾ",
@@ -112,8 +113,10 @@ template = {
     "temperatures-valleying": "ਉੱਚ ਤਾਪਮਾਨ $1 $2 ਤੋਂ ਥੱਲੇ ਆਰਿਹਾ ਹੈ",
     "temperatures-falling": "ਉੱਚ ਤਾਪਮਾਨ $1 $2 ਤੇ ਆਰਿਹਾ ਹੈ",
     "and": "$1 ਹੋਰ $2",
+    "list": list_function,
     "through": "$1 ਦੇ ਜ਼ਰੀਏ $2",
     "with": "$1 ਨਾਲ $2",
+    "accompanied-by": "$1, ਨਾਲ $2",
     "range": "$1\u2013$2",
     "title": "$1",
     "sentence": "$1",
@@ -127,4 +130,18 @@ template = {
     "smoke": "ਧੂੰਆਂ",
     "haze": "ਧੁੰਦ",
     "mist": "ਧੁੰਦ",
+    "millimeters": "$1 ਮਿਲੀਮੀਟਰ",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 ਦੀ ਉਮੀਦ",
+    "for-night": "$1 ਸਾਰੀ ਰਾਤ",
+    "intermittent": "ਰੁਕ-ਰੁਕ ਕੇ $1",
+    "occasional": "ਕਦੇ-ਕਦੇ $1",
+    "periods-of": "ਕੁਝ ਸਮੇਂ ਲਈ $1",
+    "tapering-off": "$1 ਹੌਲੀ-ਹੌਲੀ ਘੱਟ ਰਿਹਾ",
+    "to": "$1 ਤੋਂ $2",
+    "generally": "ਆਮ ਤੌਰ 'ਤੇ $1",
+    "increasing": "ਵਧਦੇ ਬੱਦਲ",
+    "clearing": "ਅਸਮਾਨ ਸਾਫ਼ ਹੋ ਰਿਹਾ",
+    "becoming": "$1, ਫਿਰ $2",
+    "temperatures-steady": "ਉੱਚ ਤਾਪਮਾਨ $1 ਦੇ ਆਸਪਾਸ ਸਥਿਰ",
 }

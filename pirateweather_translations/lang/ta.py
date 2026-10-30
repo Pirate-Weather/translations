@@ -1,3 +1,8 @@
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    return ", ".join(items[:-1]) + " மற்றும் " + items[-1]
+
+
 template = {
     "clear": "தெளிவு",
     "no-precipitation": "நீர்க்கசிவு இல்லை",
@@ -44,13 +49,9 @@ template = {
     "medium-freezing-rain": "உறைபனி மழை",
     "possible-heavy-freezing-rain": "கனத்த உறைபனி மழை சாத்தியம்",
     "heavy-freezing-rain": "கனத்த உறைபனி மழை",
-    "possible-hail": "கல்மழை சாத்தியம்",
-    "hail": "கல்மழை",
     "light-wind": "தென்றல் காற்று",
     "medium-wind": "வேகக்காற்று",
-    "heavy-wind": "ஆபத்தான வேகக்காற்று",
-    "low-humidity": "வறட்சி",
-    "high-humidity": "ஈரப்பதம்",
+    "heavy-wind": "பலத்த காற்று",
     "fog": "மூடுபனி",
     "very-light-clouds": "பெரும்பாலும் தெளிவு",
     "light-clouds": "லேசான மேகமூட்டம்",
@@ -112,8 +113,10 @@ template = {
     "temperatures-valleying": "உயர் வெப்பம் $1 $2 இல் வெளியேற்றம்",
     "temperatures-falling": "உயர் வெப்பம் $1 $2 ற்கு வீழ்தல்",
     "and": "$1 மற்றும் $2",
+    "list": list_function,
     "through": "$1, $2 மூலமாக",
     "with": "$1, $2 உடன்",
+    "accompanied-by": "$1, உடன் $2",
     "range": "$1\u2013$2",
     "title": "$1",
     "sentence": "$1",
@@ -127,4 +130,18 @@ template = {
     "smoke": "புகை",
     "haze": "மூடுபனி",
     "mist": "பனிமூட்டம்",
+    "millimeters": "$1 மி.மீ",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 எதிர்பார்க்கப்படுகிறது",
+    "for-night": "$1 இரவு முழுவதும்",
+    "intermittent": "இடைவிட்ட $1",
+    "occasional": "அவ்வப்போது $1",
+    "periods-of": "சில நேரங்களில் $1",
+    "tapering-off": "$1 படிப்படியாக குறைகிறது",
+    "to": "$1 முதல் $2 வரை",
+    "generally": "பொதுவாக $1",
+    "increasing": "அதிகரிக்கும் மேகங்கள்",
+    "clearing": "வானம் தெளிவடைகிறது",
+    "becoming": "$1, பின்னர் $2",
+    "temperatures-steady": "உயர் வெப்பம் $1 அளவில் நிலையாக உள்ளது",
 }

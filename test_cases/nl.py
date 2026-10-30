@@ -25,14 +25,6 @@ cases = {
     "Overwegend bewolkt": ["title", "medium-clouds"],
     "Zwaar bewolkt": ["title", "heavy-clouds"],
     "Mogelijk lichte ijzel": ["title", "possible-light-sleet"],
-    "Lage luchtvochtigheid en lichte wind": [
-        "title",
-        ["and", "low-humidity", "light-wind"],
-    ],
-    "Hoge luchtvochtigheid en licht bewolkt": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Het komende uur helder.": ["sentence", ["for-hour", "clear"]],
     "Over 35 minuten lichte sneeuwval.": [
         "sentence",
@@ -113,19 +105,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Vannacht lage luchtvochtigheid en lichte neerslag vanaf morgenavond, houdt aan tot morgennacht.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Sneeuw (5 inch) gedurende de nacht.": [
@@ -218,8 +197,27 @@ cases = {
     "Nevel": ["title", "haze"],
     "Nevel gedurende de dag.": ["sentence", ["for-day", "haze"]],
     "Nevel gedurende de middag.": ["sentence", ["during", "haze", "afternoon"]],
-    "Nevel en hoge luchtvochtigheid": ["title", ["and", "haze", "high-humidity"]],
     "Mist gedurende de dag.": ["sentence", ["for-day", "mist"]],
     "Mist gedurende de nacht.": ["sentence", ["during", "mist", "night"]],
     "Mist en zwaar bewolkt": ["title", ["and", "mist", "heavy-clouds"]],
+    "Regen vandaag, op vrijdag, zondag en volgende woensdag met temperaturen stabiel rond 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Regen, met mogelijk onweer vanmiddag.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

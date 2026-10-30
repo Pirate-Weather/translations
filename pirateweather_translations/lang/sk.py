@@ -107,6 +107,20 @@ def and_function(stack, a, b):
     )
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return (
         "od "
@@ -225,13 +239,9 @@ template = {
     "medium-freezing-rain": "mrznúce dážď",
     "possible-heavy-freezing-rain": "možnosť vydatný mrznúce dažďa",
     "heavy-freezing-rain": "vydatný mrznúce dážď",
-    "possible-hail": "prípadné krupobitie",
-    "hail": "krupobitie",
     "light-wind": "slabý vietor",
     "medium-wind": "veterno",
     "heavy-wind": "silný vietor",
-    "low-humidity": "nízka vlhkosť",
-    "high-humidity": "vysoká vlhkosť",
     "fog": "hmlisto",
     "very-light-clouds": "prevažne jasno",
     "light-clouds": "čiastočne zamračené",
@@ -276,8 +286,10 @@ template = {
     "centimeters": "$1 cm",
     "less-than": "menej ako $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, a tiež $2",
     "range": "$1-$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 hodinu",
@@ -308,4 +320,18 @@ template = {
     "smoke": "dym",
     "haze": "opar",
     "mist": "hmla",
+    "millimeters": "$1 mm",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "očakáva sa $1 ($2)",
+    "for-night": "Počas noci $1",
+    "intermittent": "$1 s prestávkami",
+    "occasional": "občas $1",
+    "periods-of": "chvíľami $1",
+    "tapering-off": "$1 postupne ustáva",
+    "to": "$1 až $2",
+    "generally": "prevažne $1",
+    "increasing": "pribúdanie oblačnosti",
+    "clearing": "vyjasňovanie",
+    "becoming": "$1, neskôr $2",
+    "temperatures-steady": "s teplotami okolo $1",
 }

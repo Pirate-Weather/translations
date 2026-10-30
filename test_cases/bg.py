@@ -31,19 +31,12 @@ cases = {
     "Слаб Вятър": ["title", "light-wind"],
     "Умерен Вятър": ["title", "medium-wind"],
     "Силен Вятър": ["title", "heavy-wind"],
-    "Сухо": ["title", "low-humidity"],
-    "Влажно": ["title", "high-humidity"],
     "Мъгла": ["title", "fog"],
     "Предимно Ясно": ["title", "very-light-clouds"],
     "Незначителна Облачност": ["title", "light-clouds"],
     "Облачно": ["title", "medium-clouds"],
     "Гъста Облачност": ["title", "heavy-clouds"],
-    "Сухо и Слаб Вятър": ["title", ["and", "low-humidity", "light-wind"]],
     "Ръмеж и Силен Вятър": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Влажно и Незначителна Облачност": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Ясно през следващия час.": ["sentence", ["for-hour", "clear"]],
     "Много слаб сняг започва след 35 мин.": [
         "sentence",
@@ -116,19 +109,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Сухо през нощта и леки превалявания, започва от утре вечерта, до утре през нощта.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Снеговалеж (5 см.) през нощта.": [
@@ -227,7 +207,26 @@ cases = {
     "Дим и Незначителна Облачност": ["title", ["and", "smoke", "light-clouds"]],
     "Мъгла през целия ден.": ["sentence", ["for-day", "mist"]],
     "Мъгла следобед.": ["sentence", ["during", "haze", "afternoon"]],
-    "Мъгла и Влажно": ["title", ["and", "haze", "high-humidity"]],
     "Мъгла през нощта.": ["sentence", ["during", "mist", "night"]],
     "Мъгла и Гъста Облачност": ["title", ["and", "mist", "heavy-clouds"]],
+    "Дъжд днес, в петък, неделя и следващата сряда, с максимални температури около 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Дъжд, както и възможна гръмотевична буря започва днес следобед.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

@@ -15,6 +15,11 @@ def and_function(stack, a, b):
     return a + b if a.endswith("。") else a + "，" + b
 
 
+def list_function(stack, *items):
+    # Separate items with "、", using "和" before the last item.
+    return "、".join(items[:-1]) + "和" + items[-1]
+
+
 def sentence_function(stack, s):
     """
     Ensures that the string `s` ends with a full stop (。).
@@ -62,8 +67,6 @@ template = {
     "light-wind": "微风",
     "medium-wind": "有风",
     "heavy-wind": "推人大风",
-    "low-humidity": "干燥",
-    "high-humidity": "潮湿",
     "fog": "有雾",
     "very-light-clouds": "大部分時間晴朗",
     "light-clouds": "局部多云",
@@ -87,8 +90,6 @@ template = {
     "medium-freezing-rain": "冻雨",
     "possible-heavy-freezing-rain": "可能有大冻雨",
     "heavy-freezing-rain": "大冻雨",
-    "possible-hail": "可能有冰雹",
-    "hail": "冰雹",
     "today-morning": "今天早上",
     "later-today-morning": "今天上午晚些时候",
     "today-afternoon": "今天下午",
@@ -128,9 +129,11 @@ template = {
     "centimeters": "$1厘米",
     "less-than": "低于$1",
     "and": and_function,
+    "list": list_function,
     "through": "$1直至$2",
     "through": "$1直至$2",
     "with": "$1，且$2",
+    "accompanied-by": "$1，并伴有$2",
     "range": "$1\u2013$2",
     "parenthetical": "$1($2)",
     "for-hour": "在接下来一个小时内$1。",
@@ -161,4 +164,18 @@ template = {
     "smoke": "煙",
     "haze": "霾",
     "mist": "薄霧",
+    "millimeters": "$1毫米",
+    "multiple-sentences": "$1$2",
+    "of-expected": "预计$2$1",
+    "for-night": "$1将持续一整夜。",
+    "intermittent": "间歇性$1",
+    "occasional": "偶有$1",
+    "periods-of": "阵发性$1",
+    "tapering-off": "$1逐渐减弱",
+    "to": "$1至$2",
+    "generally": "大致$1",
+    "increasing": "云量增加",
+    "clearing": "转晴",
+    "becoming": "$1转$2",
+    "temperatures-steady": "最高气温稳定在$1左右",
 }

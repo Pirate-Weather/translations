@@ -82,7 +82,7 @@ test_cases/                        # Test cases for each language
 
 test.py                            # Main test runner
 requirements.txt                   # Python dependencies
-setup.py                          # Package setup
+pyproject.toml                    # Package metadata and build config
 .ruff.toml                        # Ruff linting configuration
 pytest.ini                        # Pytest configuration
 ```

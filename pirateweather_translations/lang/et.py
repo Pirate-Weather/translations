@@ -60,6 +60,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, " ja ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     a = elative(a)
     b = illative(b)
@@ -145,13 +159,9 @@ template = {
     "medium-freezing-rain": "freezing mõõdukas vihmasadu",
     "possible-heavy-freezing-rain": "tugev jääkülma vihmasadu võimalus",
     "heavy-freezing-rain": "tugev jääkülma vihmasadu",
-    "possible-hail": "rahe võimalus",
-    "hail": "rahe",
     "light-wind": "kerge tuul",
     "medium-wind": "mõõdukas tuul",
     "heavy-wind": "tugev tuul",
-    "low-humidity": "kuiv",
-    "high-humidity": "niiske",
     "fog": "udu",
     "very-light-clouds": "enamasti selge",
     "light-clouds": "vähene pilvisus",
@@ -196,8 +206,10 @@ template = {
     "centimeters": "$1 cm",
     "less-than": "alla $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, lisaks $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 järgmised tund aega",
@@ -228,4 +240,18 @@ template = {
     "smoke": "suits",
     "haze": "udu",
     "mist": "uduvihm",
+    "millimeters": "$1 mm",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "oodata on $1 ($2)",
+    "for-night": "Terve öö on $1",
+    "intermittent": "katkendlik $1",
+    "occasional": "aeg-ajalt $1",
+    "periods-of": "perioodiliselt $1",
+    "tapering-off": "$1 vaibub järk-järgult",
+    "to": "$1 kuni $2",
+    "generally": "valdavalt $1",
+    "increasing": "pilvisuse suurenemine",
+    "clearing": "selginemine",
+    "becoming": "$1, hiljem $2",
+    "temperatures-steady": "temperatuur püsib umbes $1",
 }

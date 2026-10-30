@@ -32,9 +32,7 @@ cases = {
     "ít mây": ["title", "light-clouds"],
     "có mây": ["title", "medium-clouds"],
     "trời âm u": ["title", "heavy-clouds"],
-    "trời hanh khô và gió nhẹ": ["title", ["and", "low-humidity", "light-wind"]],
     "mưa phùn và gió to": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "độ ẩm cao và ít mây": ["title", ["and", "high-humidity", "light-clouds"]],
     "Quang mây trong một giờ.": ["sentence", ["for-hour", "clear"]],
     "Tuyết rơi rất nhỏ bắt đầu sau 35 phút.": [
         "sentence",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Trời hanh khô vào đêm nay và lượng mưa nhỏ bắt đầu lúc chiều tối mai, tiếp tục tới tối mai.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Tuyết rơi (5 in) vào đêm.": [
@@ -216,19 +201,9 @@ cases = {
     "sương mù": ["title", "haze"],
     "Sương mù suốt cả ngày.": ["sentence", ["for-day", "haze"]],
     "Sương mù vào buổi chiều.": ["sentence", ["during", "haze", "afternoon"]],
-    "sương mù và độ ẩm cao": ["title", ["and", "haze", "high-humidity"]],
     "Sương mù vào đêm.": ["sentence", ["during", "mist", "night"]],
     "sương mù và trời âm u": ["title", ["and", "mist", "heavy-clouds"]],
     "Có dông trong một giờ.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Kêu bắt đầu sau 5 phút, dừng lại 45 phút sau.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Mưa to lạnh giá dừng sau 10 phút, tiếp tục 32 phút sau.": [
         "sentence",
         [
@@ -241,5 +216,25 @@ cases = {
     "Mưa phùn đóng băng bắt đầu sau 49 phút.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Mưa vừa vào hôm nay, thứ sáu, chủ nhật và thứ tư tuần sau, với nhiệt độ ổn định quanh mức 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Mưa vừa, kèm theo có thể có dông bắt đầu lúc trưa nay.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

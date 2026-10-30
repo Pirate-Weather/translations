@@ -26,18 +26,16 @@ cases = {
     "Ergh": ["title", "medium-snow"],
     "Ergh Poos": ["title", "heavy-snow"],
     "Gwynsek": ["title", "medium-wind"],
-    "Gwynsek Bys Yn Peryl": ["title", "heavy-wind"],
+    "Gwynsek Fest": ["title", "heavy-wind"],
     "Niwlek": ["title", "fog"],
     "Soprattuttu Chjaru": ["title", "very-light-clouds"],
     "Nebes Komolek": ["title", "light-clouds"],
     "Komolek": ["title", "medium-clouds"],
     "Komolek Poos": ["title", "heavy-clouds"],
-    "Sygh Ha Nebes Gwynsek": ["title", ["and", "low-humidity", "light-wind"]],
-    "Glaw Pur Skav Ha Gwynsek Bys Yn Peryl": [
+    "Glaw Pur Skav Ha Gwynsek Fest": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Glyb Ha Nebes Komolek": ["title", ["and", "high-humidity", "light-clouds"]],
     "Kler rag an our.": ["sentence", ["for-hour", "clear"]],
     "Ergh pur skav ow talleth yn 35 myn.": [
         "sentence",
@@ -96,7 +94,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "Gwynsek bys yn peryl ow talleth hedhyw vyttin, ow pesya bys y'n dohajydh ma, hag erghlaw ternos vyttin.": [
+    "Gwynsek fest ow talleth hedhyw vyttin, ow pesya bys y'n dohajydh ma, hag erghlaw ternos vyttin.": [
         "sentence",
         [
             "and",
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Sygh y'n nos ma ha kodhans skav ow talleth gorthugherweyth a-vorow, ow pesya bys yn nosweyth a-vorow.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Ergh (5 mv.) y'n nos.": [
@@ -235,21 +220,11 @@ cases = {
     "Kemygi": ["title", "haze"],
     "Kemygi dres oll an jydh.": ["sentence", ["for-day", "haze"]],
     "Kemygi y'n dohajydh.": ["sentence", ["during", "haze", "afternoon"]],
-    "Kemygi Ha Glyb": ["title", ["and", "haze", "high-humidity"]],
     "Niwl": ["title", "mist"],
     "Niwl dres oll an jydh.": ["sentence", ["for-day", "mist"]],
     "Niwl y'n nos.": ["sentence", ["during", "mist", "night"]],
     "Niwl Ha Komolek Poos": ["title", ["and", "mist", "heavy-clouds"]],
     "Tewedhow-taran rag an our.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Storm hael ow talleth yn 5 myn., ow hedhi 45 myn. diwettha.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Glaw rewl poos ow hedhi yn 10 myn., ow tastalleth 32 myn. diwettha.": [
         "sentence",
         [
@@ -262,5 +237,25 @@ cases = {
     "Glaw rewl pur skav ow talleth yn 49 myn.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Glaw hedhyw, dy' Gwener, dy' Sul ha dy' Mergher a dheu, gans tempredhow sad a-dro dhe 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Glaw, gans tewedhow-taran possybyl ow talleth y'n dohajydh ma.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

@@ -41,6 +41,17 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", and " if "," in a else " and ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes ("on") are only
+    # written once: "today, Friday, Sunday and next Wednesday".
+    result = items[0]
+    for i in range(1, len(items)):
+        joiner = " and " if i == len(items) - 1 else ", "
+        prev = items[i - 1]
+        result += join_with_shared_prefix(prev, items[i], joiner)[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " through ")
 
@@ -153,13 +164,9 @@ template = {
     "medium-freezing-rain": "freezing rain",
     "possible-heavy-freezing-rain": "possible heavy freezing rain",
     "heavy-freezing-rain": "heavy freezing rain",
-    "possible-hail": "possible hail",
-    "hail": "hail",
     "light-wind": "breezy",
     "medium-wind": "windy",
-    "heavy-wind": "dangerously windy",
-    "low-humidity": "dry",
-    "high-humidity": "humid",
+    "heavy-wind": "very windy",
     "fog": "foggy",
     "very-light-clouds": "mostly clear",
     "light-clouds": "partly cloudy",
@@ -205,7 +212,9 @@ template = {
     "less-than": "< $1",
     "and": and_function,
     "through": through_function,
+    "list": list_function,  # Joins three or more items, like "today, Friday, Sunday and next Wednesday". Takes any number of arguments.
     "with": "$1, with $2",
+    "accompanied-by": "$1, with $2",  # Used in the daily summaries for phrases like "rain, with possible thunderstorms starting this afternoon". Separate from "with", which is only used for weekly temperatures.
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 for the hour",
@@ -236,4 +245,18 @@ template = {
     "smoke": "smoke",
     "haze": "hazy",
     "mist": "misty",
+    "millimeters": "$1 mm",
+    "multiple-sentences": "$1 $2",  # Joins two sentences together, with a space in between.
+    "of-expected": "$1 of $2 expected",  # Used for phrases like "1-2 in of snow expected and is used for other precipitation types as well whereas parenthetical is used for snow only."
+    "for-night": "$1 throughout the night",
+    "intermittent": "intermittent $1",  # Used for phrases like "intermittent rain from afternoon until night".
+    "occasional": "occasional $1",  # Used for phrases like "occasional rain starting in the morning".
+    "periods-of": "periods of $1",  # Used for phrases like "periods of rain throughout the day".
+    "tapering-off": "$1 tapering off",  # Used for phrases like "rain tapering off in the afternoon".
+    "to": "$1 to $2",  # Used for cloud coverage phrases like "cloudy to mostly cloudy" or "partly cloudy to mostly clear".
+    "generally": "generally $1",  # Used for phrases like "generally cloudy throughout the day".
+    "increasing": "increasing clouds",  # Used for phrases like "increasing clouds throughout the day" when the cloud coverage is increasing.
+    "clearing": "clearing",  # Used for phrases like "clearing skies in the afternoon".
+    "becoming": "$1 becoming $2",  # Used for phrases like "cloudy becoming mostly cloudy in the afternoon". Could also be used for phrases where precipitation is transitioning to another type of precipitation like "rain becoming snow in the afternoon".
+    "temperatures-steady": "highs steady around $1",  # Used for the weekly summaries when the temperature is steady around a certain value.
 }

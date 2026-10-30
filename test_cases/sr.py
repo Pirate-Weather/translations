@@ -42,18 +42,10 @@ cases = {
     "Mestimično oblačno": ["title", "light-clouds"],
     "Pretežno oblačno": ["title", "medium-clouds"],
     "Oblačno": ["title", "heavy-clouds"],
-    "Niska vlažnost i slab vetar": [
-        "title",
-        ["and", "low-humidity", "light-wind"],
-    ],  # Updated humidity and wind
     "Veoma sitna kiša i jak vetar": [  # Updated wind
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Visoka vlažnost i mestimično oblačno": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],  # Updated humidity
     "Vedro za ovaj sat.": ["sentence", ["for-hour", "clear"]],
     "Veoma sitan sneg počinje za 35 minuta.": [
         "sentence",
@@ -141,19 +133,6 @@ cases = {
                 "later-today-night",
             ],  # Changed from "kasnije noć"
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Večeras niska vlažnost, slabe padavine počinju sutra uveče, nastaviće se tokom noći.": [  # Updated humidity
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Sneg (5 inča) tokom noći.": [
@@ -282,10 +261,6 @@ cases = {
         "sentence",
         ["during", "haze", "afternoon"],
     ],  # Changed from "Maglina"
-    "Maglica i visoka vlažnost": [
-        "title",
-        ["and", "haze", "high-humidity"],
-    ],  # Changed from "Maglina i vlažno"
     "Izmaglica": ["title", "mist"],  # Changed from "Magla"
     "Izmaglica tokom celog dana.": [
         "sentence",
@@ -299,4 +274,24 @@ cases = {
         "title",
         ["and", "mist", "heavy-clouds"],
     ],  # Changed from "Magla"
+    "Kiša u danas, petak, nedelju i sledeća sreda, sa temperaturom stabilnom oko 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Kiša, kao i moguća je grmljavina počinje ovog popodneva.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

@@ -32,12 +32,7 @@ cases = {
     "Skýjað að hluta til": ["title", "light-clouds"],
     "Skýjað": ["title", "medium-clouds"],
     "Alskýjað": ["title", "heavy-clouds"],
-    "Lítill raki og gola": ["title", ["and", "low-humidity", "light-wind"]],
     "Úði og hávaðarok": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Mikill raki og skýjað að hluta til": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Heiðskýrt næsta klukkutímann.": ["sentence", ["for-hour", "clear"]],
     "Lítilsháttar snjókoma sem byrjar eftir 35 mín.": [
         "sentence",
@@ -115,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Lítill raki í nótt og smávægileg úrkoma, byrjar annað kvöld og heldur áfram yfir næstu nótt.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Snjókoma (5 in.) yfir nóttina.": [
@@ -216,21 +198,11 @@ cases = {
     "Reykur og skýjað að hluta til": ["title", ["and", "smoke", "light-clouds"]],
     "Þoka yfir daginn.": ["sentence", ["for-day", "haze"]],
     "Þoka í síðdeginu.": ["sentence", ["during", "haze", "afternoon"]],
-    "Þoka og mikill raki": ["title", ["and", "haze", "high-humidity"]],
     "Mistur": ["title", "mist"],
     "Mistur yfir daginn.": ["sentence", ["for-day", "mist"]],
     "Mistur yfir nóttina.": ["sentence", ["during", "mist", "night"]],
     "Mistur og alskýjað": ["title", ["and", "mist", "heavy-clouds"]],
     "Þrumuveður næsta klukkutímann.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Haglél sem byrjar eftir 5 mín., líkur 45 mín. seinna.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Mikil ískalt rigning sem líkur eftir 10 mín., byrjar aftur 32 mín. seinna.": [
         "sentence",
         [
@@ -243,5 +215,25 @@ cases = {
     "Ískalt súld sem byrjar eftir 49 mín.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Rigning í dag, á föstudag, sunnudag og miðvikudag, með stöðugum hita í kringum 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Rigning, auk þess líkur á þrumuveður, byrjar þennan eftirmiðsdag.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

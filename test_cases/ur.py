@@ -26,15 +26,13 @@ cases = {
     "برف باری": ["title", "medium-snow"],
     "بھاری برف باری": ["title", "heavy-snow"],
     "طوفانی ہوا": ["title", "medium-wind"],
-    "خطرناک ہوائی": ["title", "heavy-wind"],
+    "بہت تیز ہوا": ["title", "heavy-wind"],
     "دھندلا": ["title", "fog"],
     "زیادہ تر واضح": ["title", "very-light-clouds"],
     "جزوی طور پر ابر آلود": ["title", "light-clouds"],
     "زیادہ تر ابر آلود": ["title", "medium-clouds"],
     "ابر آلود": ["title", "heavy-clouds"],
-    "ہوائی اور روکھا": ["title", ["and", "low-humidity", "light-wind"]],
-    "خطرناک ہوائی اور بوندا باندی": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "جزوی طور پر ابر آلود اور نمی": ["title", ["and", "high-humidity", "light-clouds"]],
+    "بہت تیز ہوا اور بوندا باندی": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "صاف کریں ایک گھنٹے کے لئے": ["sentence", ["for-hour", "clear"]],
     "شروع ہو رہا برف میں منٹ 35": [
         "sentence",
@@ -90,7 +88,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "کے دوران کل صبح اولے والی بارش اور اس دوپہر جاری رہا ہے جب تک ،خطرناک ہوائی تک اس صبح": [
+    "کے دوران کل صبح اولے والی بارش اور اس دوپہر جاری رہا ہے جب تک ،بہت تیز ہوا تک اس صبح": [
         "sentence",
         [
             "and",
@@ -109,19 +107,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "کل رات جاری رہا ہے جب تک ،ہلکی ورن تک کل شام اور کے دوران اس رات روکھا": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "کے دوران رات بھر برف باری (انچ 5)": [
@@ -217,19 +202,9 @@ cases = {
     "دھند": ["title", "haze"],
     "پورے دن دھند": ["sentence", ["for-day", "haze"]],
     "کے دوران دوپہر دھند": ["sentence", ["during", "haze", "afternoon"]],
-    "نمی اور دھند": ["title", ["and", "haze", "high-humidity"]],
     "کے دوران رات بھر دھند": ["sentence", ["during", "mist", "night"]],
     "ابر آلود اور دھند": ["title", ["and", "mist", "heavy-clouds"]],
     "برق و باراں ایک گھنٹے کے لئے": ["sentence", ["for-hour", "thunderstorm"]],
-    "رک رہا ہے منٹ 45 شروع ہو رہا، بعد میں اولے میں منٹ 5": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "شروع ہو رہا ہے منٹ 32 رک رہا، بعد میں شدید منجمد بارش میں منٹ 10": [
         "sentence",
         [
@@ -242,5 +217,25 @@ cases = {
     "شروع ہو رہا جمنے والی بوندا باندی میں منٹ 49": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "کے ساتھ زیادہ سے زیادہ درجہ حرارت سیلشن 20 کے قریب مستحکم، کے دوران اگلے بدھ، اتوار کو، جمعہ کو اور آج کے دن بارش": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "بارش، ساتھ ہی اس دوپہر میں ممکنہ برق و باراں": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

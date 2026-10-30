@@ -28,21 +28,14 @@ cases = {
     "Слабый Ветер": ["title", "light-wind"],
     "Ветер": ["title", "medium-wind"],
     "Сильный Ветер": ["title", "heavy-wind"],
-    "Сухо": ["title", "low-humidity"],
-    "Влажно": ["title", "high-humidity"],
     "Туман": ["title", "fog"],
     "Почти Ясно": ["title", "very-light-clouds"],
     "Небольшая Облачность": ["title", "light-clouds"],
     "Облачно": ["title", "medium-clouds"],
     "Сильная Облачность": ["title", "heavy-clouds"],
-    "Сухо и Слабый Ветер": ["title", ["and", "low-humidity", "light-wind"]],
     "Незначительный Дождь и Сильный Ветер": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
-    ],
-    "Влажно и Небольшая Облачность": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
     ],
     "Ясно в течение следующего часа.": ["sentence", ["for-hour", "clear"]],
     "Незначительный снег начинается в течение 35 мин.": [
@@ -116,19 +109,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Сухо сегодня ночью и небольшие осадки, начинаясь с завтрашнего вечера, и до завтрашней ночи.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Снег (5 см.) ночью.": [
@@ -209,20 +189,10 @@ cases = {
     "Мгла": ["title", "haze"],
     "Мгла в течение всего дня.": ["sentence", ["for-day", "haze"]],
     "Мгла днем.": ["sentence", ["during", "haze", "afternoon"]],
-    "Мгла и Влажно": ["title", ["and", "haze", "high-humidity"]],
     "Туман в течение всего дня.": ["sentence", ["for-day", "mist"]],
     "Туман ночью.": ["sentence", ["during", "mist", "night"]],
     "Туман и Сильная Облачность": ["title", ["and", "mist", "heavy-clouds"]],
     "Грозы в течение следующего часа.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Град начинается в течение 5 мин, и заканчивается через 45 мин.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Сильный ледяной дождь заканчивается в течение 10 мин, и начинается снова через 32 мин.": [
         "sentence",
         [
@@ -235,5 +205,25 @@ cases = {
     "Ледяная морось начинается в течение 49 мин.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Дождь сегодня, в пятницу, воскресенье и следующую среду, с стабильной температурой около 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Дождь, а также возможны грозы начинается сегодня днем.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

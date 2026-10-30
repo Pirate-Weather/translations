@@ -32,12 +32,10 @@ cases = {
     "Sgothan Aotruime": ["title", "light-clouds"],
     "Sgothach": ["title", "medium-clouds"],
     "Sgothan Truime": ["title", "heavy-clouds"],
-    "Tioram Agus Oiteag Shocair": ["title", ["and", "low-humidity", "light-wind"]],
     "Uisge Glè Aotrom Agus Gaoth Làidir": [
         "title",
         ["and", "very-light-rain", "heavy-wind"],
     ],
-    "Tais Agus Sgothan Aotruime": ["title", ["and", "high-humidity", "light-clouds"]],
     "Soilleir fad uair a thìde.": ["sentence", ["for-hour", "clear"]],
     "Frasan sneachda a' tòiseachadh ann an 35 mion.": [
         "sentence",
@@ -118,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Tioram a-nochd agus sileadh aotrom a' tòiseachadh anmoch feasgar a-màireach, a' stad an ath oidhche.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Sneachd (5 òir.) a-nochd.": [
@@ -224,7 +209,6 @@ cases = {
     "Ceo-dhubh": ["title", "haze"],
     "Ceo-dhubh fad an latha.": ["sentence", ["for-day", "haze"]],
     "Ceo-dhubh tràth san fheasgar.": ["sentence", ["during", "haze", "afternoon"]],
-    "Ceo-dhubh Agus Tais": ["title", ["and", "haze", "high-humidity"]],
     "Ceòtharnach": ["title", "mist"],
     "Ceòtharnach fad an latha.": ["sentence", ["for-day", "mist"]],
     "Ceòtharnach a-nochd.": ["sentence", ["during", "mist", "night"]],
@@ -232,15 +216,6 @@ cases = {
     "Stoirmean tàirneanaich fad uair a thìde.": [
         "sentence",
         ["for-hour", "thunderstorm"],
-    ],
-    "Fàilinn a' tòiseachadh ann an 5 mion., a' stad as dèidh 45 mion.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
     ],
     "Uisge reòta trom a' stad ann an 10 mion., a' tòiseachadh a-rithist as dèidh 32 mion.": [
         "sentence",
@@ -254,5 +229,25 @@ cases = {
     "Glè aotrom reòta a' tòiseachadh ann an 49 mion.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Uisge an-diugh, Dihaoine, Didòmhnaich agus Diciadain an ath sheachdain, le an teòthachd as àirde seasmhach timcheall air 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Uisge, le ma dh'fhaoidte gum bi stoirmean tàirneanaich a' tòiseachadh tràth feasgar an-diugh.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

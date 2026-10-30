@@ -26,15 +26,13 @@ cases = {
     "మంచు": ["title", "medium-snow"],
     "భారీ మంచు": ["title", "heavy-snow"],
     "గాలులతో": ["title", "medium-wind"],
-    "ప్రమాదకరమైన గాలులతో": ["title", "heavy-wind"],
+    "బలమైన గాలులతో": ["title", "heavy-wind"],
     "పొగమంచు": ["title", "fog"],
     "చాలావరకు స్పష్టమైన": ["title", "very-light-clouds"],
     "పాక్షికంగా మేఘావృతం": ["title", "light-clouds"],
     "చాలావరకు మేఘావృతంగా": ["title", "medium-clouds"],
     "మబ్బులతో": ["title", "heavy-clouds"],
-    "పొడి మరియు గాలులతో": ["title", ["and", "low-humidity", "light-wind"]],
-    "చినుకులు మరియు ప్రమాదకరమైన గాలులతో": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "ఆర్ద్ర మరియు పాక్షికంగా మేఘావృతం": ["title", ["and", "high-humidity", "light-clouds"]],
+    "చినుకులు మరియు బలమైన గాలులతో": ["title", ["and", "very-light-rain", "heavy-wind"]],
     "ఒక గంట కు స్పష్టమైన": ["sentence", ["for-hour", "clear"]],
     "35 నిమిషం లో మొదలయ్యే సుడిగాలి": [
         "sentence",
@@ -93,7 +91,7 @@ cases = {
             ["during", "fog", "tomorrow-morning"],
         ],
     ],
-    "ఈ ఉదయం వచ్చే వరుకు ప్రమాదకరమైన గాలులతో, మళ్ళీ ఈ మధ్యాహ్నం వచ్చే అంత వరుకు కొనసాగుతుంది మరియు వడగండ్లవాన రేపు ప్రొద్దున అప్పుడు": [
+    "ఈ ఉదయం వచ్చే వరుకు బలమైన గాలులతో, మళ్ళీ ఈ మధ్యాహ్నం వచ్చే అంత వరుకు కొనసాగుతుంది మరియు వడగండ్లవాన రేపు ప్రొద్దున అప్పుడు": [
         "sentence",
         [
             "and",
@@ -112,19 +110,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "పొడి ఈ రాత్రి అప్పుడు మరియు రేపు సాయంత్రం వచ్చే వరుకు తేలికపాటి వర్షపాతం, మళ్ళీ రేపు రాత్రి వచ్చే అంత వరుకు కొనసాగుతుంది": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "మంచు(5 ఇంచ్) రాత్రిపూట అప్పుడు": [
@@ -220,7 +205,26 @@ cases = {
     "పొగమంచు": ["title", "haze"],
     "రోజు మొత్తం పొగమంచు గానే ఉంటుంది": ["sentence", ["for-day", "haze"]],
     "పొగమంచు మధ్యాహ్నం అప్పుడు": ["sentence", ["during", "haze", "afternoon"]],
-    "పొగమంచు మరియు ఆర్ద్ర": ["title", ["and", "haze", "high-humidity"]],
     "పొగమంచు రాత్రిపూట అప్పుడు": ["sentence", ["during", "mist", "night"]],
     "పొగమంచు మరియు మబ్బులతో": ["title", ["and", "mist", "heavy-clouds"]],
+    "వర్షం నేడు, శుక్రవారం నాడు, ఆదివారం నాడు మరియు వచ్చే బుధవారం అప్పుడు తో అధిక ఉష్ణోగ్రతలు 20°C వద్ద స్థిరంగా ఉన్నాయి": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "వర్షం, తో పాటు ఈ మధ్యాహ్నం మొదలయ్యే రాబోయే ఉరుములతో కూడిన తుఫాను": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

@@ -22,6 +22,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, ", i " if "," in a else " i ")
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " fins a ")
 
@@ -86,13 +100,9 @@ template = {
     "medium-freezing-rain": "pluja gelada",
     "possible-heavy-freezing-rain": "possible pluja gelada fortes",
     "heavy-freezing-rain": "pluja gelada fortes",
-    "possible-hail": "possible calamarsa",
-    "hail": "calamarsa",
     "light-wind": "vents fluixos",
     "medium-wind": "ventós",
-    "heavy-wind": "perillosament ventós",
-    "low-humidity": "sec",
-    "high-humidity": "humit",
+    "heavy-wind": "molt ventós",
     "fog": "ennuvolat",
     "very-light-clouds": "majoritariament clar",
     "light-clouds": "parcialment ennuvolat",
@@ -137,8 +147,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "menys de $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, amb $2",
+    "accompanied-by": "$1, amb $2",
     "range": "$1\u2013$2",
     "parenthetical": "$1 ($2)",
     "for-hour": "$1 cada hora",
@@ -169,4 +181,18 @@ template = {
     "smoke": "fum",
     "haze": "calitja",
     "mist": "boira",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "s'esperen $1 de $2",
+    "for-night": "$1 durant la nit",
+    "intermittent": "$1 intermitent",
+    "occasional": "$1 ocasional",
+    "periods-of": "períodes de $1",
+    "tapering-off": "$1 que va minvant",
+    "to": "de $1 a $2",
+    "generally": "generalment $1",
+    "increasing": "augment de la nuvolositat",
+    "clearing": "aclarides",
+    "becoming": "$1, passant a $2",
+    "temperatures-steady": "temperatures estables al voltant de $1",
 }

@@ -32,9 +32,7 @@ cases = {
     "약간 흐림": ["title", "light-clouds"],
     "흐림": ["title", "medium-clouds"],
     "흐림": ["title", "heavy-clouds"],
-    "건조, 약한 바람": ["title", ["and", "low-humidity", "light-wind"]],
     "이슬비, 강한 바람": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "습함, 약간 흐림": ["title", ["and", "high-humidity", "light-clouds"]],
     "한 시간 맑음": ["sentence", ["for-hour", "clear"]],
     "35분 후 아주 약한 눈 시작": [
         "sentence",
@@ -109,19 +107,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "오늘 밤동안 건조, 내일 저녁 약한 강수 시작, 내일 밤까지 이어짐": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "밤동안 눈(5인치)": [
@@ -217,8 +202,27 @@ cases = {
     "옅은 안개": ["title", "haze"],
     "온종일 옅은 안개": ["sentence", ["for-day", "haze"]],
     "오후동안 옅은 안개": ["sentence", ["during", "haze", "afternoon"]],
-    "옅은 안개, 습함": ["title", ["and", "haze", "high-humidity"]],
     "온종일 안개": ["sentence", ["for-day", "mist"]],
     "밤동안 안개": ["sentence", ["during", "mist", "night"]],
     "안개, 흐림": ["title", ["and", "mist", "heavy-clouds"]],
+    "오늘, 금요일, 일요일, 다음주 수요일동안 비, 최고 기온 20°C 안팎 유지": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "비, 오늘 오후에 뇌우 가능성 시작 동반": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

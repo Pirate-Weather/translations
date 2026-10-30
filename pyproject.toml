@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pirateweather-translations"
+version = "2.0.0"
+description = "Translate Pirate Weather API summaries into any language"
+readme = "README.md"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
+authors = [{ name = "Pirate-Weather" }]
+keywords = ["weather", "API", "pirateweather", "translations"]
+
+[project.urls]
+Homepage = "https://github.com/Pirate-Weather/translations"
+Download = "https://github.com/Pirate-Weather/translations/archive/2.0.0.tar.gz"
+
+[tool.setuptools.packages.find]
+include = ["pirateweather_translations", "pirateweather_translations.*"]
+
+[tool.setuptools.package-data]
+"pirateweather_translations.lang" = ["*.py"]

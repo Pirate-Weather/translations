@@ -39,6 +39,27 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, joiner)
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
+def millimeters_function(stack, a):
+    if a == "1":
+        return "מ״מ"
+    else:
+        return a + " מ״מ"
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " עד ")
 
@@ -158,13 +179,9 @@ template = {
     "medium-freezing-rain": "גשם קפוא",
     "possible-heavy-freezing-rain": "גשם קפוא אפשרי",
     "heavy-freezing-rain": "גשם קפוא חזק",
-    "possible-hail": "ברד אפשרי",
-    "hail": "ברד",
     "light-wind": "רוח קלה",
     "medium-wind": "רוח",
     "heavy-wind": "רוח חזקה",
-    "low-humidity": "יבש",
-    "high-humidity": "לחות גבוהה",
     "fog": "ערפל",
     "very-light-clouds": "ברור בעיקר",
     "light-clouds": "עננות חלקית",
@@ -209,8 +226,10 @@ template = {
     "centimeters": centimeters_function,
     "less-than": "פחות מ$1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, ו$2",
+    "accompanied-by": "$1, בליווי $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 לשעה הקרובה",
@@ -241,4 +260,18 @@ template = {
     "smoke": "עשן",
     "haze": "אובך",
     "mist": "ערפל",
+    "millimeters": millimeters_function,
+    "multiple-sentences": "$1 $2",
+    "of-expected": "צפויים $1 של $2",
+    "for-night": "$1 לאורך הלילה",
+    "intermittent": "$1 לסירוגין",
+    "occasional": "$1 מדי פעם",
+    "periods-of": "פרקים של $1",
+    "tapering-off": "$1, בהיחלשות הדרגתית",
+    "to": "$1 עד $2",
+    "generally": "בדרך כלל $1",
+    "increasing": "עננות גוברת",
+    "clearing": "התבהרות",
+    "becoming": "$1, ובהמשך $2",
+    "temperatures-steady": "טמפרטורות יציבות סביב $1",
 }

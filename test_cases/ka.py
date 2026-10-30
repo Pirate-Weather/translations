@@ -32,12 +32,7 @@ cases = {
     "ნაწილობრივ ღრუბლიანი": ["title", "light-clouds"],
     "უმეტესად ღრუბლიანი": ["title", "medium-clouds"],
     "მოღრუბლულობა": ["title", "heavy-clouds"],
-    "მშრალი და სუსტი ქარი": ["title", ["and", "low-humidity", "light-wind"]],
     "სუსტი წვიმა და ძლიერი ქარი": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "ტენიანი და ნაწილობრივ ღრუბლიანი": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "მოწმენდილი ამ დროისთვის.": ["sentence", ["for-hour", "clear"]],
     "სუსტი თოვლი დაიწყება 35 წთ.": [
         "sentence",
@@ -118,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "მშრალი ღამე და მცირე ნალექი დაიწყება ხვალ საღამოს, გაგრძელდება ხვალ ღამით.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "თოვლი (5 ინ.) ღამე.": [
@@ -226,8 +208,27 @@ cases = {
     "ბურუსი": ["title", "haze"],
     "ბურუსი მთელი დღის განმავლობაში.": ["sentence", ["for-day", "haze"]],
     "ბურუსი შუადღეს.": ["sentence", ["during", "haze", "afternoon"]],
-    "ბურუსი და ტენიანი": ["title", ["and", "haze", "high-humidity"]],
     "ნისლი მთელი დღის განმავლობაში.": ["sentence", ["for-day", "mist"]],
     "ნისლი ღამე.": ["sentence", ["during", "mist", "night"]],
     "ნისლი და მოღრუბლულობა": ["title", ["and", "mist", "heavy-clouds"]],
+    "წვიმა დღეს, პარასკევს, კვირას და შემდეგ ოთხშაბათს, ტემპერატურა სტაბილური იქნება დაახლოებით 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "წვიმა, ასევე მოსალოდნელია ჭექა-ქუხილი დაიწყება შუადღეს.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

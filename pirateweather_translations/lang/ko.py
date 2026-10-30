@@ -18,6 +18,20 @@ def and_function(stack, a, b):
     return join_with_shared_prefix(a, b, joiner)
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, "부터 ")
 
@@ -68,13 +82,9 @@ template = {
     "medium-freezing-rain": "얼어붙는 비",
     "possible-heavy-freezing-rain": "강한 얼어붙는 비 가능성",
     "heavy-freezing-rain": "강한 얼어붙는 비 가능성",
-    "possible-hail": "빗발 가능성",
-    "hail": "빗발",
     "light-wind": "약한 바람",
     "medium-wind": "바람",
     "heavy-wind": "강한 바람",
-    "low-humidity": "건조",
-    "high-humidity": "습함",
     "fog": "안개",
     "very-light-clouds": "대체로 맑음",
     "light-clouds": "약간 흐림",
@@ -119,8 +129,10 @@ template = {
     "centimeters": "$1cm",
     "less-than": "< $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, $2 동반",
     "range": "$1\u2013$2",
     "parenthetical": "$1($2)",
     "for-hour": "한 시간 $1",
@@ -153,4 +165,18 @@ template = {
     "smoke": "연기",
     "haze": "옅은 안개",
     "mist": "안개",
+    "millimeters": "$1mm",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$2 $1 예상",
+    "for-night": "밤새 $1",
+    "intermittent": "간헐적인 $1",
+    "occasional": "가끔 $1",
+    "periods-of": "때때로 $1",
+    "tapering-off": "$1 점차 그침",
+    "to": "$1에서 $2",
+    "generally": "대체로 $1",
+    "increasing": "구름 증가",
+    "clearing": "맑아짐",
+    "becoming": "$1 후 $2",
+    "temperatures-steady": "최고 기온 $1 안팎 유지",
 }

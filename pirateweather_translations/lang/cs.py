@@ -52,6 +52,20 @@ def and_function(stack, a, b):
     )
 
 
+def list_function(stack, *items):
+    # Join each item to the previous one so shared prefixes are only written once,
+    # using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        if i == len(items) - 1:
+            joined = and_function(stack, prev, items[i])
+        else:
+            joined = join_with_shared_prefix(prev, items[i], ", ")
+        result += joined[len(prev) :]
+    return result
+
+
 def through_function(stack, a, b):
     return (
         "od "
@@ -168,13 +182,9 @@ template = {
     "medium-freezing-rain": "mrazivý déšť",
     "possible-heavy-freezing-rain": "možnost slabého vydatný mrazivý déšť",
     "heavy-freezing-rain": "vydatný mrazivý déšť",
-    "possible-hail": "možnost slabého kroupy",
-    "hail": "kroupy",
     "light-wind": "slabý vítr",
     "medium-wind": "větrno",
     "heavy-wind": "silný vítr",
-    "low-humidity": "nízká vlhkost",
-    "high-humidity": "vysoká vlhkost",
     "fog": "mlhavo",
     "very-light-clouds": "převážně jasno",
     "light-clouds": "částečně oblačno",
@@ -219,8 +229,10 @@ template = {
     "centimeters": "$1 cm",
     "less-than": "méně než $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, a také $2",
     "range": "$1-$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 hodinu",
@@ -251,4 +263,18 @@ template = {
     "smoke": "kouř",
     "haze": "opar",
     "mist": "mlha",
+    "millimeters": "$1 mm",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "očekává se $1 ($2)",
+    "for-night": "Během noci $1",
+    "intermittent": "$1 s přestávkami",
+    "occasional": "občas $1",
+    "periods-of": "chvílemi $1",
+    "tapering-off": "$1 postupně ustává",
+    "to": "$1 až $2",
+    "generally": "převážně $1",
+    "increasing": "přibývání oblačnosti",
+    "clearing": "vyjasňování",
+    "becoming": "$1, později $2",
+    "temperatures-steady": "s teplotami kolem $1",
 }

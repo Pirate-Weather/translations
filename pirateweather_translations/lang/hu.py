@@ -27,6 +27,17 @@ def and_function(stack, a, b):
     )
 
 
+def list_function(stack, *items):
+    # join_with_shared_prefix always inserts " és ", so it is swapped for a comma
+    # between all but the last two items.
+    result = items[0]
+    for i in range(1, len(items)):
+        prev = items[i - 1]
+        rest = join_with_shared_prefix(prev, items[i], "")[len(prev) + len(" és ") :]
+        result += (" és " if i == len(items) - 1 else ", ") + rest
+    return result
+
+
 def through_function(stack, a, b):
     return join_with_shared_prefix(a, b, " között")
 
@@ -96,13 +107,9 @@ template = {
     "medium-freezing-rain": "fagyos eső",
     "possible-heavy-freezing-rain": "intenzív fagyos eső lehetséges",
     "heavy-freezing-rain": "intenzív fagyos eső",
-    "possible-hail": "fagyos lehetséges",
-    "hail": "fagyos",
     "light-wind": "enyhe szél",
     "medium-wind": "mérsékelt szél",
     "heavy-wind": "erős szél",
-    "low-humidity": "száraz idő",
-    "high-humidity": "párás idő",
     "fog": "ködös idő",
     "very-light-clouds": "erős derült",
     "light-clouds": "közepes felhősödés",
@@ -147,8 +154,10 @@ template = {
     "centimeters": "$1 cm.",
     "less-than": "$1 alatt",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, $2",
+    "accompanied-by": "$1, valamint $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 ebben az órában",
@@ -179,4 +188,18 @@ template = {
     "smoke": "füst",
     "haze": "pára",
     "mist": "köd",
+    "millimeters": "$1 mm.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "$1 $2 várható",
+    "for-night": "$1 egész éjjel",
+    "intermittent": "szakaszos $1",
+    "occasional": "időnként $1",
+    "periods-of": "időszakos $1",
+    "tapering-off": "fokozatosan gyengülő $1",
+    "to": "$1 vagy $2",
+    "generally": "többnyire $1",
+    "increasing": "növekvő felhőzet",
+    "clearing": "kitisztulás",
+    "becoming": "$1, később $2",
+    "temperatures-steady": "$1 körüli állandó hőmérséklettel",
 }

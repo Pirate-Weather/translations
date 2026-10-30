@@ -1,4 +1,10 @@
+import inspect
 import re
+
+
+def is_variadic(func):
+    # True if the function takes *args, e.g. def list_function(stack, *items)
+    return bool(func.__code__.co_flags & inspect.CO_VARARGS)
 
 
 def parse(template, expr, stack):
@@ -30,7 +36,7 @@ def parse(template, expr, stack):
             # We'll check the function's argument count.
             argcount = val.__code__.co_argcount
             # Expecting only the context (stack) as single argument
-            if argcount != 1:
+            if argcount != 1 or is_variadic(val):
                 raise ValueError(
                     f'"{expr}" was used in a value context, '
                     f"but is expected in a template context."
@@ -74,7 +80,14 @@ def parse(template, expr, stack):
             argcount = val.__code__.co_argcount
             expected_args = expr[1:]  # all arguments after the first
 
-            if len(expected_args) == 0:
+            if is_variadic(val):
+                # Variadic functions (e.g. def f(stack, *items)) accept any number of
+                # arguments, as long as the fixed ones are filled and at least one is given.
+                if len(expected_args) == 0 or len(expected_args) < argcount - 1:
+                    raise ValueError(
+                        f'Template "{expr[0]}" did not expect {len(expected_args)} arguments.'
+                    )
+            elif len(expected_args) == 0:
                 # This means expr is used in a template context but no arguments.
                 # According to JS code:
                 # if(template[expr[0]].length === 0) { throw ... }

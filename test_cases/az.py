@@ -32,9 +32,7 @@ cases = {
     "Qismən Buludlu": ["title", "light-clouds"],
     "Əsasən Buludlu": ["title", "medium-clouds"],
     "Tutqun Hava": ["title", "heavy-clouds"],
-    "Rütubətsiz və Sərin": ["title", ["and", "low-humidity", "light-wind"]],
     "Çiskin və Güclü Külək": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Rütubətli və Qismən Buludlu": ["title", ["and", "high-humidity", "light-clouds"]],
     "1 saat boyunca buludsuz olacaq.": ["sentence", ["for-hour", "clear"]],
     "35 dəq. sonra sulu qar başlayacaq.": [
         "sentence",
@@ -118,19 +116,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Bu gün gecə rütubətsiz olacaq və sabah axşam yüngül yağış başlayıb, sabah gecə dayanacaq.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Gecə qar (5 düym) olacaq.": [
@@ -219,9 +204,28 @@ cases = {
     "Tüstü və Qismən Buludlu": ["title", ["and", "smoke", "light-clouds"]],
     "Gün boyu çiskin olacaq.": ["sentence", ["for-day", "haze"]],
     "Günortadan sonra çiskin olacaq.": ["sentence", ["during", "haze", "afternoon"]],
-    "Çiskin və Rütubətli": ["title", ["and", "haze", "high-humidity"]],
     "Duman": ["title", "mist"],
     "Gün boyu duman olacaq.": ["sentence", ["for-day", "mist"]],
     "Gecə duman olacaq.": ["sentence", ["during", "mist", "night"]],
     "Duman və Tutqun Hava": ["title", ["and", "mist", "heavy-clouds"]],
+    "Bu gün, cümə günü, bazar günü və çərşənbə günü yağış olacaq, temperatur 20°C ətrafında sabit qalacaq.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Yağış, həmçinin bu gün günortadan sonra mümkün tufanlar başlayacaq.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
+    ],
 }

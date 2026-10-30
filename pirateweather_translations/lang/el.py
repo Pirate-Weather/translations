@@ -14,6 +14,18 @@ def and_function(stack, a, b):
     return a + (", και " if "," in a else " και ") + b
 
 
+def list_function(stack, *items):
+    # Separate items with commas, using "and" before the last item.
+    result = items[0]
+    for i in range(1, len(items)):
+        if i == len(items) - 1:
+            prev = items[i - 1]
+            result += and_function(stack, prev, items[i])[len(prev) :]
+        else:
+            result += ", " + items[i]
+    return result
+
+
 def through_function(stack, a, b):
     return a + " μέχρι " + b
 
@@ -118,13 +130,9 @@ template = {
     "medium-freezing-rain": "παγωμένη βροχή",
     "possible-heavy-freezing-rain": "πιθανή ισχυρή παγωμένη βροχή",
     "heavy-freezing-rain": "ισχυρή παγωμένη βροχή",
-    "possible-hail": "πιθανό χαλάζι",
-    "hail": "χαλάζι",
     "light-wind": "ασθενής άνεμος",
     "medium-wind": "μέτριος άνεμος",
     "heavy-wind": "ισχυρός άνεμος",
-    "low-humidity": "ξηρασία",
-    "high-humidity": "υγρασία",
     "fog": "ομίχλη",
     "very-light-clouds": "κυρίως αίθριος",
     "light-clouds": "αραιή νέφωση",
@@ -169,8 +177,10 @@ template = {
     "centimeters": "$1 εκ.",
     "less-than": "λιγότερο από $1",
     "and": and_function,
+    "list": list_function,
     "through": through_function,
     "with": "$1, με $2",
+    "accompanied-by": "$1, καθώς και $2",
     "range": "$1\u2013$2",
     "parenthetical": parenthetical_function,
     "for-hour": "$1 για αυτή την ώρα",
@@ -201,4 +211,18 @@ template = {
     "smoke": "καπνός",
     "haze": "ελαφριά ομίχλη",
     "mist": "ομίχλη",
+    "millimeters": "$1 χιλ.",
+    "multiple-sentences": "$1 $2",
+    "of-expected": "αναμένονται $1 ($2)",
+    "for-night": "$1 κατά τη διάρκεια της νύχτας",
+    "intermittent": "$1 κατά διαστήματα",
+    "occasional": "πού και πού $1",
+    "periods-of": "$1 κατά περιόδους",
+    "tapering-off": "$1 που σταδιακά εξασθενεί",
+    "to": "$1 έως $2",
+    "generally": "γενικά $1",
+    "increasing": "αυξανόμενη νέφωση",
+    "clearing": "σταδιακή αραίωση της νέφωσης",
+    "becoming": "$1, αργότερα $2",
+    "temperatures-steady": "θερμοκρασίες σταθερές γύρω στους $1",
 }

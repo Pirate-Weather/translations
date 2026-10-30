@@ -32,9 +32,7 @@ cases = {
     "Lettskyet": ["title", "light-clouds"],
     "Skyet": ["title", "medium-clouds"],
     "Overskyet": ["title", "heavy-clouds"],
-    "Tørke og lett vind": ["title", ["and", "low-humidity", "light-wind"]],
     "Duskregn og storm": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Fuktig og lettskyet": ["title", ["and", "high-humidity", "light-clouds"]],
     "Klart i løpet av de neste timene.": ["sentence", ["for-hour", "clear"]],
     "Veldig lett snø som starter om 35 min.": [
         "sentence",
@@ -115,19 +113,6 @@ cases = {
             "and",
             ["starting", "heavy-clouds", "later-today-night"],
             ["during", "heavy-snow", "tomorrow-afternoon"],
-        ],
-    ],
-    "Tørke i kveld og lett nedbør som starter i morgen kveld, fortsetter fram til i morgen natt.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
         ],
     ],
     "Snø (5 in.) om natten.": [
@@ -227,20 +212,10 @@ cases = {
     "Dis": ["title", "haze"],
     "Dis i løpet av dagen.": ["sentence", ["for-day", "haze"]],
     "Dis på ettermiddagen.": ["sentence", ["during", "haze", "afternoon"]],
-    "Dis og fuktig": ["title", ["and", "haze", "high-humidity"]],
     "Tåke i løpet av dagen.": ["sentence", ["for-day", "mist"]],
     "Tåke om natten.": ["sentence", ["during", "mist", "night"]],
     "Tåke og overskyet": ["title", ["and", "mist", "heavy-clouds"]],
     "Tordenvær i løpet av de neste timene.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Hagl som starter om 5 min., avtar 45 min. senere.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Kraftig underkjølt regn avtar om 10 min., starter igjen 32 min. senere.": [
         "sentence",
         [
@@ -253,5 +228,25 @@ cases = {
     "Underkjølt duskregn som starter om 49 min.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Regn i dag, på fredag, søndag og neste onsdag, med temperaturer stabile rundt 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Regn, med tordenvær kan forekomme som starter på ettermiddagen.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }

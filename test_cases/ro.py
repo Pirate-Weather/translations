@@ -35,12 +35,7 @@ cases = {
     "Parțial Noros": ["title", "light-clouds"],
     "Predominant Noros": ["title", "medium-clouds"],
     "Noros": ["title", "heavy-clouds"],
-    "Umiditate Scăzută și Vânt Ușor": ["title", ["and", "low-humidity", "light-wind"]],
     "Burniță și Vânt Puternic": ["title", ["and", "very-light-rain", "heavy-wind"]],
-    "Umiditate Ridicată și Parțial Noros": [
-        "title",
-        ["and", "high-humidity", "light-clouds"],
-    ],
     "Senin în următoarea oră.": ["sentence", ["for-hour", "clear"]],
     "Ploaie torențială în următoarea oră.": ["sentence", ["for-hour", "heavy-rain"]],
     "Ploaie în următoarea oră.": ["sentence", ["for-hour", "medium-rain"]],
@@ -137,19 +132,6 @@ cases = {
             ["during", "heavy-snow", "tomorrow-afternoon"],
         ],
     ],
-    "Umiditate scăzută la noapte și precipitații slabe începând de mâine seară și până mâine noapte.": [
-        "sentence",
-        [
-            "and",
-            ["during", "low-humidity", "today-night"],
-            [
-                "starting-continuing-until",
-                "light-precipitation",
-                "tomorrow-evening",
-                "tomorrow-night",
-            ],
-        ],
-    ],
     "Ninsoare (5 in.) la noapte.": [
         "sentence",
         ["during", ["parenthetical", "medium-snow", ["inches", 5]], "night"],
@@ -242,21 +224,11 @@ cases = {
     "Fum și Parțial Noros": ["title", ["and", "smoke", "light-clouds"]],
     "Ceață de-a lungul zilei.": ["sentence", ["for-day", "haze"]],
     "Ceață după-masă.": ["sentence", ["during", "haze", "afternoon"]],
-    "Ceață și Umiditate Ridicată": ["title", ["and", "haze", "high-humidity"]],
     "Abur": ["title", "mist"],
     "Abur de-a lungul zilei.": ["sentence", ["for-day", "mist"]],
     "Abur la noapte.": ["sentence", ["during", "mist", "night"]],
     "Abur și Noros": ["title", ["and", "mist", "heavy-clouds"]],
     "Furtună în următoarea oră.": ["sentence", ["for-hour", "thunderstorm"]],
-    "Grindină peste 5 minute, durează 45 de minute.": [
-        "sentence",
-        [
-            "starting-then-stopping-later",
-            "hail",
-            ["minutes", 5],
-            ["minutes", 45],
-        ],
-    ],
     "Ploaie înghețată torențială, se oprește în 10 minute, începe din nou 32 de minute mai târziu.": [
         "sentence",
         [
@@ -269,5 +241,25 @@ cases = {
     "Burniță înghețată, în 49 de minute.": [
         "sentence",
         ["starting-in", "very-light-freezing-rain", ["minutes", 49]],
+    ],
+    "Ploaie azi, vineri, duminică și miercurea viitoare, cu temperaturi stabile în jur de 20°C.": [
+        "sentence",
+        [
+            "with",
+            [
+                "during",
+                "medium-rain",
+                ["list", "today", "friday", "sunday", "next-wednesday"],
+            ],
+            ["temperatures-steady", ["celsius", 20]],
+        ],
+    ],
+    "Ploaie, cu posibil furtună, începând de după-amiază.": [
+        "sentence",
+        [
+            "accompanied-by",
+            "medium-rain",
+            ["starting", "possible-thunderstorm", "today-afternoon"],
+        ],
     ],
 }
