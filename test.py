@@ -109,6 +109,24 @@ def test_fail_to_apply_variadic_function_given_no_arguments():
         test.translate("list")
 
 
+def test_cached_translations_match_and_errors_still_raise(test_translation):
+    """translate() caches results; a cached call must give the same text, a
+    failing expression must keep failing, and equal values of different types
+    (True vs 1) must not share a cached result."""
+    assert test_translation.translate(["bar", 10, ["baz", 20, "foo"]]) == (
+        "meeple meeple bar"
+    )
+    assert test_translation.translate(["bar", 10, ["baz", 20, "foo"]]) == (
+        "meeple meeple bar"
+    )
+    for _ in range(2):
+        with pytest.raises(ValueError):
+            test_translation.translate(["baz", 10, 20, 30])
+    assert test_translation.translate(1) == "1"
+    with pytest.raises(ValueError):
+        test_translation.translate(1.0)
+
+
 def test_provide_context_to_functions():
     test = Translation(
         {
