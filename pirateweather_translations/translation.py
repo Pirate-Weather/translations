@@ -1,6 +1,13 @@
 import inspect
 import re
 
+# $n references to an expression's arguments in a template string
+_ARG_REF = re.compile(r"\$\d+")
+
+# Translations remembered per language; the API repeats a few hundred distinct
+# summaries, so this bound is only a guard against unbounded growth.
+_CACHE_SIZE = 4096
+
 
 def is_variadic(func):
     # True if the function takes *args, e.g. def list_function(stack, *items)
@@ -23,7 +30,7 @@ def parse(template, expr, stack):
 
         if isinstance(val, str):
             # If the template value contains $n references, that's invalid in a value context
-            if re.search(r"\$\d+", val):
+            if _ARG_REF.search(val):
                 raise ValueError(
                     f'"{expr}" was used in a value context, '
                     f"but is expected in a template context."
@@ -64,7 +71,7 @@ def parse(template, expr, stack):
                 index = int(m.group()[1:])
                 return parse(template, expr[index], stack)
 
-            result = re.sub(r"\$\d+", repl, val)
+            result = _ARG_REF.sub(repl, val)
 
         elif callable(val):
             # In JS code:
@@ -142,12 +149,36 @@ def parse(template, expr, stack):
         raise ValueError("Invalid expression.")
 
 
+def _cache_key(expr):
+    """A hashable copy of an expression. Each term is tagged with its type,
+    because equal values of different types (1, 1.0, True) parse differently."""
+    if isinstance(expr, list):
+        return (list, tuple(_cache_key(item) for item in expr))
+    return (type(expr), expr)
+
+
 class Translation:
     def __init__(self, template):
         self.template = template
+        self._cache = {}
 
     def translate(self, expr):
-        return parse(self.template, expr, [])
+        # Templates are pure functions of the expression (the stack they see is
+        # built from the expression itself), so a translated expression can be
+        # reused. Callers translate the same few summaries many times per
+        # forecast, and parsing them each time dominated the cost.
+        try:
+            key = _cache_key(expr)
+            cached = self._cache.get(key)
+        except TypeError:  # an unhashable term; translate without caching
+            return parse(self.template, expr, [])
+        if cached is not None:
+            return cached
+        result = parse(self.template, expr, [])
+        if len(self._cache) >= _CACHE_SIZE:
+            self._cache.clear()
+        self._cache[key] = result
+        return result
 
     def is_supported(self, term):
         return term in self.template
