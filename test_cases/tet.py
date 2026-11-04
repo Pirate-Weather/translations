@@ -221,4 +221,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Abu-abu to'o loron remata.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

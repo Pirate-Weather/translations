@@ -298,6 +298,7 @@ template = {
     "starting-then-stopping-later": "$1 o $2, skončí o $3 neskôr",
     "stopping-then-starting-later": "$1 skončí o $2 a začne znovu o $3 neskôr",
     "for-day": "Počas dňa $1",
+    "for-rest-of-day": "Do konca dňa $1",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

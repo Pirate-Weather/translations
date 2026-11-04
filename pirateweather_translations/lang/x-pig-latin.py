@@ -212,6 +212,7 @@ template = {
     "starting-then-stopping-later": "$1 artingstay inway $2, endingway $3 aterlay",
     "stopping-then-starting-later": "$1 endingway inway $2, eturningray $3 aterlay",
     "for-day": "$1 oughoutthray ethay ayday",
+    "for-rest-of-day": "$1 orfay ethay estray ofay ethay ayday",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

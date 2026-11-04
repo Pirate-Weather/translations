@@ -218,6 +218,7 @@ template = {
     "starting-then-stopping-later": "$1 algab $2 pärast, lõppeb $3 hiljem",
     "stopping-then-starting-later": "$1 lõppeb $2 pärast, algab uuesti $3 hiljem",
     "for-day": "Terve päev on $1",
+    "for-rest-of-day": "Ülejäänud päeva on $1",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

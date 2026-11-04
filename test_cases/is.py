@@ -236,4 +236,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Skýjað það sem eftir er dagsins.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

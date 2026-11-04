@@ -164,6 +164,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 sonra başlayacaq, $3 davam edib dayanacaq",
     "stopping-then-starting-later": "$1 $2 sonra dayanacaq, $3 sonra yenidən başlayacaq",
     "for-day": "gün boyu $1 olacaq",
+    "for-rest-of-day": "günün qalan hissəsində $1 olacaq",
     "starting": "$2 $1 başlayacaq",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

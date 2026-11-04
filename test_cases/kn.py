@@ -237,4 +237,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "ಹೆಚ್ಚಾಗಿ ಮೋಡ ದಿನದ ಉಳಿದ ಭಾಗದಲ್ಲಿ": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

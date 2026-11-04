@@ -201,6 +201,7 @@ template = {
     "starting-then-stopping-later": "$1 om $2, aftager $3 senere",
     "stopping-then-starting-later": "$1 aftager om $2, begynder igen $3 senere",
     "for-day": "$1 i løbet af dagen",
+    "for-rest-of-day": "$1 resten af dagen",
     "starting": "$1 $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

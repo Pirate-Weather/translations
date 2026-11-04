@@ -101,6 +101,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 ਵਿਚ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ, ਬਾਅਦ ਵਿਚ $3 ਵਿਚ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ",
     "stopping-then-starting-later": "$1 $2 ਵਿੱਚ ਰੁਕ ਰਿਹਾ ਹੈ, $3 ਤੋਂ ਬਾਦ ਸ਼ੁਰੂ ਹੋਏਗਾ",
     "for-day": "$1 ਪੂਰਾ ਦਿਨ",
+    "for-rest-of-day": "$1 ਬਾਕੀ ਦਿਨ",
     "starting": "$1 $2 ਤੋਂ ਸ਼ੁਰੂ",
     "until": "$1 $2 ਤਕ",
     "until-starting-again": "$1 $2 ਤਕ, $3 ਫੇਰ ਸ਼ੁਰੂ ਹੋ ਰਿਹਾ ਹੈ",

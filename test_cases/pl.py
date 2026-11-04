@@ -249,4 +249,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Średnie zachmurzenie do końca dnia.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

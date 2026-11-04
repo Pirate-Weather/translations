@@ -182,6 +182,7 @@ template = {
     "starting-then-stopping-later": "$1 yn cychwyn mewn $2, ac yn dod i ben $3 wedyn",
     "stopping-then-starting-later": "$1 yn dod i ben mewn $2, gan gychwyn eto $3 wedyn",
     "for-day": "$1 drwy\u2019r dydd",
+    "for-rest-of-day": "$1 am weddill y dydd",
     "starting": "$1 yn cychwyn $2",  # o?
     "until": until_function,
     "until-starting-again": until_starting_again_function,

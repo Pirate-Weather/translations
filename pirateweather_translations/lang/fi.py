@@ -210,6 +210,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 kuluessa, päättyen $3 myöhemmin",
     "stopping-then-starting-later": "$1 vielä $2, alkaen uudestaan $3 myöhemmin",
     "for-day": "$1 päivän aikana",
+    "for-rest-of-day": "$1 loppupäivän ajan",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

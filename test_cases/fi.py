@@ -240,4 +240,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Enimmäkseen pilvistä loppupäivän ajan.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

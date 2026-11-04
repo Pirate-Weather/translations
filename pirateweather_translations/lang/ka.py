@@ -118,6 +118,7 @@ template = {
     "starting-then-stopping-later": "$1 დაიწყება $2, შეწყდება $3 მოგვიანებით",
     "stopping-then-starting-later": "$1 შეწყდება $2, დაიწყება კვლავ $3 მოგვიანებით",
     "for-day": "$1 მთელი დღის განმავლობაში",
+    "for-rest-of-day": "$1 დღის დარჩენილ ნაწილში",
     "starting": "$1 დაიწყება $2",
     "until": "$1 გაგრძელდება $2",
     "until-starting-again": "$1 $2, დაიწყება კვლავ $3",

@@ -242,4 +242,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "מעונן חלקית עד סוף היום.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

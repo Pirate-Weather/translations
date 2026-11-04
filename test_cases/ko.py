@@ -225,4 +225,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "남은 하루 동안 흐림": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

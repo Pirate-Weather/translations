@@ -226,4 +226,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "多雲將持續到今天結束。": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

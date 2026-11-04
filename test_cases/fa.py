@@ -242,4 +242,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "آسمان کمی تا قسمتی ابری تا پایان روز": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

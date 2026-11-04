@@ -141,6 +141,7 @@ template = {
     "starting-then-stopping-later": "$2 후 $1 시작, $3 후 멈춤",
     "stopping-then-starting-later": "$2 후 $1 멈춤, $3 후 다시 시작",
     "for-day": "온종일 $1",
+    "for-rest-of-day": "남은 하루 동안 $1",
     "starting": "$2에 $1 시작",
     "until": "$2까지 $1",
     "until-starting-again": "$2까지 $1, $3 다시 시작",

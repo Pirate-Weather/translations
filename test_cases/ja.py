@@ -225,4 +225,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "今日いっぱい曇り。": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

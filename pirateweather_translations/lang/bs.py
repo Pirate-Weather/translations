@@ -154,6 +154,7 @@ template = {
     "starting-then-stopping-later": "$1 počinje za $2, ondak prekida za $3",
     "stopping-then-starting-later": "$1 prekida za $2, ondak počinje za $3",
     "for-day": "$1 tokom cijelog dana",
+    "for-rest-of-day": "$1 do kraja dana",
     "starting": "$1 počinje $2",
     "until": "$1 do $2",
     "until-starting-again": "$1 do $2, i opet poćinje $3",

@@ -101,6 +101,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 এ শুরু হচ্ছে, $3 এ পরে বন্দ হচ্ছে",
     "stopping-then-starting-later": "$1 $2 এ বন্দ হচ্ছে, আবার পরে $3 এ শুরু হচ্ছে",
     "for-day": "সারাদিন $1",
+    "for-rest-of-day": "দিনের বাকি সময় $1",
     "starting": "$1 $2 এ শুরু হচ্ছে",
     "until": "$1 $2 অব্দি",
     "until-starting-again": "$1 $2 অব্দি, $3 আবার শুরু",

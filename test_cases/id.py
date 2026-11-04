@@ -242,4 +242,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Berawan sepanjang sisa hari.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

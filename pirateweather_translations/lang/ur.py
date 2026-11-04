@@ -452,6 +452,7 @@ template = {
     "starting-then-stopping-later": starting_then_stopping_later_function,
     "stopping-then-starting-later": stopping_then_starting_later_function,
     "for-day": for_day_function,
+    "for-rest-of-day": "باقی دن $1",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

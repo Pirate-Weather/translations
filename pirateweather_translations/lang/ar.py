@@ -150,6 +150,7 @@ template = {
     "starting-then-stopping-later": "$1 تبدأ خلال $2 وتتوقف لاحقاً خلال $3",
     "stopping-then-starting-later": "$1 تتوقف خلال $2 وتبدأ لاحقاً خلال $3",
     "for-day": "$1 خلال اليوم",
+    "for-rest-of-day": "$1 لبقية اليوم",
     "starting": "$1 تبدأ $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

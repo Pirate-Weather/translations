@@ -224,4 +224,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "ਜ੍ਯਾਦਾ ਬੱਦਲ ਹੋਣਾ ਬਾਕੀ ਦਿਨ": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

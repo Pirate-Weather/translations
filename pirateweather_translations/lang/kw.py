@@ -224,6 +224,7 @@ template = {
     "starting-then-stopping-later": starting_then_stopping_later_function,
     "stopping-then-starting-later": stopping_then_starting_later_function,
     "for-day": "$1 dres oll an jydh",
+    "for-rest-of-day": "$1 dres remenant an jydh",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

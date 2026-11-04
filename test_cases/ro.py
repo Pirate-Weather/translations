@@ -262,4 +262,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Predominant noros în restul zilei.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

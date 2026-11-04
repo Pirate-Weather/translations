@@ -232,4 +232,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "मुख्यतः ढगाळ उर्वरित दिवसासाठी": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

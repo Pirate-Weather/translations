@@ -237,4 +237,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Erős felhősödés a nap hátralévő részében.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

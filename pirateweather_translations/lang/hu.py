@@ -166,6 +166,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 múlva, $3ig",
     "stopping-then-starting-later": "$1 $2 múlva véget ér, de $3 elteltével újra várható",
     "for-day": "$1 egész nap",
+    "for-rest-of-day": "$1 a nap hátralévő részében",
     "starting": "$1 lesz $2",
     "until": "$1 $2",
     "until-starting-again": "$1 $2, majd $3 ismét",

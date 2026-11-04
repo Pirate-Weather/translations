@@ -238,6 +238,7 @@ template = {
     "starting-then-stopping-later": "$1 יתחיל בעוד $2, יפסק אחרי $3",
     "stopping-then-starting-later": "$1 יפסק בעוד $2, יתחדש לאחר $3",
     "for-day": "$1 לאורך היום",
+    "for-rest-of-day": "$1 עד סוף היום",
     "starting": "$1 מתחיל $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

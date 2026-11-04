@@ -215,6 +215,7 @@ template = {
     "starting-then-stopping-later": "$1 a partire tra $2 per $3",
     "stopping-then-starting-later": "$1 per altri $2, per ricominciare $3 più tardi",
     "for-day": "$1 durante il giorno",
+    "for-rest-of-day": "$1 per il resto della giornata",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

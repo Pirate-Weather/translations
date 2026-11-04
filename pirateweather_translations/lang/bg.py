@@ -197,6 +197,7 @@ template = {
     "starting-then-stopping-later": "$1 започва след $2, и приключва до $3 по-късно",
     "stopping-then-starting-later": "$1 приключва до $2, и започва отново след $3",
     "for-day": "$1 през целия ден",
+    "for-rest-of-day": "$1 до края на деня",
     "starting": "$1 започва $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,
