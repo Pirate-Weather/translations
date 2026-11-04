@@ -222,6 +222,7 @@ template = {
     "starting-then-stopping-later": "$1 in $2 für $3",
     "stopping-then-starting-later": "$1 endet in $2 und beginnt $3 danach erneut",
     "for-day": "den ganzen Tag lang $1",
+    "for-rest-of-day": "den restlichen Tag lang $1",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

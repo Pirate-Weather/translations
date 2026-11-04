@@ -227,4 +227,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "మిగిలిన రోజు మొత్తం చాలావరకు మేఘావృతంగా గానే ఉంటుంది": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

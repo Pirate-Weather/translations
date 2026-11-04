@@ -226,4 +226,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "দিনের বাকি সময় প্রায় মেঘাছন্ন": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

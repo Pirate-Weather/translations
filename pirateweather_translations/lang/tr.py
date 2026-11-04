@@ -193,6 +193,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 içinde başlayacak, $3 sonra duracak",
     "stopping-then-starting-later": "$1 $2 içinde duracak, $3 sonra tekrar başlayacak",
     "for-day": "$1 gün boyunca devam edecek",
+    "for-rest-of-day": "$1 günün geri kalanında devam edecek",
     "starting": "$2 $1 başlayacak",
     "until": "$1 $2 sona erecek",
     "until-starting-again": "$1 $2 sona erecek, $3 tekrar başlayacak",

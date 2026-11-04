@@ -226,4 +226,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Воблачна да канца дня.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

@@ -129,6 +129,7 @@ template = {
     "starting-then-stopping-later": "$1 ag tosú i $2, ag stopadh i $3",
     "stopping-then-starting-later": "$1 ag stopadh i $2, ag tosú arís i $3",
     "for-day": "$1 ar feadh an lae",
+    "for-rest-of-day": "$1 ar feadh an chuid eile den lá",
     "starting": "$1 ag tosú $2",
     "until": "$1 ag stopadh $2",
     "until-starting-again": "$1 ag stopadh $2, ag tosú arís $3",

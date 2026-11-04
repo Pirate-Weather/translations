@@ -164,6 +164,7 @@ template = {
     "starting-then-stopping-later": "$1 a' tòiseachadh ann an $2, a' stad as dèidh $3",
     "stopping-then-starting-later": "$1 a' stad ann an $2, a' tòiseachadh a-rithist as dèidh $3",
     "for-day": "$1 fad an latha",
+    "for-rest-of-day": "$1 fad a’ chòrr den latha",
     "starting": "$1 a' tòiseachadh $2",
     "until": "$1 a' stad $2",
     "until-starting-again": "$1 a' stad $2, a' tòiseachadh a-rithist $3",

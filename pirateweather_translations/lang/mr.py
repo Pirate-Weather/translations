@@ -101,6 +101,7 @@ template = {
     "starting-then-stopping-later": "$1 $2 सुरु होईल त्यानंतर बंद $3 नंतर",
     "stopping-then-starting-later": "$1 $2 बंद होईल त्यानंतर चालू $3 नंतर",
     "for-day": "$1 दिवसासाठी",
+    "for-rest-of-day": "$1 उर्वरित दिवसासाठी",
     "starting": "$1 सुरु $2",
     "until": "$1 पर्यंत $2",
     "until-starting-again": "$1 $2 पुन्हा चालू होई पर्यंत $3",

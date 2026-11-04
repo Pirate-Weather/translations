@@ -146,6 +146,7 @@ template = {
     "starting-then-stopping-later": "$1が$2に始まり、$3後終わる。",
     "stopping-then-starting-later": "$1が$2に終わり、また$3後始まる。",
     "for-day": "一日中$1。",
+    "for-rest-of-day": "今日いっぱい$1。",
     "starting": "$2から$1が始まる。",
     "until": "$2まで$1。",
     "until-starting-again": "$2まで$1、$3からまた始まる。",

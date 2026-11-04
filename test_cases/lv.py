@@ -257,4 +257,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Līdz dienas beigām pārsvarā mākoņains.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

@@ -219,4 +219,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Cymylog am weddill y dydd.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

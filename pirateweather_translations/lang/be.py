@@ -211,6 +211,7 @@ template = {
     "starting-then-stopping-later": "$1 пачынаецца на працягу $2, і заканчваецца праз $3",
     "stopping-then-starting-later": "$1 заканчваецца на працягу $2, і пачынаецца зноў праз $3",
     "for-day": "$1 на працягу ўсяго дня",
+    "for-rest-of-day": "$1 да канца дня",
     "starting": "$1 пачынаецца $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

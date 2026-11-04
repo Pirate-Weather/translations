@@ -241,4 +241,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Ostlymay oudyclay orfay ethay estray ofay ethay ayday.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

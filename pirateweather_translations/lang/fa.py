@@ -166,6 +166,7 @@ template = {
     "starting-then-stopping-later": "$1 در $2 آغاز می‌شود و $3 بعد پایان می‌یابد",
     "stopping-then-starting-later": "$1 در $2 پایان می‌یابد و $3 بعد دوباره آغاز می‌شود",
     "for-day": "$1 در طول روز",
+    "for-rest-of-day": "$1 تا پایان روز",
     "starting": "$1 $2 آغاز می‌شود",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

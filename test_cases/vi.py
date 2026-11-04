@@ -237,4 +237,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Có mây trong suốt phần còn lại của ngày.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

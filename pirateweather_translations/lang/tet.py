@@ -220,6 +220,7 @@ template = {
     "starting-then-stopping-later": "$1 hahu iha $2, hein $3 para",
     "stopping-then-starting-later": "$1 para iha $2, hein $3 hahu fali",
     "for-day": "$1 loron tomak",
+    "for-rest-of-day": "$1 to'o loron remata",
     "starting": "$1 hahu $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

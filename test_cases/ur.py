@@ -238,4 +238,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "باقی دن زیادہ تر ابر آلود": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

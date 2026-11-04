@@ -174,6 +174,7 @@ template = {
     "starting-then-stopping-later": "$1 sem byrjar eftir $2, líkur $3 seinna",
     "stopping-then-starting-later": "$1 sem líkur eftir $2, byrjar aftur $3 seinna",
     "for-day": "$1 yfir daginn",
+    "for-rest-of-day": "$1 það sem eftir er dagsins",
     "starting": "$1, byrjar $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

@@ -204,6 +204,7 @@ template = {
     "starting-then-stopping-later": "$1 peste $2, durează $3",
     "stopping-then-starting-later": "$1, se oprește în $2, începe din nou $3 mai târziu",
     "for-day": "$1 de-a lungul zilei",
+    "for-rest-of-day": "$1 în restul zilei",
     "starting": "$1, începând de $2",
     "until": "$1 până $2",
     "until-starting-again": "$1 până $2, începe din nou $3",

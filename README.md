@@ -140,6 +140,7 @@ day. (Or a larger period of the day, as the case may be.)
 
 *   `["for-day", WEATHER_CONDITION]`
 *   `["for-night", WEATHER_CONDITION]`
+*   `["for-rest-of-day", WEATHER_CONDITION]`
 *   `["during", WEATHER_CONDITION, TIME_OF_DAY]`
 *   `["during", WEATHER_CONDITION, ["and", TIME_OF_DAY, TIME_OF_DAY]]`
 *   `["during", WEATHER_CONDITION, ["list", TIME_OF_DAY, TIME_OF_DAY, ...]]`
@@ -153,6 +154,8 @@ day. (Or a larger period of the day, as the case may be.)
 considered analogous to the five similar cases in hourly summaries. `"during"`
 is used both here and in weekly summaries, below. `"for-night"` is the
 overnight counterpart of `"for-day"` (e.g. "rain throughout the night").
+`"for-rest-of-day"` is for a condition filling what is left of today (e.g. "rain
+for the rest of the day").
 
 `WEATHER_CONDITION` may also be one of the precipitation or cloud cover
 quantifiers described under [Quantifiers](#quantifiers) below.

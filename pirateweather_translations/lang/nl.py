@@ -234,6 +234,7 @@ template = {
     "starting-then-stopping-later": "$1 begint over $2 en stopt weer $3 later",
     "stopping-then-starting-later": "$1 stopt over $2 maar begint $3 later opnieuw",
     "for-day": "$1 gedurende de dag",
+    "for-rest-of-day": "$1 de rest van de dag",
     "starting": starting_function,
     "until": "$1 tot $2",
     "until-starting-again": "$1 tot $2 en $3 weer opnieuw",

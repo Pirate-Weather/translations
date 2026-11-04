@@ -248,4 +248,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Nuboj dum la resto de la tago.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

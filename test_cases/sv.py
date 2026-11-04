@@ -237,4 +237,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Molnigt resten av dagen.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

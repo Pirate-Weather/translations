@@ -250,4 +250,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "Sgothach fad a’ chòrr den latha.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

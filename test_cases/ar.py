@@ -233,4 +233,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "اجواء غائمة لبقية اليوم": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

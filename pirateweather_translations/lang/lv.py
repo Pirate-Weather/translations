@@ -213,6 +213,7 @@ template = {
     "starting-then-stopping-later": "$1 sāksies $2 laikā, beigsies $3 vēlāk",
     "stopping-then-starting-later": "$1 beigsies $2 laikā, atsāksies $3 vēlāk",
     "for-day": "visu dienu $1",
+    "for-rest-of-day": "līdz dienas beigām $1",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

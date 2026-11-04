@@ -163,6 +163,7 @@ template = {
     "starting-then-stopping-later": "$1 comenzando en $2, después parando en $3",
     "stopping-then-starting-later": "$1 parando en $2, comenzando de nuevo $3 después",
     "for-day": "$1 durante el día",
+    "for-rest-of-day": "$1 durante el resto del día",
     "starting": "$1 comenzando $2",
     "until": "$1 hasta $2",
     "until-starting-again": "$1 hasta $2, comenzando otra vez $3",

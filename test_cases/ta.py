@@ -246,4 +246,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "பெரும்பாலும் மேகமூட்டம் நாளின் மீதமுள்ள நேரம் முழுவதும்": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

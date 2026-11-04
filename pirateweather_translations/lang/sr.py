@@ -333,6 +333,7 @@ template = {
     "starting-then-stopping-later": "$1 počinje za $2, onda prestaje za $3",
     "stopping-then-starting-later": "$1 prestaje za $2, onda počinje za $3",
     "for-day": "$1 tokom celog dana",
+    "for-rest-of-day": "$1 do kraja dana",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,

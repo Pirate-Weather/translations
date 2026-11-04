@@ -189,6 +189,7 @@ template = {
     "starting-then-stopping-later": "$1 που θα αρχίσει σε $2, και θα σταματήσει $3 αργότερα",
     "stopping-then-starting-later": "$1 που θα σταματήσει σε $2, και θα συνεχιστεί $3 αργότερα",
     "for-day": "$1 κατά τη διάρκεια της ημέρας",
+    "for-rest-of-day": "$1 για το υπόλοιπο της ημέρας",
     "starting": "$1 που θα αρχίσει $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

@@ -235,4 +235,5 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
+    "बाकी दिन बादलों से आच्छादित": ["sentence", ["for-rest-of-day", "medium-clouds"]],
 }

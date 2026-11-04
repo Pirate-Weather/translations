@@ -272,6 +272,7 @@ template = {
     "starting-then-stopping-later": "$1 починається за $2, і закінчується за $3",
     "stopping-then-starting-later": "$1 закінчується за $2, і починається знову за $3",
     "for-day": "$1 протягом всього дня",
+    "for-rest-of-day": "$1 до кінця дня",
     "starting": "$1 починається $2",
     "until": until_function,
     "until-starting-again": until_starting_again_function,

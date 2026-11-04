@@ -350,4 +350,8 @@ cases = {
         "sentence",
         ["accompanied-by", "heavy-clouds", ["during", "very-light-rain", "evening"]],
     ],
+    "Mostly cloudy for the rest of the day.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

@@ -142,6 +142,7 @@ template = {
     "starting-then-stopping-later": "$1将于$2后开始，并在之后的$3结束。",
     "stopping-then-starting-later": "$1将于$2后结束，而在之后的$3又将继续。",
     "for-day": "$1将持续一整天。",
+    "for-rest-of-day": "$1将持续到今天结束。",
     "starting": "$1开始于$2。",
     "until": "$1将持续至$2",
     "until-starting-again": "$1直到$2，将于$3再次出现",

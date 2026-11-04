@@ -185,6 +185,7 @@ template = {
     "starting-then-stopping-later": "$1 bắt đầu sau $2, dừng lại $3 sau",
     "stopping-then-starting-later": "$1 dừng sau $2, tiếp tục $3 sau",
     "for-day": "$1 suốt cả ngày",
+    "for-rest-of-day": "$1 trong suốt phần còn lại của ngày",
     "starting": "$1 bắt đầu lúc $2",
     "until": "$1 cho đến $2",
     "until-starting-again": "$1 cho đến $2, bắt đầu lại $3",

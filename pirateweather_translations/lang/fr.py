@@ -203,6 +203,7 @@ template = {
     "starting-then-stopping-later": starting_then_stopping_later_function,
     "stopping-then-starting-later": stopping_then_starting_later_function,
     "for-day": "$1 toute la journée",
+    "for-rest-of-day": "$1 pour le reste de la journée",
     "starting": starting_function,
     "until": until_function,
     "until-starting-again": until_starting_again_function,
