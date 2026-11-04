@@ -14,7 +14,7 @@ keywords = ["weather", "API", "pirateweather", "translations"]
 
 [project.urls]
 Homepage = "https://github.com/Pirate-Weather/translations"
-Download = "https://github.com/Pirate-Weather/translations/archive/2.0.0.tar.gz"
+Download = "https://github.com/Pirate-Weather/translations/archive/2.0.1.tar.gz"
 
 [tool.setuptools.packages.find]
 include = ["pirateweather_translations", "pirateweather_translations.*"]
