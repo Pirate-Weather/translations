@@ -291,5 +291,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Bulutlanma günün geri kalanında devam edecek.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Bulutlanma günün geri kalanında devam edecek.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

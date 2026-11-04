@@ -245,5 +245,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Μερική νέφωση για το υπόλοιπο της ημέρας.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Μερική νέφωση για το υπόλοιπο της ημέρας.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

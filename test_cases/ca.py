@@ -231,5 +231,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Majoritariament ennuvolat durant la resta del dia.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Majoritariament ennuvolat durant la resta del dia.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

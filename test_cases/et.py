@@ -238,5 +238,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Ülejäänud päeva on mõõdukas pilvisus.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Ülejäänud päeva on mõõdukas pilvisus.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

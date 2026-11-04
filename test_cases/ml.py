@@ -242,5 +242,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "മിക്കപ്പോഴും മേഘാവൃതമായ ദിവസത്തിന്റെ ബാക്കി സമയം": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "മിക്കപ്പോഴും മേഘാവൃതമായ ദിവസത്തിന്റെ ബാക്കി സമയം": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

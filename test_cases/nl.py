@@ -220,5 +220,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Overwegend bewolkt de rest van de dag.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Overwegend bewolkt de rest van de dag.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

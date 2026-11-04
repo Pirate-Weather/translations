@@ -231,5 +231,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "უმეტესად ღრუბლიანი დღის დარჩენილ ნაწილში.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "უმეტესად ღრუბლიანი დღის დარჩენილ ნაწილში.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

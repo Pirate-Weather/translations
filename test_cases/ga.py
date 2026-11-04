@@ -250,5 +250,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Scamaill mheasartha ar feadh an chuid eile den lá.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Scamaill mheasartha ar feadh an chuid eile den lá.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

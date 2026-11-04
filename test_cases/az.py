@@ -228,5 +228,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Günün qalan hissəsində əsasən buludlu olacaq.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Günün qalan hissəsində əsasən buludlu olacaq.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

@@ -262,5 +262,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Do konca dňa prevažne zamračené.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Do konca dňa prevažne zamračené.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }

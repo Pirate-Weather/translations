@@ -258,5 +258,8 @@ cases = {
             ["starting", "possible-thunderstorm", "today-afternoon"],
         ],
     ],
-    "Komolek dres remenant an jydh.": ["sentence", ["for-rest-of-day", "medium-clouds"]],
+    "Komolek dres remenant an jydh.": [
+        "sentence",
+        ["for-rest-of-day", "medium-clouds"],
+    ],
 }
